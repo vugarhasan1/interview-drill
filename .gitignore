@@ -1,0 +1,5 @@
+node_modules/
+dist/
+
+# Not redistributable: the JavaScript question repo has no licence
+public/data/javascript.json
