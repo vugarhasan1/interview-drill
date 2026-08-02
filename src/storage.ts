@@ -22,4 +22,8 @@ export const saveProgress = (deck: Deck, progress: ProgressMap): void => {
 export const clearProgress = (deck: Deck): void => localStorage.removeItem(key(deck));
 
 export const exportProgress = (deck: Deck): string =>
-  JSON.stringify({ deck, savedAt: new Date().toISOString(), progress: loadProgress(deck) }, null, 2);
+  JSON.stringify(
+    { deck, savedAt: new Date().toISOString(), progress: loadProgress(deck) },
+    null,
+    2,
+  );

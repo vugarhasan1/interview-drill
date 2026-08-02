@@ -3,7 +3,6 @@
   "count": 414,
   "clusters": [
     "React fundamentals and ecosystem",
-    "Routing",
     "Rendering model: VDOM, reconciliation, keys, Fiber",
     "Components, props, state, composition",
     "Other / trivia",
@@ -12,6 +11,7 @@
     "SSR, Next.js, ecosystem",
     "Hooks: rules, deps, useEffect, memo",
     "Forms and validation",
+    "Routing",
     "State management, data fetching",
     "Errors, testing, tooling"
   ],
@@ -27,7 +27,7 @@
     {
       "id": "react-002",
       "number": 2,
-      "cluster": "Routing",
+      "cluster": "React fundamentals and ecosystem",
       "question": "What is the history behind React evolution?",
       "answer": "The history of ReactJS started in 2010 with the creation of **XHP**. XHP is a PHP extension which improved the syntax of the language such that XML document fragments become valid PHP expressions and the primary purpose was used to create custom and reusable HTML elements.\n\n   The main principle of this extension was to make front-end code easier to understand and to help avoid cross-site scripting attacks. The project was successful to prevent the malicious content submitted by the scrubbing user.\n\n   But there was a different problem with XHP in which dynamic web applications require many roundtrips to the server, and XHP did not solve this problem. Also, the whole UI was re-rendered for small change in the application. Later, the initial prototype of React is created with the name **FaxJ** by Jordan inspired from XHP. Finally after sometime React has been introduced as a new library into JavaScript world.\n\n   <details>\n       <summary><b>See deep-dive answer</b></summary>\n       The evolution of React has a fascinating history that spans over a decade:\n\n   **2010-2011: The Origins**\n   - The journey began with **XHP**, a PHP extension created at Facebook that allowed HTML components to be used in PHP code\n   - XHP improved front-end code readability and helped prevent cross-site scripting (XSS) attacks\n   - However, XHP had limitations with dynamic web applications, requiring frequent server roundtrips and complete UI re-renders for small changes\n\n   **2011-2012: Early Development**\n   - Jordan Walke created the first prototype called **FaxJS** (later renamed to React), inspired by XHP's component model\n   - The key innovation was bringing XHP's component model to JavaScript with performance improvements\n   - React introduced the Virtual DOM concept to solve the performance issues of full page re-renders\n   - First deployed internally on Facebook's News Feed in 2011 and Instagram in 2012\n\n   **2013: Public Release**\n   - React was officially open-sourced at JSConf US in May 2013\n   - Initial public reception was mixed, with some developers skeptical about the JSX syntax and the approach of mixing markup with JavaScript\n\n   **2014-2015: Growing Adoption**\n   - React Native was announced in 2015, extending React's paradigm to mobile app development\n   - The ecosystem began to grow with tools like Redux for state management\n   - Companies beyond Facebook began adopting React for production applications\n\n   **2016-2018: Maturation**\n   - React 16 (\"Fiber\") was released in 2017 with a complete rewrite of the core architecture\n   - Introduction of new features like Error Boundaries, Portals, and improved server-side rendering\n   - React 16.3 introduced the Context API for easier state management\n\n   **2019-Present: Modern React**\n   - React Hooks were introduced in React 16.8 (February 2019), revolutionizing state management in functional components\n   - React 17 (October 2020) focused on making React upgrades easier\n   - React 18 (March 2022) introduced concurrent rendering and automatic batching\n   - React continues to evolve with Server Components, the new React compiler (React Forget), and other performance improvements\n   </details>\n\n   **Note:** JSX, React's syntax extension, was indeed inspired by XHP's approach of embedding XML-like syntax in code.",
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-history-behind-react-evolution"
@@ -659,7 +659,7 @@
     {
       "id": "react-082",
       "number": 82,
-      "cluster": "Routing",
+      "cluster": "React fundamentals and ecosystem",
       "question": "What is the purpose of `push()` and `replace()` methods of `history`?",
       "answer": "A history instance has two methods for navigation purpose.\n\n1.  `push()`\n2.  `replace()`\n\nIf you think of the history as an array of visited locations, `push()` will add a new location to the array and `replace()` will replace the current location in the array with the new one.",
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-purpose-of-push-and-replace-methods-of-history"

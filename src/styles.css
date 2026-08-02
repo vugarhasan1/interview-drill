@@ -76,10 +76,62 @@ input[type='file'] {
   cursor: pointer;
 }
 
-button.active {
+button.active,
+button.primary {
   background: var(--accent);
   border-color: var(--accent);
   color: #fff;
+  font-weight: 600;
+}
+
+/* Grade buttons carry the same colours as the coverage table, so the two read as one system. */
+button.grade-known {
+  border-color: var(--good);
+  color: var(--good);
+  font-weight: 600;
+}
+
+button.grade-shaky {
+  border-color: var(--warn);
+  color: var(--warn);
+  font-weight: 600;
+}
+
+button.grade-unknown {
+  border-color: var(--bad);
+  color: var(--bad);
+  font-weight: 600;
+}
+
+button.grade-known:hover {
+  background: var(--good);
+  color: #fff;
+}
+
+button.grade-shaky:hover {
+  background: var(--warn);
+  color: #fff;
+}
+
+button.grade-unknown:hover {
+  background: var(--bad);
+  color: #fff;
+}
+
+/* Navigation is deliberately quieter than grading: it does not record anything. */
+button.nav {
+  background: transparent;
+  color: var(--muted);
+  border-style: dashed;
+}
+
+button.nav:hover:not(:disabled) {
+  color: inherit;
+  border-style: solid;
+}
+
+button.nav.skip {
+  margin-left: auto;
 }
 
 button.ghost {
@@ -89,6 +141,11 @@ button.ghost {
 
 button.danger {
   color: var(--bad);
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
 button.link {
@@ -231,8 +288,13 @@ button.link {
   color: var(--muted);
 }
 
+.table-wrap {
+  overflow-x: auto;
+}
+
 .heatmap table {
   width: 100%;
+  min-width: 520px;
   border-collapse: collapse;
   font-size: 14px;
 }
@@ -307,4 +369,89 @@ footer a {
 
 .credit {
   margin-left: auto;
+}
+
+/* Phone layout: bigger tap targets, no horizontal page scroll, answer gets more height. */
+@media (max-width: 640px) {
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  main {
+    padding: 16px 12px 40px;
+  }
+
+  h1 {
+    font-size: 19px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  header {
+    align-items: center;
+  }
+
+  .controls {
+    align-items: stretch;
+    margin: 14px 0 12px;
+  }
+
+  .controls select {
+    max-width: none;
+    width: 100%;
+  }
+
+  button,
+  select {
+    min-height: 40px;
+  }
+
+  .modes button,
+  .deck-switch button {
+    flex: 1 1 auto;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  .grades {
+    gap: 6px;
+  }
+
+  .grades button {
+    flex: 1 1 46%;
+  }
+
+  button.nav.skip {
+    margin-left: 0;
+  }
+
+  .answer {
+    max-height: 52vh;
+    padding: 2px 10px;
+  }
+
+  .heatmap table {
+    font-size: 13px;
+  }
+
+  td.bar {
+    display: none;
+  }
+
+  .heatmap th:last-child {
+    display: none;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+
+  .credit {
+    margin-left: 0;
+    width: 100%;
+  }
 }

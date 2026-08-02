@@ -3,3 +3,6 @@ dist/
 
 # Not redistributable: the JavaScript question repo has no licence
 public/data/javascript.json
+
+# Upstream READMEs used by the parser
+.cache/

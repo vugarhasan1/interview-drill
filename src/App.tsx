@@ -76,11 +76,12 @@ export default function App() {
         if (!revealed) drill.reveal();
         return;
       }
+      if (event.key === 'ArrowLeft') drill.back();
+      if (event.key === 's' || event.key === 'ArrowRight') drill.skip();
       if (!revealed) return;
       if (event.key === '1') drill.grade('known');
       if (event.key === '2') drill.grade('shaky');
       if (event.key === '3') drill.grade('unknown');
-      if (event.key === 's') drill.skip();
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
@@ -165,11 +166,20 @@ export default function App() {
                   ) : null}
                   <div className="answer" dangerouslySetInnerHTML={{ __html: answerHtml }} />
                   <div className="grades">
-                    <button onClick={() => drill.grade('known')}>Knew it (1)</button>
-                    <button onClick={() => drill.grade('shaky')}>Shaky (2)</button>
-                    <button onClick={() => drill.grade('unknown')}>No idea (3)</button>
-                    <button className="ghost" onClick={drill.skip}>
-                      Skip (s)
+                    <button className="grade-known" onClick={() => drill.grade('known')}>
+                      Knew it (1)
+                    </button>
+                    <button className="grade-shaky" onClick={() => drill.grade('shaky')}>
+                      Shaky (2)
+                    </button>
+                    <button className="grade-unknown" onClick={() => drill.grade('unknown')}>
+                      No idea (3)
+                    </button>
+                    <button className="nav" onClick={drill.back} disabled={drill.index === 0}>
+                      &larr; Back
+                    </button>
+                    <button className="nav skip" onClick={drill.skip}>
+                      Skip &rarr;
                     </button>
                   </div>
                   <a className="source" href={current.source} target="_blank" rel="noreferrer">
@@ -178,9 +188,14 @@ export default function App() {
                 </>
               ) : (
                 <div className="grades">
-                  <button onClick={drill.reveal}>Show answer (Space)</button>
-                  <button className="ghost" onClick={drill.skip}>
-                    Skip (s)
+                  <button className="primary" onClick={drill.reveal}>
+                    Show answer (Space)
+                  </button>
+                  <button className="nav" onClick={drill.back} disabled={drill.index === 0}>
+                    &larr; Back
+                  </button>
+                  <button className="nav skip" onClick={drill.skip}>
+                    Skip &rarr;
                   </button>
                 </div>
               )}

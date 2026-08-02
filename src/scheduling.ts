@@ -67,9 +67,14 @@ export const clusterStats = (questions: Question[], progress: ProgressMap): Clus
   const stats = new Map<string, ClusterStat>();
 
   for (const question of questions) {
-    const stat =
-      stats.get(question.cluster) ??
-      { cluster: question.cluster, total: 0, known: 0, shaky: 0, unknown: 0, unseen: 0 };
+    const stat = stats.get(question.cluster) ?? {
+      cluster: question.cluster,
+      total: 0,
+      known: 0,
+      shaky: 0,
+      unknown: 0,
+      unseen: 0,
+    };
 
     stat.total += 1;
     const grade = progress[question.id]?.grade;

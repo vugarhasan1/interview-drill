@@ -51,7 +51,10 @@ export const useDrill = ({ deck, questions, mode, cluster }: UseDrillOptions) =>
       if (!current) return;
       const seconds = Math.floor((Date.now() - startedAt.current) / 1000);
       setProgress(previous => {
-        const next = { ...previous, [current.id]: gradeQuestion(previous[current.id], value, seconds) };
+        const next = {
+          ...previous,
+          [current.id]: gradeQuestion(previous[current.id], value, seconds),
+        };
         saveProgress(deck, next);
         return next;
       });
@@ -64,6 +67,12 @@ export const useDrill = ({ deck, questions, mode, cluster }: UseDrillOptions) =>
   const skip = useCallback(() => {
     setRevealed(false);
     setIndex(position => position + 1);
+  }, []);
+
+  // Walking back keeps the recorded grade: it is for re-reading an answer, not for undoing it.
+  const back = useCallback(() => {
+    setRevealed(false);
+    setIndex(position => Math.max(0, position - 1));
   }, []);
 
   const restart = useCallback(() => {
@@ -82,6 +91,7 @@ export const useDrill = ({ deck, questions, mode, cluster }: UseDrillOptions) =>
     reveal,
     grade,
     skip,
+    back,
     restart,
     finished: queue.length > 0 && index >= queue.length,
   };

@@ -1,6 +1,6 @@
 // Turns the two interview-question READMEs into JSON: one record per question with its full
 // answer, a study cluster and, where one exists, the personal example from the hand-written cards.
-import { readFileSync, writeFileSync } from 'fs';
+import { existsSync, readFileSync, writeFileSync } from 'fs';
 
 interface Question {
   id: string;
@@ -34,7 +34,9 @@ const CLUSTERS: Record<'js' | 'react', { cluster: string; match: RegExp }[]> = {
     { cluster: 'State management, data fetching', match: /redux|toolkit|\brtk\b|saga|thunk|mobx|zustand|recoil|flux|store|reducer|action|selector|immer|query|swr|apollo|graphql|axios|fetch data|cache/i },
     { cluster: 'Forms and validation', match: /form|input|validation|formik|react-?hook-?form|yup|zod|onchange|submit/i },
     { cluster: 'Performance and bundling', match: /performance|optimi|lazy|code split|dynamic import|bundle|memoiz|virtualiz|windowing|profiler|tree shak|preload|web vitals/i },
-    { cluster: 'Routing', match: /router|route|navigat|\blink\b|history|params|redirect|outlet/i },
+    // `history` alone also matches "the history behind React", so it is only a routing signal
+    // together with the API or hook name.
+    { cluster: 'Routing', match: /router|route|navigat|\blink\b|history api|usehistory|browser history|params|redirect|outlet/i },
     { cluster: 'Errors, testing, tooling', match: /error boundary|error handling|test|jest|enzyme|react testing library|cypress|storybook|eslint|devtools|debug|typescript|flow/i },
     { cluster: 'SSR, Next.js, ecosystem', match: /server-?side|\bssr\b|\bssg\b|\bisr\b|next\.?js|gatsby|remix|hydration|streaming|\brsc\b|server component|native|electron|\bpwa\b/i },
     { cluster: 'Styling and accessibility', match: /style|\bcss\b|styled|emotion|tailwind|theme|class(name)?|accessib|aria|i18n|internationali|localiz/i },
@@ -57,6 +59,7 @@ const anchorOf = (title: string) =>
 const loadExamples = (paths: string[]): Map<string, string> => {
   const examples = new Map<string, string>();
   for (const path of paths) {
+    if (!existsSync(path)) continue;
     for (const line of readFileSync(path, 'utf8').split('\n')) {
       const [front, back] = line.split('\t');
       if (!front || !back) continue;
@@ -123,11 +126,11 @@ const parse = (path: string, kind: 'js' | 'react', repo: string, examples: Map<s
 
 const dir = './.cache';
 const target = './public/data';
-const examples = loadExamples([`${target}/anki-javascript.tsv`, `${target}/anki-react.tsv`]);
+const examples = loadExamples(['../interview-prep/anki-javascript.tsv', '../interview-prep/anki-react.tsv']);
 
 for (const [file, kind, repo, out] of [
-  ['js-q.md', 'js', 'sudheerj/javascript-interview-questions', 'questions-javascript.json'],
-  ['react-q.md', 'react', 'sudheerj/reactjs-interview-questions', 'questions-react.json'],
+  ['js-q.md', 'js', 'sudheerj/javascript-interview-questions', 'javascript.json'],
+  ['react-q.md', 'react', 'sudheerj/reactjs-interview-questions', 'react.json'],
 ] as const) {
   const questions = parse(`${dir}/${file}`, kind, repo, examples);
   const clusters = [...new Set(questions.map(q => q.cluster))];
