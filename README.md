@@ -43,9 +43,9 @@ attached show it above the model answer.
 ## Azerbaijani overlay
 
 `public/data/az-*.json` adds an Azerbaijani phrasing of the question and a one-line gist, keyed by
-question id. Technical terms deliberately stay in English (state, hook, closure, reconciliation,
-batching), because that is how they are used in an interview - what needs practising is explaining
-them in Azerbaijani, not translating them.
+question id. Technical terms stay in English (state, hook, closure, reconciliation, batching),
+because that is how they come up in an interview. What needs practising is explaining them in
+Azerbaijani, not translating the vocabulary.
 
 ```json
 {
@@ -59,7 +59,7 @@ them in Azerbaijani, not translating them.
 }
 ```
 
-The overlay is optional and partial by design: questions without an entry simply show English only.
+The overlay is optional and partial: questions without an entry just show English.
 The `AZ` button in the header hides it, and the choice is remembered.
 
 An overlay that isn't shipped with the app can be pointed at by URL. There's a field under the
@@ -92,10 +92,11 @@ itself and would attach progress and overlays to the wrong card.
   with attribution.
 - **JavaScript** questions come from [sudheerj/javascript-interview-questions](https://github.com/sudheerj/javascript-interview-questions),
   which currently ships **no licence file**. Without a licence there is no permission to
-  redistribute, so `public/data/javascript.json` is gitignored and never deployed. Generate it
-  locally with the parser; the app also accepts a JSON file picked from disk, so a deployed build
-  can load it without the data leaving the browser. Its Azerbaijani overlay
-  (`public/data/az-javascript.json`) is derived from those questions and stays out of the repo for
-  the same reason.
+  redistribute, so `public/data/javascript.json` is gitignored and never deployed. On a deployed
+  build the browser reads that README from the source repository itself and keeps the parsed result
+  on the device, which is the same thing as opening the page and reading it. Locally the parser or a
+  JSON file picked from disk work too. Its Azerbaijani overlay (`public/data/az-javascript.json`) is
+  derived from those questions, so it stays out of the repo for the same reason and is loaded from a
+  URL instead.
 
 The app itself is MIT.
