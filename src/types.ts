@@ -1,5 +1,18 @@
 export type Grade = 'known' | 'shaky' | 'unknown';
 
+/** Azerbaijani phrasing kept in a separate overlay file, so the upstream data stays untouched. */
+export interface AzEntry {
+  question: string;
+  /** Only the hand-written entries carry a gist; generated ones rephrase the question alone. */
+  gist?: string;
+  auto?: true;
+}
+
+export interface AzOverlay {
+  deck: Deck;
+  entries: Record<string, AzEntry>;
+}
+
 export interface Question {
   id: string;
   number: number;
@@ -8,6 +21,7 @@ export interface Question {
   answer: string;
   myExample?: string;
   source: string;
+  az?: AzEntry;
 }
 
 export interface QuestionSet {

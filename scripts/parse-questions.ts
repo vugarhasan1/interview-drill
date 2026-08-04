@@ -48,6 +48,18 @@ const CLUSTERS: Record<'js' | 'react', { cluster: string; match: RegExp }[]> = {
 const clusterOf = (title: string, kind: 'js' | 'react') =>
   CLUSTERS[kind].find(rule => rule.match.test(title))?.cluster ?? 'Other / trivia';
 
+/**
+ * Ids come from the question text, not from the numbering in the README: markdown renumbers list
+ * items, so the same number appears on several questions and an overlay keyed by it lands on the
+ * wrong card.
+ */
+const slugOf = (title: string) =>
+  title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+    .slice(0, 60);
+
 const anchorOf = (title: string) =>
   title
     .toLowerCase()
@@ -88,7 +100,7 @@ const parse = (path: string, kind: 'js' | 'react', repo: string, examples: Map<s
       const prefix = kind === 'js' ? 'js' : 'react';
       const example = examples.get(current.question.toLowerCase());
       questions.push({
-        id: `${prefix}-${String(current.number).padStart(3, '0')}`,
+        id: `${prefix}-${slugOf(current.question)}`,
         number: current.number,
         cluster: clusterOf(current.question, kind),
         question: current.question,

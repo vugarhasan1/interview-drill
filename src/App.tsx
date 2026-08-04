@@ -3,11 +3,16 @@ import { marked } from 'marked';
 import { ClusterHeatmap } from './ClusterHeatmap';
 import { useDrill } from './useDrill';
 import { clearProgress, exportProgress } from './storage';
-import type { Deck, QuestionSet, QueueMode } from './types';
+import type { AzOverlay, Deck, QuestionSet, QueueMode } from './types';
 
-const DECKS: { id: Deck; label: string; file: string }[] = [
-  { id: 'react', label: 'React', file: 'data/react.json' },
-  { id: 'javascript', label: 'JavaScript', file: 'data/javascript.json' },
+const DECKS: { id: Deck; label: string; file: string; az: string }[] = [
+  { id: 'react', label: 'React', file: 'data/react.json', az: 'data/az-react.json' },
+  {
+    id: 'javascript',
+    label: 'JavaScript',
+    file: 'data/javascript.json',
+    az: 'data/az-javascript.json',
+  },
 ];
 
 const MODES: { id: QueueMode; label: string; hint: string }[] = [
@@ -20,6 +25,17 @@ const MODES: { id: QueueMode; label: string; hint: string }[] = [
 
 const TARGET_SECONDS = 90;
 
+const withAz = (set: QuestionSet, overlay: AzOverlay | undefined): QuestionSet =>
+  overlay
+    ? {
+        ...set,
+        questions: set.questions.map(question => {
+          const az = overlay.entries[question.id];
+          return az ? { ...question, az } : question;
+        }),
+      }
+    : set;
+
 const formatTime = (seconds: number) =>
   `${String(Math.floor(seconds / 60)).padStart(2, '0')}:${String(seconds % 60).padStart(2, '0')}`;
 
@@ -29,17 +45,24 @@ export default function App() {
   const [loadError, setLoadError] = useState<string>();
   const [mode, setMode] = useState<QueueMode>('unseen');
   const [cluster, setCluster] = useState<string | 'all'>('all');
+  const [showAz, setShowAz] = useState(() => localStorage.getItem('interview-drill:az') !== 'off');
 
   useEffect(() => {
-    const file = DECKS.find(item => item.id === deck)!.file;
+    const entry = DECKS.find(item => item.id === deck)!;
     setSet(null);
     setLoadError(undefined);
-    fetch(file)
-      .then(response => {
+
+    // The Azerbaijani overlay is optional: a missing or partial file just means fewer gists.
+    Promise.all([
+      fetch(entry.file).then(response => {
         if (!response.ok) throw new Error(`${response.status}`);
         return response.json() as Promise<QuestionSet>;
-      })
-      .then(setSet)
+      }),
+      fetch(entry.az)
+        .then(response => (response.ok ? (response.json() as Promise<AzOverlay>) : undefined))
+        .catch(() => undefined),
+    ])
+      .then(([questionSet, overlay]) => setSet(withAz(questionSet, overlay)))
       .catch(() =>
         setLoadError(
           'This deck is not bundled with the deployed app. Load the JSON file from your machine below.',
@@ -103,6 +126,18 @@ export default function App() {
               {item.label}
             </button>
           ))}
+          <button
+            className={showAz ? 'active' : ''}
+            title="Azərbaycanca sual və qısa izah"
+            onClick={() => {
+              setShowAz(value => {
+                localStorage.setItem('interview-drill:az', value ? 'off' : 'on');
+                return !value;
+              });
+            }}
+          >
+            AZ
+          </button>
         </div>
       </header>
 
@@ -157,8 +192,15 @@ export default function App() {
 
               <h2>{current.question}</h2>
 
+              {showAz && current.az ? <p className="az-question">{current.az.question}</p> : null}
+
               {revealed ? (
                 <>
+                  {showAz && current.az?.gist ? (
+                    <p className="az-gist">
+                      <strong>Qısa:</strong> {current.az.gist}
+                    </p>
+                  ) : null}
                   {current.myExample ? (
                     <p className="my-example">
                       <strong>My example:</strong> {current.myExample}

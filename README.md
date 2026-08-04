@@ -40,6 +40,28 @@ Coverage table at the bottom is the heatmap: click a cluster name to drill only 
 Beats 3 and 4 are what separate levels in an interview. Questions that have a personal example
 attached show it above the model answer.
 
+## Azerbaijani overlay
+
+`public/data/az-*.json` adds an Azerbaijani phrasing of the question and a one-line gist, keyed by
+question id. Technical terms deliberately stay in English (state, hook, closure, reconciliation,
+batching), because that is how they are used in an interview - what needs practising is explaining
+them in Azerbaijani, not translating them.
+
+```json
+{
+  "deck": "react",
+  "entries": {
+    "react-how-do-reactive-dependencies-in-the-useeffect-dependency-arr": {
+      "question": "useEffect-in dependency array-i nə üçündür?",
+      "gist": "Effekt həmin dəyərlərdən biri dəyişdikdə yenidən işləyir..."
+    }
+  }
+}
+```
+
+The overlay is optional and partial by design: questions without an entry simply show English only.
+The `AZ` button in the header hides it, and the choice is remembered.
+
 ## Data
 
 `public/data/*.json` is generated from the two upstream repos by `scripts/parse-questions.ts`:
@@ -61,6 +83,8 @@ Each record: `id`, `number`, `cluster`, `question`, `answer` (markdown), `source
   which currently ships **no licence file**. Without a licence there is no permission to
   redistribute, so `public/data/javascript.json` is gitignored and never deployed. Generate it
   locally with the parser; the app also accepts a JSON file picked from disk, so a deployed build
-  can load it without the data leaving the browser.
+  can load it without the data leaving the browser. Its Azerbaijani overlay
+  (`public/data/az-javascript.json`) is derived from those questions and stays out of the repo for
+  the same reason.
 
 The app itself is MIT.

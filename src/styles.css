@@ -221,6 +221,19 @@ button.link {
   margin-top: 16px;
 }
 
+.az-question {
+  margin: -4px 0 12px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.az-gist {
+  border-left: 3px solid var(--warn);
+  padding: 6px 12px;
+  margin: 0 0 12px;
+  background: var(--bg);
+}
+
 .my-example {
   border-left: 3px solid var(--accent);
   padding: 6px 12px;

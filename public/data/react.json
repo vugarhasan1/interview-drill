@@ -17,7 +17,7 @@
   ],
   "questions": [
     {
-      "id": "react-001",
+      "id": "react-what-is-react",
       "number": 1,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is React?",
@@ -25,7 +25,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-react"
     },
     {
-      "id": "react-002",
+      "id": "react-what-is-the-history-behind-react-evolution",
       "number": 2,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is the history behind React evolution?",
@@ -33,7 +33,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-history-behind-react-evolution"
     },
     {
-      "id": "react-003",
+      "id": "react-what-are-the-major-features-of-react",
       "number": 3,
       "cluster": "React fundamentals and ecosystem",
       "question": "What are the major features of React?",
@@ -41,7 +41,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-major-features-of-react"
     },
     {
-      "id": "react-004",
+      "id": "react-what-is-jsx",
       "number": 4,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is JSX?",
@@ -49,7 +49,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-jsx"
     },
     {
-      "id": "react-005",
+      "id": "react-what-is-the-difference-between-an-element-and-a-component",
       "number": 5,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the difference between an Element and a Component?",
@@ -57,7 +57,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-an-element-and-a-component"
     },
     {
-      "id": "react-006",
+      "id": "react-how-to-create-components-in-react",
       "number": 6,
       "cluster": "Components, props, state, composition",
       "question": "How to create components in React?",
@@ -65,7 +65,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-create-components-in-react"
     },
     {
-      "id": "react-007",
+      "id": "react-when-to-use-a-class-component-over-a-function-component",
       "number": 7,
       "cluster": "Components, props, state, composition",
       "question": "When to use a Class Component over a Function Component?",
@@ -73,7 +73,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#when-to-use-a-class-component-over-a-function-component"
     },
     {
-      "id": "react-008",
+      "id": "react-what-are-pure-components",
       "number": 8,
       "cluster": "Components, props, state, composition",
       "question": "What are Pure Components?",
@@ -81,7 +81,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-pure-components"
     },
     {
-      "id": "react-009",
+      "id": "react-what-is-state-in-react",
       "number": 9,
       "cluster": "Components, props, state, composition",
       "question": "What is state in React?",
@@ -89,7 +89,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-state-in-react"
     },
     {
-      "id": "react-010",
+      "id": "react-what-are-props-in-react",
       "number": 10,
       "cluster": "Components, props, state, composition",
       "question": "What are props in React?",
@@ -97,7 +97,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-props-in-react"
     },
     {
-      "id": "react-011",
+      "id": "react-what-is-the-difference-between-state-and-props",
       "number": 11,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the difference between state and props?",
@@ -105,7 +105,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-state-and-props"
     },
     {
-      "id": "react-012",
+      "id": "react-what-is-the-difference-between-html-and-react-event-handling",
       "number": 12,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the difference between HTML and React event handling?",
@@ -113,7 +113,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-html-and-react-event-handling"
     },
     {
-      "id": "react-013",
+      "id": "react-what-are-synthetic-events-in-react",
       "number": 13,
       "cluster": "React fundamentals and ecosystem",
       "question": "What are synthetic events in React?",
@@ -121,7 +121,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-synthetic-events-in-react"
     },
     {
-      "id": "react-014",
+      "id": "react-what-are-inline-conditional-expressions",
       "number": 14,
       "cluster": "Other / trivia",
       "question": "What are inline conditional expressions?",
@@ -129,7 +129,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-inline-conditional-expressions"
     },
     {
-      "id": "react-015",
+      "id": "react-what-is-key-prop-and-what-is-the-benefit-of-using-it-in-arra",
       "number": 15,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is \"key\" prop and what is the benefit of using it in arrays of elements?",
@@ -137,7 +137,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-key-prop-and-what-is-the-benefit-of-using-it-in-arrays-of-elements"
     },
     {
-      "id": "react-016",
+      "id": "react-what-is-virtual-dom",
       "number": 16,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is Virtual DOM?",
@@ -145,7 +145,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-virtual-dom"
     },
     {
-      "id": "react-017",
+      "id": "react-how-virtual-dom-works",
       "number": 17,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "How Virtual DOM works?",
@@ -153,7 +153,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-virtual-dom-works"
     },
     {
-      "id": "react-018",
+      "id": "react-what-is-the-difference-between-shadow-dom-and-virtual-dom",
       "number": 18,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the difference between Shadow DOM and Virtual DOM?",
@@ -161,7 +161,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-shadow-dom-and-virtual-dom"
     },
     {
-      "id": "react-019",
+      "id": "react-what-is-react-fiber",
       "number": 19,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is React Fiber?",
@@ -169,7 +169,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-react-fiber"
     },
     {
-      "id": "react-020",
+      "id": "react-what-is-the-main-goal-of-react-fiber",
       "number": 20,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the main goal of React Fiber?",
@@ -177,7 +177,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-main-goal-of-react-fiber"
     },
     {
-      "id": "react-021",
+      "id": "react-what-are-controlled-components",
       "number": 21,
       "cluster": "Components, props, state, composition",
       "question": "What are controlled components?",
@@ -185,7 +185,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-controlled-components"
     },
     {
-      "id": "react-022",
+      "id": "react-what-are-uncontrolled-components",
       "number": 22,
       "cluster": "Components, props, state, composition",
       "question": "What are uncontrolled components?",
@@ -193,7 +193,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-uncontrolled-components"
     },
     {
-      "id": "react-023",
+      "id": "react-what-is-the-difference-between-createelement-and-cloneelemen",
       "number": 23,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the difference between createElement and cloneElement?",
@@ -201,7 +201,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-createelement-and-cloneelement"
     },
     {
-      "id": "react-024",
+      "id": "react-what-is-lifting-state-up-in-react",
       "number": 24,
       "cluster": "Components, props, state, composition",
       "question": "What is Lifting State Up in React?",
@@ -209,7 +209,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-lifting-state-up-in-react"
     },
     {
-      "id": "react-025",
+      "id": "react-what-are-higher-order-components",
       "number": 25,
       "cluster": "Components, props, state, composition",
       "question": "What are Higher-Order Components?",
@@ -217,7 +217,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-higher-order-components"
     },
     {
-      "id": "react-026",
+      "id": "react-what-is-children-prop",
       "number": 26,
       "cluster": "Components, props, state, composition",
       "question": "What is children prop?",
@@ -225,7 +225,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-children-prop"
     },
     {
-      "id": "react-027",
+      "id": "react-how-to-write-comments-in-react",
       "number": 27,
       "cluster": "React fundamentals and ecosystem",
       "question": "How to write comments in React?",
@@ -233,7 +233,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-write-comments-in-react"
     },
     {
-      "id": "react-028",
+      "id": "react-what-is-reconciliation",
       "number": 28,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is reconciliation?",
@@ -241,7 +241,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-reconciliation"
     },
     {
-      "id": "react-029",
+      "id": "react-does-the-lazy-function-support-named-exports",
       "number": 29,
       "cluster": "Performance and bundling",
       "question": "Does the lazy function support named exports?",
@@ -249,7 +249,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#does-the-lazy-function-support-named-exports"
     },
     {
-      "id": "react-030",
+      "id": "react-why-react-uses-classname-over-class-attribute",
       "number": 30,
       "cluster": "Styling and accessibility",
       "question": "Why React uses `className` over `class` attribute?",
@@ -257,7 +257,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#why-react-uses-classname-over-class-attribute"
     },
     {
-      "id": "react-031",
+      "id": "react-what-are-fragments",
       "number": 31,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What are fragments?",
@@ -265,7 +265,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-fragments"
     },
     {
-      "id": "react-032",
+      "id": "react-why-fragments-are-better-than-container-divs",
       "number": 32,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "Why fragments are better than container divs?",
@@ -273,7 +273,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#why-fragments-are-better-than-container-divs"
     },
     {
-      "id": "react-033",
+      "id": "react-what-are-portals-in-react",
       "number": 33,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What are portals in React?",
@@ -281,7 +281,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-portals-in-react"
     },
     {
-      "id": "react-034",
+      "id": "react-what-are-stateless-components",
       "number": 34,
       "cluster": "Components, props, state, composition",
       "question": "What are stateless components?",
@@ -289,7 +289,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-stateless-components"
     },
     {
-      "id": "react-035",
+      "id": "react-what-are-stateful-components",
       "number": 35,
       "cluster": "Components, props, state, composition",
       "question": "What are stateful components?",
@@ -297,7 +297,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-stateful-components"
     },
     {
-      "id": "react-036",
+      "id": "react-how-to-apply-validation-on-props-in-react",
       "number": 36,
       "cluster": "Components, props, state, composition",
       "question": "How to apply validation on props in React?",
@@ -305,7 +305,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-apply-validation-on-props-in-react"
     },
     {
-      "id": "react-037",
+      "id": "react-what-are-the-advantages-of-react",
       "number": 37,
       "cluster": "React fundamentals and ecosystem",
       "question": "What are the advantages of React?",
@@ -313,7 +313,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-advantages-of-react"
     },
     {
-      "id": "react-038",
+      "id": "react-what-are-the-limitations-of-react",
       "number": 38,
       "cluster": "React fundamentals and ecosystem",
       "question": "What are the limitations of React?",
@@ -321,7 +321,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-limitations-of-react"
     },
     {
-      "id": "react-039",
+      "id": "react-what-are-the-recommended-ways-for-static-type-checking",
       "number": 39,
       "cluster": "Other / trivia",
       "question": "What are the recommended ways for static type checking?",
@@ -329,7 +329,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-recommended-ways-for-static-type-checking"
     },
     {
-      "id": "react-040",
+      "id": "react-what-is-the-use-of-react-dom-package",
       "number": 40,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is the use of `react-dom` package?",
@@ -337,7 +337,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-use-of-react-dom-package"
     },
     {
-      "id": "react-041",
+      "id": "react-what-is-reactdomserver",
       "number": 41,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is ReactDOMServer?",
@@ -345,7 +345,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-reactdomserver"
     },
     {
-      "id": "react-042",
+      "id": "react-how-to-use-innerhtml-in-react",
       "number": 42,
       "cluster": "React fundamentals and ecosystem",
       "question": "How to use innerHTML in React?",
@@ -353,7 +353,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-use-innerhtml-in-react"
     },
     {
-      "id": "react-043",
+      "id": "react-how-to-use-styles-in-react",
       "number": 43,
       "cluster": "Styling and accessibility",
       "question": "How to use styles in React?",
@@ -361,7 +361,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-use-styles-in-react"
     },
     {
-      "id": "react-044",
+      "id": "react-how-events-are-different-in-react",
       "number": 44,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "How events are different in React?",
@@ -369,7 +369,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-events-are-different-in-react"
     },
     {
-      "id": "react-045",
+      "id": "react-what-is-the-impact-of-indexes-as-keys",
       "number": 45,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is the impact of indexes as keys?",
@@ -377,7 +377,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-impact-of-indexes-as-keys"
     },
     {
-      "id": "react-046",
+      "id": "react-how-do-you-conditionally-render-components",
       "number": 46,
       "cluster": "Components, props, state, composition",
       "question": "How do you conditionally render components?",
@@ -385,7 +385,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-conditionally-render-components"
     },
     {
-      "id": "react-047",
+      "id": "react-why-we-need-to-be-careful-when-spreading-props-on-dom-elemen",
       "number": 47,
       "cluster": "Components, props, state, composition",
       "question": "Why we need to be careful when spreading props on DOM elements?",
@@ -393,7 +393,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#why-we-need-to-be-careful-when-spreading-props-on-dom-elements"
     },
     {
-      "id": "react-048",
+      "id": "react-how-do-you-memoize-a-component",
       "number": 48,
       "cluster": "Components, props, state, composition",
       "question": "How do you memoize a component?",
@@ -401,7 +401,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-memoize-a-component"
     },
     {
-      "id": "react-049",
+      "id": "react-how-you-implement-server-side-rendering-or-ssr",
       "number": 49,
       "cluster": "SSR, Next.js, ecosystem",
       "question": "How you implement Server Side Rendering or SSR?",
@@ -409,7 +409,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-you-implement-server-side-rendering-or-ssr"
     },
     {
-      "id": "react-050",
+      "id": "react-how-to-enable-production-mode-in-react",
       "number": 50,
       "cluster": "React fundamentals and ecosystem",
       "question": "How to enable production mode in React?",
@@ -417,7 +417,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-enable-production-mode-in-react"
     },
     {
-      "id": "react-051",
+      "id": "react-do-hooks-replace-render-props-and-higher-order-components",
       "number": 51,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "Do Hooks replace render props and higher order components?",
@@ -425,7 +425,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#do-hooks-replace-render-props-and-higher-order-components"
     },
     {
-      "id": "react-052",
+      "id": "react-what-is-a-switching-component",
       "number": 52,
       "cluster": "Components, props, state, composition",
       "question": "What is a switching component?",
@@ -433,7 +433,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-a-switching-component"
     },
     {
-      "id": "react-054",
+      "id": "react-what-are-the-pointer-events-supported-in-react",
       "number": 54,
       "cluster": "React fundamentals and ecosystem",
       "question": "What are the Pointer Events supported in React?",
@@ -441,7 +441,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-pointer-events-supported-in-react"
     },
     {
-      "id": "react-055",
+      "id": "react-why-should-component-names-start-with-capital-letter",
       "number": 55,
       "cluster": "Components, props, state, composition",
       "question": "Why should component names start with capital letter?",
@@ -449,7 +449,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#why-should-component-names-start-with-capital-letter"
     },
     {
-      "id": "react-056",
+      "id": "react-are-custom-dom-attributes-supported-in-react-v16",
       "number": 56,
       "cluster": "React fundamentals and ecosystem",
       "question": "Are custom DOM attributes supported in React v16?",
@@ -457,7 +457,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#are-custom-dom-attributes-supported-in-react-v16"
     },
     {
-      "id": "react-057",
+      "id": "react-how-to-loop-inside-jsx",
       "number": 57,
       "cluster": "React fundamentals and ecosystem",
       "question": "How to loop inside JSX?",
@@ -465,7 +465,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-loop-inside-jsx"
     },
     {
-      "id": "react-058",
+      "id": "react-how-do-you-access-props-in-attribute-quotes",
       "number": 58,
       "cluster": "Components, props, state, composition",
       "question": "How do you access props in attribute quotes?",
@@ -473,7 +473,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-access-props-in-attribute-quotes"
     },
     {
-      "id": "react-059",
+      "id": "react-what-is-react-proptype-array-with-shape",
       "number": 59,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is React proptype array with shape?",
@@ -481,7 +481,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-react-proptype-array-with-shape"
     },
     {
-      "id": "react-060",
+      "id": "react-how-to-conditionally-apply-class-attributes",
       "number": 60,
       "cluster": "Styling and accessibility",
       "question": "How to conditionally apply class attributes?",
@@ -489,7 +489,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-conditionally-apply-class-attributes"
     },
     {
-      "id": "react-061",
+      "id": "react-what-is-the-difference-between-react-and-reactdom",
       "number": 61,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the difference between React and ReactDOM?",
@@ -497,7 +497,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-react-and-reactdom"
     },
     {
-      "id": "react-062",
+      "id": "react-why-reactdom-is-separated-from-react",
       "number": 62,
       "cluster": "React fundamentals and ecosystem",
       "question": "Why ReactDOM is separated from React?",
@@ -505,7 +505,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#why-reactdom-is-separated-from-react"
     },
     {
-      "id": "react-063",
+      "id": "react-how-to-use-react-label-element",
       "number": 63,
       "cluster": "React fundamentals and ecosystem",
       "question": "How to use React label element?",
@@ -513,7 +513,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-use-react-label-element"
     },
     {
-      "id": "react-064",
+      "id": "react-how-to-combine-multiple-inline-style-objects",
       "number": 64,
       "cluster": "Styling and accessibility",
       "question": "How to combine multiple inline style objects?",
@@ -521,7 +521,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-combine-multiple-inline-style-objects"
     },
     {
-      "id": "react-065",
+      "id": "react-how-to-re-render-the-view-when-the-browser-is-resized",
       "number": 65,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "How to re-render the view when the browser is resized?",
@@ -529,7 +529,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-re-render-the-view-when-the-browser-is-resized"
     },
     {
-      "id": "react-066",
+      "id": "react-how-to-pretty-print-json-with-react",
       "number": 66,
       "cluster": "React fundamentals and ecosystem",
       "question": "How to pretty print JSON with React?",
@@ -537,7 +537,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-pretty-print-json-with-react"
     },
     {
-      "id": "react-067",
+      "id": "react-why-can-t-you-update-props-in-react",
       "number": 67,
       "cluster": "Components, props, state, composition",
       "question": "Why can't you update props in React?",
@@ -545,7 +545,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#why-cant-you-update-props-in-react"
     },
     {
-      "id": "react-068",
+      "id": "react-how-to-focus-an-input-element-on-page-load",
       "number": 68,
       "cluster": "Forms and validation",
       "question": "How to focus an input element on page load?",
@@ -553,7 +553,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-focus-an-input-element-on-page-load"
     },
     {
-      "id": "react-069",
+      "id": "react-how-can-we-find-the-version-of-react-at-runtime-in-the-brows",
       "number": 69,
       "cluster": "React fundamentals and ecosystem",
       "question": "How can we find the version of React at runtime in the browser?",
@@ -561,7 +561,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-can-we-find-the-version-of-react-at-runtime-in-the-browser"
     },
     {
-      "id": "react-070",
+      "id": "react-how-to-add-google-analytics-for-react-router",
       "number": 70,
       "cluster": "Routing",
       "question": "How to add Google Analytics for React Router?",
@@ -569,7 +569,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-add-google-analytics-for-react-router"
     },
     {
-      "id": "react-071",
+      "id": "react-how-do-you-apply-vendor-prefixes-to-inline-styles-in-react",
       "number": 71,
       "cluster": "Styling and accessibility",
       "question": "How do you apply vendor prefixes to inline styles in React?",
@@ -577,7 +577,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-apply-vendor-prefixes-to-inline-styles-in-react"
     },
     {
-      "id": "react-072",
+      "id": "react-how-to-import-and-export-components-using-react-and-es6",
       "number": 72,
       "cluster": "Components, props, state, composition",
       "question": "How to import and export components using React and ES6?",
@@ -585,7 +585,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-import-and-export-components-using-react-and-es6"
     },
     {
-      "id": "react-073",
+      "id": "react-what-are-the-exceptions-on-react-component-naming",
       "number": 73,
       "cluster": "Components, props, state, composition",
       "question": "What are the exceptions on React component naming?",
@@ -593,7 +593,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-exceptions-on-react-component-naming"
     },
     {
-      "id": "react-074",
+      "id": "react-is-it-possible-to-use-async-await-in-plain-react",
       "number": 74,
       "cluster": "React fundamentals and ecosystem",
       "question": "Is it possible to use async/await in plain React?",
@@ -601,7 +601,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#is-it-possible-to-use-asyncawait-in-plain-react"
     },
     {
-      "id": "react-075",
+      "id": "react-what-are-the-common-folder-structures-for-react",
       "number": 75,
       "cluster": "React fundamentals and ecosystem",
       "question": "What are the common folder structures for React?",
@@ -609,7 +609,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-common-folder-structures-for-react"
     },
     {
-      "id": "react-076",
+      "id": "react-what-are-the-popular-packages-for-animation",
       "number": 76,
       "cluster": "Other / trivia",
       "question": "What are the popular packages for animation?",
@@ -617,7 +617,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-popular-packages-for-animation"
     },
     {
-      "id": "react-077",
+      "id": "react-what-is-the-benefit-of-styles-modules",
       "number": 77,
       "cluster": "Styling and accessibility",
       "question": "What is the benefit of styles modules?",
@@ -625,7 +625,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-benefit-of-styles-modules"
     },
     {
-      "id": "react-078",
+      "id": "react-what-are-the-popular-react-specific-linters",
       "number": 78,
       "cluster": "React fundamentals and ecosystem",
       "question": "What are the popular React-specific linters?",
@@ -633,7 +633,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-popular-react-specific-linters"
     },
     {
-      "id": "react-079",
+      "id": "react-what-is-react-router",
       "number": 79,
       "cluster": "Routing",
       "question": "What is React Router?",
@@ -641,7 +641,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-react-router"
     },
     {
-      "id": "react-080",
+      "id": "react-how-react-router-is-different-from-history-library",
       "number": 80,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "How React Router is different from history library?",
@@ -649,7 +649,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-react-router-is-different-from-history-library"
     },
     {
-      "id": "react-081",
+      "id": "react-what-are-the-router-components-of-react-router-v6",
       "number": 81,
       "cluster": "Components, props, state, composition",
       "question": "What are the `<Router>` components of React Router v6?",
@@ -657,7 +657,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-router-components-of-react-router-v6"
     },
     {
-      "id": "react-082",
+      "id": "react-what-is-the-purpose-of-push-and-replace-methods-of-history",
       "number": 82,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is the purpose of `push()` and `replace()` methods of `history`?",
@@ -665,7 +665,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-purpose-of-push-and-replace-methods-of-history"
     },
     {
-      "id": "react-083",
+      "id": "react-how-do-you-programmatically-navigate-using-react-router-v4",
       "number": 83,
       "cluster": "Routing",
       "question": "How do you programmatically navigate using React Router v4?",
@@ -673,7 +673,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-programmatically-navigate-using-react-router-v4"
     },
     {
-      "id": "react-084",
+      "id": "react-how-to-get-query-parameters-in-react-router-v4",
       "number": 84,
       "cluster": "State management, data fetching",
       "question": "How to get query parameters in React Router v4?",
@@ -681,7 +681,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-get-query-parameters-in-react-router-v4"
     },
     {
-      "id": "react-085",
+      "id": "react-why-you-get-router-may-have-only-one-child-element-warning",
       "number": 85,
       "cluster": "Routing",
       "question": "Why you get \"Router may have only one child element\" warning?",
@@ -689,7 +689,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#why-you-get-router-may-have-only-one-child-element-warning"
     },
     {
-      "id": "react-086",
+      "id": "react-how-to-pass-params-to-history-push-method-in-react-router-v4",
       "number": 86,
       "cluster": "Routing",
       "question": "How to pass params to `history.push` method in React Router v4?",
@@ -697,7 +697,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-pass-params-to-historypush-method-in-react-router-v4"
     },
     {
-      "id": "react-087",
+      "id": "react-how-to-implement-default-or-notfound-page",
       "number": 87,
       "cluster": "Other / trivia",
       "question": "How to implement _default_ or _NotFound_ page?",
@@ -705,7 +705,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-implement-_default_-or-_notfound_-page"
     },
     {
-      "id": "react-088",
+      "id": "react-how-to-get-history-on-react-router-v4",
       "number": 88,
       "cluster": "Routing",
       "question": "How to get history on React Router v4?",
@@ -713,7 +713,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-get-history-on-react-router-v4"
     },
     {
-      "id": "react-089",
+      "id": "react-how-to-perform-automatic-redirect-after-login",
       "number": 89,
       "cluster": "Forms and validation",
       "question": "How to perform automatic redirect after login?",
@@ -721,7 +721,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-perform-automatic-redirect-after-login"
     },
     {
-      "id": "react-090",
+      "id": "react-what-is-react-intl",
       "number": 90,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is React Intl?",
@@ -729,7 +729,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-react-intl"
     },
     {
-      "id": "react-091",
+      "id": "react-what-are-the-main-features-of-react-intl",
       "number": 91,
       "cluster": "React fundamentals and ecosystem",
       "question": "What are the main features of React Intl?",
@@ -737,7 +737,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-main-features-of-react-intl"
     },
     {
-      "id": "react-092",
+      "id": "react-what-are-the-two-ways-of-formatting-in-react-intl",
       "number": 92,
       "cluster": "Forms and validation",
       "question": "What are the two ways of formatting in React Intl?",
@@ -745,7 +745,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-two-ways-of-formatting-in-react-intl"
     },
     {
-      "id": "react-093",
+      "id": "react-how-to-use-formattedmessage-as-placeholder-using-react-intl",
       "number": 93,
       "cluster": "Forms and validation",
       "question": "How to use `<FormattedMessage>` as placeholder using React Intl?",
@@ -753,7 +753,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-use-formattedmessage-as-placeholder-using-react-intl"
     },
     {
-      "id": "react-094",
+      "id": "react-how-to-access-current-locale-with-react-intl",
       "number": 94,
       "cluster": "React fundamentals and ecosystem",
       "question": "How to access current locale with React Intl?",
@@ -761,7 +761,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-access-current-locale-with-react-intl"
     },
     {
-      "id": "react-095",
+      "id": "react-how-to-format-date-using-react-intl",
       "number": 95,
       "cluster": "Forms and validation",
       "question": "How to format date using React Intl?",
@@ -769,7 +769,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-format-date-using-react-intl"
     },
     {
-      "id": "react-096",
+      "id": "react-what-is-shallow-renderer-in-react-testing",
       "number": 96,
       "cluster": "Errors, testing, tooling",
       "question": "What is Shallow Renderer in React testing?",
@@ -777,7 +777,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-shallow-renderer-in-react-testing"
     },
     {
-      "id": "react-097",
+      "id": "react-what-is-testrenderer-package-in-react",
       "number": 97,
       "cluster": "Errors, testing, tooling",
       "question": "What is `TestRenderer` package in React?",
@@ -785,7 +785,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-testrenderer-package-in-react"
     },
     {
-      "id": "react-098",
+      "id": "react-what-is-the-purpose-of-reacttestutils-package",
       "number": 98,
       "cluster": "Errors, testing, tooling",
       "question": "What is the purpose of ReactTestUtils package?",
@@ -793,7 +793,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-purpose-of-reacttestutils-package"
     },
     {
-      "id": "react-099",
+      "id": "react-what-is-jest",
       "number": 99,
       "cluster": "Errors, testing, tooling",
       "question": "What is Jest?",
@@ -801,7 +801,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-jest"
     },
     {
-      "id": "react-100",
+      "id": "react-what-are-the-advantages-of-jest-over-jasmine",
       "number": 100,
       "cluster": "Errors, testing, tooling",
       "question": "What are the advantages of Jest over Jasmine?",
@@ -809,7 +809,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-advantages-of-jest-over-jasmine"
     },
     {
-      "id": "react-101",
+      "id": "react-give-a-simple-example-of-jest-test-case",
       "number": 101,
       "cluster": "Errors, testing, tooling",
       "question": "Give a simple example of Jest test case",
@@ -817,7 +817,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#give-a-simple-example-of-jest-test-case"
     },
     {
-      "id": "react-102",
+      "id": "react-what-is-flux",
       "number": 102,
       "cluster": "State management, data fetching",
       "question": "What is flux?",
@@ -825,7 +825,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-flux"
     },
     {
-      "id": "react-103",
+      "id": "react-what-is-redux",
       "number": 103,
       "cluster": "State management, data fetching",
       "question": "What is Redux?",
@@ -833,7 +833,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-redux"
     },
     {
-      "id": "react-104",
+      "id": "react-what-are-the-core-principles-of-redux",
       "number": 104,
       "cluster": "State management, data fetching",
       "question": "What are the core principles of Redux?",
@@ -841,7 +841,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-core-principles-of-redux"
     },
     {
-      "id": "react-105",
+      "id": "react-what-are-the-downsides-of-redux-compared-to-flux",
       "number": 105,
       "cluster": "State management, data fetching",
       "question": "What are the downsides of Redux compared to Flux?",
@@ -849,7 +849,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-downsides-of-redux-compared-to-flux"
     },
     {
-      "id": "react-106",
+      "id": "react-what-is-the-difference-between-mapstatetoprops-and-mapdispat",
       "number": 106,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the difference between `mapStateToProps()` and `mapDispatchToProps()`?",
@@ -857,7 +857,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-mapstatetoprops-and-mapdispatchtoprops"
     },
     {
-      "id": "react-107",
+      "id": "react-can-i-dispatch-an-action-in-reducer",
       "number": 107,
       "cluster": "State management, data fetching",
       "question": "Can I dispatch an action in reducer?",
@@ -865,7 +865,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#can-i-dispatch-an-action-in-reducer"
     },
     {
-      "id": "react-108",
+      "id": "react-how-to-access-redux-store-outside-a-component",
       "number": 108,
       "cluster": "Components, props, state, composition",
       "question": "How to access Redux store outside a component?",
@@ -873,7 +873,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-access-redux-store-outside-a-component"
     },
     {
-      "id": "react-109",
+      "id": "react-what-are-the-drawbacks-of-mvw-pattern",
       "number": 109,
       "cluster": "Other / trivia",
       "question": "What are the drawbacks of MVW pattern?",
@@ -881,7 +881,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-drawbacks-of-mvw-pattern"
     },
     {
-      "id": "react-110",
+      "id": "react-are-there-any-similarities-between-redux-and-rxjs",
       "number": 110,
       "cluster": "State management, data fetching",
       "question": "Are there any similarities between Redux and RxJS?",
@@ -889,7 +889,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#are-there-any-similarities-between-redux-and-rxjs"
     },
     {
-      "id": "react-111",
+      "id": "react-how-to-reset-state-in-redux",
       "number": 111,
       "cluster": "Components, props, state, composition",
       "question": "How to reset state in Redux?",
@@ -897,7 +897,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-reset-state-in-redux"
     },
     {
-      "id": "react-112",
+      "id": "react-what-is-the-difference-between-react-context-and-react-redux",
       "number": 112,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the difference between React context and React Redux?",
@@ -905,7 +905,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-react-context-and-react-redux"
     },
     {
-      "id": "react-113",
+      "id": "react-why-are-redux-state-functions-called-reducers",
       "number": 113,
       "cluster": "Components, props, state, composition",
       "question": "Why are Redux state functions called reducers?",
@@ -913,7 +913,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#why-are-redux-state-functions-called-reducers"
     },
     {
-      "id": "react-114",
+      "id": "react-how-to-make-ajax-request-in-redux",
       "number": 114,
       "cluster": "State management, data fetching",
       "question": "How to make AJAX request in Redux?",
@@ -921,7 +921,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-make-ajax-request-in-redux"
     },
     {
-      "id": "react-115",
+      "id": "react-should-i-keep-all-component-s-state-in-redux-store",
       "number": 115,
       "cluster": "Components, props, state, composition",
       "question": "Should I keep all component's state in Redux store?",
@@ -929,7 +929,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#should-i-keep-all-components-state-in-redux-store"
     },
     {
-      "id": "react-116",
+      "id": "react-what-is-the-proper-way-to-access-redux-store",
       "number": 116,
       "cluster": "State management, data fetching",
       "question": "What is the proper way to access Redux store?",
@@ -937,7 +937,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-proper-way-to-access-redux-store"
     },
     {
-      "id": "react-117",
+      "id": "react-what-is-the-difference-between-component-and-container-in-re",
       "number": 117,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the difference between component and container in React Redux?",
@@ -945,7 +945,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-component-and-container-in-react-redux"
     },
     {
-      "id": "react-118",
+      "id": "react-what-is-the-purpose-of-the-constants-in-redux",
       "number": 118,
       "cluster": "State management, data fetching",
       "question": "What is the purpose of the constants in Redux?",
@@ -953,7 +953,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-purpose-of-the-constants-in-redux"
     },
     {
-      "id": "react-119",
+      "id": "react-what-are-the-different-ways-to-write-mapdispatchtoprops",
       "number": 119,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What are the different ways to write `mapDispatchToProps()`?",
@@ -961,7 +961,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-different-ways-to-write-mapdispatchtoprops"
     },
     {
-      "id": "react-120",
+      "id": "react-what-is-the-use-of-the-ownprops-parameter-in-mapstatetoprops",
       "number": 120,
       "cluster": "Components, props, state, composition",
       "question": "What is the use of the `ownProps` parameter in `mapStateToProps()` and `mapDispatchToProps()`?",
@@ -969,7 +969,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-use-of-the-ownprops-parameter-in-mapstatetoprops-and-mapdispatchtoprops"
     },
     {
-      "id": "react-121",
+      "id": "react-how-to-structure-redux-top-level-directories",
       "number": 121,
       "cluster": "State management, data fetching",
       "question": "How to structure Redux top level directories?",
@@ -977,7 +977,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-structure-redux-top-level-directories"
     },
     {
-      "id": "react-122",
+      "id": "react-what-is-redux-saga",
       "number": 122,
       "cluster": "State management, data fetching",
       "question": "What is redux-saga?",
@@ -985,7 +985,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-redux-saga"
     },
     {
-      "id": "react-123",
+      "id": "react-what-is-the-mental-model-of-redux-saga",
       "number": 123,
       "cluster": "State management, data fetching",
       "question": "What is the mental model of redux-saga?",
@@ -993,7 +993,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-mental-model-of-redux-saga"
     },
     {
-      "id": "react-124",
+      "id": "react-what-are-the-differences-between-call-and-put-in-redux-saga",
       "number": 124,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What are the differences between `call()` and `put()` in redux-saga?",
@@ -1001,7 +1001,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-differences-between-call-and-put-in-redux-saga"
     },
     {
-      "id": "react-125",
+      "id": "react-what-is-redux-thunk",
       "number": 125,
       "cluster": "State management, data fetching",
       "question": "What is Redux Thunk?",
@@ -1009,7 +1009,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-redux-thunk"
     },
     {
-      "id": "react-126",
+      "id": "react-what-are-the-differences-between-redux-saga-and-redux-thunk",
       "number": 126,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What are the differences between `redux-saga` and `redux-thunk`?",
@@ -1017,7 +1017,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-differences-between-redux-saga-and-redux-thunk"
     },
     {
-      "id": "react-127",
+      "id": "react-what-is-redux-devtools",
       "number": 127,
       "cluster": "State management, data fetching",
       "question": "What is Redux DevTools?",
@@ -1025,7 +1025,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-redux-devtools"
     },
     {
-      "id": "react-128",
+      "id": "react-what-are-the-features-of-redux-devtools",
       "number": 128,
       "cluster": "State management, data fetching",
       "question": "What are the features of Redux DevTools?",
@@ -1033,7 +1033,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-features-of-redux-devtools"
     },
     {
-      "id": "react-129",
+      "id": "react-what-are-redux-selectors-and-why-use-them",
       "number": 129,
       "cluster": "State management, data fetching",
       "question": "What are Redux selectors and why use them?",
@@ -1041,7 +1041,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-redux-selectors-and-why-use-them"
     },
     {
-      "id": "react-130",
+      "id": "react-what-is-redux-form",
       "number": 130,
       "cluster": "State management, data fetching",
       "question": "What is Redux Form?",
@@ -1049,7 +1049,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-redux-form"
     },
     {
-      "id": "react-131",
+      "id": "react-what-are-the-main-features-of-redux-form",
       "number": 131,
       "cluster": "State management, data fetching",
       "question": "What are the main features of Redux Form?",
@@ -1057,7 +1057,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-main-features-of-redux-form"
     },
     {
-      "id": "react-132",
+      "id": "react-how-to-add-multiple-middlewares-to-redux",
       "number": 132,
       "cluster": "State management, data fetching",
       "question": "How to add multiple middlewares to Redux?",
@@ -1065,7 +1065,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-add-multiple-middlewares-to-redux"
     },
     {
-      "id": "react-133",
+      "id": "react-how-to-set-initial-state-in-redux",
       "number": 133,
       "cluster": "Components, props, state, composition",
       "question": "How to set initial state in Redux?",
@@ -1073,7 +1073,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-set-initial-state-in-redux"
     },
     {
-      "id": "react-134",
+      "id": "react-how-relay-is-different-from-redux",
       "number": 134,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "How Relay is different from Redux?",
@@ -1081,7 +1081,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-relay-is-different-from-redux"
     },
     {
-      "id": "react-135",
+      "id": "react-what-is-an-action-in-redux",
       "number": 135,
       "cluster": "State management, data fetching",
       "question": "What is an action in Redux?",
@@ -1089,7 +1089,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-an-action-in-redux"
     },
     {
-      "id": "react-136",
+      "id": "react-what-is-the-difference-between-react-native-and-react",
       "number": 136,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the difference between React Native and React?",
@@ -1097,7 +1097,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-react-native-and-react"
     },
     {
-      "id": "react-137",
+      "id": "react-how-to-test-react-native-apps",
       "number": 137,
       "cluster": "Errors, testing, tooling",
       "question": "How to test React Native apps?",
@@ -1105,7 +1105,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-test-react-native-apps"
     },
     {
-      "id": "react-138",
+      "id": "react-how-to-do-logging-in-react-native",
       "number": 138,
       "cluster": "SSR, Next.js, ecosystem",
       "question": "How to do logging in React Native?",
@@ -1113,7 +1113,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-do-logging-in-react-native"
     },
     {
-      "id": "react-139",
+      "id": "react-how-to-debug-your-react-native",
       "number": 139,
       "cluster": "Errors, testing, tooling",
       "question": "How to debug your React Native?",
@@ -1121,7 +1121,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-debug-your-react-native"
     },
     {
-      "id": "react-140",
+      "id": "react-what-is-reselect-and-how-it-works",
       "number": 140,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is reselect and how it works?",
@@ -1129,7 +1129,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-reselect-and-how-it-works"
     },
     {
-      "id": "react-141",
+      "id": "react-what-is-flow",
       "number": 141,
       "cluster": "Errors, testing, tooling",
       "question": "What is Flow?",
@@ -1137,7 +1137,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-flow"
     },
     {
-      "id": "react-142",
+      "id": "react-what-is-the-difference-between-flow-and-proptypes",
       "number": 142,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the difference between Flow and PropTypes?",
@@ -1145,7 +1145,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-flow-and-proptypes"
     },
     {
-      "id": "react-143",
+      "id": "react-how-to-use-font-awesome-icons-in-react",
       "number": 143,
       "cluster": "React fundamentals and ecosystem",
       "question": "How to use Font Awesome icons in React?",
@@ -1153,7 +1153,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-use-font-awesome-icons-in-react"
     },
     {
-      "id": "react-144",
+      "id": "react-what-is-react-dev-tools",
       "number": 144,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is React Dev Tools?",
@@ -1161,7 +1161,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-react-dev-tools"
     },
     {
-      "id": "react-145",
+      "id": "react-why-is-devtools-not-loading-in-chrome-for-local-files",
       "number": 145,
       "cluster": "Errors, testing, tooling",
       "question": "Why is DevTools not loading in Chrome for local files?",
@@ -1169,7 +1169,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#why-is-devtools-not-loading-in-chrome-for-local-files"
     },
     {
-      "id": "react-146",
+      "id": "react-how-to-use-polymer-in-react",
       "number": 146,
       "cluster": "React fundamentals and ecosystem",
       "question": "How to use Polymer in React?",
@@ -1177,7 +1177,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-use-polymer-in-react"
     },
     {
-      "id": "react-147",
+      "id": "react-what-are-the-advantages-of-react-over-vue-js",
       "number": 147,
       "cluster": "React fundamentals and ecosystem",
       "question": "What are the advantages of React over Vue.js?",
@@ -1185,7 +1185,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-advantages-of-react-over-vuejs"
     },
     {
-      "id": "react-148",
+      "id": "react-what-is-the-difference-between-react-and-angular",
       "number": 148,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the difference between React and Angular?",
@@ -1193,7 +1193,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-react-and-angular"
     },
     {
-      "id": "react-149",
+      "id": "react-why-react-tab-is-not-showing-up-in-devtools",
       "number": 149,
       "cluster": "Errors, testing, tooling",
       "question": "Why React tab is not showing up in DevTools?",
@@ -1201,7 +1201,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#why-react-tab-is-not-showing-up-in-devtools"
     },
     {
-      "id": "react-150",
+      "id": "react-what-are-styled-components",
       "number": 150,
       "cluster": "Components, props, state, composition",
       "question": "What are Styled Components?",
@@ -1209,7 +1209,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-styled-components"
     },
     {
-      "id": "react-151",
+      "id": "react-give-an-example-of-styled-components",
       "number": 151,
       "cluster": "Components, props, state, composition",
       "question": "Give an example of Styled Components?",
@@ -1217,7 +1217,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#give-an-example-of-styled-components"
     },
     {
-      "id": "react-152",
+      "id": "react-what-is-relay",
       "number": 152,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is Relay?",
@@ -1225,7 +1225,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-relay"
     },
     {
-      "id": "react-153",
+      "id": "react-what-are-the-main-features-of-reselect-library",
       "number": 153,
       "cluster": "React fundamentals and ecosystem",
       "question": "What are the main features of Reselect library?",
@@ -1233,7 +1233,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-main-features-of-reselect-library"
     },
     {
-      "id": "react-155",
+      "id": "react-can-redux-only-be-used-with-react",
       "number": 155,
       "cluster": "State management, data fetching",
       "question": "Can Redux only be used with React?",
@@ -1241,7 +1241,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#can-redux-only-be-used-with-react"
     },
     {
-      "id": "react-156",
+      "id": "react-do-you-need-to-have-a-particular-build-tool-to-use-redux",
       "number": 156,
       "cluster": "State management, data fetching",
       "question": "Do you need to have a particular build tool to use Redux?",
@@ -1249,7 +1249,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#do-you-need-to-have-a-particular-build-tool-to-use-redux"
     },
     {
-      "id": "react-157",
+      "id": "react-how-redux-form-initialvalues-get-updated-from-state",
       "number": 157,
       "cluster": "Components, props, state, composition",
       "question": "How Redux Form `initialValues` get updated from state?",
@@ -1257,7 +1257,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-redux-form-initialvalues-get-updated-from-state"
     },
     {
-      "id": "react-158",
+      "id": "react-how-react-proptypes-allow-different-types-for-one-prop",
       "number": 158,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "How React PropTypes allow different types for one prop?",
@@ -1265,7 +1265,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-react-proptypes-allow-different-types-for-one-prop"
     },
     {
-      "id": "react-159",
+      "id": "react-can-i-import-an-svg-file-as-react-component",
       "number": 159,
       "cluster": "Components, props, state, composition",
       "question": "Can I import an SVG file as react component?",
@@ -1273,7 +1273,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#can-i-import-an-svg-file-as-react-component"
     },
     {
-      "id": "react-160",
+      "id": "react-what-is-render-hijacking-in-react",
       "number": 160,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is render hijacking in react?",
@@ -1281,7 +1281,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-render-hijacking-in-react"
     },
     {
-      "id": "react-161",
+      "id": "react-how-to-pass-numbers-to-react-component",
       "number": 161,
       "cluster": "Components, props, state, composition",
       "question": "How to pass numbers to React component?",
@@ -1289,7 +1289,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-pass-numbers-to-react-component"
     },
     {
-      "id": "react-162",
+      "id": "react-do-i-need-to-keep-all-my-state-into-redux-should-i-ever-use-",
       "number": 162,
       "cluster": "Components, props, state, composition",
       "question": "Do I need to keep all my state into Redux? Should I ever use react internal state?",
@@ -1297,7 +1297,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#do-i-need-to-keep-all-my-state-into-redux-should-i-ever-use-react-internal-state"
     },
     {
-      "id": "react-163",
+      "id": "react-what-is-the-purpose-of-registerserviceworker-in-react",
       "number": 163,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is the purpose of registerServiceWorker in React?",
@@ -1305,7 +1305,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-purpose-of-registerserviceworker-in-react"
     },
     {
-      "id": "react-164",
+      "id": "react-what-is-react-memo-function",
       "number": 164,
       "cluster": "Components, props, state, composition",
       "question": "What is React memo function?",
@@ -1313,7 +1313,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-react-memo-function"
     },
     {
-      "id": "react-165",
+      "id": "react-what-is-react-lazy-function",
       "number": 165,
       "cluster": "Performance and bundling",
       "question": "What is React lazy function?",
@@ -1321,7 +1321,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-react-lazy-function"
     },
     {
-      "id": "react-166",
+      "id": "react-how-to-prevent-unnecessary-updates-using-setstate",
       "number": 166,
       "cluster": "Other / trivia",
       "question": "How to prevent unnecessary updates using setState?",
@@ -1329,7 +1329,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-prevent-unnecessary-updates-using-setstate"
     },
     {
-      "id": "react-167",
+      "id": "react-how-do-you-render-array-strings-and-numbers-in-react-16-vers",
       "number": 167,
       "cluster": "React fundamentals and ecosystem",
       "question": "How do you render Array, Strings and Numbers in React 16 Version?",
@@ -1337,7 +1337,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-render-array-strings-and-numbers-in-react-16-version"
     },
     {
-      "id": "react-168",
+      "id": "react-what-are-hooks",
       "number": 168,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What are hooks?",
@@ -1345,7 +1345,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-hooks"
     },
     {
-      "id": "react-169",
+      "id": "react-what-rules-need-to-be-followed-for-hooks",
       "number": 169,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What rules need to be followed for hooks?",
@@ -1353,7 +1353,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-rules-need-to-be-followed-for-hooks"
     },
     {
-      "id": "react-170",
+      "id": "react-how-to-ensure-hooks-followed-the-rules-in-your-project",
       "number": 170,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "How to ensure hooks followed the rules in your project?",
@@ -1361,7 +1361,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-ensure-hooks-followed-the-rules-in-your-project"
     },
     {
-      "id": "react-171",
+      "id": "react-what-are-the-differences-between-flux-and-redux",
       "number": 171,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What are the differences between Flux and Redux?",
@@ -1369,7 +1369,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-differences-between-flux-and-redux"
     },
     {
-      "id": "react-172",
+      "id": "react-what-are-the-benefits-of-react-router-v4",
       "number": 172,
       "cluster": "Routing",
       "question": "What are the benefits of React Router V4?",
@@ -1377,7 +1377,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-benefits-of-react-router-v4"
     },
     {
-      "id": "react-173",
+      "id": "react-can-you-describe-about-componentdidcatch-lifecycle-method-si",
       "number": 173,
       "cluster": "Components, props, state, composition",
       "question": "Can you describe about componentDidCatch lifecycle method signature?",
@@ -1385,7 +1385,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#can-you-describe-about-componentdidcatch-lifecycle-method-signature"
     },
     {
-      "id": "react-174",
+      "id": "react-in-which-scenarios-do-error-boundaries-not-catch-errors",
       "number": 174,
       "cluster": "Other / trivia",
       "question": "In which scenarios do error boundaries not catch errors?",
@@ -1393,7 +1393,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#in-which-scenarios-do-error-boundaries-not-catch-errors"
     },
     {
-      "id": "react-175",
+      "id": "react-what-is-the-behavior-of-uncaught-errors-in-react-16",
       "number": 175,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is the behavior of uncaught errors in react 16?",
@@ -1401,7 +1401,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-behavior-of-uncaught-errors-in-react-16"
     },
     {
-      "id": "react-176",
+      "id": "react-what-is-the-proper-placement-for-error-boundaries",
       "number": 176,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is the proper placement for error boundaries?",
@@ -1409,7 +1409,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-proper-placement-for-error-boundaries"
     },
     {
-      "id": "react-177",
+      "id": "react-what-is-the-benefit-of-component-stack-trace-from-error-boun",
       "number": 177,
       "cluster": "Components, props, state, composition",
       "question": "What is the benefit of component stack trace from error boundary?",
@@ -1417,7 +1417,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-benefit-of-component-stack-trace-from-error-boundary"
     },
     {
-      "id": "react-178",
+      "id": "react-what-are-default-props",
       "number": 178,
       "cluster": "Components, props, state, composition",
       "question": "What are default props?",
@@ -1425,7 +1425,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-default-props"
     },
     {
-      "id": "react-179",
+      "id": "react-what-is-the-purpose-of-displayname-class-property",
       "number": 179,
       "cluster": "Styling and accessibility",
       "question": "What is the purpose of displayName class property?",
@@ -1433,7 +1433,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-purpose-of-displayname-class-property"
     },
     {
-      "id": "react-180",
+      "id": "react-what-is-the-browser-support-for-react-applications",
       "number": 180,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is the browser support for react applications?",
@@ -1441,7 +1441,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-browser-support-for-react-applications"
     },
     {
-      "id": "react-181",
+      "id": "react-what-is-code-splitting",
       "number": 181,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is code-splitting?",
@@ -1449,7 +1449,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-code-splitting"
     },
     {
-      "id": "react-182",
+      "id": "react-what-are-keyed-fragments",
       "number": 182,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What are Keyed Fragments?",
@@ -1457,7 +1457,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-keyed-fragments"
     },
     {
-      "id": "react-183",
+      "id": "react-does-react-support-all-html-attributes",
       "number": 183,
       "cluster": "React fundamentals and ecosystem",
       "question": "Does React support all HTML attributes?",
@@ -1465,7 +1465,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#does-react-support-all-html-attributes"
     },
     {
-      "id": "react-184",
+      "id": "react-when-component-props-defaults-to-true",
       "number": 184,
       "cluster": "Components, props, state, composition",
       "question": "When component props defaults to true?",
@@ -1473,7 +1473,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#when-component-props-defaults-to-true"
     },
     {
-      "id": "react-185",
+      "id": "react-what-is-nextjs-and-major-features-of-it",
       "number": 185,
       "cluster": "SSR, Next.js, ecosystem",
       "question": "What is NextJS and major features of it?",
@@ -1481,7 +1481,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-nextjs-and-major-features-of-it"
     },
     {
-      "id": "react-186",
+      "id": "react-how-do-you-pass-an-event-handler-to-a-component",
       "number": 186,
       "cluster": "Components, props, state, composition",
       "question": "How do you pass an event handler to a component?",
@@ -1489,7 +1489,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-pass-an-event-handler-to-a-component"
     },
     {
-      "id": "react-187",
+      "id": "react-how-to-prevent-a-function-from-being-called-multiple-times",
       "number": 187,
       "cluster": "Other / trivia",
       "question": "How to prevent a function from being called multiple times?",
@@ -1497,7 +1497,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-prevent-a-function-from-being-called-multiple-times"
     },
     {
-      "id": "react-188",
+      "id": "react-how-jsx-prevents-injection-attacks",
       "number": 188,
       "cluster": "React fundamentals and ecosystem",
       "question": "How JSX prevents Injection Attacks?",
@@ -1505,7 +1505,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-jsx-prevents-injection-attacks"
     },
     {
-      "id": "react-189",
+      "id": "react-how-do-you-update-rendered-elements",
       "number": 189,
       "cluster": "Other / trivia",
       "question": "How do you update rendered elements?",
@@ -1513,7 +1513,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-update-rendered-elements"
     },
     {
-      "id": "react-190",
+      "id": "react-how-do-you-say-that-props-are-readonly",
       "number": 190,
       "cluster": "Components, props, state, composition",
       "question": "How do you say that props are readonly?",
@@ -1521,7 +1521,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-say-that-props-are-readonly"
     },
     {
-      "id": "react-191",
+      "id": "react-what-are-the-conditions-to-safely-use-the-index-as-a-key",
       "number": 191,
       "cluster": "Other / trivia",
       "question": "What are the conditions to safely use the index as a key?",
@@ -1529,7 +1529,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-conditions-to-safely-use-the-index-as-a-key"
     },
     {
-      "id": "react-192",
+      "id": "react-should-keys-be-globally-unique",
       "number": 192,
       "cluster": "Other / trivia",
       "question": "Should keys be globally unique?",
@@ -1537,7 +1537,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#should-keys-be-globally-unique"
     },
     {
-      "id": "react-193",
+      "id": "react-what-is-the-popular-choice-for-form-handling",
       "number": 193,
       "cluster": "Forms and validation",
       "question": "What is the popular choice for form handling?",
@@ -1545,7 +1545,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-popular-choice-for-form-handling"
     },
     {
-      "id": "react-194",
+      "id": "react-what-are-the-advantages-of-formik-over-redux-form-library",
       "number": 194,
       "cluster": "State management, data fetching",
       "question": "What are the advantages of formik over redux form library?",
@@ -1553,7 +1553,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-advantages-of-formik-over-redux-form-library"
     },
     {
-      "id": "react-195",
+      "id": "react-why-are-you-not-required-to-use-inheritance",
       "number": 195,
       "cluster": "React fundamentals and ecosystem",
       "question": "Why are you not required to use inheritance?",
@@ -1561,7 +1561,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#why-are-you-not-required-to-use-inheritance"
     },
     {
-      "id": "react-196",
+      "id": "react-can-i-use-web-components-in-react-application",
       "number": 196,
       "cluster": "Components, props, state, composition",
       "question": "Can I use web components in react application?",
@@ -1569,7 +1569,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#can-i-use-web-components-in-react-application"
     },
     {
-      "id": "react-197",
+      "id": "react-what-is-dynamic-import",
       "number": 197,
       "cluster": "Performance and bundling",
       "question": "What is dynamic import?",
@@ -1577,7 +1577,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-dynamic-import"
     },
     {
-      "id": "react-198",
+      "id": "react-what-are-loadable-components",
       "number": 198,
       "cluster": "Components, props, state, composition",
       "question": "What are loadable components?",
@@ -1585,7 +1585,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-loadable-components"
     },
     {
-      "id": "react-199",
+      "id": "react-what-is-suspense-component",
       "number": 199,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is suspense component?",
@@ -1593,7 +1593,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-suspense-component"
     },
     {
-      "id": "react-200",
+      "id": "react-what-is-route-based-code-splitting",
       "number": 200,
       "cluster": "Performance and bundling",
       "question": "What is route based code splitting?",
@@ -1601,7 +1601,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-route-based-code-splitting"
     },
     {
-      "id": "react-201",
+      "id": "react-what-is-the-purpose-of-default-value-in-context",
       "number": 201,
       "cluster": "Components, props, state, composition",
       "question": "What is the purpose of default value in context?",
@@ -1609,7 +1609,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-purpose-of-default-value-in-context"
     },
     {
-      "id": "react-202",
+      "id": "react-what-is-diffing-algorithm",
       "number": 202,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is diffing algorithm?",
@@ -1617,7 +1617,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-diffing-algorithm"
     },
     {
-      "id": "react-203",
+      "id": "react-what-are-the-rules-covered-by-diffing-algorithm",
       "number": 203,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What are the rules covered by diffing algorithm?",
@@ -1625,7 +1625,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-rules-covered-by-diffing-algorithm"
     },
     {
-      "id": "react-204",
+      "id": "react-when-do-you-need-to-use-refs",
       "number": 204,
       "cluster": "Other / trivia",
       "question": "When do you need to use refs?",
@@ -1633,7 +1633,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#when-do-you-need-to-use-refs"
     },
     {
-      "id": "react-205",
+      "id": "react-must-prop-be-named-as-render-for-render-props",
       "number": 205,
       "cluster": "Components, props, state, composition",
       "question": "Must prop be named as render for render props?",
@@ -1641,7 +1641,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#must-prop-be-named-as-render-for-render-props"
     },
     {
-      "id": "react-206",
+      "id": "react-what-are-the-problems-of-using-render-props-with-pure-compon",
       "number": 206,
       "cluster": "Components, props, state, composition",
       "question": "What are the problems of using render props with pure components?",
@@ -1649,7 +1649,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-problems-of-using-render-props-with-pure-components"
     },
     {
-      "id": "react-207",
+      "id": "react-what-is-windowing-technique",
       "number": 207,
       "cluster": "Performance and bundling",
       "question": "What is windowing technique?",
@@ -1657,7 +1657,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-windowing-technique"
     },
     {
-      "id": "react-208",
+      "id": "react-how-do-you-print-falsy-values-in-jsx",
       "number": 208,
       "cluster": "React fundamentals and ecosystem",
       "question": "How do you print falsy values in JSX?",
@@ -1665,7 +1665,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-print-falsy-values-in-jsx"
     },
     {
-      "id": "react-209",
+      "id": "react-what-is-the-typical-use-case-of-portals",
       "number": 209,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the typical use case of portals?",
@@ -1673,7 +1673,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-typical-use-case-of-portals"
     },
     {
-      "id": "react-210",
+      "id": "react-how-do-you-set-default-value-for-uncontrolled-component",
       "number": 210,
       "cluster": "Components, props, state, composition",
       "question": "How do you set default value for uncontrolled component?",
@@ -1681,7 +1681,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-set-default-value-for-uncontrolled-component"
     },
     {
-      "id": "react-211",
+      "id": "react-what-is-your-favorite-react-stack",
       "number": 211,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is your favorite React stack?",
@@ -1689,7 +1689,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-your-favorite-react-stack"
     },
     {
-      "id": "react-212",
+      "id": "react-what-is-the-difference-between-real-dom-and-virtual-dom",
       "number": 212,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the difference between Real DOM and Virtual DOM?",
@@ -1697,7 +1697,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-real-dom-and-virtual-dom"
     },
     {
-      "id": "react-213",
+      "id": "react-how-to-add-bootstrap-to-a-react-application",
       "number": 213,
       "cluster": "React fundamentals and ecosystem",
       "question": "How to add Bootstrap to a react application?",
@@ -1705,7 +1705,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-add-bootstrap-to-a-react-application"
     },
     {
-      "id": "react-214",
+      "id": "react-can-you-list-down-top-websites-or-applications-using-react-a",
       "number": 214,
       "cluster": "React fundamentals and ecosystem",
       "question": "Can you list down top websites or applications using react as front end framework?",
@@ -1713,7 +1713,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#can-you-list-down-top-websites-or-applications-using-react-as-front-end-framework"
     },
     {
-      "id": "react-215",
+      "id": "react-is-it-recommended-to-use-css-in-js-technique-in-react",
       "number": 215,
       "cluster": "Styling and accessibility",
       "question": "Is it recommended to use CSS In JS technique in React?",
@@ -1721,7 +1721,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#is-it-recommended-to-use-css-in-js-technique-in-react"
     },
     {
-      "id": "react-216",
+      "id": "react-do-i-need-to-rewrite-all-my-class-components-with-hooks",
       "number": 216,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "Do I need to rewrite all my class components with hooks?",
@@ -1729,7 +1729,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#do-i-need-to-rewrite-all-my-class-components-with-hooks"
     },
     {
-      "id": "react-217",
+      "id": "react-what-is-useeffect-hook-how-to-fetch-data-with-react-hooks",
       "number": 217,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What is useEffect hook? How to fetch data with React Hooks?",
@@ -1737,7 +1737,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-useeffect-hook-how-to-fetch-data-with-react-hooks"
     },
     {
-      "id": "react-218",
+      "id": "react-is-hooks-cover-all-use-cases-for-classes",
       "number": 218,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "Is Hooks cover all use cases for classes?",
@@ -1745,7 +1745,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#is-hooks-cover-all-use-cases-for-classes"
     },
     {
-      "id": "react-219",
+      "id": "react-what-is-the-stable-release-for-hooks-support",
       "number": 219,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What is the stable release for hooks support?",
@@ -1753,7 +1753,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-stable-release-for-hooks-support"
     },
     {
-      "id": "react-220",
+      "id": "react-why-do-we-use-array-destructuring-square-brackets-notation-i",
       "number": 220,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "Why do we use array destructuring (square brackets notation) in `useState`?",
@@ -1761,7 +1761,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#why-do-we-use-array-destructuring-square-brackets-notation-in-usestate"
     },
     {
-      "id": "react-221",
+      "id": "react-what-are-the-sources-used-for-introducing-hooks",
       "number": 221,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What are the sources used for introducing hooks?",
@@ -1769,7 +1769,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-sources-used-for-introducing-hooks"
     },
     {
-      "id": "react-222",
+      "id": "react-how-do-you-access-imperative-api-of-web-components",
       "number": 222,
       "cluster": "Components, props, state, composition",
       "question": "How do you access imperative API of web components?",
@@ -1777,7 +1777,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-access-imperative-api-of-web-components"
     },
     {
-      "id": "react-223",
+      "id": "react-what-is-formik",
       "number": 223,
       "cluster": "Forms and validation",
       "question": "What is formik?",
@@ -1785,7 +1785,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-formik"
     },
     {
-      "id": "react-224",
+      "id": "react-what-are-typical-middleware-choices-for-handling-asynchronou",
       "number": 224,
       "cluster": "State management, data fetching",
       "question": "What are typical middleware choices for handling asynchronous calls in Redux?",
@@ -1793,7 +1793,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-typical-middleware-choices-for-handling-asynchronous-calls-in-redux"
     },
     {
-      "id": "react-225",
+      "id": "react-do-browsers-understand-jsx-code",
       "number": 225,
       "cluster": "React fundamentals and ecosystem",
       "question": "Do browsers understand JSX code?",
@@ -1801,7 +1801,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#do-browsers-understand-jsx-code"
     },
     {
-      "id": "react-226",
+      "id": "react-describe-about-data-flow-in-react",
       "number": 226,
       "cluster": "Errors, testing, tooling",
       "question": "Describe about data flow in react?",
@@ -1809,7 +1809,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#describe-about-data-flow-in-react"
     },
     {
-      "id": "react-227",
+      "id": "react-what-is-mobx",
       "number": 227,
       "cluster": "State management, data fetching",
       "question": "What is MobX?",
@@ -1817,7 +1817,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-mobx"
     },
     {
-      "id": "react-228",
+      "id": "react-what-are-the-differences-between-redux-and-mobx",
       "number": 228,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What are the differences between Redux and MobX?",
@@ -1825,7 +1825,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-differences-between-redux-and-mobx"
     },
     {
-      "id": "react-229",
+      "id": "react-should-i-learn-es6-before-learning-reactjs",
       "number": 229,
       "cluster": "React fundamentals and ecosystem",
       "question": "Should I learn ES6 before learning ReactJS?",
@@ -1833,7 +1833,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#should-i-learn-es6-before-learning-reactjs"
     },
     {
-      "id": "react-230",
+      "id": "react-what-is-concurrent-rendering",
       "number": 230,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is Concurrent Rendering?",
@@ -1841,7 +1841,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-concurrent-rendering"
     },
     {
-      "id": "react-231",
+      "id": "react-what-is-the-difference-between-async-mode-and-concurrent-mod",
       "number": 231,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the difference between async mode and concurrent mode?",
@@ -1849,7 +1849,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-async-mode-and-concurrent-mode"
     },
     {
-      "id": "react-233",
+      "id": "react-what-is-the-purpose-of-eslint-plugin-for-hooks",
       "number": 233,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What is the purpose of eslint plugin for hooks?",
@@ -1857,7 +1857,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-purpose-of-eslint-plugin-for-hooks"
     },
     {
-      "id": "react-234",
+      "id": "react-what-is-the-difference-between-imperative-and-declarative-in",
       "number": 234,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the difference between Imperative and Declarative in React?",
@@ -1865,7 +1865,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-imperative-and-declarative-in-react"
     },
     {
-      "id": "react-235",
+      "id": "react-what-are-the-benefits-of-using-typescript-with-reactjs",
       "number": 235,
       "cluster": "Errors, testing, tooling",
       "question": "What are the benefits of using TypeScript with ReactJS?",
@@ -1873,7 +1873,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-benefits-of-using-typescript-with-reactjs"
     },
     {
-      "id": "react-236",
+      "id": "react-how-do-you-make-sure-that-user-remains-authenticated-on-page",
       "number": 236,
       "cluster": "Components, props, state, composition",
       "question": "How do you make sure that user remains authenticated on page refresh while using Context API State Management?",
@@ -1881,7 +1881,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-make-sure-that-user-remains-authenticated-on-page-refresh-while-using-context-api-state-management"
     },
     {
-      "id": "react-237",
+      "id": "react-what-are-the-benefits-of-new-jsx-transform",
       "number": 237,
       "cluster": "Forms and validation",
       "question": "What are the benefits of new JSX transform?",
@@ -1889,7 +1889,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-benefits-of-new-jsx-transform"
     },
     {
-      "id": "react-238",
+      "id": "react-how-is-the-new-jsx-transform-different-from-old-transform",
       "number": 238,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "How is the new JSX transform different from old transform??",
@@ -1897,7 +1897,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-is-the-new-jsx-transform-different-from-old-transform"
     },
     {
-      "id": "react-239",
+      "id": "react-what-are-react-server-components",
       "number": 239,
       "cluster": "Components, props, state, composition",
       "question": "What are React Server components?",
@@ -1905,7 +1905,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-react-server-components"
     },
     {
-      "id": "react-240",
+      "id": "react-what-is-prop-drilling",
       "number": 240,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is prop drilling?",
@@ -1913,7 +1913,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-prop-drilling"
     },
     {
-      "id": "react-241",
+      "id": "react-what-is-the-difference-between-usestate-and-useref-hook",
       "number": 241,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What is the difference between useState and useRef hook?",
@@ -1921,7 +1921,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-usestate-and-useref-hook"
     },
     {
-      "id": "react-242",
+      "id": "react-what-is-a-wrapper-component",
       "number": 242,
       "cluster": "Components, props, state, composition",
       "question": "What is a wrapper component?",
@@ -1929,7 +1929,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-a-wrapper-component"
     },
     {
-      "id": "react-243",
+      "id": "react-what-are-the-differences-between-useeffect-and-uselayouteffe",
       "number": 243,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What are the differences between useEffect and useLayoutEffect hooks?",
@@ -1937,7 +1937,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-differences-between-useeffect-and-uselayouteffect-hooks"
     },
     {
-      "id": "react-244",
+      "id": "react-what-are-the-differences-between-functional-and-class-compon",
       "number": 244,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What are the differences between Functional and Class Components?",
@@ -1945,7 +1945,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-differences-between-functional-and-class-components"
     },
     {
-      "id": "react-245",
+      "id": "react-what-is-strict-mode-in-react",
       "number": 245,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is strict mode in React?",
@@ -1953,7 +1953,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-strict-mode-in-react"
     },
     {
-      "id": "react-246",
+      "id": "react-what-is-the-benefit-of-strict-mode",
       "number": 246,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is the benefit of strict mode?",
@@ -1961,7 +1961,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-benefit-of-strict-mode"
     },
     {
-      "id": "react-247",
+      "id": "react-why-does-strict-mode-render-twice-in-react",
       "number": 247,
       "cluster": "React fundamentals and ecosystem",
       "question": "Why does strict mode render twice in React?",
@@ -1969,7 +1969,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#why-does-strict-mode-render-twice-in-react"
     },
     {
-      "id": "react-248",
+      "id": "react-what-are-the-rules-of-jsx",
       "number": 248,
       "cluster": "React fundamentals and ecosystem",
       "question": "What are the rules of JSX?",
@@ -1977,7 +1977,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-rules-of-jsx"
     },
     {
-      "id": "react-249",
+      "id": "react-what-is-the-reason-behind-multiple-jsx-tags-to-be-wrapped",
       "number": 249,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is the reason behind multiple JSX tags to be wrapped?",
@@ -1985,7 +1985,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-reason-behind-multiple-jsx-tags-to-be-wrapped"
     },
     {
-      "id": "react-250",
+      "id": "react-how-do-you-prevent-mutating-array-variables",
       "number": 250,
       "cluster": "Styling and accessibility",
       "question": "How do you prevent mutating array variables?",
@@ -1993,7 +1993,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-prevent-mutating-array-variables"
     },
     {
-      "id": "react-251",
+      "id": "react-what-are-capture-phase-events",
       "number": 251,
       "cluster": "Other / trivia",
       "question": "What are capture phase events?",
@@ -2001,7 +2001,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-capture-phase-events"
     },
     {
-      "id": "react-252",
+      "id": "react-how-does-react-updates-screen-in-an-application",
       "number": 252,
       "cluster": "React fundamentals and ecosystem",
       "question": "How does React updates screen in an application?",
@@ -2009,7 +2009,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-does-react-updates-screen-in-an-application"
     },
     {
-      "id": "react-253",
+      "id": "react-how-does-react-batch-multiple-state-updates",
       "number": 253,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "How does React batch multiple state updates?",
@@ -2017,7 +2017,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-does-react-batch-multiple-state-updates"
     },
     {
-      "id": "react-254",
+      "id": "react-is-it-possible-to-prevent-automatic-batching",
       "number": 254,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "Is it possible to prevent automatic batching?",
@@ -2025,7 +2025,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#is-it-possible-to-prevent-automatic-batching"
     },
     {
-      "id": "react-255",
+      "id": "react-what-is-react-hydration",
       "number": 255,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is React hydration?",
@@ -2033,7 +2033,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-react-hydration"
     },
     {
-      "id": "react-256",
+      "id": "react-how-do-you-update-objects-inside-state",
       "number": 256,
       "cluster": "Components, props, state, composition",
       "question": "How do you update objects inside state?",
@@ -2041,7 +2041,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-update-objects-inside-state"
     },
     {
-      "id": "react-257",
+      "id": "react-how-do-you-update-nested-objects-inside-state",
       "number": 257,
       "cluster": "Components, props, state, composition",
       "question": "How do you update nested objects inside state?",
@@ -2049,7 +2049,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-update-nested-objects-inside-state"
     },
     {
-      "id": "react-258",
+      "id": "react-how-do-you-update-arrays-inside-state",
       "number": 258,
       "cluster": "Components, props, state, composition",
       "question": "How do you update arrays inside state?",
@@ -2057,7 +2057,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-update-arrays-inside-state"
     },
     {
-      "id": "react-259",
+      "id": "react-how-do-you-use-immer-library-for-state-updates",
       "number": 259,
       "cluster": "Components, props, state, composition",
       "question": "How do you use immer library for state updates?",
@@ -2065,7 +2065,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-use-immer-library-for-state-updates"
     },
     {
-      "id": "react-261",
+      "id": "react-what-are-the-preferred-and-non-preferred-array-operations-fo",
       "number": 261,
       "cluster": "Components, props, state, composition",
       "question": "What are the preferred and non-preferred array operations for updating the state?",
@@ -2073,7 +2073,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-preferred-and-non-preferred-array-operations-for-updating-the-state"
     },
     {
-      "id": "react-262",
+      "id": "react-what-will-happen-by-defining-nested-function-components",
       "number": 262,
       "cluster": "Components, props, state, composition",
       "question": "What will happen by defining nested function components?",
@@ -2081,7 +2081,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-will-happen-by-defining-nested-function-components"
     },
     {
-      "id": "react-263",
+      "id": "react-can-i-use-keys-for-non-list-items",
       "number": 263,
       "cluster": "Other / trivia",
       "question": "Can I use keys for non-list items?",
@@ -2089,7 +2089,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#can-i-use-keys-for-non-list-items"
     },
     {
-      "id": "react-264",
+      "id": "react-what-are-the-guidelines-to-be-followed-for-writing-reducers",
       "number": 264,
       "cluster": "State management, data fetching",
       "question": "What are the guidelines to be followed for writing reducers?",
@@ -2097,7 +2097,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-guidelines-to-be-followed-for-writing-reducers"
     },
     {
-      "id": "react-265",
+      "id": "react-how-does-reactjs-work-behind-the-scenes",
       "number": 265,
       "cluster": "React fundamentals and ecosystem",
       "question": "How does ReactJS work behind the scenes?",
@@ -2105,7 +2105,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-does-reactjs-work-behind-the-scenes"
     },
     {
-      "id": "react-266",
+      "id": "react-how-is-usereducer-different-from-usestate",
       "number": 266,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "How is `useReducer` Different from `useState`?",
@@ -2113,7 +2113,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-is-usereducer-different-from-usestate"
     },
     {
-      "id": "react-267",
+      "id": "react-what-is-usecontext-what-are-the-steps-to-follow-for-useconte",
       "number": 267,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What is useContext? What are the steps to follow for useContext?",
@@ -2121,7 +2121,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-usecontext-what-are-the-steps-to-follow-for-usecontext"
     },
     {
-      "id": "react-268",
+      "id": "react-what-are-the-use-cases-of-usecontext-hook",
       "number": 268,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What are the use cases of useContext hook?",
@@ -2129,7 +2129,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-use-cases-of-usecontext-hook"
     },
     {
-      "id": "react-269",
+      "id": "react-when-to-use-client-and-server-components",
       "number": 269,
       "cluster": "Components, props, state, composition",
       "question": "When to use client and server components?",
@@ -2137,7 +2137,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#when-to-use-client-and-server-components"
     },
     {
-      "id": "react-270",
+      "id": "react-what-are-the-differences-between-page-router-and-app-router-",
       "number": 270,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What are the differences between page router and app router in nextjs?",
@@ -2145,7 +2145,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-differences-between-page-router-and-app-router-in-nextjs"
     },
     {
-      "id": "react-271",
+      "id": "react-can-you-describe-the-usememo-hook",
       "number": 271,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "Can you describe the useMemo() Hook?",
@@ -2153,7 +2153,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#can-you-describe-the-usememo-hook"
     },
     {
-      "id": "react-272",
+      "id": "react-can-hooks-be-used-in-class-components",
       "number": 272,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "Can Hooks be used in class components?",
@@ -2161,7 +2161,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#can-hooks-be-used-in-class-components"
     },
     {
-      "id": "react-273",
+      "id": "react-what-is-an-updater-function-should-an-updater-function-be-us",
       "number": 273,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is an updater function? Should an updater function be used in all cases?",
@@ -2169,7 +2169,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-an-updater-function-should-an-updater-function-be-used-in-all-cases"
     },
     {
-      "id": "react-274",
+      "id": "react-can-usestate-take-a-function-as-an-initial-value",
       "number": 274,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "Can useState take a function as an initial value?",
@@ -2177,7 +2177,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#can-usestate-take-a-function-as-an-initial-value"
     },
     {
-      "id": "react-275",
+      "id": "react-what-types-of-values-can-usestate-hold",
       "number": 275,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What types of values can `useState` hold?",
@@ -2185,7 +2185,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-types-of-values-can-usestate-hold"
     },
     {
-      "id": "react-276",
+      "id": "react-what-happens-if-you-call-usestate-conditionally",
       "number": 276,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What happens if you call `useState` conditionally?",
@@ -2193,7 +2193,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-happens-if-you-call-usestate-conditionally"
     },
     {
-      "id": "react-277",
+      "id": "react-is-usestate-synchronous-or-asynchronous",
       "number": 277,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "Is useState Synchronous or Asynchronous?",
@@ -2201,7 +2201,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#is-usestate-synchronous-or-asynchronous"
     },
     {
-      "id": "react-278",
+      "id": "react-can-you-explain-how-usestate-works-internally",
       "number": 278,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "Can you explain how useState works internally?",
@@ -2209,7 +2209,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#can-you-explain-how-usestate-works-internally"
     },
     {
-      "id": "react-279",
+      "id": "react-what-is-usereducer-why-do-you-use-usereducer",
       "number": 279,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What is `useReducer`? Why do you use useReducer?",
@@ -2217,7 +2217,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-usereducer-why-do-you-use-usereducer"
     },
     {
-      "id": "react-280",
+      "id": "react-how-does-usereducer-works-explain-with-an-example",
       "number": 280,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "How does `useReducer` works? Explain with an example",
@@ -2225,7 +2225,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-does-usereducer-works-explain-with-an-example"
     },
     {
-      "id": "react-281",
+      "id": "react-can-you-combine-usereducer-with-usecontext",
       "number": 281,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "Can you combine **useReducer** with **useContext**?",
@@ -2233,7 +2233,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#can-you-combine-usereducer-with-usecontext"
     },
     {
-      "id": "react-282",
+      "id": "react-can-you-dispatch-multiple-actions-in-a-row-with-usereducer",
       "number": 282,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "Can you dispatch multiple actions in a row with useReducer?",
@@ -2241,7 +2241,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#can-you-dispatch-multiple-actions-in-a-row-with-usereducer"
     },
     {
-      "id": "react-283",
+      "id": "react-is-dispatch-from-usereducer-asynchronous-and-does-it-update-",
       "number": 283,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "Is dispatch from useReducer asynchronous and does it update state immediately?",
@@ -2249,7 +2249,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#is-dispatch-from-usereducer-asynchronous-and-does-it-update-state-immediately"
     },
     {
-      "id": "react-284",
+      "id": "react-how-does-usecontext-works-explain-with-an-example",
       "number": 284,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "How does useContext works? Explain with an example",
@@ -2257,7 +2257,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-does-usecontext-works-explain-with-an-example"
     },
     {
-      "id": "react-285",
+      "id": "react-can-you-use-multiple-contexts-in-one-component",
       "number": 285,
       "cluster": "Components, props, state, composition",
       "question": "Can You Use Multiple Contexts in One Component?",
@@ -2265,7 +2265,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#can-you-use-multiple-contexts-in-one-component"
     },
     {
-      "id": "react-286",
+      "id": "react-what-s-a-common-pitfall-when-using-usecontext-with-objects",
       "number": 286,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What's a common pitfall when using useContext with objects?",
@@ -2273,7 +2273,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#whats-a-common-pitfall-when-using-usecontext-with-objects"
     },
     {
-      "id": "react-287",
+      "id": "react-what-would-the-context-value-be-for-no-matching-provider",
       "number": 287,
       "cluster": "Components, props, state, composition",
       "question": "What would the context value be for no matching provider?",
@@ -2281,7 +2281,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-would-the-context-value-be-for-no-matching-provider"
     },
     {
-      "id": "react-288",
+      "id": "react-how-do-reactive-dependencies-in-the-useeffect-dependency-arr",
       "number": 288,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "How do reactive dependencies in the useEffect dependency array affect its execution behavior?",
@@ -2289,7 +2289,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-reactive-dependencies-in-the-useeffect-dependency-array-affect-its-execution-behavior"
     },
     {
-      "id": "react-289",
+      "id": "react-when-and-how-often-does-react-invoke-the-setup-and-cleanup-f",
       "number": 289,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "When and how often does React invoke the setup and cleanup functions inside a useEffect hook?",
@@ -2297,7 +2297,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#when-and-how-often-does-react-invoke-the-setup-and-cleanup-functions-inside-a-useeffect-hook"
     },
     {
-      "id": "react-290",
+      "id": "react-what-happens-if-you-return-a-promise-from-useeffect",
       "number": 290,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What happens if you return a Promise from useEffect??",
@@ -2305,7 +2305,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-happens-if-you-return-a-promise-from-useeffect"
     },
     {
-      "id": "react-290",
+      "id": "react-can-you-have-multiple-useeffect-hooks-in-a-single-component",
       "number": 290,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "Can you have multiple useEffect hooks in a single component?",
@@ -2313,7 +2313,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#can-you-have-multiple-useeffect-hooks-in-a-single-component"
     },
     {
-      "id": "react-291",
+      "id": "react-how-to-prevent-infinite-loops-with-useeffect",
       "number": 291,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "How to prevent infinite loops with useEffect?",
@@ -2321,7 +2321,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-prevent-infinite-loops-with-useeffect"
     },
     {
-      "id": "react-292",
+      "id": "react-what-are-the-usecases-of-uselayouteffect",
       "number": 292,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What are the usecases of useLayoutEffect?",
@@ -2329,7 +2329,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-usecases-of-uselayouteffect"
     },
     {
-      "id": "react-293",
+      "id": "react-how-does-uselayouteffect-work-during-server-side-rendering-s",
       "number": 293,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "How does useLayoutEffect work during server-side rendering (SSR)?",
@@ -2337,7 +2337,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-does-uselayouteffect-work-during-server-side-rendering-ssr"
     },
     {
-      "id": "react-294",
+      "id": "react-what-happens-if-you-use-uselayouteffect-for-non-layout-logic",
       "number": 294,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What happens if you use useLayoutEffect for non-layout logic?",
@@ -2345,7 +2345,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-happens-if-you-use-uselayouteffect-for-non-layout-logic"
     },
     {
-      "id": "react-295",
+      "id": "react-how-does-uselayouteffect-cause-layout-thrashing",
       "number": 295,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "How does useLayoutEffect cause layout thrashing?",
@@ -2353,7 +2353,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-does-uselayouteffect-cause-layout-thrashing"
     },
     {
-      "id": "react-296",
+      "id": "react-how-do-you-use-useref-to-access-a-dom-element-in-react-give-",
       "number": 296,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "How Do You Use useRef to Access a DOM Element in React? Give an example.",
@@ -2361,7 +2361,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-use-useref-to-access-a-dom-element-in-react-give-an-example"
     },
     {
-      "id": "react-297",
+      "id": "react-can-you-use-useref-to-persist-values-across-renders",
       "number": 297,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "Can you use useRef to persist values across renders??",
@@ -2369,7 +2369,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#can-you-use-useref-to-persist-values-across-renders"
     },
     {
-      "id": "react-298",
+      "id": "react-can-useref-be-used-to-store-previous-values",
       "number": 298,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "Can useRef be used to store previous values?",
@@ -2377,7 +2377,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#can-useref-be-used-to-store-previous-values"
     },
     {
-      "id": "react-299",
+      "id": "react-is-it-possible-to-access-a-ref-in-the-render-method",
       "number": 299,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "Is it possible to access a ref in the render method?",
@@ -2385,7 +2385,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#is-it-possible-to-access-a-ref-in-the-render-method"
     },
     {
-      "id": "react-300",
+      "id": "react-what-are-the-common-usecases-of-useref-hook",
       "number": 300,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What are the common usecases of useRef hook?",
@@ -2393,7 +2393,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-common-usecases-of-useref-hook"
     },
     {
-      "id": "react-301",
+      "id": "react-what-is-useimperativehandle-hook-give-an-example",
       "number": 301,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What is useImperativeHandle Hook? Give an example.",
@@ -2401,7 +2401,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-useimperativehandle-hook-give-an-example"
     },
     {
-      "id": "react-302",
+      "id": "react-when-should-you-use-useimperativehandle",
       "number": 302,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "When should you use useImperativeHandle?",
@@ -2409,7 +2409,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#when-should-you-use-useimperativehandle"
     },
     {
-      "id": "react-303",
+      "id": "react-is-that-possible-to-use-useimperativehandle-without-forwardr",
       "number": 303,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "Is that possible to use useImperativeHandle without forwardRef?",
@@ -2417,7 +2417,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#is-that-possible-to-use-useimperativehandle-without-forwardref"
     },
     {
-      "id": "react-304",
+      "id": "react-how-is-usememo-different-from-usecallback",
       "number": 304,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "How is useMemo different from useCallback?",
@@ -2425,7 +2425,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-is-usememo-different-from-usecallback"
     },
     {
-      "id": "react-305",
+      "id": "react-does-usememo-prevent-re-rendering-of-child-components",
       "number": 305,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "Does useMemo prevent re-rendering of child components?",
@@ -2433,7 +2433,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#does-usememo-prevent-re-rendering-of-child-components"
     },
     {
-      "id": "react-306",
+      "id": "react-what-is-usecallback-and-why-is-it-used",
       "number": 306,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What is `useCallback` and why is it used?",
@@ -2441,7 +2441,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-usecallback-and-why-is-it-used"
     },
     {
-      "id": "react-307",
+      "id": "react-what-are-custom-react-hooks-and-how-can-you-develop-one",
       "number": 307,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What are Custom React Hooks, and How Can You Develop One?",
@@ -2449,7 +2449,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-custom-react-hooks-and-how-can-you-develop-one"
     },
     {
-      "id": "react-309",
+      "id": "react-how-does-react-fiber-works-explain-in-detail",
       "number": 309,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "How does React Fiber works? Explain in detail.",
@@ -2457,7 +2457,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-does-react-fiber-works-explain-in-detail"
     },
     {
-      "id": "react-310",
+      "id": "react-what-is-the-useid-hook-and-when-should-you-use-it",
       "number": 310,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What is the useId hook and when should you use it?",
@@ -2465,7 +2465,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-useid-hook-and-when-should-you-use-it"
     },
     {
-      "id": "react-311",
+      "id": "react-what-is-the-usedeferredvalue-hook",
       "number": 311,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What is the useDeferredValue hook?",
@@ -2473,7 +2473,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-usedeferredvalue-hook"
     },
     {
-      "id": "react-312",
+      "id": "react-what-is-the-usetransition-hook-and-how-does-it-differ-from-u",
       "number": 312,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What is the useTransition hook and how does it differ from useDeferredValue?",
@@ -2481,7 +2481,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-usetransition-hook-and-how-does-it-differ-from-usedeferredvalue"
     },
     {
-      "id": "react-313",
+      "id": "react-what-is-the-usesyncexternalstore-hook",
       "number": 313,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What is the useSyncExternalStore hook?",
@@ -2489,7 +2489,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-usesyncexternalstore-hook"
     },
     {
-      "id": "react-314",
+      "id": "react-what-is-the-useinsertioneffect-hook",
       "number": 314,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What is the useInsertionEffect hook?",
@@ -2497,7 +2497,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-useinsertioneffect-hook"
     },
     {
-      "id": "react-315",
+      "id": "react-how-do-you-share-state-logic-between-components-using-custom",
       "number": 315,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "How do you share state logic between components using custom hooks?",
@@ -2505,7 +2505,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-share-state-logic-between-components-using-custom-hooks"
     },
     {
-      "id": "react-316",
+      "id": "react-what-is-the-usedebugvalue-hook",
       "number": 316,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What is the useDebugValue hook?",
@@ -2513,7 +2513,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-usedebugvalue-hook"
     },
     {
-      "id": "react-317",
+      "id": "react-how-do-you-handle-cleanup-in-useeffect",
       "number": 317,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "How do you handle cleanup in useEffect?",
@@ -2521,7 +2521,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-handle-cleanup-in-useeffect"
     },
     {
-      "id": "react-317",
+      "id": "react-what-are-the-differences-between-useeffect-and-useevent-expe",
       "number": 317,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What are the differences between useEffect and useEvent (experimental)?",
@@ -2529,7 +2529,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-differences-between-useeffect-and-useevent-experimental"
     },
     {
-      "id": "react-319",
+      "id": "react-what-are-the-best-practices-for-using-react-hooks",
       "number": 319,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What are the best practices for using React Hooks?",
@@ -2537,7 +2537,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-best-practices-for-using-react-hooks"
     },
     {
-      "id": "react-320",
+      "id": "react-what-are-the-key-features-introduced-in-react-18",
       "number": 320,
       "cluster": "React fundamentals and ecosystem",
       "question": "What are the key features introduced in React 18?",
@@ -2545,7 +2545,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-key-features-introduced-in-react-18"
     },
     {
-      "id": "react-321",
+      "id": "react-what-are-the-key-features-introduced-in-react-19",
       "number": 321,
       "cluster": "React fundamentals and ecosystem",
       "question": "What are the key features introduced in React 19?",
@@ -2553,7 +2553,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-key-features-introduced-in-react-19"
     },
     {
-      "id": "react-322",
+      "id": "react-what-is-the-use-hook-in-react-19",
       "number": 322,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What is the use() hook in React 19?",
@@ -2561,7 +2561,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-use-hook-in-react-19"
     },
     {
-      "id": "react-323",
+      "id": "react-what-are-server-actions-in-react-19",
       "number": 323,
       "cluster": "State management, data fetching",
       "question": "What are Server Actions in React 19?",
@@ -2569,7 +2569,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-server-actions-in-react-19"
     },
     {
-      "id": "react-324",
+      "id": "react-what-are-useformstate-and-useformstatus-hooks",
       "number": 324,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What are useFormState and useFormStatus hooks?",
@@ -2577,7 +2577,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-useformstate-and-useformstatus-hooks"
     },
     {
-      "id": "react-325",
+      "id": "react-what-is-the-useoptimistic-hook",
       "number": 325,
       "cluster": "Hooks: rules, deps, useEffect, memo",
       "question": "What is the useOptimistic hook?",
@@ -2585,7 +2585,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-useoptimistic-hook"
     },
     {
-      "id": "react-326",
+      "id": "react-what-is-the-react-compiler-react-forget",
       "number": 326,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is the React Compiler (React Forget)?",
@@ -2593,7 +2593,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-react-compiler-react-forget"
     },
     {
-      "id": "react-327",
+      "id": "react-what-is-streaming-ssr-and-how-does-react-18-improve-it",
       "number": 327,
       "cluster": "SSR, Next.js, ecosystem",
       "question": "What is Streaming SSR and how does React 18+ improve it?",
@@ -2601,7 +2601,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-streaming-ssr-and-how-does-react-18-improve-it"
     },
     {
-      "id": "react-001",
+      "id": "react-why-should-we-not-update-the-state-directly",
       "number": 1,
       "cluster": "Components, props, state, composition",
       "question": "Why should we not update the state directly?",
@@ -2609,7 +2609,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#why-should-we-not-update-the-state-directly"
     },
     {
-      "id": "react-002",
+      "id": "react-what-is-the-purpose-of-callback-function-as-an-argument-of-s",
       "number": 2,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is the purpose of callback function as an argument of `setState()`?",
@@ -2617,7 +2617,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-purpose-of-callback-function-as-an-argument-of-setstate"
     },
     {
-      "id": "react-003",
+      "id": "react-how-to-bind-methods-or-event-handlers-in-jsx-callbacks",
       "number": 3,
       "cluster": "React fundamentals and ecosystem",
       "question": "How to bind methods or event handlers in JSX callbacks?",
@@ -2625,7 +2625,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-bind-methods-or-event-handlers-in-jsx-callbacks"
     },
     {
-      "id": "react-004",
+      "id": "react-how-to-pass-a-parameter-to-an-event-handler-or-callback",
       "number": 4,
       "cluster": "Other / trivia",
       "question": "How to pass a parameter to an event handler or callback?",
@@ -2633,7 +2633,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-pass-a-parameter-to-an-event-handler-or-callback"
     },
     {
-      "id": "react-005",
+      "id": "react-what-is-the-use-of-refs",
       "number": 5,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is the use of refs?",
@@ -2641,7 +2641,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-use-of-refs"
     },
     {
-      "id": "react-006",
+      "id": "react-how-to-create-refs",
       "number": 6,
       "cluster": "React fundamentals and ecosystem",
       "question": "How to create refs?",
@@ -2649,7 +2649,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-create-refs"
     },
     {
-      "id": "react-007",
+      "id": "react-what-are-forward-refs",
       "number": 7,
       "cluster": "Other / trivia",
       "question": "What are forward refs?",
@@ -2657,7 +2657,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-forward-refs"
     },
     {
-      "id": "react-008",
+      "id": "react-which-is-preferred-option-with-in-callback-refs-and-finddomn",
       "number": 8,
       "cluster": "Other / trivia",
       "question": "Which is preferred option with in callback refs and findDOMNode()?",
@@ -2665,7 +2665,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#which-is-preferred-option-with-in-callback-refs-and-finddomnode"
     },
     {
-      "id": "react-009",
+      "id": "react-why-are-string-refs-legacy",
       "number": 9,
       "cluster": "React fundamentals and ecosystem",
       "question": "Why are String Refs legacy?",
@@ -2673,7 +2673,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#why-are-string-refs-legacy"
     },
     {
-      "id": "react-010",
+      "id": "react-what-are-the-different-phases-of-component-lifecycle",
       "number": 10,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What are the different phases of component lifecycle?",
@@ -2681,7 +2681,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-different-phases-of-component-lifecycle"
     },
     {
-      "id": "react-011",
+      "id": "react-what-are-the-lifecycle-methods-of-react",
       "number": 11,
       "cluster": "React fundamentals and ecosystem",
       "question": "What are the lifecycle methods of React?",
@@ -2689,7 +2689,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-lifecycle-methods-of-react"
     },
     {
-      "id": "react-012",
+      "id": "react-how-to-create-props-proxy-for-hoc-component",
       "number": 12,
       "cluster": "Components, props, state, composition",
       "question": "How to create props proxy for HOC component?",
@@ -2697,7 +2697,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-create-props-proxy-for-hoc-component"
     },
     {
-      "id": "react-013",
+      "id": "react-what-is-context",
       "number": 13,
       "cluster": "Components, props, state, composition",
       "question": "What is context?",
@@ -2705,7 +2705,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-context"
     },
     {
-      "id": "react-014",
+      "id": "react-what-is-the-purpose-of-using-super-constructor-with-props-ar",
       "number": 14,
       "cluster": "Components, props, state, composition",
       "question": "What is the purpose of using super constructor with props argument?",
@@ -2713,7 +2713,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-purpose-of-using-super-constructor-with-props-argument"
     },
     {
-      "id": "react-015",
+      "id": "react-how-to-set-state-with-a-dynamic-key-name",
       "number": 15,
       "cluster": "Components, props, state, composition",
       "question": "How to set state with a dynamic key name?",
@@ -2721,7 +2721,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-set-state-with-a-dynamic-key-name"
     },
     {
-      "id": "react-016",
+      "id": "react-what-would-be-the-common-mistake-of-function-being-called-ev",
       "number": 16,
       "cluster": "Components, props, state, composition",
       "question": "What would be the common mistake of function being called every time the component renders?",
@@ -2729,7 +2729,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-would-be-the-common-mistake-of-function-being-called-every-time-the-component-renders"
     },
     {
-      "id": "react-017",
+      "id": "react-what-are-error-boundaries-in-react-v16",
       "number": 17,
       "cluster": "React fundamentals and ecosystem",
       "question": "What are error boundaries in React v16?",
@@ -2737,7 +2737,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-error-boundaries-in-react-v16"
     },
     {
-      "id": "react-018",
+      "id": "react-how-are-error-boundaries-handled-in-react-v15",
       "number": 18,
       "cluster": "React fundamentals and ecosystem",
       "question": "How are error boundaries handled in React v15?",
@@ -2745,7 +2745,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-are-error-boundaries-handled-in-react-v15"
     },
     {
-      "id": "react-019",
+      "id": "react-what-is-the-purpose-of-render-method-of-react-dom",
       "number": 19,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the purpose of render method of `react-dom`?",
@@ -2753,7 +2753,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-purpose-of-render-method-of-react-dom"
     },
     {
-      "id": "react-020",
+      "id": "react-what-will-happen-if-you-use-setstate-in-constructor",
       "number": 20,
       "cluster": "Other / trivia",
       "question": "What will happen if you use `setState()` in constructor?",
@@ -2761,7 +2761,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-will-happen-if-you-use-setstate-in-constructor"
     },
     {
-      "id": "react-021",
+      "id": "react-is-it-good-to-use-setstate-in-componentwillmount-method",
       "number": 21,
       "cluster": "Components, props, state, composition",
       "question": "Is it good to use `setState()` in `componentWillMount()` method?",
@@ -2769,7 +2769,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#is-it-good-to-use-setstate-in-componentwillmount-method"
     },
     {
-      "id": "react-022",
+      "id": "react-what-will-happen-if-you-use-props-in-initial-state",
       "number": 22,
       "cluster": "Components, props, state, composition",
       "question": "What will happen if you use props in initial state?",
@@ -2777,7 +2777,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-will-happen-if-you-use-props-in-initial-state"
     },
     {
-      "id": "react-023",
+      "id": "react-how-you-use-decorators-in-react",
       "number": 23,
       "cluster": "React fundamentals and ecosystem",
       "question": "How you use decorators in React?",
@@ -2785,7 +2785,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-you-use-decorators-in-react"
     },
     {
-      "id": "react-024",
+      "id": "react-what-is-cra-and-its-benefits",
       "number": 24,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is CRA and its benefits?",
@@ -2793,7 +2793,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-cra-and-its-benefits"
     },
     {
-      "id": "react-025",
+      "id": "react-what-is-the-lifecycle-methods-order-in-mounting",
       "number": 25,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is the lifecycle methods order in mounting?",
@@ -2801,7 +2801,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-lifecycle-methods-order-in-mounting"
     },
     {
-      "id": "react-026",
+      "id": "react-what-are-the-lifecycle-methods-going-to-be-deprecated-in-rea",
       "number": 26,
       "cluster": "React fundamentals and ecosystem",
       "question": "What are the lifecycle methods going to be deprecated in React v16?",
@@ -2809,7 +2809,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-lifecycle-methods-going-to-be-deprecated-in-react-v16"
     },
     {
-      "id": "react-027",
+      "id": "react-what-is-the-purpose-of-getderivedstatefromprops-lifecycle-me",
       "number": 27,
       "cluster": "Components, props, state, composition",
       "question": "What is the purpose of `getDerivedStateFromProps()` lifecycle method?",
@@ -2817,7 +2817,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-purpose-of-getderivedstatefromprops-lifecycle-method"
     },
     {
-      "id": "react-028",
+      "id": "react-what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-met",
       "number": 28,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is the purpose of `getSnapshotBeforeUpdate()` lifecycle method?",
@@ -2825,7 +2825,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-method"
     },
     {
-      "id": "react-029",
+      "id": "react-what-is-the-recommended-way-for-naming-components",
       "number": 29,
       "cluster": "Components, props, state, composition",
       "question": "What is the recommended way for naming components?",
@@ -2833,7 +2833,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-recommended-way-for-naming-components"
     },
     {
-      "id": "react-030",
+      "id": "react-what-is-the-recommended-ordering-of-methods-in-component-cla",
       "number": 30,
       "cluster": "Components, props, state, composition",
       "question": "What is the recommended ordering of methods in component class?",
@@ -2841,7 +2841,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-recommended-ordering-of-methods-in-component-class"
     },
     {
-      "id": "react-031",
+      "id": "react-why-we-need-to-pass-a-function-to-setstate",
       "number": 31,
       "cluster": "React fundamentals and ecosystem",
       "question": "Why we need to pass a function to setState()?",
@@ -2849,7 +2849,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#why-we-need-to-pass-a-function-to-setstate"
     },
     {
-      "id": "react-032",
+      "id": "react-why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solu",
       "number": 32,
       "cluster": "React fundamentals and ecosystem",
       "question": "Why is `isMounted()` an anti-pattern and what is the proper solution?",
@@ -2857,7 +2857,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solution"
     },
     {
-      "id": "react-033",
+      "id": "react-what-is-the-difference-between-constructor-and-getinitialsta",
       "number": 33,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the difference between constructor and getInitialState?",
@@ -2865,7 +2865,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-constructor-and-getinitialstate"
     },
     {
-      "id": "react-034",
+      "id": "react-can-you-force-a-component-to-re-render-without-calling-setst",
       "number": 34,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "Can you force a component to re-render without calling setState?",
@@ -2873,7 +2873,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#can-you-force-a-component-to-re-render-without-calling-setstate"
     },
     {
-      "id": "react-035",
+      "id": "react-what-is-the-difference-between-super-and-super-props-in-reac",
       "number": 35,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the difference between `super()` and `super(props)` in React using ES6 classes?",
@@ -2881,7 +2881,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-super-and-superprops-in-react-using-es6-classes"
     },
     {
-      "id": "react-036",
+      "id": "react-what-is-the-difference-between-setstate-and-replacestate-met",
       "number": 36,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the difference between `setState()` and `replaceState()` methods?",
@@ -2889,7 +2889,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-setstate-and-replacestate-methods"
     },
     {
-      "id": "react-037",
+      "id": "react-how-to-listen-to-state-changes",
       "number": 37,
       "cluster": "Components, props, state, composition",
       "question": "How to listen to state changes?",
@@ -2897,7 +2897,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-listen-to-state-changes"
     },
     {
-      "id": "react-038",
+      "id": "react-what-is-the-recommended-approach-of-removing-an-array-elemen",
       "number": 38,
       "cluster": "Components, props, state, composition",
       "question": "What is the recommended approach of removing an array element in React state?",
@@ -2905,7 +2905,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-recommended-approach-of-removing-an-array-element-in-react-state"
     },
     {
-      "id": "react-039",
+      "id": "react-is-it-possible-to-use-react-without-rendering-html",
       "number": 39,
       "cluster": "React fundamentals and ecosystem",
       "question": "Is it possible to use React without rendering HTML?",
@@ -2913,7 +2913,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#is-it-possible-to-use-react-without-rendering-html"
     },
     {
-      "id": "react-040",
+      "id": "react-what-are-the-possible-ways-of-updating-objects-in-state",
       "number": 40,
       "cluster": "Components, props, state, composition",
       "question": "What are the possible ways of updating objects in state?",
@@ -2921,7 +2921,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-possible-ways-of-updating-objects-in-state"
     },
     {
-      "id": "react-041",
+      "id": "react-what-are-the-approaches-to-include-polyfills-in-your-create-",
       "number": 41,
       "cluster": "React fundamentals and ecosystem",
       "question": "What are the approaches to include polyfills in your `create-react-app`?",
@@ -2929,7 +2929,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-approaches-to-include-polyfills-in-your-create-react-app"
     },
     {
-      "id": "react-042",
+      "id": "react-how-to-use-https-instead-of-http-in-create-react-app",
       "number": 42,
       "cluster": "React fundamentals and ecosystem",
       "question": "How to use https instead of http in create-react-app?",
@@ -2937,7 +2937,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-use-https-instead-of-http-in-create-react-app"
     },
     {
-      "id": "react-043",
+      "id": "react-how-to-avoid-using-relative-path-imports-in-create-react-app",
       "number": 43,
       "cluster": "React fundamentals and ecosystem",
       "question": "How to avoid using relative path imports in create-react-app?",
@@ -2945,7 +2945,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-avoid-using-relative-path-imports-in-create-react-app"
     },
     {
-      "id": "react-044",
+      "id": "react-how-to-update-a-component-every-second",
       "number": 44,
       "cluster": "Components, props, state, composition",
       "question": "How to update a component every second?",
@@ -2953,7 +2953,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-update-a-component-every-second"
     },
     {
-      "id": "react-045",
+      "id": "react-why-is-a-component-constructor-called-only-once",
       "number": 45,
       "cluster": "Components, props, state, composition",
       "question": "Why is a component constructor called only once?",
@@ -2961,7 +2961,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#why-is-a-component-constructor-called-only-once"
     },
     {
-      "id": "react-046",
+      "id": "react-how-to-define-constants-in-react",
       "number": 46,
       "cluster": "React fundamentals and ecosystem",
       "question": "How to define constants in React?",
@@ -2969,7 +2969,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-define-constants-in-react"
     },
     {
-      "id": "react-047",
+      "id": "react-how-to-programmatically-trigger-click-event-in-react",
       "number": 47,
       "cluster": "React fundamentals and ecosystem",
       "question": "How to programmatically trigger click event in React?",
@@ -2977,7 +2977,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-programmatically-trigger-click-event-in-react"
     },
     {
-      "id": "react-048",
+      "id": "react-how-to-make-ajax-call-and-in-which-component-lifecycle-metho",
       "number": 48,
       "cluster": "Components, props, state, composition",
       "question": "How to make AJAX call and in which component lifecycle methods should I make an AJAX call?",
@@ -2985,7 +2985,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-make-ajax-call-and-in-which-component-lifecycle-methods-should-i-make-an-ajax-call"
     },
     {
-      "id": "react-049",
+      "id": "react-what-are-render-props",
       "number": 49,
       "cluster": "Components, props, state, composition",
       "question": "What are render props?",
@@ -2993,7 +2993,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-render-props"
     },
     {
-      "id": "react-050",
+      "id": "react-how-to-dispatch-an-action-on-load",
       "number": 50,
       "cluster": "State management, data fetching",
       "question": "How to dispatch an action on load?",
@@ -3001,7 +3001,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-dispatch-an-action-on-load"
     },
     {
-      "id": "react-051",
+      "id": "react-how-to-use-connect-from-react-redux",
       "number": 51,
       "cluster": "State management, data fetching",
       "question": "How to use `connect()` from React Redux?",
@@ -3009,7 +3009,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-use-connect-from-react-redux"
     },
     {
-      "id": "react-052",
+      "id": "react-whats-the-purpose-of-at-symbol-in-the-redux-connect-decorato",
       "number": 52,
       "cluster": "State management, data fetching",
       "question": "Whats the purpose of `at` symbol in the Redux connect decorator?",
@@ -3017,7 +3017,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#whats-the-purpose-of-at-symbol-in-the-redux-connect-decorator"
     },
     {
-      "id": "react-053",
+      "id": "react-how-to-use-typescript-in-create-react-app-application",
       "number": 53,
       "cluster": "Errors, testing, tooling",
       "question": "How to use TypeScript in `create-react-app` application?",
@@ -3025,7 +3025,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-use-typescript-in-create-react-app-application"
     },
     {
-      "id": "react-054",
+      "id": "react-does-the-statics-object-work-with-es6-classes-in-react",
       "number": 54,
       "cluster": "Styling and accessibility",
       "question": "Does the statics object work with ES6 classes in React?",
@@ -3033,7 +3033,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#does-the-statics-object-work-with-es6-classes-in-react"
     },
     {
-      "id": "react-055",
+      "id": "react-why-are-inline-ref-callbacks-or-functions-not-recommended",
       "number": 55,
       "cluster": "React fundamentals and ecosystem",
       "question": "Why are inline ref callbacks or functions not recommended?",
@@ -3041,7 +3041,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#why-are-inline-ref-callbacks-or-functions-not-recommended"
     },
     {
-      "id": "react-056",
+      "id": "react-what-are-hoc-factory-implementations",
       "number": 56,
       "cluster": "Components, props, state, composition",
       "question": "What are HOC factory implementations?",
@@ -3049,7 +3049,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-hoc-factory-implementations"
     },
     {
-      "id": "react-057",
+      "id": "react-how-to-use-class-field-declarations-syntax-in-react-classes",
       "number": 57,
       "cluster": "Styling and accessibility",
       "question": "How to use class field declarations syntax in React classes?",
@@ -3057,7 +3057,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-use-class-field-declarations-syntax-in-react-classes"
     },
     {
-      "id": "react-058",
+      "id": "react-why-do-you-not-need-error-boundaries-for-event-handlers",
       "number": 58,
       "cluster": "React fundamentals and ecosystem",
       "question": "Why do you not need error boundaries for event handlers?",
@@ -3065,7 +3065,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#why-do-you-not-need-error-boundaries-for-event-handlers"
     },
     {
-      "id": "react-059",
+      "id": "react-what-is-the-difference-between-try-catch-block-and-error-bou",
       "number": 59,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the difference between try catch block and error boundaries?",
@@ -3073,7 +3073,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-difference-between-try-catch-block-and-error-boundaries"
     },
     {
-      "id": "react-060",
+      "id": "react-what-is-the-required-method-to-be-defined-for-a-class-compon",
       "number": 60,
       "cluster": "Components, props, state, composition",
       "question": "What is the required method to be defined for a class component?",
@@ -3081,7 +3081,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-required-method-to-be-defined-for-a-class-component"
     },
     {
-      "id": "react-061",
+      "id": "react-what-are-the-possible-return-types-of-render-method",
       "number": 61,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What are the possible return types of render method?",
@@ -3089,7 +3089,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-possible-return-types-of-render-method"
     },
     {
-      "id": "react-062",
+      "id": "react-what-is-the-main-purpose-of-constructor",
       "number": 62,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is the main purpose of constructor?",
@@ -3097,7 +3097,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-main-purpose-of-constructor"
     },
     {
-      "id": "react-063",
+      "id": "react-is-it-mandatory-to-define-constructor-for-react-component",
       "number": 63,
       "cluster": "Components, props, state, composition",
       "question": "Is it mandatory to define constructor for React component?",
@@ -3105,7 +3105,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#is-it-mandatory-to-define-constructor-for-react-component"
     },
     {
-      "id": "react-064",
+      "id": "react-why-should-not-call-setstate-in-componentwillunmount",
       "number": 64,
       "cluster": "Components, props, state, composition",
       "question": "Why should not call setState in componentWillUnmount?",
@@ -3113,7 +3113,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#why-should-not-call-setstate-in-componentwillunmount"
     },
     {
-      "id": "react-065",
+      "id": "react-what-is-the-purpose-of-getderivedstatefromerror",
       "number": 65,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is the purpose of getDerivedStateFromError?",
@@ -3121,7 +3121,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-purpose-of-getderivedstatefromerror"
     },
     {
-      "id": "react-066",
+      "id": "react-what-is-the-methods-order-when-component-re-rendered",
       "number": 66,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "What is the methods order when component re-rendered?",
@@ -3129,7 +3129,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-methods-order-when-component-re-rendered"
     },
     {
-      "id": "react-067",
+      "id": "react-what-are-the-methods-invoked-during-error-handling",
       "number": 67,
       "cluster": "Errors, testing, tooling",
       "question": "What are the methods invoked during error handling?",
@@ -3137,7 +3137,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-methods-invoked-during-error-handling"
     },
     {
-      "id": "react-068",
+      "id": "react-what-is-the-purpose-of-unmountcomponentatnode-method",
       "number": 68,
       "cluster": "Components, props, state, composition",
       "question": "What is the purpose of unmountComponentAtNode method?",
@@ -3145,7 +3145,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-purpose-of-unmountcomponentatnode-method"
     },
     {
-      "id": "react-069",
+      "id": "react-what-are-the-limitations-with-hocs",
       "number": 69,
       "cluster": "React fundamentals and ecosystem",
       "question": "What are the limitations with HOCs?",
@@ -3153,7 +3153,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-limitations-with-hocs"
     },
     {
-      "id": "react-070",
+      "id": "react-how-to-debug-forwardrefs-in-devtools",
       "number": 70,
       "cluster": "Components, props, state, composition",
       "question": "How to debug forwardRefs in DevTools?",
@@ -3161,7 +3161,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-debug-forwardrefs-in-devtools"
     },
     {
-      "id": "react-071",
+      "id": "react-is-it-good-to-use-arrow-functions-in-render-methods",
       "number": 71,
       "cluster": "Rendering model: VDOM, reconciliation, keys, Fiber",
       "question": "Is it good to use arrow functions in render methods?",
@@ -3169,7 +3169,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#is-it-good-to-use-arrow-functions-in-render-methods"
     },
     {
-      "id": "react-072",
+      "id": "react-how-do-you-say-that-state-updates-are-merged",
       "number": 72,
       "cluster": "Components, props, state, composition",
       "question": "How do you say that state updates are merged?",
@@ -3177,7 +3177,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-say-that-state-updates-are-merged"
     },
     {
-      "id": "react-073",
+      "id": "react-how-do-you-pass-arguments-to-an-event-handler",
       "number": 73,
       "cluster": "Other / trivia",
       "question": "How do you pass arguments to an event handler?",
@@ -3185,7 +3185,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-pass-arguments-to-an-event-handler"
     },
     {
-      "id": "react-074",
+      "id": "react-how-to-prevent-component-from-rendering",
       "number": 74,
       "cluster": "Components, props, state, composition",
       "question": "How to prevent component from rendering?",
@@ -3193,7 +3193,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-prevent-component-from-rendering"
     },
     {
-      "id": "react-075",
+      "id": "react-give-an-example-on-how-to-use-context",
       "number": 75,
       "cluster": "Components, props, state, composition",
       "question": "Give an example on How to use context?",
@@ -3201,7 +3201,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#give-an-example-on-how-to-use-context"
     },
     {
-      "id": "react-076",
+      "id": "react-how-do-you-use-contexttype",
       "number": 76,
       "cluster": "Components, props, state, composition",
       "question": "How do you use contextType?",
@@ -3209,7 +3209,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-use-contexttype"
     },
     {
-      "id": "react-077",
+      "id": "react-what-is-a-consumer",
       "number": 77,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is a consumer?",
@@ -3217,7 +3217,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-a-consumer"
     },
     {
-      "id": "react-078",
+      "id": "react-how-do-you-solve-performance-corner-cases-while-using-contex",
       "number": 78,
       "cluster": "Components, props, state, composition",
       "question": "How do you solve performance corner cases while using context?",
@@ -3225,7 +3225,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-solve-performance-corner-cases-while-using-context"
     },
     {
-      "id": "react-079",
+      "id": "react-what-is-the-purpose-of-forward-ref-in-hocs",
       "number": 79,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is the purpose of forward ref in HOCs?",
@@ -3233,7 +3233,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-purpose-of-forward-ref-in-hocs"
     },
     {
-      "id": "react-080",
+      "id": "react-is-ref-argument-available-for-all-functions-or-class-compone",
       "number": 80,
       "cluster": "Components, props, state, composition",
       "question": "Is ref argument available for all functions or class components?",
@@ -3241,7 +3241,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#is-ref-argument-available-for-all-functions-or-class-components"
     },
     {
-      "id": "react-081",
+      "id": "react-why-do-you-need-additional-care-for-component-libraries-whil",
       "number": 81,
       "cluster": "Components, props, state, composition",
       "question": "Why do you need additional care for component libraries while using forward refs?",
@@ -3249,7 +3249,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#why-do-you-need-additional-care-for-component-libraries-while-using-forward-refs"
     },
     {
-      "id": "react-082",
+      "id": "react-how-to-create-react-class-components-without-es6",
       "number": 82,
       "cluster": "Components, props, state, composition",
       "question": "How to create react class components without ES6?",
@@ -3257,7 +3257,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-to-create-react-class-components-without-es6"
     },
     {
-      "id": "react-083",
+      "id": "react-is-it-possible-to-use-react-without-jsx",
       "number": 83,
       "cluster": "React fundamentals and ecosystem",
       "question": "Is it possible to use react without JSX?",
@@ -3265,7 +3265,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#is-it-possible-to-use-react-without-jsx"
     },
     {
-      "id": "react-084",
+      "id": "react-how-do-you-create-hoc-using-render-props",
       "number": 84,
       "cluster": "Components, props, state, composition",
       "question": "How do you create HOC using render props?",
@@ -3273,7 +3273,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-create-hoc-using-render-props"
     },
     {
-      "id": "react-085",
+      "id": "react-what-is-react-scripts",
       "number": 85,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is react scripts?",
@@ -3281,7 +3281,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-react-scripts"
     },
     {
-      "id": "react-086",
+      "id": "react-what-are-the-features-of-create-react-app",
       "number": 86,
       "cluster": "React fundamentals and ecosystem",
       "question": "What are the features of create react app?",
@@ -3289,7 +3289,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-the-features-of-create-react-app"
     },
     {
-      "id": "react-087",
+      "id": "react-what-is-the-purpose-of-rendertonodestream-method",
       "number": 87,
       "cluster": "React fundamentals and ecosystem",
       "question": "What is the purpose of renderToNodeStream method?",
@@ -3297,7 +3297,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-the-purpose-of-rendertonodestream-method"
     },
     {
-      "id": "react-088",
+      "id": "react-how-do-you-get-redux-scaffolding-using-create-react-app",
       "number": 88,
       "cluster": "State management, data fetching",
       "question": "How do you get redux scaffolding using create-react-app?",
@@ -3305,7 +3305,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#how-do-you-get-redux-scaffolding-using-create-react-app"
     },
     {
-      "id": "react-089",
+      "id": "react-what-is-state-mutation-and-how-to-prevent-it",
       "number": 89,
       "cluster": "Components, props, state, composition",
       "question": "What is state mutation and how to prevent it?",
@@ -3313,7 +3313,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-is-state-mutation-and-how-to-prevent-it"
     },
     {
-      "id": "react-090",
+      "id": "react-what-are-react-mixins",
       "number": 90,
       "cluster": "React fundamentals and ecosystem",
       "question": "What are React Mixins?",
@@ -3321,7 +3321,7 @@
       "source": "https://github.com/sudheerj/reactjs-interview-questions#what-are-react-mixins"
     },
     {
-      "id": "react-091",
+      "id": "react-can-i-use-javascript-urls-in-react16-9",
       "number": 91,
       "cluster": "React fundamentals and ecosystem",
       "question": "Can I use javascript urls in react16.9?",
