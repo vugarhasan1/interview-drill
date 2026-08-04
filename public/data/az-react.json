@@ -6,10 +6,6 @@
       "question": "React nədir?",
       "auto": true
     },
-    "react-what-are-the-major-features-of-react": {
-      "question": "React-in əsas xüsusiyyətləri nələrdir?",
-      "auto": true
-    },
     "react-what-is-jsx": {
       "question": "JSX nədir?",
       "auto": true
@@ -20,10 +16,6 @@
     },
     "react-how-to-create-components-in-react": {
       "question": "React-də components necə yaradılır?",
-      "auto": true
-    },
-    "react-when-to-use-a-class-component-over-a-function-component": {
-      "question": "Class Component Function Component yerinə nə vaxt istifadə olunur?",
       "auto": true
     },
     "react-what-are-pure-components": {
@@ -45,14 +37,6 @@
     "react-what-is-the-difference-between-html-and-react-event-handling": {
       "question": "HTML və React-də event handling arasında fərq nədir?",
       "gist": "HTML-də atribut kiçik hərflərlə və string olur (`onclick=\"fn()\"`), React-də camelCase və funksiya verilir (`onClick={fn}`). React SyntheticEvent ötürür (brauzerlər arası normalizasiya), default davranışı dayandırmaq üçün `return false` işləmir — `preventDefault()` çağırılır."
-    },
-    "react-what-are-synthetic-events-in-react": {
-      "question": "React-də synthetic events nədir?",
-      "auto": true
-    },
-    "react-what-are-inline-conditional-expressions": {
-      "question": "inline conditional expressions nədir?",
-      "auto": true
     },
     "react-what-is-key-prop-and-what-is-the-benefit-of-using-it-in-arra": {
       "question": "`key` prop nə üçündür, siyahılarda hansı faydası var?",
@@ -98,14 +82,6 @@
       "question": "Higher-Order Component (HOC) nədir?",
       "gist": "Komponenti alıb yeni komponent qaytaran funksiya. Hooks gələndən sonra əksər hallarda custom hook daha oxunaqlıdır; HOC hələ də cross-cutting wrapper-lər üçün işlənir."
     },
-    "react-what-is-children-prop": {
-      "question": "children prop nədir?",
-      "auto": true
-    },
-    "react-how-to-write-comments-in-react": {
-      "question": "write comments in React — bunu necə edirsən?",
-      "auto": true
-    },
     "react-what-is-reconciliation": {
       "question": "Reconciliation nədir?",
       "gist": "React-in köhnə və yeni element ağacını tutuşdurub nəyi yeniləyəcəyini müəyyən etməsi. Eyni mövqe və eyni tipdə instance və state saxlanılır; tip dəyişəndə subtree unmount olur."
@@ -113,10 +89,6 @@
     "react-does-the-lazy-function-support-named-exports": {
       "question": "`React.lazy` named export dəstəkləyirmi?",
       "gist": "Xeyr, default export gözləyir. Named export üçün dynamic import-un nəticəsini `{ default: module.Named }` şəklinə çevirmək lazımdır."
-    },
-    "react-why-react-uses-classname-over-class-attribute": {
-      "question": "React niyə `class` attribute yerinə `className` işlədir?",
-      "auto": true
     },
     "react-what-are-fragments": {
       "question": "Fragment nədir?",
@@ -130,165 +102,25 @@
       "question": "Portal nədir?",
       "gist": "React ağacında qalıb, DOM-da başqa node-a render olunur — modal, tooltip, drawer. Valideynin overflow və z-index-i onları kəsmir."
     },
-    "react-what-are-stateless-components": {
-      "question": "stateless components nədir?",
-      "auto": true
-    },
-    "react-what-are-stateful-components": {
-      "question": "stateful components nədir?",
-      "auto": true
-    },
-    "react-how-to-apply-validation-on-props-in-react": {
-      "question": "React-də validation on props necə tətbiq olunur?",
-      "auto": true
-    },
-    "react-what-are-the-advantages-of-react": {
-      "question": "React-in üstünlükləri nələrdir?",
-      "auto": true
-    },
-    "react-what-are-the-limitations-of-react": {
-      "question": "React-in məhdudiyyətləri nələrdir?",
-      "auto": true
-    },
-    "react-what-are-the-recommended-ways-for-static-type-checking": {
-      "question": "recommended ways for static type checking nədir?",
-      "auto": true
-    },
-    "react-what-is-the-use-of-react-dom-package": {
-      "question": "`react-dom` package nə üçündür?",
-      "auto": true
-    },
-    "react-what-is-reactdomserver": {
-      "question": "ReactDOMServer nədir?",
-      "auto": true
-    },
-    "react-how-to-use-innerhtml-in-react": {
-      "question": "React-də innerHTML necə istifadə olunur?",
-      "auto": true
-    },
-    "react-how-to-use-styles-in-react": {
-      "question": "React-də styles necə istifadə olunur?",
-      "auto": true
-    },
     "react-how-events-are-different-in-react": {
       "question": "React-də event-lər nə ilə fərqlənir?",
       "gist": "Handler camelCase adlanır və funksiya kimi verilir, React isə SyntheticEvent obyekti ötürür. Listener-lər hər node-a ayrı bağlanmır — React 17-dən root container səviyyəsində delegation edilir (əvvəl `document`-də idi)."
-    },
-    "react-what-is-the-impact-of-indexes-as-keys": {
-      "question": "indexes as keys-in təsiri nədir?",
-      "auto": true
-    },
-    "react-how-do-you-conditionally-render-components": {
-      "question": "conditionally render components — bunu necə edirsən?",
-      "auto": true
     },
     "react-how-do-you-memoize-a-component": {
       "question": "Komponenti necə memoize edirsən?",
       "gist": "`React.memo` ilə — amma props referansları sabit olmalıdır, əks halda müqayisə həmişə uğursuzdur. Ölçmədən memo əlavə etmək performansı yaxşılaşdırmır."
     },
-    "react-how-to-enable-production-mode-in-react": {
-      "question": "enable production mode in React — bunu necə edirsən?",
-      "auto": true
-    },
     "react-do-hooks-replace-render-props-and-higher-order-components": {
       "question": "Hooks render props və HOC-ları əvəz edirmi?",
       "gist": "Məntiqin paylaşılması üçün — bəli, çox vaxt. Amma render-i idarə edən nümunələr (render prop) və wrapper davranışı (HOC) hələ də yerində qalır."
-    },
-    "react-what-is-a-switching-component": {
-      "question": "switching component nədir?",
-      "auto": true
-    },
-    "react-what-are-the-pointer-events-supported-in-react": {
-      "question": "React-də Pointer Events supported nədir?",
-      "auto": true
-    },
-    "react-why-should-component-names-start-with-capital-letter": {
-      "question": "component names start with capital letter niyə belədir?",
-      "auto": true
-    },
-    "react-how-to-loop-inside-jsx": {
-      "question": "loop inside JSX — bunu necə edirsən?",
-      "auto": true
-    },
-    "react-how-do-you-access-props-in-attribute-quotes": {
-      "question": "access props in attribute quotes — bunu necə edirsən?",
-      "auto": true
-    },
-    "react-what-is-react-proptype-array-with-shape": {
-      "question": "React proptype array with shape nədir?",
-      "auto": true
-    },
-    "react-how-to-conditionally-apply-class-attributes": {
-      "question": "conditionally apply class attributes — bunu necə edirsən?",
-      "auto": true
     },
     "react-what-is-the-difference-between-react-and-reactdom": {
       "question": "React və ReactDOM arasında fərq nədir?",
       "gist": "`react` platformadan asılı olmayan hissədir: component, element, hook-lar. `react-dom` brauzer renderer-idir: `createRoot`, `hydrateRoot`, `createPortal`, `flushSync`. React Native-də ikincisinin yerini öz renderer-i tutur."
     },
-    "react-why-reactdom-is-separated-from-react": {
-      "question": "ReactDOM niyə React-dən ayrılıb?",
-      "auto": true
-    },
-    "react-how-to-use-react-label-element": {
-      "question": "React label element necə istifadə olunur?",
-      "auto": true
-    },
-    "react-how-to-combine-multiple-inline-style-objects": {
-      "question": "combine multiple inline style objects — bunu necə edirsən?",
-      "auto": true
-    },
     "react-how-to-re-render-the-view-when-the-browser-is-resized": {
       "question": "Brauzer ölçüsü dəyişəndə görünüşü necə yenidən render edirsən?",
       "gist": "`useEffect`-də `resize` listener əlavə edib ölçünü state-də saxla, cleanup-da listener-i sil. Hadisə tez-tez baş verdiyi üçün debounce/throttle lazımdır; sadəcə stil dəyişirsə CSS media query daha yaxşıdır."
-    },
-    "react-how-to-pretty-print-json-with-react": {
-      "question": "pretty print JSON with React — bunu necə edirsən?",
-      "auto": true
-    },
-    "react-why-can-t-you-update-props-in-react": {
-      "question": "update props in React niyə mümkün deyil?",
-      "auto": true
-    },
-    "react-how-to-focus-an-input-element-on-page-load": {
-      "question": "focus an input element on page load — bunu necə edirsən?",
-      "auto": true
-    },
-    "react-how-to-add-google-analytics-for-react-router": {
-      "question": "Google Analytics for React Router necə əlavə olunur?",
-      "auto": true
-    },
-    "react-how-do-you-apply-vendor-prefixes-to-inline-styles-in-react": {
-      "question": "React-də vendor prefixes to inline styles necə tətbiq olunur?",
-      "auto": true
-    },
-    "react-how-to-import-and-export-components-using-react-and-es6": {
-      "question": "import and export components using React and ES6 — bunu necə edirsən?",
-      "auto": true
-    },
-    "react-what-are-the-exceptions-on-react-component-naming": {
-      "question": "exceptions on React component naming nədir?",
-      "auto": true
-    },
-    "react-is-it-possible-to-use-async-await-in-plain-react": {
-      "question": "use async/await in plain React mümkündürmü?",
-      "auto": true
-    },
-    "react-what-are-the-common-folder-structures-for-react": {
-      "question": "common folder structures for React nədir?",
-      "auto": true
-    },
-    "react-what-are-the-popular-packages-for-animation": {
-      "question": "popular packages for animation nədir?",
-      "auto": true
-    },
-    "react-what-is-the-benefit-of-styles-modules": {
-      "question": "styles modules-in faydası nədir?",
-      "auto": true
-    },
-    "react-what-are-the-popular-react-specific-linters": {
-      "question": "popular React-specific linters nədir?",
-      "auto": true
     },
     "react-what-is-react-router": {
       "question": "React Router nədir?",
@@ -298,76 +130,12 @@
       "question": "React Router `history` kitabxanasından nə ilə fərqlənir?",
       "gist": "`history` brauzer tarixçəsi üzərində aşağı səviyyəli API-dir (push, replace, listen). React Router onun üzərində qurulur və deklarativ marşrutlaşdırma verir: `Route`, `Switch`, `Link`, parametrlər, iç-içə route-lar."
     },
-    "react-how-do-you-programmatically-navigate-using-react-router-v4": {
-      "question": "programmatically navigate using React Router v4 — bunu necə edirsən?",
-      "auto": true
-    },
-    "react-how-to-get-query-parameters-in-react-router-v4": {
-      "question": "get query parameters in React Router v4 — bunu necə edirsən?",
-      "auto": true
-    },
-    "react-how-to-pass-params-to-history-push-method-in-react-router-v4": {
-      "question": "params to `history.push` method in React Router v4 necə ötürülür?",
-      "auto": true
-    },
-    "react-how-to-implement-default-or-notfound-page": {
-      "question": "_default_ or _NotFound_ page necə tətbiq olunur?",
-      "auto": true
-    },
-    "react-how-to-get-history-on-react-router-v4": {
-      "question": "get history on React Router v4 — bunu necə edirsən?",
-      "auto": true
-    },
-    "react-how-to-perform-automatic-redirect-after-login": {
-      "question": "perform automatic redirect after login — bunu necə edirsən?",
-      "auto": true
-    },
     "react-what-is-react-intl": {
       "question": "React Intl nədir?",
       "auto": true
     },
-    "react-what-are-the-main-features-of-react-intl": {
-      "question": "React Intl-in əsas xüsusiyyətləri nələrdir?",
-      "auto": true
-    },
-    "react-what-are-the-two-ways-of-formatting-in-react-intl": {
-      "question": "formatting in React Intl-in üsulları nələrdir?",
-      "auto": true
-    },
-    "react-how-to-use-formattedmessage-as-placeholder-using-react-intl": {
-      "question": "`<FormattedMessage>` as placeholder using React Intl necə istifadə olunur?",
-      "auto": true
-    },
-    "react-how-to-access-current-locale-with-react-intl": {
-      "question": "access current locale with React Intl — bunu necə edirsən?",
-      "auto": true
-    },
-    "react-how-to-format-date-using-react-intl": {
-      "question": "format date using React Intl — bunu necə edirsən?",
-      "auto": true
-    },
-    "react-what-is-shallow-renderer-in-react-testing": {
-      "question": "Shallow Renderer in React testing nədir?",
-      "auto": true
-    },
-    "react-what-is-testrenderer-package-in-react": {
-      "question": "React-də `TestRenderer` package nədir?",
-      "auto": true
-    },
-    "react-what-is-the-purpose-of-reacttestutils-package": {
-      "question": "ReactTestUtils package nə üçündür?",
-      "auto": true
-    },
     "react-what-is-jest": {
       "question": "Jest nədir?",
-      "auto": true
-    },
-    "react-what-are-the-advantages-of-jest-over-jasmine": {
-      "question": "Jest over Jasmine-in üstünlükləri nələrdir?",
-      "auto": true
-    },
-    "react-give-a-simple-example-of-jest-test-case": {
-      "question": "Jest test case üçün nümunə göstər",
       "auto": true
     },
     "react-what-is-flux": {
@@ -378,69 +146,21 @@
       "question": "Redux nədir?",
       "auto": true
     },
-    "react-what-are-the-core-principles-of-redux": {
-      "question": "Redux-in əsas prinsipləri nələrdir?",
-      "auto": true
-    },
     "react-what-is-the-difference-between-mapstatetoprops-and-mapdispat": {
       "question": "`mapStateToProps()` və `mapDispatchToProps()` arasında fərq nədir?",
       "gist": "Birincisi store-dan state oxuyub prop-a çevirir və store dəyişəndə yenidən çağırılır (oxumaq). İkincisi `dispatch`-i prop kimi verilən action funksiyalarına çevirir (yazmaq)."
-    },
-    "react-can-i-dispatch-an-action-in-reducer": {
-      "question": "dispatch an action in reducer — bu doğrudur?",
-      "auto": true
-    },
-    "react-how-to-access-redux-store-outside-a-component": {
-      "question": "access Redux store outside a component — bunu necə edirsən?",
-      "auto": true
-    },
-    "react-what-are-the-drawbacks-of-mvw-pattern": {
-      "question": "MVW pattern-in çatışmazlıqları nələrdir?",
-      "auto": true
-    },
-    "react-how-to-reset-state-in-redux": {
-      "question": "reset state in Redux — bunu necə edirsən?",
-      "auto": true
     },
     "react-what-is-the-difference-between-react-context-and-react-redux": {
       "question": "Context ilə Redux arasında fərq nədir?",
       "gist": "Context dependency injection-dır: dəyər dəyişəndə bütün consumer-lər render olunur. Redux/RTK isə store, selector-lar və dev alətləri ilə server/app state idarəsi üçündür."
     },
-    "react-why-are-redux-state-functions-called-reducers": {
-      "question": "Redux state functions called reducers niyə belədir?",
-      "auto": true
-    },
-    "react-how-to-make-ajax-request-in-redux": {
-      "question": "make AJAX request in Redux — bunu necə edirsən?",
-      "auto": true
-    },
-    "react-should-i-keep-all-component-s-state-in-redux-store": {
-      "question": "keep all component's state in Redux store — bu doğrudur?",
-      "auto": true
-    },
-    "react-what-is-the-proper-way-to-access-redux-store": {
-      "question": "proper way to access Redux store nədir?",
-      "auto": true
-    },
     "react-what-is-the-difference-between-component-and-container-in-re": {
       "question": "React Redux-da component və container arasında fərq nədir?",
       "gist": "Presentational component yalnız prop alır və UI göstərir, store-dan xəbərsizdir. Container store-a bağlanır (`connect` ya `useSelector`), data və handler hazırlayıb ötürür. Məqsəd — UI-nı state məntiqindən ayırmaq."
     },
-    "react-what-is-the-purpose-of-the-constants-in-redux": {
-      "question": "constants in Redux nə üçündür?",
-      "auto": true
-    },
     "react-what-are-the-different-ways-to-write-mapdispatchtoprops": {
       "question": "`mapDispatchToProps()` neçə şəkildə yazıla bilər?",
       "gist": "Üç yolla: funksiya kimi (`dispatch => ({ add: () => dispatch(add()) })`), obyekt qısa formasında (`{ add }` — connect özü `dispatch`-ə bükür) və ya heç verməmək (komponent `dispatch`-i prop kimi alır)."
-    },
-    "react-what-is-the-use-of-the-ownprops-parameter-in-mapstatetoprops": {
-      "question": "`ownProps` parameter in `mapStateToProps()` and `mapDispatchToProps()` nə üçündür?",
-      "auto": true
-    },
-    "react-how-to-structure-redux-top-level-directories": {
-      "question": "structure Redux top level directories — bunu necə edirsən?",
-      "auto": true
     },
     "react-what-is-redux-saga": {
       "question": "redux-saga nədir?",
@@ -462,24 +182,8 @@
       "question": "Redux DevTools nədir?",
       "auto": true
     },
-    "react-what-are-the-features-of-redux-devtools": {
-      "question": "Redux DevTools-in xüsusiyyətləri nələrdir?",
-      "auto": true
-    },
     "react-what-is-redux-form": {
       "question": "Redux Form nədir?",
-      "auto": true
-    },
-    "react-what-are-the-main-features-of-redux-form": {
-      "question": "Redux Form-in əsas xüsusiyyətləri nələrdir?",
-      "auto": true
-    },
-    "react-how-to-add-multiple-middlewares-to-redux": {
-      "question": "multiple middlewares to Redux necə əlavə olunur?",
-      "auto": true
-    },
-    "react-how-to-set-initial-state-in-redux": {
-      "question": "Redux-də initial state necə təyin olunur?",
       "auto": true
     },
     "react-how-relay-is-different-from-redux": {
@@ -494,18 +198,6 @@
       "question": "React Native ilə React arasında fərq nədir?",
       "gist": "Eyni React nüvəsi, fərqli renderer. React DOM elementlərini (div, span) göstərir; React Native `View`, `Text` kimi native komponentlərə çevirir, stil CSS deyil, JS obyektləri ilə verilir."
     },
-    "react-how-to-test-react-native-apps": {
-      "question": "React Native apps necə test olunur?",
-      "auto": true
-    },
-    "react-how-to-do-logging-in-react-native": {
-      "question": "do logging in React Native — bunu necə edirsən?",
-      "auto": true
-    },
-    "react-how-to-debug-your-react-native": {
-      "question": "your React Native necə debug olunur?",
-      "auto": true
-    },
     "react-what-is-flow": {
       "question": "Flow nədir?",
       "auto": true
@@ -514,89 +206,13 @@
       "question": "Flow və PropTypes arasında fərq nədir?",
       "gist": "Flow (və TypeScript) statik tip yoxlayıcıdır — səhvi kod yazılarkən tutur, bütün kodu əhatə edir. PropTypes runtime-da yalnız prop-ları yoxlayır və dev rejimində konsola xəbərdarlıq yazır."
     },
-    "react-how-to-use-font-awesome-icons-in-react": {
-      "question": "React-də Font Awesome icons necə istifadə olunur?",
-      "auto": true
-    },
-    "react-what-is-react-dev-tools": {
-      "question": "React Dev Tools nədir?",
-      "auto": true
-    },
-    "react-why-is-devtools-not-loading-in-chrome-for-local-files": {
-      "question": "DevTools not loading in Chrome for local files niyə belədir?",
-      "auto": true
-    },
-    "react-how-to-use-polymer-in-react": {
-      "question": "React-də Polymer necə istifadə olunur?",
-      "auto": true
-    },
-    "react-what-are-the-advantages-of-react-over-vue-js": {
-      "question": "React over Vue.js-in üstünlükləri nələrdir?",
-      "auto": true
-    },
     "react-what-is-the-difference-between-react-and-angular": {
       "question": "React və Angular arasında fərq nədir?",
       "gist": "React kitabxanadır — yalnız view; routing, form, HTTP üçün paketlər özün seçirsən, JSX və birtərəfli data axını var. Angular tam framework-dür: DI, RxJS, template sintaksisi, iki tərəfli binding, CLI hazır gəlir."
     },
-    "react-what-are-styled-components": {
-      "question": "Styled Components nədir?",
-      "auto": true
-    },
-    "react-give-an-example-of-styled-components": {
-      "question": "Styled Components üçün nümunə göstər",
-      "auto": true
-    },
-    "react-what-is-relay": {
-      "question": "Relay nədir?",
-      "auto": true
-    },
-    "react-what-are-the-main-features-of-reselect-library": {
-      "question": "Reselect library-in əsas xüsusiyyətləri nələrdir?",
-      "auto": true
-    },
-    "react-do-you-need-to-have-a-particular-build-tool-to-use-redux": {
-      "question": "need to have a particular build tool to use Redux — bu doğrudur?",
-      "auto": true
-    },
     "react-how-react-proptypes-allow-different-types-for-one-prop": {
       "question": "PropTypes bir prop üçün bir neçə tipə necə icazə verir?",
       "gist": "`PropTypes.oneOfType([PropTypes.string, PropTypes.number])` ilə. Sabit dəyər dəsti üçün `oneOf`, dəqiq obyekt forması üçün `shape`, massiv elementinin tipi üçün `arrayOf` var."
-    },
-    "react-can-i-import-an-svg-file-as-react-component": {
-      "question": "import an SVG file as react component — bu doğrudur?",
-      "auto": true
-    },
-    "react-what-is-render-hijacking-in-react": {
-      "question": "react-də render hijacking nədir?",
-      "auto": true
-    },
-    "react-how-to-pass-numbers-to-react-component": {
-      "question": "numbers to React component necə ötürülür?",
-      "auto": true
-    },
-    "react-do-i-need-to-keep-all-my-state-into-redux-should-i-ever-use-": {
-      "question": "need to keep all my state into Redux — bu doğrudur?",
-      "auto": true
-    },
-    "react-what-is-the-purpose-of-registerserviceworker-in-react": {
-      "question": "registerServiceWorker in React nə üçündür?",
-      "auto": true
-    },
-    "react-what-is-react-memo-function": {
-      "question": "React memo function nədir?",
-      "auto": true
-    },
-    "react-what-is-react-lazy-function": {
-      "question": "React lazy function nədir?",
-      "auto": true
-    },
-    "react-how-to-prevent-unnecessary-updates-using-setstate": {
-      "question": "unnecessary updates using setState necə qarşısı alınır?",
-      "auto": true
-    },
-    "react-how-do-you-render-array-strings-and-numbers-in-react-16-vers": {
-      "question": "Array, Strings and Numbers in React 16 Version necə render olunur?",
-      "auto": true
     },
     "react-what-are-hooks": {
       "question": "Hook-lar nədir?",
@@ -614,109 +230,17 @@
       "question": "Flux və Redux arasında fərqlər nələrdir?",
       "gist": "Flux-da bir neçə store və dispatcher var, məntiq store-ların içindədir. Redux-da tək store, dispatcher yox, dəyişiklik saf reducer-lərlə və immutable şəkildə edilir — time-travel debugging və test bundan yaranır."
     },
-    "react-what-are-the-benefits-of-react-router-v4": {
-      "question": "React Router V4-in üstünlükləri nələrdir?",
-      "auto": true
-    },
-    "react-can-you-describe-about-componentdidcatch-lifecycle-method-si": {
-      "question": "describe about componentDidCatch lifecycle method signature mümkündürmü?",
-      "auto": true
-    },
-    "react-what-is-the-behavior-of-uncaught-errors-in-react-16": {
-      "question": "uncaught errors in react 16-in davranışı nədir?",
-      "auto": true
-    },
-    "react-what-is-the-proper-placement-for-error-boundaries": {
-      "question": "proper placement for error boundaries nədir?",
-      "auto": true
-    },
     "react-what-is-the-benefit-of-component-stack-trace-from-error-boun": {
       "question": "Error boundary-nin component stack trace faydası nədir?",
       "gist": "Xətanın hansı komponent ağacında baş verdiyini göstərir. Error boundary yalnız render fazasındaki xətaları tutur — event handler və async callback-lər onun əhatəsində deyil."
-    },
-    "react-what-are-default-props": {
-      "question": "default props nədir?",
-      "auto": true
-    },
-    "react-what-is-the-purpose-of-displayname-class-property": {
-      "question": "displayName class property nə üçündür?",
-      "auto": true
-    },
-    "react-what-is-the-browser-support-for-react-applications": {
-      "question": "browser support for react applications nədir?",
-      "auto": true
-    },
-    "react-what-is-code-splitting": {
-      "question": "code-splitting nədir?",
-      "auto": true
     },
     "react-what-are-keyed-fragments": {
       "question": "Keyed Fragment nədir?",
       "gist": "Siyahı render edərkən fragment-ə `key` vermək lazım gəlirsə qısa `<>` sintaksisi yaramır — açıq `<React.Fragment key={item.id}>` yazılır. `key` fragment-in qəbul etdiyi yeganə prop-dur."
     },
-    "react-does-react-support-all-html-attributes": {
-      "question": "React support all HTML attributes — belədirmi?",
-      "auto": true
-    },
-    "react-what-is-nextjs-and-major-features-of-it": {
-      "question": "it-in əsas xüsusiyyətləri nələrdir?",
-      "auto": true
-    },
-    "react-how-do-you-pass-an-event-handler-to-a-component": {
-      "question": "event handler to a component necə ötürülür?",
-      "auto": true
-    },
-    "react-how-to-prevent-a-function-from-being-called-multiple-times": {
-      "question": "function from being called multiple times necə qarşısı alınır?",
-      "auto": true
-    },
-    "react-how-do-you-update-rendered-elements": {
-      "question": "rendered elements necə yenilənir?",
-      "auto": true
-    },
-    "react-how-do-you-say-that-props-are-readonly": {
-      "question": "say that props are readonly — bunu necə edirsən?",
-      "auto": true
-    },
-    "react-what-are-the-conditions-to-safely-use-the-index-as-a-key": {
-      "question": "conditions to safely use the index as a key nədir?",
-      "auto": true
-    },
-    "react-what-is-the-popular-choice-for-form-handling": {
-      "question": "popular choice for form handling nədir?",
-      "auto": true
-    },
-    "react-what-are-the-advantages-of-formik-over-redux-form-library": {
-      "question": "formik over redux form library-in üstünlükləri nələrdir?",
-      "auto": true
-    },
-    "react-why-are-you-not-required-to-use-inheritance": {
-      "question": "you not required to use inheritance niyə belədir?",
-      "auto": true
-    },
-    "react-can-i-use-web-components-in-react-application": {
-      "question": "use web components in react application — bu doğrudur?",
-      "auto": true
-    },
-    "react-what-is-dynamic-import": {
-      "question": "dynamic import nədir?",
-      "auto": true
-    },
-    "react-what-are-loadable-components": {
-      "question": "loadable components nədir?",
-      "auto": true
-    },
     "react-what-is-suspense-component": {
       "question": "Suspense komponenti nədir?",
       "gist": "Uşaq ağacı hazır olana qədər fallback göstərir — lazy komponentlər və data fetching üçün. Layout sıçrayışının olmaması üçün fallback yer ayırmalıdır."
-    },
-    "react-what-is-route-based-code-splitting": {
-      "question": "route based code splitting nədir?",
-      "auto": true
-    },
-    "react-what-is-the-purpose-of-default-value-in-context": {
-      "question": "default value in context nə üçündür?",
-      "auto": true
     },
     "react-what-is-diffing-algorithm": {
       "question": "Diffing algoritmi nədir?",
@@ -726,45 +250,13 @@
       "question": "Diffing algoritmi hansı qaydalara əsaslanır?",
       "gist": "Element tipi dəyişibsə köhnə ağac atılır və yenidən qurulur (state itir). Tip eynidirsə yalnız dəyişən atributlar yenilənir, state saxlanılır. Siyahıda uşaqlar `key` üzrə uyğunlaşdırılır; key yoxdursa indeks işlədilir və sıra dəyişəndə lazımsız yenidənqurma olur."
     },
-    "react-when-do-you-need-to-use-refs": {
-      "question": "refs nə vaxt lazım olur?",
-      "auto": true
-    },
-    "react-what-is-windowing-technique": {
-      "question": "windowing technique nədir?",
-      "auto": true
-    },
-    "react-how-do-you-print-falsy-values-in-jsx": {
-      "question": "print falsy values in JSX — bunu necə edirsən?",
-      "auto": true
-    },
     "react-what-is-the-typical-use-case-of-portals": {
       "question": "Portal-ların tipik istifadə halı nədir?",
       "gist": "Modal, dialog, tooltip, dropdown — valideynin `overflow: hidden` və ya `z-index` konteksti kəsdiyi halda content `document.body`-ə render olunur. Event-lər isə React ağacında valideynə qədər qalxmağa davam edir."
     },
-    "react-how-do-you-set-default-value-for-uncontrolled-component": {
-      "question": "default value for uncontrolled component necə təyin olunur?",
-      "auto": true
-    },
-    "react-what-is-your-favorite-react-stack": {
-      "question": "your favorite React stack nədir?",
-      "auto": true
-    },
     "react-what-is-the-difference-between-real-dom-and-virtual-dom": {
       "question": "Real DOM və Virtual DOM arasında fərq nədir?",
       "gist": "Real DOM brauzerin obyekt modelidir; ona hər müraciət reflow/repaint xərci yarada bilər. Virtual DOM yaddaşdaki sadə obyekt ağacıdır — ucuz yaradılır, müqayisə olunur, real DOM-a yalnız fərqlər tətbiq edilir."
-    },
-    "react-how-to-add-bootstrap-to-a-react-application": {
-      "question": "Bootstrap to a react application necə əlavə olunur?",
-      "auto": true
-    },
-    "react-can-you-list-down-top-websites-or-applications-using-react-a": {
-      "question": "list down top websites or applications using react as front end framework mümkündürmü?",
-      "auto": true
-    },
-    "react-is-it-recommended-to-use-css-in-js-technique-in-react": {
-      "question": "recommended to use CSS In JS technique in React — belədirmi?",
-      "auto": true
     },
     "react-do-i-need-to-rewrite-all-my-class-components-with-hooks": {
       "question": "Bütün class component-ləri hook-larla yenidən yazmalıyam?",
@@ -794,14 +286,6 @@
       "question": "formik nədir?",
       "auto": true
     },
-    "react-what-are-typical-middleware-choices-for-handling-asynchronou": {
-      "question": "Redux-də typical middleware choices for handling asynchronous calls nədir?",
-      "auto": true
-    },
-    "react-describe-about-data-flow-in-react": {
-      "question": "data flow in react barədə danış",
-      "auto": true
-    },
     "react-what-is-mobx": {
       "question": "MobX nədir?",
       "auto": true
@@ -809,10 +293,6 @@
     "react-what-are-the-differences-between-redux-and-mobx": {
       "question": "Redux və MobX arasında fərqlər nələrdir?",
       "gist": "Redux: tək immutable store, action → reducer axını, çox açıq və boilerplate-li, debugging güclü. MobX: observable-lar, state-i birbaşa dəyişirsən, kod az, amma data axını gizli qalır və izləmək çətinləşə bilər."
-    },
-    "react-should-i-learn-es6-before-learning-reactjs": {
-      "question": "learn ES6 before learning ReactJS — bu doğrudur?",
-      "auto": true
     },
     "react-what-is-concurrent-rendering": {
       "question": "Concurrent rendering nədir?",
@@ -830,29 +310,13 @@
       "question": "React-də imperativ və deklarativ yanaşma arasında fərq nədir?",
       "gist": "İmperativ kodda DOM-a addım-addım nə etməli olduğunu deyirsən (`el.classList.add`). Deklarativ yanaşmada UI-nın state-dən asılı son görünüşünü təsvir edirsən, keçidləri React edir. İmperativə yalnız focus, scroll, media kimi hallarda `ref` ilə düşülür."
     },
-    "react-what-are-the-benefits-of-new-jsx-transform": {
-      "question": "new JSX transform-in üstünlükləri nələrdir?",
-      "auto": true
-    },
     "react-how-is-the-new-jsx-transform-different-from-old-transform": {
       "question": "Yeni JSX transform köhnəsindən nə ilə fərqlənir?",
       "gist": "Köhnə transform JSX-i `React.createElement`-ə çevirirdi, ona görə hər faylda `import React` lazım idi. React 17-dən compiler `react/jsx-runtime`-dan `jsx()` funksiyasını özü import edir — `React` idxalı lazım deyil, bundle bir az kiçilir."
     },
-    "react-what-are-react-server-components": {
-      "question": "React Server components nədir?",
-      "auto": true
-    },
-    "react-what-is-prop-drilling": {
-      "question": "prop drilling nədir?",
-      "auto": true
-    },
     "react-what-is-the-difference-between-usestate-and-useref-hook": {
       "question": "useState ilə useRef arasında fərq nədir?",
       "gist": "State dəyişikliyi render tetikleyir; ref dəyişikliyi tetiklemez. Ref render-lər arası sabit qutu ya DOM node handle-ı üçündür."
-    },
-    "react-what-is-a-wrapper-component": {
-      "question": "wrapper component nədir?",
-      "auto": true
     },
     "react-what-are-the-differences-between-useeffect-and-uselayouteffe": {
       "question": "useEffect və useLayoutEffect arasında fərq nədir?",
@@ -861,26 +325,6 @@
     "react-what-are-the-differences-between-functional-and-class-compon": {
       "question": "Function və class component arasındakı fərqlər nələrdir?",
       "gist": "Function component sadə funksiyadır: state və lifecycle hook-larla gəlir, `this` yoxdur, kod az olur. Class `React.Component`-dən miras alır, `this.state`/`setState` və lifecycle metodları işlədir. Error boundary hələ class tələb edir, qalan hallarda function component tövsiyə olunur."
-    },
-    "react-what-is-strict-mode-in-react": {
-      "question": "React-də strict mode nədir?",
-      "auto": true
-    },
-    "react-what-is-the-benefit-of-strict-mode": {
-      "question": "strict mode-in faydası nədir?",
-      "auto": true
-    },
-    "react-what-are-the-rules-of-jsx": {
-      "question": "JSX-in qaydaları nələrdir?",
-      "auto": true
-    },
-    "react-how-do-you-prevent-mutating-array-variables": {
-      "question": "mutating array variables necə qarşısı alınır?",
-      "auto": true
-    },
-    "react-what-are-capture-phase-events": {
-      "question": "capture phase events nədir?",
-      "auto": true
     },
     "react-how-does-react-batch-multiple-state-updates": {
       "question": "React state yeniləmələrini necə batch edir?",
@@ -894,42 +338,6 @@
       "question": "React hydration nədir?",
       "gist": "Serverdə hazırlanmış HTML-in üzərinə client-də event handler və state-in «bərkidilməsi». Markup sıfırdan qurulmur, ona görə kontent tez görünür; server və client nəticəsi uyğun gəlməsə hydration xətası olur. API — `hydrateRoot`."
     },
-    "react-how-do-you-update-objects-inside-state": {
-      "question": "objects inside state necə yenilənir?",
-      "auto": true
-    },
-    "react-how-do-you-update-nested-objects-inside-state": {
-      "question": "nested objects inside state necə yenilənir?",
-      "auto": true
-    },
-    "react-how-do-you-update-arrays-inside-state": {
-      "question": "arrays inside state necə yenilənir?",
-      "auto": true
-    },
-    "react-how-do-you-use-immer-library-for-state-updates": {
-      "question": "immer library for state updates necə istifadə olunur?",
-      "auto": true
-    },
-    "react-what-are-the-preferred-and-non-preferred-array-operations-fo": {
-      "question": "preferred and non-preferred array operations for updating the state nədir?",
-      "auto": true
-    },
-    "react-what-will-happen-by-defining-nested-function-components": {
-      "question": "defining nested function components halında nə baş verir?",
-      "auto": true
-    },
-    "react-can-i-use-keys-for-non-list-items": {
-      "question": "use keys for non-list items — bu doğrudur?",
-      "auto": true
-    },
-    "react-what-are-the-guidelines-to-be-followed-for-writing-reducers": {
-      "question": "guidelines to be followed for writing reducers nədir?",
-      "auto": true
-    },
-    "react-how-does-reactjs-work-behind-the-scenes": {
-      "question": "ReactJS arxa planda necə işləyir?",
-      "auto": true
-    },
     "react-how-is-usereducer-different-from-usestate": {
       "question": "useReducer useState-dən nə ilə fərqlənir?",
       "gist": "Bir neçə sahə birlikdə, adlandırılmış keçidlərlə dəyişəndə reducer daha oxunaqlıdır və məntiq React-dən kənarda test olunur."
@@ -942,10 +350,6 @@
       "question": "useContext hook-un istifadə halları nələrdir?",
       "gist": "Nadir dəyişən qlobal dəyərlər: theme, locale, auth istifadəçisi, feature flag, i18n. Tez dəyişən state üçün uyğun deyil — dəyər dəyişəndə bütün consumer-lər re-render olur."
     },
-    "react-when-to-use-client-and-server-components": {
-      "question": "client and server components nə vaxt istifadə olunur?",
-      "auto": true
-    },
     "react-what-are-the-differences-between-page-router-and-app-router-": {
       "question": "Next.js-də page router və app router arasında fərqlər nələrdir?",
       "gist": "`pages/`: fayl əsaslı marşrut, `getServerSideProps`/`getStaticProps`, komponentlər client tərəflidir. `app/`: default server component, iç-içə layout-lar, `loading.tsx`/`error.tsx`, streaming, server action-lar və data-nın komponent içində yüklənməsi."
@@ -957,10 +361,6 @@
     "react-can-hooks-be-used-in-class-components": {
       "question": "Hook-lar class component-lərdə istifadə oluna bilər?",
       "gist": "Yox. Class-ı hook istifadə edən function component-ə wrap etmək və ya nəticəni prop kimi ötürmək lazımdır."
-    },
-    "react-what-is-an-updater-function-should-an-updater-function-be-us": {
-      "question": "updater function nədir?",
-      "auto": true
     },
     "react-can-usestate-take-a-function-as-an-initial-value": {
       "question": "useState ilkin dəyər olaraq funksiya qəbul edə bilər?",
@@ -1005,10 +405,6 @@
     "react-how-does-usecontext-works-explain-with-an-example": {
       "question": "useContext necə işləyir? Nümunə ilə izah et.",
       "gist": "useContext ağacda ən yaxın Provider-in value-sunu oxuyur; Provider yoxdursa createContext-ə verilən default dəyəri götürür. Provider-in value-su dəyişəndə bütün consumer-lər re-render olur (memo bunun qarşısını almır)."
-    },
-    "react-can-you-use-multiple-contexts-in-one-component": {
-      "question": "Use Multiple Contexts in One Component mümkündürmü?",
-      "auto": true
     },
     "react-what-s-a-common-pitfall-when-using-usecontext-with-objects": {
       "question": "useContext-i object ilə istifadə edərkən tipik səhv nədir?",
@@ -1142,21 +538,9 @@
       "question": "React hook-larından istifadə üçün ən yaxşı praktikalar nələrdir?",
       "gist": "Qaydaları lint ilə məcburi et; effect-ləri məsuliyyətə görə böl; dependency-ləri düzgün yaz və referansları sabitlə; təkrar məntiqi custom hook-a çıxar; ölçmədən useMemo/useCallback əlavə etmə; state-i istifadə olunduğu yerə yaxın saxla; derived dəyəri state-də saxlamaq yerinə hesabla."
     },
-    "react-what-are-the-key-features-introduced-in-react-18": {
-      "question": "key features introduced in React 18 nədir?",
-      "auto": true
-    },
-    "react-what-are-the-key-features-introduced-in-react-19": {
-      "question": "key features introduced in React 19 nədir?",
-      "auto": true
-    },
     "react-what-is-the-use-hook-in-react-19": {
       "question": "React 19-da use() hook nədir?",
       "gist": "Promise və ya context-i render zamanı oxuyur; Promise hazır olana qədər komponent suspend olur və ən yaxın Suspense fallback görünür. Digər hook-lardan fərqli olaraq şərt və loop içində çağırıla bilər."
-    },
-    "react-what-are-server-actions-in-react-19": {
-      "question": "Server Actions in React 19 nədir?",
-      "auto": true
     },
     "react-what-are-useformstate-and-useformstatus-hooks": {
       "question": "useFormState və useFormStatus hook-ları nələrdir?",
@@ -1166,22 +550,6 @@
       "question": "useOptimistic hook nədir?",
       "gist": "Async action gedərkən gözlənilən nəticəni dərhal göstərir: UI optimistik state ilə render olunur, action bitəndə real state-ə keçir, uğursuzluqda dəyişiklik avtomatik geri alınır."
     },
-    "react-what-is-the-react-compiler-react-forget": {
-      "question": "React Compiler (React Forget) nədir?",
-      "auto": true
-    },
-    "react-why-should-we-not-update-the-state-directly": {
-      "question": "update the state directly niyə belədir?",
-      "auto": true
-    },
-    "react-how-to-bind-methods-or-event-handlers-in-jsx-callbacks": {
-      "question": "bind methods or event handlers in JSX callbacks — bunu necə edirsən?",
-      "auto": true
-    },
-    "react-how-to-pass-a-parameter-to-an-event-handler-or-callback": {
-      "question": "parameter to an event handler or callback necə ötürülür?",
-      "auto": true
-    },
     "react-what-is-the-use-of-refs": {
       "question": "refs nə üçündür?",
       "auto": true
@@ -1190,21 +558,9 @@
       "question": "refs necə yaradılır?",
       "auto": true
     },
-    "react-what-are-forward-refs": {
-      "question": "forward refs nədir?",
-      "auto": true
-    },
-    "react-why-are-string-refs-legacy": {
-      "question": "String Refs legacy niyə belədir?",
-      "auto": true
-    },
     "react-what-are-the-different-phases-of-component-lifecycle": {
       "question": "Komponentin lifecycle mərhələləri hansılardır?",
       "gist": "Mounting (constructor → render → componentDidMount), updating (yeni prop/state → render → componentDidUpdate), unmounting (componentWillUnmount). Xəta üçün `getDerivedStateFromError`/`componentDidCatch`. Hook-larda qarşılığı `useState` və `useEffect`-in setup/cleanup-ıdır."
-    },
-    "react-what-are-the-lifecycle-methods-of-react": {
-      "question": "React-in metodları nələrdir?",
-      "auto": true
     },
     "react-how-to-create-props-proxy-for-hoc-component": {
       "question": "HOC-da props proxy nə üçün qurulur?",
@@ -1214,53 +570,9 @@
       "question": "context nədir?",
       "auto": true
     },
-    "react-what-is-the-purpose-of-using-super-constructor-with-props-ar": {
-      "question": "using super constructor with props argument nə üçündür?",
-      "auto": true
-    },
-    "react-how-to-set-state-with-a-dynamic-key-name": {
-      "question": "state with a dynamic key name necə təyin olunur?",
-      "auto": true
-    },
-    "react-what-are-error-boundaries-in-react-v16": {
-      "question": "error boundaries in React v16 nədir?",
-      "auto": true
-    },
     "react-what-is-the-purpose-of-render-method-of-react-dom": {
       "question": "`react-dom`-un `render` metodu nə üçündür?",
       "gist": "React element ağacını verilmiş DOM konteynerinə yerləşdirir və UI-nı idarə etməyə başlayır. React 18-də `ReactDOM.render` deprecate olundu — `createRoot(container).render(...)` istifadə edilir, concurrent xüsusiyyətləri yalnız o açır."
-    },
-    "react-what-will-happen-if-you-use-setstate-in-constructor": {
-      "question": "you use `setState()` in constructor halında nə baş verir?",
-      "auto": true
-    },
-    "react-is-it-good-to-use-setstate-in-componentwillmount-method": {
-      "question": "good to use `setState()` in `componentWillMount()` method — belədirmi?",
-      "auto": true
-    },
-    "react-what-will-happen-if-you-use-props-in-initial-state": {
-      "question": "you use props in initial state halında nə baş verir?",
-      "auto": true
-    },
-    "react-what-is-the-lifecycle-methods-order-in-mounting": {
-      "question": "lifecycle methods order in mounting nədir?",
-      "auto": true
-    },
-    "react-what-are-the-lifecycle-methods-going-to-be-deprecated-in-rea": {
-      "question": "lifecycle methods going to be deprecated in React v16 nədir?",
-      "auto": true
-    },
-    "react-what-is-the-purpose-of-getderivedstatefromprops-lifecycle-me": {
-      "question": "`getDerivedStateFromProps()` lifecycle method nə üçündür?",
-      "auto": true
-    },
-    "react-what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-met": {
-      "question": "`getSnapshotBeforeUpdate()` lifecycle method nə üçündür?",
-      "auto": true
-    },
-    "react-what-is-the-recommended-way-for-naming-components": {
-      "question": "recommended way for naming components nədir?",
-      "auto": true
     },
     "react-what-is-the-difference-between-constructor-and-getinitialsta": {
       "question": "`constructor` və `getInitialState` arasında fərq nədir?",
@@ -1278,188 +590,32 @@
       "question": "`setState()` və `replaceState()` arasında fərq nədir?",
       "gist": "`setState` verilən obyekti mövcud state ilə birləşdirir (shallow merge). `replaceState` state-i tamamilə əvəz edirdi — köhnə `createClass` API-sinin hissəsidir, ES6 class-larda mövcud deyil."
     },
-    "react-how-to-listen-to-state-changes": {
-      "question": "listen to state changes — bunu necə edirsən?",
-      "auto": true
-    },
-    "react-is-it-possible-to-use-react-without-rendering-html": {
-      "question": "use React without rendering HTML mümkündürmü?",
-      "auto": true
-    },
-    "react-what-are-the-possible-ways-of-updating-objects-in-state": {
-      "question": "updating objects in state-in mümkün üsulları nələrdir?",
-      "auto": true
-    },
-    "react-what-are-the-approaches-to-include-polyfills-in-your-create-": {
-      "question": "approaches to include polyfills in your `create-react-app` nədir?",
-      "auto": true
-    },
-    "react-how-to-avoid-using-relative-path-imports-in-create-react-app": {
-      "question": "using relative path imports in create-react-app necə qarşısı alınır?",
-      "auto": true
-    },
-    "react-how-to-update-a-component-every-second": {
-      "question": "component every second necə yenilənir?",
-      "auto": true
-    },
-    "react-why-is-a-component-constructor-called-only-once": {
-      "question": "component constructor called only once niyə belədir?",
-      "auto": true
-    },
-    "react-how-to-define-constants-in-react": {
-      "question": "React-də constants necə təyin olunur?",
-      "auto": true
-    },
-    "react-how-to-programmatically-trigger-click-event-in-react": {
-      "question": "programmatically trigger click event in React — bunu necə edirsən?",
-      "auto": true
-    },
     "react-what-are-render-props": {
       "question": "render props nədir?",
-      "auto": true
-    },
-    "react-how-to-dispatch-an-action-on-load": {
-      "question": "dispatch an action on load — bunu necə edirsən?",
-      "auto": true
-    },
-    "react-how-to-use-connect-from-react-redux": {
-      "question": "`connect()` from React Redux necə istifadə olunur?",
-      "auto": true
-    },
-    "react-how-to-use-typescript-in-create-react-app-application": {
-      "question": "TypeScript in `create-react-app` application necə istifadə olunur?",
-      "auto": true
-    },
-    "react-does-the-statics-object-work-with-es6-classes-in-react": {
-      "question": "statics object work with ES6 classes in React — belədirmi?",
-      "auto": true
-    },
-    "react-why-are-inline-ref-callbacks-or-functions-not-recommended": {
-      "question": "inline ref callbacks or functions not recommended niyə belədir?",
-      "auto": true
-    },
-    "react-what-are-hoc-factory-implementations": {
-      "question": "HOC factory implementations nədir?",
-      "auto": true
-    },
-    "react-how-to-use-class-field-declarations-syntax-in-react-classes": {
-      "question": "class field declarations syntax in React classes necə istifadə olunur?",
-      "auto": true
-    },
-    "react-why-do-you-not-need-error-boundaries-for-event-handlers": {
-      "question": "need error boundaries for event handlers niyə belədir?",
       "auto": true
     },
     "react-what-is-the-difference-between-try-catch-block-and-error-bou": {
       "question": "try/catch bloku ilə error boundary arasında fərq nədir?",
       "gist": "`try/catch` imperativ kodda, funksiya çağırışlarını əhatə edir. Error boundary render, lifecycle və konstruktorda yaranan xətaları tutub fallback UI göstərir. Event handler, async kod və server render xətalarını tutmur — orada `try/catch` lazımdır."
     },
-    "react-what-is-the-required-method-to-be-defined-for-a-class-compon": {
-      "question": "required method to be defined for a class component nədir?",
-      "auto": true
-    },
     "react-what-are-the-possible-return-types-of-render-method": {
       "question": "`render` metodu hansı tipləri qaytara bilər?",
       "gist": "React element, fragment, portal, string və ya rəqəm, boolean və `null` (heç nə göstərmir), elementlərdən ibarət massiv. React 18-dən `undefined` də icazəlidir."
-    },
-    "react-what-is-the-main-purpose-of-constructor": {
-      "question": "constructor-in əsas məqsədi nədir?",
-      "auto": true
-    },
-    "react-is-it-mandatory-to-define-constructor-for-react-component": {
-      "question": "mandatory to define constructor for React component — belədirmi?",
-      "auto": true
-    },
-    "react-why-should-not-call-setstate-in-componentwillunmount": {
-      "question": "call setState in componentWillUnmount niyə belədir?",
-      "auto": true
-    },
-    "react-what-is-the-purpose-of-getderivedstatefromerror": {
-      "question": "getDerivedStateFromError nə üçündür?",
-      "auto": true
     },
     "react-what-is-the-methods-order-when-component-re-rendered": {
       "question": "Komponent yenidən render olunanda metodlar hansı sıra ilə işləyir?",
       "gist": "`static getDerivedStateFromProps` → `shouldComponentUpdate` → `render` → `getSnapshotBeforeUpdate` → DOM commit → `componentDidUpdate`. `shouldComponentUpdate` `false` qaytarsa, sonrakılar işləmir."
     },
-    "react-what-are-the-methods-invoked-during-error-handling": {
-      "question": "methods invoked during error handling nədir?",
-      "auto": true
-    },
-    "react-what-is-the-purpose-of-unmountcomponentatnode-method": {
-      "question": "unmountComponentAtNode method nə üçündür?",
-      "auto": true
-    },
-    "react-what-are-the-limitations-with-hocs": {
-      "question": "limitations with HOCs nədir?",
-      "auto": true
-    },
-    "react-how-to-debug-forwardrefs-in-devtools": {
-      "question": "forwardRefs in DevTools necə debug olunur?",
-      "auto": true
-    },
     "react-is-it-good-to-use-arrow-functions-in-render-methods": {
       "question": "`render` metodunda arrow funksiya işlətmək yaxşıdırmı?",
       "gist": "Hər render-də yeni funksiya referansı yaranır, ona görə `React.memo`/`PureComponent` ilə bükülmüş child hər dəfə yenidən render olur. Kiçik komponentlərdə problem deyil; ağır siyahılarda handler class metodu ya `useCallback` ilə sabitlənir."
-    },
-    "react-how-do-you-say-that-state-updates-are-merged": {
-      "question": "say that state updates are merged — bunu necə edirsən?",
-      "auto": true
-    },
-    "react-how-do-you-pass-arguments-to-an-event-handler": {
-      "question": "arguments to an event handler necə ötürülür?",
-      "auto": true
-    },
-    "react-how-to-prevent-component-from-rendering": {
-      "question": "component from rendering necə qarşısı alınır?",
-      "auto": true
-    },
-    "react-how-do-you-use-contexttype": {
-      "question": "contextType necə istifadə olunur?",
-      "auto": true
     },
     "react-what-is-a-consumer": {
       "question": "consumer nədir?",
       "auto": true
     },
-    "react-what-is-the-purpose-of-forward-ref-in-hocs": {
-      "question": "forward ref in HOCs nə üçündür?",
-      "auto": true
-    },
-    "react-how-to-create-react-class-components-without-es6": {
-      "question": "react class components without ES6 necə yaradılır?",
-      "auto": true
-    },
-    "react-is-it-possible-to-use-react-without-jsx": {
-      "question": "use react without JSX mümkündürmü?",
-      "auto": true
-    },
-    "react-how-do-you-create-hoc-using-render-props": {
-      "question": "HOC using render props necə yaradılır?",
-      "auto": true
-    },
-    "react-what-is-react-scripts": {
-      "question": "react scripts nədir?",
-      "auto": true
-    },
-    "react-what-are-the-features-of-create-react-app": {
-      "question": "create react app-in xüsusiyyətləri nələrdir?",
-      "auto": true
-    },
-    "react-what-is-the-purpose-of-rendertonodestream-method": {
-      "question": "renderToNodeStream method nə üçündür?",
-      "auto": true
-    },
-    "react-how-do-you-get-redux-scaffolding-using-create-react-app": {
-      "question": "get redux scaffolding using create-react-app — bunu necə edirsən?",
-      "auto": true
-    },
     "react-what-are-react-mixins": {
       "question": "React Mixins nədir?",
-      "auto": true
-    },
-    "react-can-i-use-javascript-urls-in-react16-9": {
-      "question": "use javascript urls in react16.9 — bu doğrudur?",
       "auto": true
     }
   }

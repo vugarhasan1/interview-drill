@@ -292,6 +292,57 @@ const RULES: { match: RegExp; build: (groups: string[]) => string }[] = [
   },
 ];
 
+/** English that is allowed to survive: the vocabulary an interview is conducted in anyway. */
+const TECH = new Set(
+  `react javascript js jsx dom html css node bun vite api url http https json xml svg canvas
+   hook hooks state props prop context provider consumer component components element elements
+   render rendering reconciliation fiber batching hydration portal fragment suspense transition
+   ref refs key keys memo callback effect cleanup dependency array closure closures scope hoisting
+   tdz prototype prototypes class classes constructor instance inheritance mixin proxy reflect
+   symbol iterator generator promise promises async await microtask macrotask event loop callback
+   debounce throttle observer worker service websocket sse fetch xhr ajax cors csrf xss cookie
+   storage localstorage sessionstorage indexeddb cache immutability spread destructuring rest
+   getter setter descriptor typeof instanceof nan null undefined bigint boolean number string
+   object array map set weakmap weakset regexp date intl module modules import export commonjs
+   amd umd bundle bundler tree-shaking polyfill transpiler babel webpack rollup eslint prettier
+   typescript flow proptypes redux toolkit rtk saga thunk mobx zustand recoil flux store reducer
+   action selector immer graphql apollo axios query swr router route link params redirect outlet
+   ssr ssg isr rsc next nextjs gatsby remix electron pwa native lifecycle mount unmount update
+   props-drilling hoc render-prop controlled uncontrolled virtual shadow real strictmode
+   concurrent devtools profiler jest enzyme cypress storybook vitest testing library
+   form input validation submit onchange formik yup zod curry recursion arguments unary
+   this call apply bind arrow lambda`
+    .split(/\s+/)
+    .filter(Boolean),
+);
+
+/**
+ * Azerbaijani words the templates produce that happen to carry no Azerbaijani-specific letter, so
+ * the check below cannot recognise them by their spelling.
+ */
+const AZ_ASCII = new Set(
+  `var bu bir ilk son daha az çox tabe olmaq tarixi baş verir sual cavab hansi hansilar
+   nə niyə necə fərq halda halinda zaman kimi ilə üzrə arasinda etmək edir olur alir
+   nümunə göstər danış qayda qaydalar lazim lazimdir doğru doğrudur`
+    .split(/\s+/)
+    .filter(Boolean),
+);
+
+/**
+ * A pattern that matched but left English content words behind produced something like
+ * "JavaScript-də possible ways to create objects nədir?". Such a line is worse than showing the
+ * question in English, so it is rejected: every word has to be Azerbaijani or a technical term.
+ */
+const isAzerbaijani = (built: string) => {
+  const words = built.toLowerCase().match(/\p{L}+/gu) ?? [];
+  return words.every(word => {
+    if (/[əğıöşüç]/.test(word)) return true;
+    // "React-də", "hook-lar" and plain plurals all have to resolve to a known term.
+    const forms = [word, word.split('-')[0]!, word.replace(/e?s$/, '')];
+    return forms.some(form => TECH.has(form) || AZ_ASCII.has(form));
+  });
+};
+
 const azQuestion = (english: string): string | undefined => {
   // Titles that pack two questions ("What is useContext? What are the steps...") only get their
   // first sentence rephrased; the rest would come out as English glued onto Azerbaijani.
@@ -310,6 +361,7 @@ const azQuestion = (english: string): string | undefined => {
     // leaving such a question in English beats showing a mangled Azerbaijani line.
     if (/\s(of|behind|its|their|between|when|while)\s/i.test(built)) return undefined;
     if (built.length > 120) return undefined;
+    if (!isAzerbaijani(built)) return undefined;
 
     return built;
   }
