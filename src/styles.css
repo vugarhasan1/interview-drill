@@ -468,3 +468,34 @@ footer a {
     width: 100%;
   }
 }
+
+.notice-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.notice-actions input[type='url'] {
+  flex: 1 1 240px;
+  min-width: 0;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg);
+  color: inherit;
+  font: inherit;
+}
+
+.az-url label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.az-url .hint {
+  margin: 8px 0 0;
+  font-size: 12px;
+  opacity: 0.65;
+}

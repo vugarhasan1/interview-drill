@@ -11,13 +11,13 @@ bun run dev
 
 ## How it works
 
-| Mode | Queue |
-| --- | --- |
+| Mode   | Queue                                                      |
+| ------ | ---------------------------------------------------------- |
 | Unseen | every question once, in source order - the first full pass |
-| Due | questions whose scheduled repeat has arrived |
-| Weak | everything graded shaky or unknown |
-| Mock | 10 random questions, interview tempo |
-| All | ignores progress |
+| Due    | questions whose scheduled repeat has arrived               |
+| Weak   | everything graded shaky or unknown                         |
+| Mock   | 10 random questions, interview tempo                       |
+| All    | ignores progress                                           |
 
 Grading sets the next appearance: **Knew it** 5 days and growing, **Shaky** 1 day, **No idea**
 10 minutes. Progress lives in `localStorage` per deck and can be exported as JSON.
@@ -62,17 +62,28 @@ them in Azerbaijani, not translating them.
 The overlay is optional and partial by design: questions without an entry simply show English only.
 The `AZ` button in the header hides it, and the choice is remembered.
 
+An overlay that isn't shipped with the app can be pointed at by URL. There's a field under the
+footer; paste a raw gist URL, it's kept in localStorage and the fetched overlay goes to IndexedDB,
+so it survives being offline.
+
 ## Data
 
-`public/data/*.json` is generated from the two upstream repos by `scripts/parse-questions.ts`:
+Two ways in, and both end up with the same records, same ids:
+
+1. `public/data/*.json`, generated locally by the parser:
 
 ```bash
 # put the upstream READMEs in ./.cache first
 bun run scripts/parse-questions.ts
 ```
 
+2. Read from the source repository at runtime. "Read from GitHub" fetches the upstream README over
+   CORS, parses it in the browser with the same code as the script, and stores the result in
+   IndexedDB. Nothing about it lives in this repo or in the deployed build.
+
 Each record: `id`, `number`, `cluster`, `question`, `answer` (markdown), `source`, and optionally
-`myExample`.
+`myExample`. Ids come from the question text, not from the numbering in the README, which repeats
+itself and would attach progress and overlays to the wrong card.
 
 ## Licensing of the question banks
 

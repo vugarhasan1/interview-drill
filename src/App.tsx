@@ -3,16 +3,19 @@ import { marked } from 'marked';
 import { ClusterHeatmap } from './ClusterHeatmap';
 import { useDrill } from './useDrill';
 import { clearProgress, exportProgress } from './storage';
+import {
+  fetchDeckFromSource,
+  getOverlayUrl,
+  loadDeck,
+  loadOverlay,
+  setOverlayUrl,
+  type DeckOrigin,
+} from './data/loadDeck';
 import type { AzOverlay, Deck, QuestionSet, QueueMode } from './types';
 
-const DECKS: { id: Deck; label: string; file: string; az: string }[] = [
-  { id: 'react', label: 'React', file: 'data/react.json', az: 'data/az-react.json' },
-  {
-    id: 'javascript',
-    label: 'JavaScript',
-    file: 'data/javascript.json',
-    az: 'data/az-javascript.json',
-  },
+const DECKS: { id: Deck; label: string }[] = [
+  { id: 'react', label: 'React' },
+  { id: 'javascript', label: 'JavaScript' },
 ];
 
 const MODES: { id: QueueMode; label: string; hint: string }[] = [
@@ -42,35 +45,62 @@ const formatTime = (seconds: number) =>
 export default function App() {
   const [deck, setDeck] = useState<Deck>('react');
   const [set, setSet] = useState<QuestionSet | null>(null);
+  const [overlay, setOverlay] = useState<AzOverlay>();
+  const [origin, setOrigin] = useState<{ from: DeckOrigin; fetchedAt?: number }>();
   const [loadError, setLoadError] = useState<string>();
+  const [busy, setBusy] = useState(false);
   const [mode, setMode] = useState<QueueMode>('unseen');
   const [cluster, setCluster] = useState<string | 'all'>('all');
   const [showAz, setShowAz] = useState(() => localStorage.getItem('interview-drill:az') !== 'off');
+  const [azUrl, setAzUrl] = useState('');
 
   useEffect(() => {
-    const entry = DECKS.find(item => item.id === deck)!;
+    let active = true;
     setSet(null);
+    setOverlay(undefined);
+    setOrigin(undefined);
     setLoadError(undefined);
+    setAzUrl(getOverlayUrl(deck));
 
-    // The Azerbaijani overlay is optional: a missing or partial file just means fewer gists.
-    Promise.all([
-      fetch(entry.file).then(response => {
-        if (!response.ok) throw new Error(`${response.status}`);
-        return response.json() as Promise<QuestionSet>;
-      }),
-      fetch(entry.az)
-        .then(response => (response.ok ? (response.json() as Promise<AzOverlay>) : undefined))
-        .catch(() => undefined),
-    ])
-      .then(([questionSet, overlay]) => setSet(withAz(questionSet, overlay)))
-      .catch(() =>
+    // The Azerbaijani overlay is optional: a missing or partial one just means fewer gists.
+    Promise.all([loadDeck(deck), loadOverlay(deck)]).then(([loaded, az]) => {
+      if (!active) return;
+      setOverlay(az);
+      if (!loaded) {
         setLoadError(
-          'This deck is not bundled with the deployed app. Load the JSON file from your machine below.',
-        ),
-      );
+          'This deck is not bundled with the app. Read it from the source repository below; it stays on this device afterwards.',
+        );
+        return;
+      }
+      setSet(loaded.set);
+      setOrigin({
+        from: loaded.origin,
+        ...(loaded.fetchedAt ? { fetchedAt: loaded.fetchedAt } : {}),
+      });
+    });
+
+    return () => {
+      active = false;
+    };
   }, [deck]);
 
-  const questions = set?.questions ?? [];
+  const refreshFromSource = useCallback(() => {
+    setBusy(true);
+    setLoadError(undefined);
+    fetchDeckFromSource(deck)
+      .then(loaded => {
+        setSet(loaded.set);
+        setOrigin({
+          from: loaded.origin,
+          ...(loaded.fetchedAt ? { fetchedAt: loaded.fetchedAt } : {}),
+        });
+      })
+      .catch((error: Error) => setLoadError(`Could not read the questions: ${error.message}`))
+      .finally(() => setBusy(false));
+  }, [deck]);
+
+  const merged = useMemo(() => (set ? withAz(set, overlay) : null), [set, overlay]);
+  const questions = merged?.questions ?? [];
   const drill = useDrill({ deck, questions, mode, cluster });
   const { current, revealed, elapsed } = drill;
 
@@ -84,10 +114,16 @@ export default function App() {
       .text()
       .then(text => {
         setSet(JSON.parse(text) as QuestionSet);
+        setOrigin({ from: 'file' });
         setLoadError(undefined);
       })
       .catch(() => setLoadError('That file is not a question set exported by the parser.'));
   }, []);
+
+  const applyOverlayUrl = useCallback(() => {
+    setOverlayUrl(deck, azUrl.trim());
+    loadOverlay(deck).then(setOverlay);
+  }, [azUrl, deck]);
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -144,18 +180,23 @@ export default function App() {
       {loadError ? (
         <section className="notice">
           <p>{loadError}</p>
-          <input
-            type="file"
-            accept="application/json"
-            onChange={event => {
-              const file = event.target.files?.[0];
-              if (file) onFile(file);
-            }}
-          />
+          <div className="notice-actions">
+            <button className="primary" disabled={busy} onClick={refreshFromSource}>
+              {busy ? 'Reading…' : 'Read from GitHub'}
+            </button>
+            <input
+              type="file"
+              accept="application/json"
+              onChange={event => {
+                const file = event.target.files?.[0];
+                if (file) onFile(file);
+              }}
+            />
+          </div>
         </section>
       ) : null}
 
-      {set ? (
+      {merged ? (
         <>
           <section className="controls">
             <div className="modes">
@@ -172,8 +213,8 @@ export default function App() {
             </div>
 
             <select value={cluster} onChange={event => setCluster(event.target.value)}>
-              <option value="all">All clusters ({set.count})</option>
-              {set.clusters.map(name => (
+              <option value="all">All clusters ({merged.count})</option>
+              {merged.clusters.map(name => (
                 <option key={name} value={name}>
                   {name}
                 </option>
@@ -282,10 +323,37 @@ export default function App() {
             >
               Reset progress
             </button>
+            <button className="ghost" disabled={busy} onClick={refreshFromSource}>
+              {busy ? 'Reading…' : 'Refresh from GitHub'}
+            </button>
             <span className="credit">
-              Questions from <a href={`https://github.com/${set.source}`}>{set.source}</a>
+              Questions from <a href={`https://github.com/${merged.source}`}>{merged.source}</a>
+              {origin?.fetchedAt
+                ? `, read ${new Date(origin.fetchedAt).toLocaleDateString()} and kept on this device`
+                : ''}
             </span>
           </footer>
+
+          <section className="notice az-url">
+            <label htmlFor="az-url">Azerbaijani overlay URL for this deck</label>
+            <div className="notice-actions">
+              <input
+                id="az-url"
+                type="url"
+                placeholder="https://gist.githubusercontent.com/..."
+                value={azUrl}
+                onChange={event => setAzUrl(event.target.value)}
+              />
+              <button className="ghost" onClick={applyOverlayUrl}>
+                Save
+              </button>
+            </div>
+            <p className="hint">
+              {overlay
+                ? `${Object.keys(overlay.entries).length} entries loaded.`
+                : 'Optional. Without it the questions stay in English.'}
+            </p>
+          </section>
         </>
       ) : null}
     </main>
