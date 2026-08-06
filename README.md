@@ -85,6 +85,19 @@ Each record: `id`, `number`, `cluster`, `question`, `answer` (markdown), `source
 `myExample`. Ids come from the question text, not from the numbering in the README, which repeats
 itself and would attach progress and overlays to the wrong card.
 
+## Deploy
+
+Vite copies the whole of `public/` into `dist/`, gitignored files included. That is fine locally and
+a licence problem anywhere else, so **deploy from git, not from this machine**: push the repo, point
+Vercel at it, and let it build. Then the only decks in the build are the ones git tracks.
+
+No configuration is needed - no router, so no SPA rewrite, and Vercel detects Vite on its own.
+`.vercelignore` repeats the data exclusions so that a `vercel` CLI deploy cannot leak them either.
+
+On a deployed build: the React deck is there immediately; the JavaScript deck arrives through
+"Read from GitHub" once and then lives in IndexedDB; the Azerbaijani overlay for it comes from the
+gist URL pasted under the footer. All three survive going offline.
+
 ## Licensing of the question banks
 
 - **React** questions come from [sudheerj/reactjs-interview-questions](https://github.com/sudheerj/reactjs-interview-questions),
