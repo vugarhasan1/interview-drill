@@ -77,9 +77,10 @@ Two ways in, and both end up with the same records, same ids:
 bun run scripts/parse-questions.ts
 ```
 
-2. Read from the source repository at runtime. "Read from GitHub" fetches the upstream README over
-   CORS, parses it in the browser with the same code as the script, and stores the result in
-   IndexedDB. Nothing about it lives in this repo or in the deployed build.
+2. Read from the source repository at runtime. A deck that isn't bundled is fetched on first open:
+   the browser reads the upstream README over CORS, parses it with the same code as the script, and
+   stores the result in IndexedDB. Nothing about it lives in this repo or in the deployed build.
+   "Refresh from GitHub" reads it again.
 
 Each record: `id`, `number`, `cluster`, `question`, `answer` (markdown), `source`, and optionally
 `myExample`. Ids come from the question text, not from the numbering in the README, which repeats
@@ -94,22 +95,22 @@ Vercel at it, and let it build. Then the only decks in the build are the ones gi
 No configuration is needed - no router, so no SPA rewrite, and Vercel detects Vite on its own.
 `.vercelignore` repeats the data exclusions so that a `vercel` CLI deploy cannot leak them either.
 
-On a deployed build: the React deck is there immediately; the JavaScript deck arrives through
-"Read from GitHub" once and then lives in IndexedDB; the Azerbaijani overlay for it comes from the
-gist URL pasted under the footer. All three survive going offline.
+On a deployed build: the React deck and both Azerbaijani overlays are there immediately; the
+JavaScript deck is read from its source on first open and then lives in IndexedDB, so it survives
+going offline.
 
 ## Licensing of the question banks
 
 - **React** questions come from [sudheerj/reactjs-interview-questions](https://github.com/sudheerj/reactjs-interview-questions),
   MIT licensed (Copyright (c) 2017-Present Sudheer Jonna). Redistributed here under that licence
   with attribution.
-- **JavaScript** questions come from [sudheerj/javascript-interview-questions](https://github.com/sudheerj/javascript-interview-questions),
+- **JavaScript** questions are by Sudheer Jonna, from [sudheerj/javascript-interview-questions](https://github.com/sudheerj/javascript-interview-questions),
   which currently ships **no licence file**. Without a licence there is no permission to
   redistribute, so `public/data/javascript.json` is gitignored and never deployed. On a deployed
   build the browser reads that README from the source repository itself and keeps the parsed result
   on the device, which is the same thing as opening the page and reading it. Locally the parser or a
-  JSON file picked from disk work too. Its Azerbaijani overlay (`public/data/az-javascript.json`) is
-  derived from those questions, so it stays out of the repo for the same reason and is loaded from a
-  URL instead.
+  JSON file picked from disk work too. `public/data/az-javascript.json` holds Azerbaijani phrasings
+  of the question titles and short gists written for this project, and ships with the app; the
+  phrasings are derived from the original titles, so remove them if the author objects.
 
 The app itself is MIT.

@@ -2,9 +2,7 @@ node_modules/
 dist/
 
 # Not redistributable: the JavaScript question repo has no licence.
-# The Azerbaijani overlay is derived from those questions, so it stays out too.
 public/data/javascript.json
-public/data/az-javascript.json
 
 # Upstream READMEs used by the parser
 .cache/

@@ -69,7 +69,7 @@ export default function App() {
       setOverlay(az);
       if (!loaded) {
         setLoadError(
-          'This deck is not bundled with the app. Read it from the source repository below; it stays on this device afterwards.',
+          'Could not read this deck from the source repository. Check the connection and try again; it stays on this device afterwards.',
         );
         return;
       }
@@ -182,6 +182,12 @@ export default function App() {
           </button>
         </div>
       </header>
+
+      {!merged && !loadError ? (
+        <section className="notice">
+          <p>Loading questions…</p>
+        </section>
+      ) : null}
 
       {loadError ? (
         <section className="notice">
@@ -334,7 +340,8 @@ export default function App() {
               {busy ? 'Reading…' : 'Refresh from GitHub'}
             </button>
             <span className="credit">
-              Questions from <a href={`https://github.com/${merged.source}`}>{merged.source}</a>
+              Questions by Sudheer Jonna, from{' '}
+              <a href={`https://github.com/${merged.source}`}>{merged.source}</a>
               {origin?.fetchedAt
                 ? `, read ${new Date(origin.fetchedAt).toLocaleDateString()} and kept on this device`
                 : ''}

@@ -1,6 +1,5 @@
 # Vite copies all of public/ into dist/, so a local `vercel` deploy would upload these even though
 # git never sees them. Keep the licence boundary in place for CLI deploys too.
 public/data/javascript.json
-public/data/az-javascript.json
 dist/
 .cache/

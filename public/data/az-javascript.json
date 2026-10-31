@@ -1,0 +1,2078 @@
+{
+  "deck": "javascript",
+  "note": "Azerbaijani phrasing and a one-line gist. Technical terms stay in English on purpose.",
+  "entries": {
+    "js-what-are-the-possible-ways-to-create-objects-in-javascript": {
+      "question": "JavaScript-də obyekt yaratmağın hansı yolları var?",
+      "gist": "Literal `{}`, `new Object()`, `Object.create(proto)`, constructor funksiya, `class`. Çox vaxt literal və class kifayətdir."
+    },
+    "js-what-is-a-prototype-chain": {
+      "question": "Prototype chain nədir?",
+      "gist": "Hər obyektin prototipə daxili keçidi var; property axtarışı zəncir boyu yuxarı gedir. `class` sintaksisi bu mexanizmin üzərindədir."
+    },
+    "js-what-is-the-difference-between-call-apply-and-bind": {
+      "question": "`call`, `apply` və `bind` arasında fərq nədir?",
+      "gist": "`call(thisArg, ...args)` dərhal çağırır; `apply(thisArg, argsArray)` massivlə çağırır; `bind` `this`-i və ilk arqumentləri sabitləyən yeni funksiya qaytarır."
+    },
+    "js-what-is-json-and-its-common-operations": {
+      "question": "JSON nədir və əsas əməliyyatları hansılardır?",
+      "gist": "Mətn əsaslı data formatı. `JSON.parse` sətri obyektə, `JSON.stringify` obyekti sətrə çevirir. Funksiya, `undefined` və Symbol atılır, `Date` sətrə çevrilir."
+    },
+    "js-what-is-the-purpose-of-the-array-slice-method": {
+      "question": "`slice` nə edir?",
+      "gist": "Massivin hissəsinin kopyasını qaytarır, orijinalı dəyişmir — immutable state kodunda üstünlük verilən metod."
+    },
+    "js-what-is-the-purpose-of-the-array-splice-method": {
+      "question": "`splice` nə edir?",
+      "gist": "Massivi yerində dəyişir (mutate) və silinən hissəni qaytarır. Redux/state kodunda birbaşa işlədilməsi bug mənbəyidir."
+    },
+    "js-what-is-the-difference-between-slice-and-splice": {
+      "question": "`slice` və `splice` arasında fərq nədir?",
+      "gist": "`slice` kopya qaytarır, orijinala toxunmur. `splice` massivi yerində dəyişir: silir, əlavə edir və silinənləri qaytarır. State-də `slice` təhlükəsizdir."
+    },
+    "js-how-do-you-compare-object-and-map": {
+      "question": "Object və Map necə müqayisə olunur?",
+      "gist": "Map-də açar istənilən tip ola bilər, əlavə sırası qorunur, `size` var, tez dəyişən data üçün yaxşıdır. Object sabit quruluş və JSON üçün uyğundur, amma prototype açarları tələ ola bilər."
+    },
+    "js-what-is-the-difference-between-and-operators": {
+      "question": "`==` ilə `===` arasında fərq nədir?",
+      "gist": "`===` tip və dəyəri müqayisə edir; `==` coercion edir: `null == undefined` doğru, `\"\" == 0` doğru, `NaN` heç nəyə bərabər deyil."
+    },
+    "js-what-are-lambda-expressions-or-arrow-functions": {
+      "question": "Arrow function (lambda) nədir?",
+      "gist": "Qısa funksiya sintaksisi: `x => x * 2`. Öz `this`-i, `arguments`-i və `prototype`-ı yoxdur — `this` yazıldığı yerin scope-undan gəlir, ona görə callback-lərdə `bind` ehtiyacı qalmır, amma metod və constructor kimi işlənmir."
+    },
+    "js-what-is-a-first-class-function": {
+      "question": "First class function nə deməkdir?",
+      "gist": "Funksiya adi dəyər kimi işlənir: dəyişənə yazılır, arqument kimi ötürülür, başqa funksiyadan qaytarılır. JS-də callback, HOC və closure pattern-ləri bunun üzərində qurulur."
+    },
+    "js-what-is-a-first-order-function": {
+      "question": "First-order function nədir?",
+      "gist": "Nə funksiya qəbul edir, nə də funksiya qaytarır. Əksi higher-order function-dur."
+    },
+    "js-what-is-a-higher-order-function": {
+      "question": "Higher order function nədir?",
+      "gist": "Funksiyanı arqument kimi qəbul edən və ya funksiya qaytaran funksiya. Nümunələr: `map`, `filter`, `reduce`, `setTimeout`, debounce/throttle, React-də HOC."
+    },
+    "js-what-is-a-unary-function": {
+      "question": "Unary function nədir?",
+      "gist": "Yalnız bir arqument qəbul edən funksiya. `map(parseInt)` kimi hallarda faydalıdır: `map` üç arqument ötürür, unary sarğı yalnız birincisini keçirir və `parseInt` səhv radix almır."
+    },
+    "js-what-is-the-currying-function": {
+      "question": "Currying nədir?",
+      "gist": "`f(a, b)`-ni `f(a)(b)` formasına salmaq — arqumentləri mərhələlərlə vermək. Konfiqurasiya, event handler və adapter-lərdə işlənir."
+    },
+    "js-what-is-a-pure-function": {
+      "question": "Pure function nədir?",
+      "gist": "Eyni giriş → eyni çıxış, müşahidə olunan side effect yoxdur. Reducer və selector-ların pure olmasının səbəbi budur: proqnozlaşdırıla bilən və keşlənə bilən."
+    },
+    "js-what-are-the-benefits-of-pure-functions": {
+      "question": "Pure funksiyaların faydaları nələrdir?",
+      "gist": "Test etmək asandır (mock lazım deyil), nəticə proqnozlaşdırıla biləndir, memoization və keşləmə mümkündür, paralel icra təhlükəsizdir. Reducer və selector-ların pure olması bu səbəbdəndir."
+    },
+    "js-what-is-the-purpose-of-the-let-keyword": {
+      "question": "`let` açar sözü nə üçündür?",
+      "gist": "Blok scope-lu dəyişən elan edir: yalnız `{}` daxilində görünür, hoisting olur amma TDZ səbəbindən elandan əvvəl oxunmur, eyni scope-da yenidən elan edilmir. Loop-da hər iterasiya üçün ayrı binding yaradır."
+    },
+    "js-what-is-the-difference-between-let-and-var": {
+      "question": "`let` ilə `var` arasında fərq nədir?",
+      "gist": "`var` funksiya scope-ludur, `undefined` kimi hoist olur, təkrar elana icazə verir və `window`-a yazılır. `let` blok scope-ludur, TDZ-dədir, təkrar elan olunmur. Klassik nümunə — loop içindəki `setTimeout`: `var` son dəyəri, `let` hər iterasiyanın dəyərini verir."
+    },
+    "js-what-is-the-reason-to-choose-the-name-let-as-a-keyword": {
+      "question": "Açar söz kimi niyə `let` seçilib?",
+      "gist": "Riyaziyyatdakı \"let x = 5\" ifadəsindən gəlir, Scheme və BASIC kimi köhnə dillərdə də var. Yeni dəyişən elan etdiyini aydın göstərir."
+    },
+    "js-how-do-you-redeclare-variables-in-a-switch-block-without-an-": {
+      "question": "switch bloku içində dəyişəni xəta olmadan necə yenidən elan edirsən?",
+      "gist": "Bütün `case`-lər eyni bloku paylaşır, ona görə iki `case`-də `let x` xəta verir. Həll — hər `case` üçün öz `{ }` bloku açmaq, yaxud dəyişəni `switch`-dən əvvəl bir dəfə elan etmək."
+    },
+    "js-what-is-the-temporal-dead-zone": {
+      "question": "Temporal Dead Zone (TDZ) nədir?",
+      "gist": "Scope-a girişlə `let`/`const` initialize olması arasındaki interval; ora müraciət `ReferenceError` atır. Dairəvi importlarda `const` export-a erkən müraciət tam bu səbəbdən partlayır."
+    },
+    "js-what-is-an-iife-immediately-invoked-function-expression": {
+      "question": "IIFE nədir?",
+      "gist": "Elan olunan kimi çağırılan funksiya: `(function () { ... })()` ya `(() => { ... })()`. Modullardan əvvəl dəyişənləri qlobal scope-dan qorumaq üçün əsas üsul idi; bugün `let`/`const` və ES modulları eyni işi görür, IIFE isə top-level await üçün istifadə olunur."
+    },
+    "js-how-do-you-decode-or-encode-a-url-in-javascript": {
+      "question": "JavaScript-də URL necə encode və decode olunur?",
+      "gist": "`encodeURI`/`decodeURI` tam URL üçün, `encodeURIComponent`/`decodeURIComponent` parametr üçün. Parametrlərdə ikincini və ya `URLSearchParams` işlət, yoxsa `&` URL-i pozur."
+    },
+    "js-what-is-memoization": {
+      "question": "Memoization nədir?",
+      "gist": "Nəticəni arqumentlərə görə keşləmək. Qiyməti: yaddaş, sabit key tələbi və giriş mutate olunanda yanlış nəticə riski."
+    },
+    "js-what-is-hoisting": {
+      "question": "Hoisting nədir?",
+      "gist": "Deklarasiyalar icra başlamazdan əvvəl qeydə alınır: `var` → `undefined`, function declaration tam hoist olunur, `let`/`const`/`class` hoist olunur amma initialize olunmur (TDZ)."
+    },
+    "js-what-are-classes-in-es6": {
+      "question": "ES6-da class nədir?",
+      "gist": "Prototype-based inheritance üzərində syntactic sugar - arxada yenə funksiya və prototype var. Hoisting olunmur (TDZ), gövdə həmişə strict mode-dadır, new olmadan çağırılmır."
+    },
+    "js-what-are-closures": {
+      "question": "Closure nədir?",
+      "gist": "Funksiya + onun yaradıldığı scope. Xarici çağırış bitəndən sonra da həmin dəyişənlər yaşayır — buna görə effekt köhnə dəyəri tutub saxlaya bilir (stale closure)."
+    },
+    "js-what-are-modules": {
+      "question": "Module nədir, niyə lazımdır?",
+      "gist": "Kodu public səthə və daxili detala ayırır. ESM statik qraf qurur (tree shaking mümkün olur), CommonJS isə dinamik `require` ilə işləyir."
+    },
+    "js-why-do-you-need-modules": {
+      "question": "Modullar niyə lazımdır?",
+      "gist": "Kodu hissələrə bölür, global adlar toqquşmur, asılılıqlar açıq görünür, təkrar istifadə olunur. Statik ESM tree shaking-i də mümkün edir."
+    },
+    "js-what-is-scope-in-javascript": {
+      "question": "JavaScript-də scope nədir?",
+      "gist": "Dəyişənin görünür olduğu sahə. Növləri: global, funksiya (module) scope, blok scope (`let`/`const`), və lexical scope zənciri — daxili funksiya xarici funksiyanın dəyişənlərini görür, əksi olmur."
+    },
+    "js-what-is-a-service-worker": {
+      "question": "Service worker nədir?",
+      "gist": "Səhifədən ayrı işləyən proxy script: offline keş, background sync, push. DOM-a çıxışı yoxdur; versiyalanmayan keş strategiyası deploy-dan sonra köhnə fayl verir."
+    },
+    "js-how-do-you-manipulate-dom-using-a-service-worker": {
+      "question": "Service worker ilə DOM necə dəyişdirilir?",
+      "gist": "Birbaşa olmur, DOM-a çıxışı yoxdur. `postMessage` ilə səhifəyə mesaj göndərir, DOM-u səhifənin özü dəyişir."
+    },
+    "js-how-do-you-reuse-information-across-service-worker-restarts": {
+      "question": "Service worker yenidən başlayanda məlumat necə saxlanılır?",
+      "gist": "Boşda dayandırıldığı üçün global dəyişən itir. Davamlı data IndexedDB-də və ya Cache API-də saxlanılır. `localStorage` burada əlçatan deyil."
+    },
+    "js-what-is-indexeddb": {
+      "question": "IndexedDB nədir?",
+      "gist": "Brauzerdə böyük strukturlaşdırılmış data və fayl saxlayan asinxron baza: indeks və transaction var. API-si çətindir, ona görə çox vaxt `idb` wrapper işlənir."
+    },
+    "js-what-is-web-storage": {
+      "question": "Web storage nədir?",
+      "gist": "`localStorage` daimidir, `sessionStorage` tab müddətindədir; ikisi də same-origin, sinxron API və ~5 MB. Sorğularla göndərilmir — bu, cookie-dən əsas fərqdir."
+    },
+    "js-what-is-a-post-message": {
+      "question": "`postMessage` nədir?",
+      "gist": "Fərqli origin-dəki pəncərələr, iframe-lər və worker-lər arasında təhlükəsiz mesaj mübadiləsi. Alanda `event.origin` yoxlanılmalıdır."
+    },
+    "js-what-is-a-cookie": {
+      "question": "Cookie nədir?",
+      "gist": "Kiçik həcmli data, uyğun gələn hər sorğu ilə serverə gedir. Server-side session üçün lazımdır; `HttpOnly`, `Secure` və `SameSite` təhlükəsizlik üçün vacibdir."
+    },
+    "js-why-do-you-need-a-cookie": {
+      "question": "Cookie niyə lazımdır?",
+      "gist": "Hər sorğu ilə serverə avtomatik gedən kiçik data: sessiya, tənzimləmələr, izləmə. Serverə hər dəfə getmək lazım deyilsə Web Storage daha uyğundur."
+    },
+    "js-what-are-the-options-in-a-cookie": {
+      "question": "Cookie-nin hansı parametrləri var?",
+      "gist": "`Expires`/`Max-Age`, `Path`, `Domain`, `Secure`, `HttpOnly`, `SameSite`. Sessiya cookie-si üçün son üçü vacibdir: XSS və CSRF riskini azaldır."
+    },
+    "js-how-do-you-delete-a-cookie": {
+      "question": "Cookie necə silinir?",
+      "gist": "Keçmiş tarix ver və ya `Max-Age=0` yaz. `Path` və `Domain` yaradılandakı ilə eyni olmalıdır, yoxsa silinmir. `HttpOnly` cookie-ni JS silə bilmir."
+    },
+    "js-what-are-the-differences-between-cookie-local-storage-and-se": {
+      "question": "Cookie, localStorage və sessionStorage arasında fərqlər nələrdir?",
+      "gist": "Cookie 4 KB-dır və serverə gedir. localStorage bağlananda qalır, sessionStorage tab bağlananda silinir; ikisi də bir neçə MB-dır və serverə getmir. Token üçün `HttpOnly` cookie XSS-dən daha yaxşı qoruyur."
+    },
+    "js-what-is-the-main-difference-between-localstorage-and-session": {
+      "question": "localStorage və sessionStorage arasında əsas fərq nədir?",
+      "gist": "Ömür və əhatə: localStorage silinənə qədər qalır və eyni origin-in tab-larında paylaşılır; sessionStorage tab-a bağlıdır və onunla silinir."
+    },
+    "js-how-do-you-access-web-storage": {
+      "question": "Web storage-a necə çatmaq olar?",
+      "gist": "`window.localStorage` və `sessionStorage`: `setItem`, `getItem`, `removeItem`, `clear`. Yalnız sətir saxlayır, obyekt üçün JSON lazımdır. Sinxron və bloklayıcıdır."
+    },
+    "js-what-are-the-methods-available-on-session-storage": {
+      "question": "sessionStorage-in hansı metodları var?",
+      "gist": "`setItem(key, value)`, `getItem(key)`, `removeItem(key)`, `clear()`, `key(index)` və `length` xassəsi."
+    },
+    "js-what-is-a-storage-event-and-its-event-handler": {
+      "question": "Storage event və onun handler-i nədir?",
+      "gist": "Eyni origin-in başqa tab-ı storage-i dəyişəndə işləyir, dəyişən tab-da yox. `window.addEventListener(\"storage\", ...)`: tab-lar arası sinxronizasiya, məsələn logout."
+    },
+    "js-why-do-you-need-web-storage": {
+      "question": "Web storage niyə lazımdır?",
+      "gist": "Cookie-dən çox data saxlayır və hər sorğuda serverə getmir. Tənzimləmə və qaralama üçün yaxşıdır. Tələ: XSS oxuya bilər, ona görə həssas data yazma."
+    },
+    "js-how-do-you-check-web-storage-browser-support": {
+      "question": "Web storage dəstəyi necə yoxlanılır?",
+      "gist": "`typeof Storage !== \"undefined\"`. Daha etibarlısı `try/catch`-də yazıb silməkdir, çünki private rejim və ya dolu storage xəta ata bilər."
+    },
+    "js-how-do-you-check-web-workers-browser-support": {
+      "question": "Web worker dəstəyi necə yoxlanılır?",
+      "gist": "`typeof Worker !== \"undefined\"`. Müasir brauzerlərdə dəstək hər yerdədir, ona görə yoxlama əsasən köhnə mühit üçündür."
+    },
+    "js-give-an-example-of-a-web-worker": {
+      "question": "Web worker-ə nümunə göstərin.",
+      "gist": "`new Worker(\"counter.js\")` yaradılır, `worker.postMessage` ilə göndərilir, `onmessage` ilə alınır. İş bitəndə `worker.terminate()`. Ağır hesablama UI-ı bloklamır."
+    },
+    "js-what-are-the-restrictions-of-web-workers-on-dom": {
+      "question": "Web worker-lərin DOM ilə bağlı məhdudiyyətləri nələrdir?",
+      "gist": "`window`, `document` və `parent`-ə çıxışı yoxdur. UI ilə yalnız `postMessage` ilə danışır. `fetch`, timer-lər və IndexedDB isə işləyir."
+    },
+    "js-what-is-a-promise": {
+      "question": "Promise nədir?",
+      "gist": "Gələcək nəticəni təmsil edən obyekt: pending → fulfilled/rejected, yalnız bir dəfə keçid edir. `then` callback-ləri microtask kimi planlanır, ona görə `setTimeout(…, 0)`-dan əvvəl işləyir."
+    },
+    "js-why-do-you-need-a-promise": {
+      "question": "Promise nə üçün lazımdır?",
+      "gist": "İç-içə callback-lərlə yazılan asinxron kodu düz zəncirə çevirir: nəticə və xəta bir obyektdə saxlanılır, `then`/`catch` ilə oxunur. Callback hell və «xətanı kim tutur» problemi aradan qalxır."
+    },
+    "js-explain-the-three-states-of-promise": {
+      "question": "Promise-in üç vəziyyətini izah et.",
+      "gist": "pending (nəticə hələ yoxdur), fulfilled (dəyər var), rejected (səbəb var). Bir dəfə pending-dən çıxandan sonra vəziyyət və dəyər dəyişməz qalır (settled)."
+    },
+    "js-what-is-a-callback-function": {
+      "question": "Callback funksiya nədir?",
+      "gist": "Başqa funksiyaya arqument kimi verilən və sonra onun tərəfindən çağırılan funksiya. Sinxron da olur (`map`, `sort`), asinxron da (`setTimeout`, event handler)."
+    },
+    "js-why-do-we-need-callbacks": {
+      "question": "Callback-lər nə üçün lazımdır?",
+      "gist": "JS tək thread-lidir, ona görə nəticəni bloklayaraq gözləmək olmaz. Nəticə hazır olanda çağırılacaq funksiyanı əvvəlcədən veririk — «gözlə» yerinə «hazır olanda bunu et»."
+    },
+    "js-what-is-a-callback-hell": {
+      "question": "Callback hell nədir?",
+      "gist": "İç-içə düşmüş callback piramidası: kod sağa sürüşür, xəta idarəsi hər səviyyədə təkrarlanır, oxumaq və dəyişmək çətinləşir. Həlli — promise zənciri, async/await, funksiyaları ayırmaq."
+    },
+    "js-what-are-server-sent-events": {
+      "question": "Server-sent events nədir?",
+      "gist": "Server HTTP üzərindən brauzerə tək istiqamətli yeniləmə göndərir, polling lazım olmur. `EventSource` kəsiləndə özü qoşulur. İki tərəfli rabitə üçün WebSocket seçilir."
+    },
+    "js-how-do-you-receive-server-sent-event-notifications": {
+      "question": "Server-sent event bildirişləri necə alınır?",
+      "gist": "`new EventSource(url)` və `onmessage`. Bir istiqamətli axındır, kəsiləndə özü qoşulur. İki tərəfli lazımdırsa WebSocket seç."
+    },
+    "js-how-do-you-check-browser-support-for-server-sent-events": {
+      "question": "Server-sent events dəstəyi necə yoxlanılır?",
+      "gist": "`typeof EventSource !== \"undefined\"`."
+    },
+    "js-what-are-the-events-available-for-server-sent-events": {
+      "question": "Server-sent events üçün hansı hadisələr var?",
+      "gist": "`onopen` bağlantı açılanda, `onmessage` mesaj gələndə, `onerror` xətada işləyir."
+    },
+    "js-what-are-the-main-rules-of-promise": {
+      "question": "Promise-in əsas qaydaları hansılardır?",
+      "gist": "Üç vəziyyətdən birində olur və yalnız bir dəfə settle olunur; `then` yeni promise qaytarır (zəncir buna görə mümkündür); handler-lər həmişə asinxron, microtask kimi çağırılır; `then`-dən qaytarılan dəyər növbətiyə keçir, atılan xəta isə `catch`-ə düşür."
+    },
+    "js-what-is-callback-in-callback": {
+      "question": "Callback içində callback nə deməkdir?",
+      "gist": "Bir asinxron nəticə digərinin girişi olduqda çağırışlar bir-birinin içinə yazılır. İki-üç səviyyədən sonra callback hell alınır; promise zənciri ya async/await ilə düzləndirilir."
+    },
+    "js-what-is-promise-chaining": {
+      "question": "Promise chaining nədir?",
+      "gist": "`then` yeni promise qaytardığı üçün addımları ardıcıl bağlamaq olur, hər addımın nəticəsi növbətiyə keçir. Xəta zəncir boyu aşağı düşür, ona görə bir `catch` hamısını əhatə edir. Şərt: hər `then`-də promise-i return etmək."
+    },
+    "js-what-is-promise-all": {
+      "question": "Promise.all nədir?",
+      "gist": "Promise siyahısını paralel gözləyir və hamısı fulfilled olanda nəticələr massivini qaytarır. Biri reject olan kimi dərhal reject edir (fail-fast) — qalanları dayanmır, sadəcə nəticələri atılır."
+    },
+    "js-does-promise-all-cancel-the-other-promises": {
+      "question": "`Promise.all()` digər Promise-ləri ləğv edir?",
+      "gist": "Xeyr. Biri rədd olanda nəticə dərhal rədd olur, qalanları işləməkdə davam edir. Həqiqi ləğv üçün `AbortController` işlət; hamısının nəticəsi lazımdırsa `allSettled`."
+    },
+    "js-what-is-the-purpose-of-the-race-method-in-promise": {
+      "question": "Promise-də race metodu nə üçündür?",
+      "gist": "Siyahıdan ilk settle olan promise-in nəticəsini (ya xətasını) qaytarır. Tipik istifadə — timeout: sorğu ilə `setTimeout`-a bağlı promise yarışdırılır."
+    },
+    "js-what-is-a-strict-mode-in-javascript": {
+      "question": "JavaScript-də strict mode nədir?",
+      "gist": "Səssiz səhvləri xətaya çevirən rejim, `\"use strict\"` ilə açılır. ES modulları və class-lar avtomatik strict-dir. Funksiyada `this` `undefined` olur."
+    },
+    "js-why-do-you-need-strict-mode": {
+      "question": "Strict mode niyə lazımdır?",
+      "gist": "Təsadüfi global yaratmağı, yalnız oxunan xassəyə yazmağı, dublikat parametri xətaya çevirir. Səhvlər erkən görünür, mühərrik də daha yaxşı optimallaşdırır."
+    },
+    "js-how-do-you-declare-strict-mode": {
+      "question": "Strict mode necə elan olunur?",
+      "gist": "Skriptin və ya funksiyanın əvvəlinə `\"use strict\";` yaz. Yalnız ilk ifadə olanda işləyir. Modul və class-larda yazmağa ehtiyac yoxdur."
+    },
+    "js-what-is-the-purpose-of-double-exclamation": {
+      "question": "`!!` nə üçündür?",
+      "gist": "Dəyəri boolean-a çevirir: `!!0` `false`, `!!\"a\"` `true`. `Boolean(x)` ilə eynidir."
+    },
+    "js-what-is-the-purpose-of-the-delete-operator": {
+      "question": "`delete` operatoru nə üçündür?",
+      "gist": "Obyektin xassəsini silir. Dəyişən silmir, massivdə isə boşluq saxlayır, ona görə massiv üçün `splice` işlət."
+    },
+    "js-what-is-typeof-operator": {
+      "question": "`typeof` operatoru nədir?",
+      "gist": "Dəyərin tipini sətir kimi qaytarır. Elan olunmamış dəyişəndə xəta atmır. Tələlər: `typeof null === \"object\"`, massiv də `\"object\"`-dir, funksiya `\"function\"`."
+    },
+    "js-what-is-undefined-property": {
+      "question": "`undefined` nədir?",
+      "gist": "Dəyər verilməmiş dəyişənin, olmayan xassənin və `return`-süz funksiyanın dəyəri. Öz primitive tipi var. Boşluğu bildirmək üçün özün `null` yaz."
+    },
+    "js-what-is-null-value": {
+      "question": "`null` nədir?",
+      "gist": "Dəyərin qəsdən olmadığını bildirən primitive. `typeof null` tarixi səhvə görə `\"object\"`-dir. Yoxlama üçün `x === null`."
+    },
+    "js-what-is-the-difference-between-null-and-undefined": {
+      "question": "`null` və `undefined` arasında fərq nədir?",
+      "gist": "`undefined` — dəyər verilməyib, `null` — qəsdən boş. `null == undefined` `true`, `===` `false`. Rəqəmə çevriləndə `null` 0, `undefined` `NaN` olur."
+    },
+    "js-what-is-eval": {
+      "question": "`eval` nədir?",
+      "gist": "Sətri JS kodu kimi icra edir. Kod injection riski yaradır, optimallaşdırmanı pozur, ona görə işlədilmir."
+    },
+    "js-what-is-the-difference-between-window-and-document": {
+      "question": "`window` və `document` arasında fərq nədir?",
+      "gist": "`window` brauzer pəncərəsi və qlobal obyektdir. `document` onun içindəki DOM-dur: `window.document`."
+    },
+    "js-how-do-you-access-history-in-javascript": {
+      "question": "JavaScript-də `history`-yə necə çatmaq olar?",
+      "gist": "`window.history`: `back()`, `forward()`, `go(n)`, `pushState`, `replaceState`. Təhlükəsizlik üçün keçmiş URL-ləri oxumaq olmur."
+    },
+    "js-how-do-you-detect-caps-lock-key-turned-on-or-not": {
+      "question": "Caps Lock-un açıq olması necə aşkar olunur?",
+      "gist": "Klaviatura və ya maus hadisəsində `event.getModifierState(\"CapsLock\")`."
+    },
+    "js-what-is-isnan": {
+      "question": "`isNaN` nədir?",
+      "gist": "Dəyəri əvvəl rəqəmə çevirib `NaN` olmasını yoxlayır, ona görə `isNaN(\"abc\")` `true` verir. Dəqiq yoxlama üçün `Number.isNaN`."
+    },
+    "js-what-are-the-differences-between-undeclared-and-undefined-va": {
+      "question": "Elan olunmamış və `undefined` dəyişənlər arasında fərqlər nələrdir?",
+      "gist": "Elan olunmamış dəyişən yoxdur, oxumaq `ReferenceError` atır. `undefined` dəyişən var, dəyəri yoxdur. `typeof` hər ikisində `\"undefined\"` verir."
+    },
+    "js-what-are-global-variables": {
+      "question": "Qlobal dəyişənlər nədir?",
+      "gist": "Hər yerdən əlçatan dəyişənlər. Non-strict rejimdə elan etmədən mənimsətmək qəfil global yaradır, strict mode bunu xətaya çevirir."
+    },
+    "js-what-are-the-problems-with-global-variables": {
+      "question": "Qlobal dəyişənlərin problemləri nələrdir?",
+      "gist": "Ad toqquşması, gizli asılılıq, çətin test və debug, yaddaşda uzun qalma. Modul və lokal scope bunu həll edir."
+    },
+    "js-what-is-nan-property": {
+      "question": "`NaN` nədir?",
+      "gist": "Etibarsız rəqəm nəticəsi, tipi `number`-dir. Özünə bərabər deyil: `NaN === NaN` `false`. Yoxlama `Number.isNaN` və ya `Object.is` ilə olur."
+    },
+    "js-what-is-the-purpose-of-isfinite-function": {
+      "question": "`isFinite` funksiyası nə üçündür?",
+      "gist": "Dəyərin sonlu rəqəm olmasını yoxlayır, `Infinity` və `NaN`-da `false` verir. Qlobal variant çevirir, `Number.isFinite` çevirmir."
+    },
+    "js-what-is-an-event-flow": {
+      "question": "Event flow nədir?",
+      "gist": "Hadisənin DOM-da keçdiyi yol: capturing (kökdən hədəfə), target, bubbling (hədəfdən kökə). Handler default olaraq bubbling fazasında işləyir."
+    },
+    "js-what-is-event-capturing": {
+      "question": "Event capturing nədir?",
+      "gist": "Hadisə əvvəl kökdən hədəfə doğru enir. Bu fazada tutmaq üçün `addEventListener(type, fn, true)` və ya `{ capture: true }` işlənir. Default handler-lər bubbling-dədir."
+    },
+    "js-what-is-event-bubbling": {
+      "question": "Event bubbling nədir?",
+      "gist": "Hadisə hədəfdə işləyib valideynlərə doğru qalxır. `stopPropagation` dayandırır. `focus`, `blur` kimi bəzi hadisələr qalxmır. Event delegation bunun üzərində qurulub."
+    },
+    "js-how-do-you-submit-a-form-using-javascript": {
+      "question": "Form JavaScript ilə necə göndərilir?",
+      "gist": "`form.requestSubmit()` validation və `submit` hadisəsini işlədir. `form.submit()` hər ikisini atlayır."
+    },
+    "js-how-do-you-find-operating-system-details": {
+      "question": "Əməliyyat sistemi məlumatı necə tapılır?",
+      "gist": "`navigator.platform` və `userAgent`. Köhnəlib və etibarsızdır; davranış üçün feature detection işlət."
+    },
+    "js-what-is-the-difference-between-document-load-and-domcontentl": {
+      "question": "`load` və `DOMContentLoaded` hadisələri arasında fərq nədir?",
+      "gist": "`DOMContentLoaded` HTML parse olunanda işləyir, şəkilləri gözləmir. `load` bütün resurslar yüklənəndən sonra işləyir."
+    },
+    "js-what-is-the-difference-between-native-host-and-user-objects": {
+      "question": "Native, host və user obyektləri arasında fərq nədir?",
+      "gist": "Native: dilin özündə (`Array`, `Math`). Host: mühitin verdiyi (`window`, `document`). User: kodda yaratdığın obyektlər."
+    },
+    "js-what-are-the-tools-or-techniques-used-for-debugging-javascri": {
+      "question": "JavaScript debug etmək üçün hansı alət və üsullar var?",
+      "gist": "DevTools (breakpoint, watch, network, performance), `debugger`, `console.log`/`table`/`trace`, VS Code debugger, source maps."
+    },
+    "js-what-are-the-pros-and-cons-of-promises-over-callbacks": {
+      "question": "Promise-lərin callback-lərə görə üstünlükləri və çatışmazlıqları nələrdir?",
+      "gist": "Üstünlük: zəncir, mərkəzləşdirilmiş xəta idarəsi, bir dəfə çağırılma zəmanəti, `all`/`race`/`any` kombinatorları. Çatışmazlıq: bir dəfəlik dəyərdir (stream deyil), özü ləğv olunmur (AbortController lazımdır), hazır nəticəni də microtask-a salır."
+    },
+    "js-what-is-the-difference-between-an-attribute-and-a-property": {
+      "question": "Attribute və property arasında fərq nədir?",
+      "gist": "Attribute HTML-də yazılır və sətirdir, property DOM obyektindədir. `input.value` cari dəyəri, `getAttribute(\"value\")` ilkin dəyəri verir."
+    },
+    "js-what-is-same-origin-policy": {
+      "question": "Same-origin policy nədir?",
+      "gist": "Bir origin-in skripti başqa origin-in datasını oxuya bilməz. Origin: protokol, host və port. İcazə CORS ilə verilir."
+    },
+    "js-what-is-the-purpose-of-void-0": {
+      "question": "`void 0` nə üçündür?",
+      "gist": "Həmişə `undefined` qaytarır. Köhnə `href=\"javascript:void(0)\"` üsulunda keçidi dayandırırdı; indi düymə və `preventDefault` işlənir."
+    },
+    "js-is-javascript-a-compiled-or-interpreted-language": {
+      "question": "JavaScript compile olunan, yoxsa interpret olunan dildir?",
+      "gist": "İkisi də: mühərrik parse edir, bytecode-u interpret edir, tez-tez işləyən kodu JIT ilə maşın koduna çevirir."
+    },
+    "js-is-javascript-a-case-sensitive-language": {
+      "question": "JavaScript hərf böyüklüyünə həssasdır?",
+      "gist": "Bəli: `name` və `Name` fərqli dəyişəndir, açar sözlər də kiçik hərflə yazılır."
+    },
+    "js-is-there-any-relation-between-java-and-javascript": {
+      "question": "Java və JavaScript arasında əlaqə var?",
+      "gist": "Xeyr, fərqli dillərdir. Ad 1995-də marketinq üçün seçilib; sintaksisdə C ailəsindən gələn oxşarlıq var."
+    },
+    "js-what-are-events": {
+      "question": "Event-lər nədir?",
+      "gist": "Brauzerdə baş verən hadisələr: klik, yazı, yüklənmə. `addEventListener` ilə dinlənilir, handler `event` obyekti alır. `preventDefault` default davranışı dayandırır."
+    },
+    "js-who-created-javascript": {
+      "question": "JavaScript-i kim yaradıb?",
+      "gist": "Brendan Eich, 1995-də Netscape-də. Adı əvvəl Mocha, sonra LiveScript olub."
+    },
+    "js-what-is-the-use-of-preventdefault-method": {
+      "question": "`preventDefault` nə üçündür?",
+      "gist": "Brauzerin default davranışını ləğv edir: form göndərmə, link keçidi. Hadisənin yayılmasını dayandırmır."
+    },
+    "js-what-is-the-use-of-stoppropagation-method": {
+      "question": "`stopPropagation` nə üçündür?",
+      "gist": "Hadisənin DOM-da yayılmasını dayandırır, default davranışa toxunmur. Çox işlətmək event delegation-u poza bilər."
+    },
+    "js-what-are-the-steps-involved-in-return-false-usage": {
+      "question": "`return false` hansı addımları yerinə yetirir?",
+      "gist": "jQuery handler-də default davranışı və yayılmanı dayandırıb funksiyadan çıxır. Adi `addEventListener`-də isə heç bir təsiri yoxdur, `preventDefault` çağır."
+    },
+    "js-what-is-bom": {
+      "question": "BOM nədir?",
+      "gist": "Browser Object Model: brauzerlə danışmaq üçün `navigator`, `history`, `location`, `screen`. Hamısı `window` altındadır."
+    },
+    "js-what-is-the-use-of-settimeout": {
+      "question": "setTimeout nə üçündür?",
+      "gist": "Funksiyanı ən azı verilən müddətdən sonra macrotask kimi növbəyə salır. Dəqiq vaxt zəmanəti yoxdur — loop məşğuldursa gecikir, iç-içə çağırışlarda brauzer minimum 4 ms tətbiq edir. `clearTimeout` ləğv edir."
+    },
+    "js-what-is-the-use-of-setinterval": {
+      "question": "setInterval nə üçündür?",
+      "gist": "Funksiyanı verilən interval ilə təkrar çağırır. İş intervaldan uzun çəkəndə çağırışlar üst-üstə yığılır, ona görə etibarlı variant hər dəfə `setTimeout`-u yenidən planlamaqdır. `clearInterval` dayandırır."
+    },
+    "js-why-is-javascript-treated-as-single-threaded": {
+      "question": "JavaScript niyə tək axınlı sayılır?",
+      "gist": "Kod bir call stack-də icra olunur. Asinxronluğu event loop verir, paralel işi isə worker-lər görür."
+    },
+    "js-what-is-an-event-delegation": {
+      "question": "Event delegation nədir?",
+      "gist": "Hər uşağa deyil, valideynə bir listener qoymaq və `event.target.closest()` ilə hədəfi tapmaq. Yaddaşa qənaət edir, sonradan əlavə olunan elementlər də işləyir."
+    },
+    "js-what-is-ecmascript": {
+      "question": "ECMAScript nədir?",
+      "gist": "JavaScript-in Ecma tərəfindən standartlaşdırılmış spesifikasiyası (ECMA-262). DOM isə ona aid deyil, brauzer API-sidir."
+    },
+    "js-what-is-json": {
+      "question": "JSON nədir?",
+      "gist": "Data mübadiləsi üçün yüngül mətn formatı. JS obyekt sintaksisinə bənzəyir, amma dildən asılı deyil: açarlar qoşa dırnaqda olur, şərh və funksiya yoxdur."
+    },
+    "js-what-are-the-syntax-rules-of-json": {
+      "question": "JSON-un sintaksis qaydaları hansılardır?",
+      "gist": "Açar-dəyər cütləri, vergüllə ayrılma, obyekt üçün `{}`, massiv üçün `[]`. Açar və sətirlər yalnız qoşa dırnaqda; sonda artıq vergül olmaz."
+    },
+    "js-what-is-the-purpose-json-stringify": {
+      "question": "`JSON.stringify` nə üçündür?",
+      "gist": "Dəyəri JSON sətrinə çevirir, məsələn serverə göndərmək üçün. Replacer və boşluq arqumenti var. Tələ: dövri istinad xəta atır, `undefined` və funksiya itir."
+    },
+    "js-how-do-you-parse-json-string": {
+      "question": "JSON sətri necə parse olunur?",
+      "gist": "`JSON.parse(text)` obyekt qaytarır. Etibarsız mətndə `SyntaxError` atır, ona görə xarici data `try/catch`-də oxunmalıdır. Reviver ilə dəyərləri çevirmək olur."
+    },
+    "js-why-do-you-need-json": {
+      "question": "JSON niyə lazımdır?",
+      "gist": "Şəbəkədə data mətn kimi gedir, JSON da mətndir və demək olar ki, bütün dillər onu oxuyur. Oxunaqlı və XML-dən yığcamdır."
+    },
+    "js-what-are-pwas": {
+      "question": "PWA nədir?",
+      "gist": "Quraşdırıla bilən, offline işləyən veb tətbiq: HTTPS, manifest və service worker tələb edir. Mağazasız yayılır, amma cihaz API-ləri native qədər geniş deyil, xüsusən iOS-da."
+    },
+    "js-what-is-the-purpose-of-cleartimeout-method": {
+      "question": "`clearTimeout` nə üçündür?",
+      "gist": "`setTimeout`-un qaytardığı id ilə gözləyən çağırışı ləğv edir. Debounce və cleanup-da işlənir."
+    },
+    "js-what-is-the-purpose-of-clearinterval-method": {
+      "question": "`clearInterval` nə üçündür?",
+      "gist": "`setInterval`-ı id ilə dayandırır. Çağırılmasa timer işləməyə davam edir və yaddaş sızır."
+    },
+    "js-how-do-you-redirect-new-page-in-javascript": {
+      "question": "JavaScript-də yeni səhifəyə necə yönləndirilir?",
+      "gist": "`location.href = url` tarixçəyə əlavə edir, `location.replace(url)` isə cari qeydi əvəz edir."
+    },
+    "js-how-do-you-check-whether-a-string-contains-a-substring": {
+      "question": "Sətrin substring saxlaması necə yoxlanılır?",
+      "gist": "`str.includes(x)` ən sadəsidir. `indexOf(x) !== -1` və regex `test` də olar."
+    },
+    "js-how-do-you-validate-an-email-in-javascript": {
+      "question": "Email JavaScript-də necə yoxlanılır?",
+      "gist": "Sadə regex və ya `type=\"email\"` kifayətdir. Client yoxlaması yan keçilə bilər, serverdə də yoxla; dəqiq təsdiq yalnız təsdiq məktubu ilə olur."
+    },
+    "js-how-do-you-get-the-current-url-with-javascript": {
+      "question": "Cari URL necə alınır?",
+      "gist": "`location.href` və ya `document.URL`. `location.href`-ə yazmaq səhifəni dəyişir."
+    },
+    "js-what-are-the-various-url-properties-of-location-object": {
+      "question": "`location` obyektinin URL xassələri hansılardır?",
+      "gist": "`href`, `protocol`, `host`, `hostname`, `port`, `pathname`, `search`, `hash`, `origin`. Parametrlər üçün `URLSearchParams` rahatdır."
+    },
+    "js-how-do-you-get-query-string-values-in-javascript": {
+      "question": "Query string dəyərləri necə alınır?",
+      "gist": "`new URLSearchParams(location.search).get(\"a\")`. Dəyər yoxdursa `null`, varsa sətir qaytarır."
+    },
+    "js-how-do-you-check-if-a-key-exists-in-an-object": {
+      "question": "Obyektdə açarın olması necə yoxlanılır?",
+      "gist": "`Object.hasOwn(obj, key)` yalnız öz xassəsini, `key in obj` prototype-u da yoxlayır. `obj.key !== undefined` dəyəri `undefined` olanda yanılır."
+    },
+    "js-how-do-you-loop-through-or-enumerate-javascript-object": {
+      "question": "JavaScript obyektində necə dövr edilir?",
+      "gist": "`Object.entries(obj)` və `for...of` ən aydın yoldur. `for...in` miras xassələri də gəzir."
+    },
+    "js-how-do-you-test-for-an-empty-object": {
+      "question": "Boş obyekt necə yoxlanılır?",
+      "gist": "`Object.keys(obj).length === 0 && obj.constructor === Object`. İkinci şərt `Date` kimi obyektləri ayırır. `null` üçün əvvəl ayrıca yoxla."
+    },
+    "js-what-is-an-arguments-object": {
+      "question": "arguments obyekti nədir?",
+      "gist": "Adi funksiyaların içində mövcud olan, ötürülən bütün arqumentləri saxlayan array-like obyekt. Massiv deyil (`map` yoxdur), arrow funksiyada mövcud deyil; müasir kodda yerini rest parametr tutur."
+    },
+    "js-how-do-you-make-first-letter-of-the-string-in-an-uppercase": {
+      "question": "Sətrin ilk hərfi necə böyük edilir?",
+      "gist": "`s.charAt(0).toUpperCase() + s.slice(1)`. Azərbaycan dili üçün `toLocaleUpperCase(\"az\")`: `i` hərfi `İ` olur."
+    },
+    "js-what-are-the-pros-and-cons-of-for-loops": {
+      "question": "`for` dövrəsinin üstün və zəif cəhətləri nələrdir?",
+      "gist": "Üstün: `break`, `continue`, `await` işləyir, hər yerdə var. Zəif: daha çox kod, indeks səhvi riski, funksional zəncirə uyğun deyil."
+    },
+    "js-how-do-you-display-the-current-date-in-javascript": {
+      "question": "Cari tarix necə göstərilir?",
+      "gist": "`new Date()`, göstərmək üçün `toLocaleDateString()` və ya `Intl.DateTimeFormat`. Tələ: `getMonth()` 0-dan başlayır."
+    },
+    "js-how-do-you-compare-two-date-objects": {
+      "question": "İki Date obyekti necə müqayisə olunur?",
+      "gist": "`===` referansa baxır, `a.getTime() === b.getTime()` işlət. `<` və `>` birbaşa işləyir, çünki `valueOf` rəqəm qaytarır."
+    },
+    "js-how-do-you-check-if-a-string-starts-with-another-string": {
+      "question": "Sətrin başqa sətirlə başlaması necə yoxlanılır?",
+      "gist": "`str.startsWith(x)`; ikinci arqument başlanğıc mövqeyidir. Mənbədəki \"dəstək yoxdur\" qeydi köhnədir."
+    },
+    "js-how-do-you-trim-a-string-in-javascript": {
+      "question": "JavaScript-də sətir necə trim olunur?",
+      "gist": "`trim()` hər iki tərəfdəki boşluqları silir, yeni sətir qaytarır, çünki sətirlər dəyişməzdir."
+    },
+    "js-how-do-you-add-a-key-value-pair-in-javascript": {
+      "question": "Obyektə açar-dəyər cütü necə əlavə olunur?",
+      "gist": "Nöqtə ilə `obj.a = 1`, dinamik açar üçün `obj[key] = 1`. Dəyişmədən əlavə üçün spread: `{ ...obj, a: 1 }`."
+    },
+    "js-is-the-notation-represents-a-special-operator": {
+      "question": "`!--` xüsusi operatordur?",
+      "gist": "Xeyr, iki operatorun birləşməsidir: əvvəl prefix `--` azaldır, sonra `!` nəticəni inkar edir."
+    },
+    "js-how-do-you-assign-default-values-to-variables": {
+      "question": "Dəyişənlərə default dəyər necə verilir?",
+      "gist": "`a || b` bütün falsy dəyərlərdə, `a ?? b` yalnız `null` və `undefined`-də `b` qaytarır. Çox vaxt `??` düzgündür. Parametrdə `(x = 1)`."
+    },
+    "js-how-do-you-define-multiline-strings": {
+      "question": "Çoxsətirli mətn necə yazılır?",
+      "gist": "Müasir üsul backtick-dir. Köhnə üsul sətir sonunda `\\` və ya `\\n` ilə birləşdirmə idi."
+    },
+    "js-what-is-an-app-shell-model": {
+      "question": "App shell modeli nədir?",
+      "gist": "PWA üsulu: UI karkası cache olunur və dərhal açılır, məzmun sonra şəbəkədən gəlir. Təkrar açılışda sürət verir."
+    },
+    "js-can-we-define-properties-for-functions": {
+      "question": "Funksiyalar üçün xassə təyin etmək olar?",
+      "gist": "Bəli, funksiya da obyektdir: `fn.count = 0`. Memoization və ya sayğac üçün işlədilə bilər."
+    },
+    "js-what-is-the-way-to-find-the-number-of-parameters-expected-by": {
+      "question": "Funksiyanın gözlədiyi parametr sayı necə tapılır?",
+      "gist": "`fn.length`. Default-lu parametrdən sonrakılar və rest sayılmır. Çağırışdakı arqument sayını vermir."
+    },
+    "js-what-is-a-polyfill": {
+      "question": "Polyfill nədir?",
+      "gist": "Köhnə mühitdə olmayan API-ni JS ilə əlavə edən kod. Runtime API üçündür; yeni sintaksis isə transpile olunur. Hamıya göndərmək bundle-ı şişirdir."
+    },
+    "js-what-are-break-and-continue-statements": {
+      "question": "`break` və `continue` nədir?",
+      "gist": "`break` dövrədən çıxır, `continue` cari addımı buraxıb növbətiyə keçir. `forEach`-də işləmir."
+    },
+    "js-what-are-js-labels": {
+      "question": "JS label-ləri nədir?",
+      "gist": "Dövrəyə ad verir: `outer: for (...)`, sonra `break outer` iç-içə dövrədən çıxır. Nadir işlənir, çox vaxt funksiya və `return` daha aydındır."
+    },
+    "js-what-are-the-benefits-of-keeping-declarations-at-the-top": {
+      "question": "Elanları yuxarıda saxlamağın faydaları nələrdir?",
+      "gist": "Təmiz kod, istifadə olunan dəyişənləri bir yerdə görmək, təsadüfi global və hoisting səhvlərindən qaçmaq. `let`/`const` ilə isə istifadə yerinə yaxın elan da yaxşıdır."
+    },
+    "js-what-are-the-benefits-of-initializing-variables": {
+      "question": "Dəyişənləri başlatmağın faydaları nələrdir?",
+      "gist": "Təmiz kod, `undefined` səhvlərinin azalması, niyyətin aydın olması. `const` onsuz da başlatma tələb edir."
+    },
+    "js-what-are-the-recommendations-to-create-new-object": {
+      "question": "Yeni obyekt yaratmaq üçün tövsiyələr nələrdir?",
+      "gist": "`new Object()` əvəzinə `{}`, `new Array()` əvəzinə `[]`, `new RegExp()` əvəzinə `/x/`, primitive üçün isə birbaşa literal."
+    },
+    "js-how-do-you-define-json-arrays": {
+      "question": "JSON massivləri necə təyin olunur?",
+      "gist": "Kvadrat mötərizədə dəyərlər: `[{\"name\":\"Ali\"},{\"name\":\"Aysel\"}]`. Elementlər obyekt, sətir, rəqəm, boolean, `null` və ya massiv ola bilər."
+    },
+    "js-how-do-you-generate-random-integers": {
+      "question": "Təsadüfi tam ədədlər necə yaradılır?",
+      "gist": "`Math.floor(Math.random() * 10) + 1` 1-10 verir. `Math.random` 0 daxil, 1 xaric. Təhlükəsizlik üçün `crypto.getRandomValues` işlət."
+    },
+    "js-can-you-write-a-random-integers-function-to-print-integers-w": {
+      "question": "Aralıqda təsadüfi tam ədəd qaytaran funksiya yaza bilərsiniz?",
+      "gist": "`Math.floor(Math.random() * (max - min + 1)) + min`, hər iki sərhəd daxil. `+ 1` olmasa `max` heç vaxt düşmür."
+    },
+    "js-what-is-tree-shaking": {
+      "question": "Tree shaking nədir?",
+      "gist": "Bundler-in işlənməyən export-ları atması. Statik ESM `import/export` tələb edir, CommonJS-də çətindir. Yan təsirli kod üçün `sideEffects` qeydi lazımdır."
+    },
+    "js-what-is-the-need-of-tree-shaking": {
+      "question": "Tree shaking niyə lazımdır?",
+      "gist": "Bundle kiçilir, yükləmə və parse azalır. Faydası kitabxana ESM yazılıbsa görünür: `lodash-es` adi `lodash`-dan yaxşı təmizlənir."
+    },
+    "js-is-it-recommended-to-use-eval": {
+      "question": "`eval` işlətmək tövsiyə olunur?",
+      "gist": "Xeyr: təhlükəsizlik riski, zəif performans, çətin debug. Data üçün `JSON.parse`, dinamik giriş üçün mötərizəli xassə yetərlidir."
+    },
+    "js-what-is-a-regular-expression": {
+      "question": "Regular expression nədir?",
+      "gist": "Mətndə axtarış nümunəsi: `/ab+/`. Yoxlama, axtarış, əvəzləmə üçün işlənir. Tələ: mürəkkəb nümunə oxunmur və backtracking ReDoS yarada bilər."
+    },
+    "js-what-are-the-string-methods-that-accept-regular-expression": {
+      "question": "Hansı string metodları regular expression qəbul edir?",
+      "gist": "`search`, `match`, `matchAll`, `replace`, `replaceAll`, `split`. `replaceAll` və `matchAll` regex-də `g` flag-i tələb edir."
+    },
+    "js-what-are-modifiers-in-regular-expression": {
+      "question": "Regular expression-da modifier-lər nədir?",
+      "gist": "Axtarış davranışını dəyişən flag-lər: `i` böyük-kiçik hərfə baxmır, `g` hamısını, `m` çoxsətirli, `s` nöqtə yeni sətri də tutur, `u` Unicode, `y` sticky."
+    },
+    "js-what-are-regular-expression-patterns": {
+      "question": "Regular expression nümunələri hansılardır?",
+      "gist": "Mötərizələr `[a-z]`, `(a|b)`; metasimvollar `\\d`, `\\s`, `\\b`; kvantifikatorlar `+`, `*`, `?`, `{2,3}`. Birləşərək mürəkkəb nümunə qurur."
+    },
+    "js-what-is-a-regexp-object": {
+      "question": "RegExp obyekti nədir?",
+      "gist": "Nümunə saxlayan obyekt: `test()`, `exec()` metodları və `lastIndex` var. Tələ: `g` flag-li regex `test`-də `lastIndex`-i saxlayır, növbəti nəticə dəyişə bilər."
+    },
+    "js-how-do-you-search-a-string-for-a-pattern": {
+      "question": "Sətirdə nümunə necə axtarılır?",
+      "gist": "`/x/.test(str)` boolean qaytarır. Mövqe üçün `search`, nəticə üçün `match`."
+    },
+    "js-what-is-the-purpose-of-exec-method": {
+      "question": "`exec` metodu nə üçündür?",
+      "gist": "`test`-ə bənzəyir, amma nəticə massivi və ya `null` qaytarır: qruplar və `index` daxil. `g` flag-i ilə `lastIndex`-dən davam edir."
+    },
+    "js-how-do-you-change-the-style-of-a-html-element": {
+      "question": "HTML elementinin stili necə dəyişdirilir?",
+      "gist": "`el.style.color = \"red\"` inline yazır. Daha yaxşısı `el.classList.toggle(\"active\")`: stil CSS-də qalır."
+    },
+    "js-what-would-be-the-result-of-1-2-3": {
+      "question": "`1 + 2 + '3'` nəticəsi nədir?",
+      "gist": "`\"33\"`. Soldan sağa: `1 + 2 = 3`, sonra sətirlə birləşmə. `\"3\" + 1 + 2` isə `\"312\"` verir."
+    },
+    "js-what-is-a-debugger-statement": {
+      "question": "`debugger` ifadəsi nədir?",
+      "gist": "DevTools açıqdırsa kodu həmin yerdə dayandırır, açıq deyilsə təsiri yoxdur. Production-a düşməsin deyə lint qaydası qoyulur."
+    },
+    "js-what-is-the-purpose-of-breakpoints-in-debugging": {
+      "question": "Debug zamanı breakpoint nə üçündür?",
+      "gist": "İcranı dayandırıb dəyişənlərə, call stack-ə baxmaq və addım-addım irəliləmək üçün. Şərtli breakpoint və logpoint kodu dəyişmədən işləyir."
+    },
+    "js-can-i-use-reserved-words-as-identifiers": {
+      "question": "Reserved sözləri identifier kimi işlətmək olar?",
+      "gist": "Dəyişən və funksiya adı kimi yox. Obyekt xassəsi kimi isə olar: `obj.class`."
+    },
+    "js-how-do-you-detect-a-mobile-browser": {
+      "question": "Mobil brauzer necə aşkar olunur?",
+      "gist": "Regex ilə `navigator.userAgent` yoxlamaq olur, amma etibarsızdır. Layout üçün `matchMedia` və ya CSS media query daha yaxşıdır."
+    },
+    "js-how-do-you-detect-a-mobile-browser-without-regexp": {
+      "question": "RegExp olmadan mobil brauzer necə aşkar olunur?",
+      "gist": "User agent-i cihaz adları siyahısı ilə müqayisə etmək. Etibarsızdır; hazırda `matchMedia(\"(pointer: coarse)\")` və feature detection daha yaxşıdır."
+    },
+    "js-how-do-you-get-the-image-width-and-height-using-js": {
+      "question": "Şəklin eni və hündürlüyü JS ilə necə alınır?",
+      "gist": "`new Image()` yarat, `onload`-da `naturalWidth` və `naturalHeight` oxu. Yüklənməmiş şəkil 0 verir."
+    },
+    "js-how-do-you-make-synchronous-http-request": {
+      "question": "Sinxron HTTP sorğusu necə edilir?",
+      "gist": "`xhr.open(\"GET\", url, false)`. Əsas axını bloklayır və UI donur, deprecated-dir. `fetch` və `await` işlət."
+    },
+    "js-how-do-you-make-asynchronous-http-request": {
+      "question": "Asinxron HTTP sorğusunu necə göndərirsən?",
+      "gist": "`fetch` + `await`, `AbortController` ilə ləğv, `response.ok` yoxlanışı. Yalnız abort kifayət etmir: uçuşda olan cavab yenə resolve ola bilər, ona görə aktivlik bayrağı da lazımdır."
+    },
+    "js-how-do-you-convert-date-to-another-timezone-in-javascript": {
+      "question": "Tarix başqa vaxt qurşağına necə çevrilir?",
+      "gist": "`date.toLocaleString(\"en-GB\", { timeZone: \"Asia/Baku\" })`. Sətir qaytarır: Date özü həmişə eyni an saxlayır, yalnız göstəriş dəyişir."
+    },
+    "js-what-are-the-properties-used-to-get-size-of-window": {
+      "question": "Pəncərə ölçüsü üçün hansı xassələr işlədilir?",
+      "gist": "`window.innerWidth/innerHeight` scrollbar daxil, `documentElement.clientWidth/clientHeight` scrollbar xaric."
+    },
+    "js-what-is-a-conditional-operator-in-javascript": {
+      "question": "JavaScript-də conditional operator nədir?",
+      "gist": "Ternary: `cond ? a : b`. Üç operandlı yeganə operatordur, dəyər qaytarır, ona görə JSX-də də işlənir."
+    },
+    "js-can-you-apply-chaining-on-conditional-operator": {
+      "question": "Conditional operatoru zəncirləmək olar?",
+      "gist": "Bəli, `a ? 1 : b ? 2 : 3` `if/else if` kimidir. Dərinləşəndə oxunmur, onda `if` və ya xəritə işlət."
+    },
+    "js-what-are-the-ways-to-execute-javascript-after-a-page-load": {
+      "question": "Səhifə yükləndikdən sonra JavaScript necə icra olunur?",
+      "gist": "`window.addEventListener(\"load\", fn)`, HTML hazır olanda `DOMContentLoaded`, və ya skriptdə `defer`. Mənbədəki `document.onload` etibarlı deyil."
+    },
+    "js-what-is-the-difference-between-proto-and-prototype": {
+      "question": "__proto__ ilə prototype arasında fərq nədir?",
+      "gist": "__proto__ hər obyektdə olan keçiddir - zəncirdə bir pillə yuxarı göstərir. prototype isə yalnız funksiyalarda olur və new ilə yaradılan instansiyanın __proto__-su ona bağlanır."
+    },
+    "js-can-you-give-an-example-of-when-you-really-need-a-semicolon": {
+      "question": "Nöqtəli vergülün həqiqətən lazım olduğu nümunə göstərə bilərsiniz?",
+      "gist": "Sətir `(` və ya `[` ilə başlayanda əvvəlki sətirlə birləşir: IIFE qarşısında `;` olmasa əvvəlki dəyər funksiya kimi çağırılır."
+    },
+    "js-what-is-the-freeze-method": {
+      "question": "`freeze` metodu nədir?",
+      "gist": "`Object.freeze(obj)` əlavə, silmə və dəyişməni qadağan edir. Shallow-dur: iç-içə obyektlər dəyişə bilər. Non-strict rejimdə yazı səssizcə atılır."
+    },
+    "js-what-is-the-purpose-of-the-freeze-method": {
+      "question": "`freeze` metodunun məqsədi nədir?",
+      "gist": "Obyekt və massivi dəyişməz etmək: sabit konfiqurasiya, təsadüfi mutasiyadan qorunma."
+    },
+    "js-why-do-i-need-to-use-the-freeze-method": {
+      "question": "`freeze` niyə lazımdır?",
+      "gist": "Dəyişməməli API və konfiqurasiyanı qoruyur, kodun başqa yerindən gizli dəyişikliyin qarşısını alır."
+    },
+    "js-how-do-you-detect-a-browser-language-preference": {
+      "question": "Brauzerin dil seçimi necə aşkar olunur?",
+      "gist": "`navigator.language` əsas dil, `navigator.languages` üstünlük siyahısı."
+    },
+    "js-how-to-convert-a-string-to-title-case-with-javascript": {
+      "question": "Sətir title case-ə necə çevrilir?",
+      "gist": "Hər sözün ilk hərfini böyüt: `s.replace(/\\b\\w/g, c => c.toUpperCase())`. Bu regex Azərbaycan hərflərində problem yarada bilər."
+    },
+    "js-how-do-you-detect-if-javascript-is-disabled-on-the-page": {
+      "question": "Səhifədə JavaScript-in söndürüldüyü necə aşkar olunur?",
+      "gist": "`<noscript>` teqi məzmunu yalnız JS söndürüləndə göstərir. Skript özü bunu yoxlaya bilməz."
+    },
+    "js-what-are-various-operators-supported-by-javascript": {
+      "question": "JavaScript hansı operatorları dəstəkləyir?",
+      "gist": "Arifmetik, müqayisə, məntiqi, mənimsətmə, bitwise, ternary, `typeof`, `instanceof`, spread, `?.`, `??`."
+    },
+    "js-what-is-a-rest-parameter": {
+      "question": "Rest parametr nədir?",
+      "gist": "`function f(...args)` — qalan arqumentləri **əsl massiv** kimi toplayır, ona görə `arguments`-dən fərqli olaraq massiv metodları işləyir. Yalnız sonuncu parametr ola bilər."
+    },
+    "js-what-happens-if-you-do-not-use-rest-parameter-as-a-last-argu": {
+      "question": "Rest parametri sonuncu yazmasan nə olur?",
+      "gist": "`SyntaxError` alınır: «Rest parameter must be last formal parameter». Səbəb — rest qalan bütün arqumentləri götürür, ondan sonra gələn parametrə heç nə qalmır."
+    },
+    "js-what-are-the-bitwise-operators-available-in-javascript": {
+      "question": "JavaScript-də hansı bitwise operatorlar var?",
+      "gist": "`&`, `|`, `^`, `~`, `<<`, `>>`, `>>>`. Operandları 32 bitlik tam ədədə çevirir. Flag-lər üçün faydalıdır."
+    },
+    "js-what-is-a-spread-operator": {
+      "question": "Spread operatoru nədir?",
+      "gist": "`...` iterable-ı ayrı elementlərə açır: massiv kopyası, birləşmə, funksiya arqumentləri, obyekt kopyası. Tələ: kopya shallow-dur, iç-içə obyektlər paylaşılır."
+    },
+    "js-how-do-you-determine-whether-object-is-frozen-or-not": {
+      "question": "Obyektin frozen olması necə yoxlanılır?",
+      "gist": "`Object.isFrozen(obj)`: genişlənmir, bütün xassələr konfiqurasiya olunmur və yazılmır. Primitive-lərdə `true` qaytarır."
+    },
+    "js-how-do-you-determine-two-values-same-or-not-using-object": {
+      "question": "İki dəyərin eyniliyi `Object` ilə necə yoxlanılır?",
+      "gist": "`Object.is(a, b)`. `===`-dən fərqi: `NaN` özünə bərabərdir, `0` və `-0` fərqlidir."
+    },
+    "js-what-is-the-purpose-of-using-object-is-method": {
+      "question": "`Object.is` metodu nə üçündür?",
+      "gist": "Dəqiq eynilik: `NaN` və `-0` hallarında. React də state müqayisəsində bunu işlədir."
+    },
+    "js-how-do-you-copy-properties-from-one-object-to-other": {
+      "question": "Xassələr bir obyektdən digərinə necə kopyalanır?",
+      "gist": "`Object.assign(target, source)` hədəfi dəyişir, `{ ...a, ...b }` yeni obyekt yaradır. İkisi də shallow-dur."
+    },
+    "js-what-are-the-applications-of-the-assign-method": {
+      "question": "`Object.assign` harada işlədilir?",
+      "gist": "Obyekti klonlamaq (shallow) və birləşdirmək; eyni açarda sonuncu qalib gəlir. Yeni kodda çox vaxt spread işlənir."
+    },
+    "js-what-is-a-proxy-object": {
+      "question": "Proxy obyekti nədir?",
+      "gist": "Property əməliyyatlarını (get, set, has) araya girib dəyişməyə imkan verir. Reactive state və Immer tipli draft obyektlərinin əsasında bu durur."
+    },
+    "js-what-is-the-purpose-of-the-seal-method": {
+      "question": "`seal` metodu nə üçündür?",
+      "gist": "`Object.seal` əlavə və silməni qadağan edir, mövcud dəyərləri dəyişməyə icazə verir. Shallow-dur."
+    },
+    "js-what-are-the-applications-of-the-seal-method": {
+      "question": "`seal` metodu harada işlədilir?",
+      "gist": "Obyektin quruluşunu sabit saxlamaq, dəyərlərin dəyişməsinə isə icazə vermək: xassələr non-configurable olur."
+    },
+    "js-what-are-the-differences-between-the-freeze-and-seal-methods": {
+      "question": "`freeze` və `seal` arasında fərqlər nələrdir?",
+      "gist": "İkisi də əlavə və silməni bağlayır. `seal` dəyəri dəyişməyə icazə verir, `freeze` vermir."
+    },
+    "js-how-do-you-determine-if-an-object-is-sealed-or-not": {
+      "question": "Obyektin sealed olması necə yoxlanılır?",
+      "gist": "`Object.isSealed(obj)`: genişlənmir və bütün xassələr non-configurable-dır. Frozen obyekt də sealed sayılır."
+    },
+    "js-how-do-you-get-enumerable-key-and-value-pairs": {
+      "question": "Enumerable açar-dəyər cütləri necə alınır?",
+      "gist": "`Object.entries(obj)` öz enumerable cütlərini massiv kimi verir. Əksi `Object.fromEntries`-dir."
+    },
+    "js-what-is-the-main-difference-between-object-values-and-object": {
+      "question": "Object.values ilə Object.entries arasında əsas fərq nədir?",
+      "gist": "values yalnız dəyərləri massiv kimi qaytarır, entries hər sahə üçün [key, value] cütü verir - ona görə for...of, destructuring və new Map() ilə birlikdə işlənir."
+    },
+    "js-how-can-you-get-the-list-of-keys-of-any-object": {
+      "question": "Obyektin açarlar siyahısı necə alınır?",
+      "gist": "`Object.keys(obj)` öz enumerable sətir açarlarını verir. Symbol və non-enumerable daxil deyil."
+    },
+    "js-how-do-you-create-an-object-with-a-prototype": {
+      "question": "Verilmiş prototype ilə obyekt necə yaradılır?",
+      "gist": "Object.create(proto) prototype-ı yaradılış anında təyin edir. Object.create(null) heç nə irsiyyət almayan təmiz dictionary verir - prototype pollution-dan qoruyur."
+    },
+    "js-what-is-a-weakset": {
+      "question": "WeakSet nədir?",
+      "gist": "Obyektləri weak reference ilə saxlayan kolleksiya: başqa istinad yoxdursa GC təmizləyir. Dövr etmək olmur. Məsələn, \"bu obyekt emal olunub\" işarəsi üçün."
+    },
+    "js-what-are-the-differences-between-weakset-and-set": {
+      "question": "WeakSet və Set arasında fərqlər nələrdir?",
+      "gist": "Set istənilən dəyəri güclü saxlayır, `size` və iterasiya var. WeakSet yalnız obyekt saxlayır, GC-yə mane olmur, `size` və iterasiyası yoxdur."
+    },
+    "js-list-down-the-collection-of-methods-available-on-weakset": {
+      "question": "WeakSet-in metodlarını sadalayın.",
+      "gist": "`add(value)`, `delete(value)`, `has(value)`. İterasiya və `size` yoxdur, çünki məzmun GC-dən asılıdır."
+    },
+    "js-what-is-a-weakmap": {
+      "question": "WeakMap nədir?",
+      "gist": "Açarları weak saxlanan map: açar obyektə başqa istinad qalmayanda giriş də silinir. Obyektə yaddaş sızmadan metadata bağlamaq, cache və private data üçün yaxşıdır."
+    },
+    "js-what-are-the-differences-between-weakmap-and-map": {
+      "question": "WeakMap və Map arasında fərqlər nələrdir?",
+      "gist": "Map açarı güclü saxlayır və GC-yə mane olur, iterasiya və `size` var. WeakMap açarı yalnız obyekt (və qeydiyyatsız Symbol) olur, dövr etmək olmur."
+    },
+    "js-list-down-the-collection-of-methods-available-on-weakmap": {
+      "question": "WeakMap-in metodlarını sadalayın.",
+      "gist": "`set(key, value)`, `get(key)`, `has(key)`, `delete(key)`. Hamısı açarla işləyir; `clear`, `size` və iterasiya yoxdur."
+    },
+    "js-what-is-the-purpose-of-uneval": {
+      "question": "`uneval` nə üçündür?",
+      "gist": "Obyektin mənbə kodunu sətir kimi verən qeyri-standart Firefox funksiyası idi; artıq silinib. Praktikada `JSON.stringify` işlənir."
+    },
+    "js-how-do-you-encode-an-url": {
+      "question": "URL necə encode olunur?",
+      "gist": "`encodeURI` tam URL-də `: / ? & = #` kimi simvollara toxunmur. Parametr dəyəri üçün bunları da kodlayan `encodeURIComponent` lazımdır."
+    },
+    "js-how-do-you-decode-an-url": {
+      "question": "URL necə decode olunur?",
+      "gist": "`decodeURI` və ya `decodeURIComponent`. Müvafiq encode cütünü işlət. Yanlış `%` ardıcıllığı `URIError` atır."
+    },
+    "js-how-do-you-print-the-contents-of-web-page": {
+      "question": "Veb səhifənin məzmunu necə çap olunur?",
+      "gist": "`window.print()` çap pəncərəsini açır. Görünüş `@media print` ilə tənzimlənir."
+    },
+    "js-what-is-the-difference-between-uneval-and-eval": {
+      "question": "`uneval` və `eval` arasında fərq nədir?",
+      "gist": "`uneval` obyektdən mənbə sətri yaradırdı, `eval` sətri kod kimi icra edir. `uneval` standart deyildi, `eval` isə təhlükəlidir."
+    },
+    "js-what-is-an-anonymous-function": {
+      "question": "Anonim funksiya nədir?",
+      "gist": "Adı olmayan funksiya: dəyişənə verilir və ya callback olur. Stack trace-də ad görünməyə bilər, adlı funksiya debug-u asanlaşdırır."
+    },
+    "js-what-is-the-precedence-order-between-local-and-global-variab": {
+      "question": "Lokal və qlobal dəyişənlər arasında üstünlük necədir?",
+      "gist": "Eyni adda lokal dəyişən üstündür, qlobalı shadow edir. Axtarış içdən çölə scope chain ilə gedir."
+    },
+    "js-what-are-javascript-accessors": {
+      "question": "JavaScript accessor-ları nədir?",
+      "gist": "`get` və `set` ilə xassə kimi görünən funksiyalar: hesablanmış dəyər və yazıda yoxlama üçün."
+    },
+    "js-how-do-you-define-property-on-object-constructor": {
+      "question": "Object konstruktoru üzərində property necə təyin olunur?",
+      "gist": "Object.defineProperty(obj, key, descriptor). Literal-dan fərqli olaraq default-lar false-dur: sahə non-enumerable, non-writable, non-configurable yaranır."
+    },
+    "js-what-is-the-difference-between-get-and-defineproperty": {
+      "question": "`get` və `defineProperty` arasında fərq nədir?",
+      "gist": "Class-da `get` prototype-a yazılır. `defineProperty` birbaşa obyektə yazır və flag-ləri idarə edir; default olaraq non-enumerable-dır."
+    },
+    "js-what-are-the-advantages-of-getters-and-setters": {
+      "question": "Getter və setter-in üstünlükləri nədir?",
+      "gist": "Sahəyə müraciəti metod çağırışına çevirmədən validasiya, hesablanmış dəyər və encapsulation verir - API dəyişmədən daxili təmsili dəyişmək olur."
+    },
+    "js-can-i-add-getters-and-setters-using-defineproperty-method": {
+      "question": "defineProperty ilə getter/setter əlavə etmək olarmı?",
+      "gist": "Bəli, descriptor-da get/set verilir. Amma value ya writable ilə bir yerdə işlənə bilməz - ikisi birlikdə TypeError atır."
+    },
+    "js-what-is-the-purpose-of-switch-case": {
+      "question": "`switch-case` nə üçündür?",
+      "gist": "Bir dəyəri bir neçə halla `===` ilə müqayisə edir. Çoxlu `if` əvəzinə oxunaqlıdır. Çox vaxt obyekt xəritəsi də olur."
+    },
+    "js-what-are-the-conventions-to-be-followed-for-the-usage-of-swi": {
+      "question": "`switch case` üçün hansı qaydalara əməl olunmalıdır?",
+      "gist": "Case dəyərləri təkrarlanmasın, `break` unudulmasın (yoxsa növbəti case-ə keçir), `default` əlavə olunsun. Müqayisə `===` iləcə aparılır."
+    },
+    "js-what-are-primitive-data-types": {
+      "question": "Primitive data tipləri hansılardır?",
+      "gist": "`string`, `number`, `boolean`, `null`, `undefined`, `bigint`, `symbol`. Dəyişməzdir və dəyərlə müqayisə olunur. Metod çağırışında müvəqqəti wrapper yaranır."
+    },
+    "js-what-are-the-different-ways-to-access-object-properties": {
+      "question": "Obyekt xassələrinə çatmağın yolları hansılardır?",
+      "gist": "Nöqtə `obj.a`, mötərizə `obj[\"a\"]`, dəyişənlə `obj[key]`. Olmaya bilən yolda `obj?.a`."
+    },
+    "js-what-are-the-function-parameter-rules": {
+      "question": "Funksiya parametrlərinin qaydaları hansılardır?",
+      "gist": "Tip yazılmır və yoxlanılmır, arqument sayı da yoxlanılmır. Çatışmayanlar `undefined` olur, artıqları `arguments` və ya rest ilə alınır."
+    },
+    "js-what-is-an-error-object": {
+      "question": "Error obyekti nədir?",
+      "gist": "Xəta məlumatı daşıyan daxili obyekt: `name`, `message`, adətən `stack`. `cause` ilə kök səbəbi ötürmək olur: `new Error(\"x\", { cause })`."
+    },
+    "js-when-do-you-get-a-syntax-error": {
+      "question": "Syntax error nə vaxt alınır?",
+      "gist": "Kod dil qrammatikasına uyğun olmayanda: parse zamanı atılır və skript işə başlamır. `JSON.parse` və `eval` isə runtime-da atır, onları `try/catch` tutur."
+    },
+    "js-what-are-the-different-error-names-from-error-object": {
+      "question": "Error obyektinin hansı adları var?",
+      "gist": "`SyntaxError`, `TypeError`, `ReferenceError`, `RangeError`, `URIError`, `EvalError`, `AggregateError`. Ən çox `TypeError` və `ReferenceError` rast gəlinir."
+    },
+    "js-what-are-the-various-statements-in-error-handling": {
+      "question": "Xəta idarəsində hansı ifadələr var?",
+      "gist": "`try` kodu yoxlayır, `catch` tutur, `finally` hər halda işləyir, `throw` xəta atır. Promise-də `await` ilə `try/catch` və ya `.catch` işlənir."
+    },
+    "js-what-are-the-two-types-of-loops-in-javascript": {
+      "question": "JavaScript-də dövrələrin iki növü hansılardır?",
+      "gist": "Girişdə yoxlanan: `for`, `while`. Çıxışda yoxlanan: `do...while`, bədən ən azı bir dəfə işləyir."
+    },
+    "js-what-is-nodejs": {
+      "question": "Node.js nədir?",
+      "gist": "V8 üzərində JavaScript runtime-ı: event-driven, non-blocking I/O ilə server yazılır. I/O üçün yaxşı, ağır CPU işi üçün worker lazımdır."
+    },
+    "js-what-is-the-intl-object": {
+      "question": "Intl obyekti nədir?",
+      "gist": "Dilə həssas API: tarix, rəqəm, cəm, siyahı və sətir müqayisəsi. Kitabxanasız locale formatı verir, ölçüdə qənaət edir."
+    },
+    "js-how-do-you-perform-language-specific-date-and-time-formattin": {
+      "question": "Dilə uyğun tarix və vaxt formatı necə edilir?",
+      "gist": "`new Intl.DateTimeFormat(\"az\", { dateStyle: \"long\" }).format(date)`. Formatter-i təkrar işlət, yaratmaq nisbətən bahalıdır."
+    },
+    "js-what-is-an-iterator": {
+      "question": "Iterator nədir?",
+      "gist": "`next()` metodu olan və hər çağırışda `{ value, done }` qaytaran obyekt. `Symbol.iterator` metodu olan obyekt iterable sayılır və `for...of`, spread, destructuring ilə işləyir."
+    },
+    "js-how-does-synchronous-iteration-works": {
+      "question": "Sinxron iterasiya necə işləyir?",
+      "gist": "Iterable `[Symbol.iterator]()` ilə iterator verir, iterator `next()` ilə `{ value, done }` qaytarır. `for...of` və spread bunun üzərindədir."
+    },
+    "js-what-is-the-event-loop": {
+      "question": "Event loop nədir?",
+      "gist": "Call stack boşalanda microtask növbəsi tam boşaldılır, sonra bir macrotask götürülür. Microtask: promise, queueMicrotask. Macrotask: setTimeout, event, I/O."
+    },
+    "js-what-is-the-call-stack": {
+      "question": "Call stack nədir?",
+      "gist": "Funksiya çağırışlarını izləyən LIFO strukturu: çağırış əlavə olunur, bitəndə çıxır. Dərin rekursiya stack overflow verir."
+    },
+    "js-what-is-the-event-queue": {
+      "question": "Event queue nədir?",
+      "gist": "Hazır asinxron callback-lərin növbəsi. Stack boşalanda event loop növbətini götürür. Microtask-lar (Promise) ondan əvvəl işləyir."
+    },
+    "js-what-is-a-decorator": {
+      "question": "Decorator nədir?",
+      "gist": "Class və metodları dəyişən funksiya: `@log`. TC39-da hələ prosesdədir, TypeScript və Babel ilə işlədilir."
+    },
+    "js-what-are-the-properties-of-the-intl-object": {
+      "question": "Intl obyektinin xassələri hansılardır?",
+      "gist": "`Collator`, `DateTimeFormat`, `NumberFormat`, `PluralRules`, `RelativeTimeFormat`, `ListFormat`, `Segmenter`."
+    },
+    "js-what-is-an-unary-operator": {
+      "question": "Unary operator nədir?",
+      "gist": "Bir operand üzərində işləyən operator: `+x`, `-x`, `!x`, `typeof x`, `delete obj.a`, `void 0`, `++`/`--`. `+\"5\"` rəqəmə çevirir, `!!x` boolean-a."
+    },
+    "js-how-do-you-sort-elements-in-an-array": {
+      "question": "Massiv elementləri necə sıralanır?",
+      "gist": "`sort()` yerində sıralayır və default olaraq sətir kimi müqayisə edir: `[10, 9]` səhv düzülür. Rəqəm üçün `(a, b) => a - b`; orijinal qalsın deyə `toSorted`."
+    },
+    "js-what-is-the-purpose-of-comparefunction-while-sorting-arrays": {
+      "question": "Sıralamada `compareFunction` nə üçündür?",
+      "gist": "Sıranı təyin edir: mənfi nəticədə `a` əvvəl, müsbətdə `b` əvvəl, 0-da yerləri qalır. Verilməsə elementlər sətir kimi müqayisə olunur."
+    },
+    "js-how-do-you-reverse-an-array": {
+      "question": "Massiv necə tərsinə çevrilir?",
+      "gist": "`reverse()` orijinal massivi yerində dəyişir. Dəyişməsin deyə `toReversed()` və ya `[...arr].reverse()`."
+    },
+    "js-how-do-you-find-the-min-and-max-values-in-an-array": {
+      "question": "Massivdə min və max necə tapılır?",
+      "gist": "`Math.max(...arr)`, `Math.min(...arr)`. Tələ: çox böyük massivdə spread stack limitinə çatır, onda dövrə və ya `reduce` işlət. Boş massiv `-Infinity` və `Infinity` verir."
+    },
+    "js-how-do-you-find-the-min-and-max-values-without-math-function": {
+      "question": "`Math` olmadan min və max necə tapılır?",
+      "gist": "Dövrə ilə ən kiçik və böyük dəyəri saxla və ya `reduce`. O(n)-dir və `Math.max(...arr)`-dan fərqli olaraq stack limiti yoxdur."
+    },
+    "js-what-is-an-empty-statement-and-purpose-of-it": {
+      "question": "Empty statement nədir və nə üçündür?",
+      "gist": "Tək `;` heç nə etmir, sintaksis statement tələb edəndə işlənir: bədənsiz `for`. Təsadüfi `if (x);` isə səhvdir."
+    },
+    "js-how-do-you-get-the-metadata-of-a-module": {
+      "question": "Modulun metadata-sı necə alınır?",
+      "gist": "`import.meta` modula aid məlumat verir: `import.meta.url`. Bundler əlavə edə bilər, məsələn Vite-də `import.meta.env`. Yalnız ES modulda işləyir."
+    },
+    "js-what-is-the-comma-operator": {
+      "question": "Comma operatoru nədir?",
+      "gist": "Operandları soldan sağa icra edir, sonuncunun dəyərini qaytarır: `(1, 2)` 2 verir. Arqument və massiv vergülündən fərqlidir."
+    },
+    "js-what-is-the-advantage-of-the-comma-operator": {
+      "question": "Comma operatorunun üstünlüyü nədir?",
+      "gist": "Tək ifadə yerində bir neçə ifadə yazmaq, əsasən `for` başlığında: `for (i = 0, j = n; ...; i++, j--)`. Başqa yerdə oxunaqlılığı azaldır."
+    },
+    "js-what-is-typescript": {
+      "question": "TypeScript nədir?",
+      "gist": "JavaScript-ə statik tiplər əlavə edən dil, JS-ə compile olunur. Səhvləri build-də tutur, refactor-u asanlaşdırır. Tiplər runtime-da yoxdur, xarici data ayrıca yoxlanılmalıdır."
+    },
+    "js-what-are-the-differences-between-javascript-and-typescript": {
+      "question": "JavaScript və TypeScript arasında fərqlər nələrdir?",
+      "gist": "JS dinamik tiplidir və birbaşa işləyir. TS statik tip, interface və generic əlavə edir, build addımı tələb edir. Runtime davranışı eynidir; fərq development zamanı təhlükəsizlikdir."
+    },
+    "js-what-are-the-advantages-of-typescript-over-javascript": {
+      "question": "TypeScript-in JavaScript-dən üstünlükləri nələrdir?",
+      "gist": "Səhvlər compile vaxtı tapılır, IDE dəstəyi güclənir, refactor təhlükəsiz olur, böyük komandada kontrakt aydındır. Bədəli build addımıdır."
+    },
+    "js-what-is-an-object-initializer": {
+      "question": "Object initializer nədir?",
+      "gist": "Obyekt literalının rəsmi adı: `{ a: 1, b }`. Computed açar, shorthand və metod dəstəkləyir."
+    },
+    "js-what-is-a-constructor-method": {
+      "question": "constructor metodu nədir?",
+      "gist": "class-ın new ilə çağırılanda işə düşən başlanğıc metodu. Yazılmasa boş bir constructor, subclass-da isə super(...args) çağıran biri nəzərdə tutulur."
+    },
+    "js-what-happens-if-you-write-constructor-more-than-once-in-a-cl": {
+      "question": "Bir class-da iki constructor yazılsa nə olur?",
+      "gist": "SyntaxError - class-da yalnız bir constructor ola bilər. JavaScript-də method overloading yoxdur."
+    },
+    "js-how-do-you-call-the-constructor-of-a-parent-class": {
+      "question": "Valideyn class-ın constructor-u necə çağırılır?",
+      "gist": "super(...) ilə, həm də this-ə toxunmadan ƏVVƏL. Subclass-da this yalnız super-dən sonra yaranır, əks halda ReferenceError."
+    },
+    "js-how-do-you-get-the-prototype-of-an-object": {
+      "question": "Obyektin prototype-ı necə alınır?",
+      "gist": "Object.getPrototypeOf(obj). __proto__ da eyni nəticəni verir, amma deprecated sayılır və yalnız uyğunluq üçün saxlanılıb."
+    },
+    "js-what-happens-if-i-pass-string-type-for-getprototype-method": {
+      "question": "getPrototypeOf-a string versək nə olur?",
+      "gist": "ES6-dan sonra primitiv boxing olunur və String.prototype qaytarılır. ES5-də isə TypeError atırdı."
+    },
+    "js-how-do-you-set-the-prototype-of-one-object-to-another": {
+      "question": "Bir obyektin prototype-ı digərinə necə təyin olunur?",
+      "gist": "Object.setPrototypeOf(obj, proto). Mövcud obyektin prototype-ını dəyişmək engine optimizasiyasını sındırır, ona görə yaradılışda Object.create üstünlükdür."
+    },
+    "js-how-do-you-check-whether-an-object-can-be-extended-or-not": {
+      "question": "Obyektin genişlənə bilməsi necə yoxlanılır?",
+      "gist": "`Object.isExtensible(obj)`. Default `true`-dur, `preventExtensions`, `seal` və `freeze`-dən sonra `false` olur."
+    },
+    "js-how-do-you-prevent-an-object-from-being-extend": {
+      "question": "Obyektin genişlənməsinin qarşısı necə alınır?",
+      "gist": "`Object.preventExtensions(obj)` yeni xassəni qadağan edir; silmək və dəyişmək qalır. Geri qaytarmaq olmur."
+    },
+    "js-what-are-the-different-ways-to-make-an-object-non-extensible": {
+      "question": "Obyekti non-extensible etməyin yolları hansılardır?",
+      "gist": "`Object.preventExtensions`, `Object.seal`, `Object.freeze`, sərtlik bu sıra ilə artır."
+    },
+    "js-how-do-you-define-multiple-properties-on-an-object": {
+      "question": "Obyektdə bir neçə xassə necə təyin olunur?",
+      "gist": "`Object.defineProperties(obj, { a: { value: 1, writable: true } })`. Default flag-lər `false`-dur."
+    },
+    "js-what-is-the-mean-stack": {
+      "question": "MEAN stack nədir?",
+      "gist": "MongoDB, Express, Angular, Node.js: bütün qatlarda JavaScript. Angular əvəzinə React olsa MERN adlanır."
+    },
+    "js-what-is-obfuscation-in-javascript": {
+      "question": "JavaScript-də obfuscation nədir?",
+      "gist": "Kodu işləməsini dəyişmədən oxunmaz etmək. Çətinləşdirir, qorumur: secret client kodunda saxlanmamalıdır."
+    },
+    "js-why-do-you-need-obfuscation": {
+      "question": "Obfuscation niyə lazımdır?",
+      "gist": "Biznes məntiqini oxumağı və kopyalamağı çətinləşdirir. Tam qoruma deyil; ölçü azaldığı üçün mənbə bunu da fayda sayır, amma əsasən minification bu işi görür."
+    },
+    "js-what-is-minification": {
+      "question": "Minification nədir?",
+      "gist": "Funksionallığı dəyişmədən boşluq, şərh və uzun adları ataraq kodu kiçiltmək. Debug üçün source map saxlanılır. Təhlükəsizlik vasitəsi deyil."
+    },
+    "js-what-are-the-advantages-of-minification": {
+      "question": "Minification-ın üstünlükləri nələrdir?",
+      "gist": "Fayl kiçilir, yükləmə sürətlənir, trafik azalır, parse tezləşir. gzip və ya Brotli ilə birlikdə işləyir."
+    },
+    "js-what-are-the-differences-between-obfuscation-and-encryption": {
+      "question": "Obfuscation və encryption arasında fərqlər nələrdir?",
+      "gist": "Obfuscation kodu oxunmaz edir, açar tələb etmir və kod yenə işləyir. Encryption datanı açarla şifrələyir, açarsız oxunmur."
+    },
+    "js-what-are-the-common-tools-used-for-minification": {
+      "question": "Minification üçün geniş yayılmış alətlər hansılardır?",
+      "gist": "Bugün Terser, esbuild, SWC, Closure Compiler. Köhnə siyahılarda UglifyJS və jsmin var. Vite default olaraq esbuild işlədir."
+    },
+    "js-how-do-you-perform-form-validation-using-javascript": {
+      "question": "Form validation JavaScript ilə necə edilir?",
+      "gist": "`submit` hadisəsində dəyərləri yoxla, səhvdə `preventDefault` və mesaj. Server tərəfində də mütləq təkrar yoxla."
+    },
+    "js-how-do-you-perform-form-validation-without-javascript": {
+      "question": "Form validation JavaScript-siz necə edilir?",
+      "gist": "HTML atributları: `required`, `type=\"email\"`, `min`, `max`, `pattern`, `maxlength`. Brauzer submit-i özü bloklayır."
+    },
+    "js-what-are-the-dom-methods-available-for-constraint-validation": {
+      "question": "Constraint validation üçün hansı DOM metodları var?",
+      "gist": "`checkValidity()` nəticə qaytarır, `reportValidity()` mesajı da göstərir, `setCustomValidity()` öz mesajını təyin edir. Boş sətir xətanı silir."
+    },
+    "js-what-are-the-available-constraint-validation-dom-properties": {
+      "question": "Constraint validation üçün hansı DOM xassələri var?",
+      "gist": "`validity` (`valueMissing`, `typeMismatch` və s.), `validationMessage`, `willValidate`. Formada `novalidate` brauzer mesajlarını söndürür."
+    },
+    "js-what-are-the-validity-properties": {
+      "question": "Validity xassələri hansılardır?",
+      "gist": "`input.validity`: `valueMissing`, `typeMismatch`, `patternMismatch`, `rangeOverflow`, `rangeUnderflow`, `tooLong`, `stepMismatch`, `customError`, `valid`."
+    },
+    "js-give-an-example-usage-of-the-rangeoverflow-property": {
+      "question": "`rangeOverflow` xassəsinin istifadəsinə nümunə göstərin.",
+      "gist": "Dəyər `max`-dan böyükdürsə `input.validity.rangeOverflow` `true` olur: `if (input.validity.rangeOverflow) show(\"Çox böyükdür\")`."
+    },
+    "js-are-enums-available-in-javascript": {
+      "question": "JavaScript-də enum var?",
+      "gist": "Xeyr. `Object.freeze({ A: \"a\" })` ilə simulyasiya olunur. TypeScript-də `enum` və ya union tipləri var."
+    },
+    "js-what-is-an-enum": {
+      "question": "Enum nədir?",
+      "gist": "Dəyişəni əvvəlcədən təyin olunmuş sabitlər çoxluğu ilə məhdudlaşdıran tip. JavaScript-də yoxdur, TypeScript-də var."
+    },
+    "js-how-do-you-list-all-properties-of-an-object": {
+      "question": "Obyektin bütün xassələri necə siyahılanır?",
+      "gist": "`Object.getOwnPropertyNames(obj)` non-enumerable-ları da verir, `Object.keys` vermir. Symbol üçün `getOwnPropertySymbols`, hamısı üçün `Reflect.ownKeys`."
+    },
+    "js-how-do-you-get-property-descriptors-of-an-object": {
+      "question": "Obyektin property descriptor-ları necə alınır?",
+      "gist": "Bir sahə üçün Object.getOwnPropertyDescriptor, hamısı üçün Object.getOwnPropertyDescriptors - ikincisi getter-ləri itirmədən kopyalamaq üçün lazımdır."
+    },
+    "js-what-are-the-attributes-provided-by-a-property-descriptor": {
+      "question": "Property descriptor hansı atributları verir?",
+      "gist": "Data descriptor: value və writable. Accessor descriptor: get və set. İkisinə ümumi olanlar: enumerable və configurable."
+    },
+    "js-how-do-you-extend-classes": {
+      "question": "Class-lar necə extend olunur?",
+      "gist": "class B extends A - prototype zəncirini, həm də static üzvləri bağlayır. constructor yazılıbsa super() çağırılmalıdır."
+    },
+    "js-how-do-i-modify-the-url-without-reloading-the-page": {
+      "question": "Səhifəni yeniləmədən URL necə dəyişdirilir?",
+      "gist": "`history.pushState(state, \"\", url)` qeyd əlavə edir, `replaceState` əvəz edir. Eyni origin-də olmalıdır; Geri düyməsi üçün `popstate` dinlə."
+    },
+    "js-how-do-you-check-whether-or-not-an-array-includes-a-particul": {
+      "question": "Massivdə müəyyən dəyərin olması necə yoxlanılır?",
+      "gist": "`includes(value)` boolean qaytarır, `NaN`-ı da tapır. `indexOf` tapmır. Obyektlər referansla müqayisə olunur, şərt üçün `some` işlət."
+    },
+    "js-how-do-you-compare-scalar-arrays": {
+      "question": "Skalyar massivlər necə müqayisə olunur?",
+      "gist": "`===` referansa baxır. Uzunluğu yoxla və `every((v, i) => v === b[i])`. Sıra önəmli deyilsə əvvəl kopyaları sırala."
+    },
+    "js-how-to-get-the-value-from-get-parameters": {
+      "question": "GET parametrlərinin dəyəri necə alınır?",
+      "gist": "`new URL(url).searchParams.get(\"a\")`. Cari səhifə üçün `location.href` ötür."
+    },
+    "js-how-do-you-print-numbers-with-commas-as-thousand-separators": {
+      "question": "Rəqəmlər minlik ayırıcı ilə necə göstərilir?",
+      "gist": "`n.toLocaleString(\"en-US\")` və ya `Intl.NumberFormat`. Ayırıcı locale-dan asılıdır."
+    },
+    "js-what-is-the-difference-between-java-and-javascript": {
+      "question": "Java və JavaScript arasında fərq nədir?",
+      "gist": "Java statik tipli, class əsaslı, JVM-də işləyir. JavaScript dinamik tipli, prototype əsaslı, brauzer və Node-da işləyir."
+    },
+    "js-does-javascript-support-namespaces": {
+      "question": "JavaScript namespace dəstəkləyir?",
+      "gist": "Xüsusi sintaksisi yoxdur. Əvvəl obyekt və IIFE ilə qurulurdu, indi ES modulları bu problemi həll edir."
+    },
+    "js-how-do-you-declare-a-namespace": {
+      "question": "Namespace necə elan olunur?",
+      "gist": "Obyekt literalı, IIFE və ya blok daxilində `let`/`const` ilə. Yeni kodda modul işlət."
+    },
+    "js-how-do-you-invoke-javascript-code-in-an-iframe-from-the-pare": {
+      "question": "Valideyn səhifədən iframe-dəki kod necə çağırılır?",
+      "gist": "Eyni origin-də `iframe.contentWindow.fn()`. Fərqli origin-də bloklanır, `postMessage` işlət."
+    },
+    "js-how-do-you-get-the-timezone-offset-of-a-date-object": {
+      "question": "Date obyektinin timezone offset-i necə alınır?",
+      "gist": "`getTimezoneOffset()` UTC ilə fərqi dəqiqə verir. Tələ: UTC-dən irəlidirsə mənfi olur: Bakı üçün `-240`. DST-yə görə tarixdən asılı dəyişə bilər."
+    },
+    "js-how-do-you-load-css-and-js-files-dynamically": {
+      "question": "CSS və JS faylları dinamik necə yüklənir?",
+      "gist": "`link` və `script` elementi yaradıb `head`-ə əlavə et, `onload`-da gözlə. Modullar üçün `import()` daha yaxşıdır."
+    },
+    "js-what-are-the-different-methods-to-find-html-elements-in-dom": {
+      "question": "DOM-da HTML elementlərini tapmağın yolları hansılardır?",
+      "gist": "`querySelector`, `querySelectorAll`, `getElementById`, `getElementsByClassName`, `getElementsByTagName`. Tələ: `querySelectorAll` statik, `getElementsBy*` isə canlı kolleksiya qaytarır."
+    },
+    "js-what-is-jquery": {
+      "question": "jQuery nədir?",
+      "gist": "DOM, hadisə və AJAX-ı sadələşdirən kitabxana; brauzer fərqlərini gizlədirdi. Müasir API-lər və framework-lər onu əsasən lazımsız edib, köhnə kodda hələ çoxdur."
+    },
+    "js-what-is-v8-javascript-engine": {
+      "question": "V8 JavaScript mühərriki nədir?",
+      "gist": "Google-un C++ ilə yazdığı açıq mənbəli mühərriki: Chrome və Node işlədir. Ignition interpreter, TurboFan isə optimallaşdırıcı compiler-dir."
+    },
+    "js-why-do-we-call-javascript-as-dynamic-language": {
+      "question": "JavaScript-ə niyə dinamik dil deyilir?",
+      "gist": "Tip dəyişənə deyil, dəyərə aiddir və runtime-da yoxlanılır: eyni dəyişən əvvəl rəqəm, sonra sətir ola bilər."
+    },
+    "js-what-is-a-void-operator": {
+      "question": "`void` operatoru nədir?",
+      "gist": "İfadəni icra edir, nəticəni atıb `undefined` qaytarır: `void 0`. Arrow function-un dəyər qaytarmaması üçün də işlənir."
+    },
+    "js-how-to-set-the-cursor-to-wait": {
+      "question": "Kursor `wait` vəziyyətinə necə gətirilir?",
+      "gist": "`document.body.style.cursor = \"wait\"`, iş bitəndə əvvəlki dəyərə qaytar. Sinif dəyişmək adətən daha səliqəlidir."
+    },
+    "js-how-do-you-create-an-infinite-loop": {
+      "question": "Sonsuz dövrə necə yaradılır?",
+      "gist": "`for (;;) {}` və ya `while (true) {}`. Əsas axını bloklayır, ona görə içində `break` və ya `await` olmalıdır."
+    },
+    "js-why-do-you-need-to-avoid-with-statement": {
+      "question": "`with` ifadəsindən niyə qaçmaq lazımdır?",
+      "gist": "Adın hara aid olduğu qeyri-müəyyən olur, optimallaşdırma pozulur. Strict mode-da qadağandır; dəyişənə mənimsət və ya destructure et."
+    },
+    "js-what-is-the-output-of-the-following-for-loops": {
+      "question": "Aşağıdakı `for` dövrələrinin nəticəsi nədir?",
+      "gist": "`var` ilə 4 4 4 4, `let` ilə 0 1 2 3. `var` tək dəyişəndir, `let` hər addımda yeni binding yaradır; callback dövrədən sonra işləyir."
+    },
+    "js-list-down-some-of-the-features-of-es6": {
+      "question": "ES6-nın bəzi xüsusiyyətlərini sadalayın.",
+      "gist": "`let`/`const`, arrow function, class, template literal, destructuring, spread, modul, Promise, Map/Set, generator, default parametrlər."
+    },
+    "js-what-is-es6": {
+      "question": "ES6 nədir?",
+      "gist": "ECMAScript-in 2015-də çıxan altıncı versiyası (ES2015). Dildə ən böyük yeniləmədir; bundan sonra hər il yeni versiya buraxılır."
+    },
+    "js-can-i-redeclare-let-and-const-variables": {
+      "question": "`let` və `const` dəyişənlərini yenidən elan etmək olar?",
+      "gist": "Eyni scope-da yox — `SyntaxError` verir. Daxili blokda eyni adla yeni dəyişən elan etmək olar (shadowing) və o, xaricdəkini kölgədə saxlayır."
+    },
+    "js-does-the-const-variable-make-the-value-immutable": {
+      "question": "`const` dəyəri immutable edirmi?",
+      "gist": "Yox — yalnız **binding**-i sabitləyir. `const arr = []` üçün `arr.push(1)` işləyir, `arr = []` isə xəta verir. Dəyəri dondurmaq üçün `Object.freeze` (səthi) lazımdır."
+    },
+    "js-what-are-default-parameters": {
+      "question": "Default parametrlər nədir?",
+      "gist": "`function f(a = 1)` — arqument `undefined` olduqda default dəyər işə düşür (`null` işə düşmür). Default-lar soldan sağa hesablanır və əvvəlki parametrlərdən istifadə edə bilər."
+    },
+    "js-what-are-template-literals": {
+      "question": "Template literal nədir?",
+      "gist": "Backtick-lə yazılan sətir: `${x}` ilə interpolation, çoxsətirlilik, tag funksiyası dəstəyi. Birləşdirmədən oxunaqlıdır."
+    },
+    "js-how-do-you-write-multi-line-strings-in-template-literals": {
+      "question": "Template literal-da çoxsətirli mətn necə yazılır?",
+      "gist": "Sadəcə backtick içində yeni sətrə keç. Tələ: kod girintisi də sətrə düşür, ona görə iç-içə kodda mətn boşluqla başlaya bilər."
+    },
+    "js-what-are-nesting-templates": {
+      "question": "Nesting template nədir?",
+      "gist": "Template literal-ın `${}` içində başqa template yazmaq: `${a ? `x ${b}` : \"\"}`. Çox iç-içə oxunmur."
+    },
+    "js-what-are-tagged-templates": {
+      "question": "Tagged template nədir?",
+      "gist": "Funksiya template-i emal edir: birinci arqument sətir hissələri, qalanları dəyərlərdir. Escape və CSS-in-JS üçün işlənir."
+    },
+    "js-what-are-raw-strings": {
+      "question": "Raw string nədir?",
+      "gist": "`String.raw` escape-ləri emal etmir: `String.raw`a\\nb`` `\\n`-i hərfi saxlayır. Windows yolları və regex üçün rahatdır."
+    },
+    "js-what-is-destructuring-assignment": {
+      "question": "Destructuring assignment nədir?",
+      "gist": "Massiv və ya obyektdən dəyərləri dəyişənlərə açır: `const { a } = obj`, `const [x, y] = arr`. Tələ: `null` və `undefined`-i destructure etmək `TypeError` atır."
+    },
+    "js-what-are-default-values-in-destructuring-assignment": {
+      "question": "Destructuring-də default dəyərlər nədir?",
+      "gist": "`const { a = 1 } = obj`: dəyər yalnız `undefined` olanda işlənir. `null`, `0`, `\"\"` default-u işə salmır."
+    },
+    "js-how-do-you-swap-variables-in-destructuring-assignment": {
+      "question": "Destructuring ilə dəyişənlər necə yerini dəyişir?",
+      "gist": "`[a, b] = [b, a]`, müvəqqəti dəyişən lazım deyil. Əvvəlki sətir nöqtəli vergülsüz bitirsə `[` ilə başlayan sətir birləşə bilər."
+    },
+    "js-what-are-enhanced-object-literals": {
+      "question": "Enhanced object literal nədir?",
+      "gist": "ES6 qısaltmaları: `{ name }`, metod `{ run() {} }`, computed açar `{ [key]: 1 }`."
+    },
+    "js-what-are-dynamic-imports": {
+      "question": "Dynamic import nədir?",
+      "gist": "`import(\"./x.js\")` modulu runtime-da yükləyir və Promise qaytarır. Yolu hesablamaq olur, statik import-dan fərqli olaraq şərt içində yazılır."
+    },
+    "js-what-are-the-use-cases-for-dynamic-imports": {
+      "question": "Dynamic import-un istifadə halları hansılardır?",
+      "gist": "Tələb olunanda yükləmə, şərti polyfill, runtime-da hesablanan yol, adi skriptdən modul çağırmaq, ağır hissəni ilk bundle-dan çıxarmaq."
+    },
+    "js-what-are-typed-arrays": {
+      "question": "Typed array nədir?",
+      "gist": "Binary data üçün sabit tipli massivə bənzər görünüşlər: `Uint8Array`, `Float64Array`. `ArrayBuffer` üzərində işləyir, ölçüsü sabitdir. Fayl, WebGL, kriptoqrafiyada işlənir."
+    },
+    "js-what-are-the-advantages-of-module-loaders": {
+      "question": "Module loader-lərin üstünlükləri nələrdir?",
+      "gist": "Dinamik yükləmə, state və global ad izolyasiyası, kompilyasiya hook-ları. Bu sual köhnə SystemJS dövründəndir; indi yerini ESM və bundler tutub."
+    },
+    "js-what-is-collation": {
+      "question": "Collation nədir?",
+      "gist": "Sətirləri dil qaydalarına görə sıralama və axtarma. `Intl.Collator` və ya `localeCompare`: `ə` kimi hərflər üçün lazımdır."
+    },
+    "js-what-is-for-of-statement": {
+      "question": "`for...of` nədir?",
+      "gist": "Iterable dəyərləri üzrə dövrə: massiv, sətir, Map, Set. `break` və `await` işləyir. Adi obyektdə işləmir."
+    },
+    "js-what-is-the-output-of-below-spread-operator-array": {
+      "question": "Aşağıdakı spread massivinin nəticəsi nədir?",
+      "gist": "`[...\"John Resig\"]` hər simvolu ayrı element edir, boşluq da daxil: `[\"J\", \"o\", \"h\", \"n\", \" \", ...]`. Çünki sətir iterable-dır."
+    },
+    "js-is-postmessage-secure": {
+      "question": "`postMessage` təhlükəsizdir?",
+      "gist": "Düzgün işlədilsə bəli: göndərəndə dəqiq `targetOrigin`, alanda `event.origin` yoxlanılır. Yoxlama olmasa istənilən sayt mesaj göndərə bilər."
+    },
+    "js-what-are-the-problems-with-postmessage-target-origin-as-wild": {
+      "question": "`postMessage`-də target origin `*` olanda hansı problemlər var?",
+      "gist": "Hədəf pəncərə başqa sayta yönləndirilsə, data ona da çatır, həssas məlumat sızır. Həmişə dəqiq origin yaz."
+    },
+    "js-how-do-you-avoid-receiving-postmessages-from-attackers": {
+      "question": "Hücumçuların `postMessage`-lərini qəbul etməməyin yolu nədir?",
+      "gist": "Listener-də `event.origin`-i icazəli siyahı ilə yoxla, `event.source`-a da bax. Datanı etibarsız say, `innerHTML` və `eval`-a vermə."
+    },
+    "js-can-i-avoid-using-postmessages-completely": {
+      "question": "`postMessage`-dən tamamilə qaçmaq olar?",
+      "gist": "Tam yox: üçüncü tərəf skriptlər də işlədir, ona görə səhifəyə mesaj gələ bilər. Öz kodunda lazım deyilsə işlətmə, listener varsa origin yoxla."
+    },
+    "js-is-postmessages-synchronous": {
+      "question": "`postMessage` sinxrondur?",
+      "gist": "Xeyr, müasir brauzerlərdə asinxrondur: mesaj növbəyə düşür, cavab gözlənilmir. Cavab lazımdırsa geri mesaj və ya `MessageChannel` işlət."
+    },
+    "js-what-paradigm-is-javascript": {
+      "question": "JavaScript hansı paradiqmaya aiddir?",
+      "gist": "Multi-paradigm: imperativ, prototype əsaslı OOP, funksional. Class sintaksisi də prototype üzərindədir."
+    },
+    "js-what-is-the-difference-between-internal-and-external-javascr": {
+      "question": "Daxili və xarici JavaScript arasında fərq nədir?",
+      "gist": "Daxili `<script>` içində, xarici `src` ilə ayrı fayldadır. Xarici fayl cache olunur və təkrar işlənir."
+    },
+    "js-is-javascript-faster-than-server-side-script": {
+      "question": "JavaScript server tərəfi skriptdən sürətlidir?",
+      "gist": "Mənbə \"bəli\" deyir, amma bu sadələşdirmədir: client işi şəbəkə gözləmir, amma cihazın gücündən asılıdır. Sürət tapşırıqdan və mühitdən asılıdır."
+    },
+    "js-how-do-you-get-the-status-of-a-checkbox": {
+      "question": "Checkbox-un vəziyyəti necə alınır?",
+      "gist": "`input.checked` boolean qaytarır. `value` deyil, `checked` oxunmalıdır."
+    },
+    "js-what-is-the-purpose-of-double-tilde-operator": {
+      "question": "`~~` operatoru nə üçündür?",
+      "gist": "Kəsri atır. `Math.floor` deyil, `Math.trunc` kimidir: `~~-2.5` `-2` verir. 32 bitdən böyük rəqəmlərdə səhv nəticə verir."
+    },
+    "js-how-do-you-convert-character-to-ascii-code": {
+      "question": "Simvol ASCII koduna necə çevrilir?",
+      "gist": "`\"A\".charCodeAt(0)` 65 verir. Əksi `String.fromCharCode(65)`. Emoji üçün `codePointAt`."
+    },
+    "js-what-is-arraybuffer": {
+      "question": "ArrayBuffer nədir?",
+      "gist": "Sabit ölçülü xam binary yaddaş. Birbaşa oxunmur, typed array və ya `DataView` ilə işlənir. Worker-ə kopyasız transfer etmək olur."
+    },
+    "js-what-is-the-output-of-below-string-expression": {
+      "question": "Aşağıdakı string ifadəsinin nəticəsi nədir?",
+      "gist": "Sətir indeksi həmin mövqedəki simvolu qaytarır, burada `\"W\"`. İndeks 0-dan başlayır, olmayan indeks `undefined` verir."
+    },
+    "js-what-is-the-purpose-of-error-object": {
+      "question": "Error obyekti nə üçündür?",
+      "gist": "Runtime xətasını təsvir edir və öz xəta tiplərinin əsasıdır: `class ApiError extends Error`. Sətir atmaq əvəzinə işlət ki, stack qalsın."
+    },
+    "js-what-is-the-purpose-of-evalerror-object": {
+      "question": "EvalError obyekti nə üçündür?",
+      "gist": "`eval` ilə bağlı xəta üçün nəzərdə tutulub, amma mühərrik artıq atmır; uyğunluq üçün qalıb. Praktikada `eval`-ın özündən qaç."
+    },
+    "js-what-are-the-list-of-cases-error-thrown-from-non-strict-mode": {
+      "question": "Strict mode-a keçəndə hansı hallarda xəta atılır?",
+      "gist": "Oktal sintaksis, `with`, dəyişənə `delete`, `eval` və `arguments`-i ad kimi işlətmək, dublikat parametr. Bunlar icradan əvvəl `SyntaxError` verir."
+    },
+    "js-do-all-objects-have-prototypes": {
+      "question": "Bütün obyektlərin prototype-ı var?",
+      "gist": "Xeyr. Object.create(null) ilə yaradılanın və zəncirin sonundaki Object.prototype-ın özünün prototype-ı null-dur."
+    },
+    "js-what-is-the-difference-between-a-parameter-and-an-argument": {
+      "question": "Parameter və argument arasında fərq nədir?",
+      "gist": "Parameter funksiya təyinindəki addır, argument çağırışda ötürülən dəyərdir."
+    },
+    "js-what-is-the-purpose-of-some-method-in-arrays": {
+      "question": "`some` metodu nə üçündür?",
+      "gist": "Ən azı bir element şərti ödəyirsə `true` qaytarır və ilk uyğunluqda dayanır. Boş massivdə `false`-dur; `every` isə `true` verir."
+    },
+    "js-how-do-you-combine-two-or-more-arrays": {
+      "question": "İki və ya daha çox massiv necə birləşdirilir?",
+      "gist": "`a.concat(b)` və ya `[...a, ...b]`, ikisi də yeni massiv qaytarır, orijinala toxunmur. Elementlər shallow kopyalanır."
+    },
+    "js-what-is-the-difference-between-shallow-and-deep-copy": {
+      "question": "Shallow copy ilə deep copy arasında fərq nədir?",
+      "gist": "Shallow: bir səviyyə kopyalanır, iç obyektlər paylaşılır (`{...obj}`). Deep: bütün ağac kopyalanır (`structuredClone`); JSON round-trip `Date`, `Map`, `undefined` və cycle-ları itirir."
+    },
+    "js-how-do-you-create-specific-number-of-copies-of-a-string": {
+      "question": "Sətrin müəyyən sayda nüsxəsi necə yaradılır?",
+      "gist": "`\"ab\".repeat(3)` `\"ababab\"` verir. Mənfi say `RangeError` atır."
+    },
+    "js-how-do-you-return-all-matching-strings-against-a-regular-exp": {
+      "question": "Regular expression-a uyğun bütün sətirlər necə qaytarılır?",
+      "gist": "`str.matchAll(/x/g)` iterator verir, qruplar da daxil. Regex-də `g` flag-i məcburidir. `[...]` ilə massivə çevrilir."
+    },
+    "js-how-do-you-trim-a-string-at-the-beginning-or-ending": {
+      "question": "Sətir yalnız əvvəldən və ya sondan necə trim olunur?",
+      "gist": "`trimStart()` və `trimEnd()`. Köhnə adları `trimLeft` və `trimRight`-dır."
+    },
+    "js-what-is-the-output-of-below-console-statement-with-unary-ope": {
+      "question": "Unary operator ilə konsol nəticəsi nə olacaq?",
+      "gist": "Klassik nümunə: `console.log(+\"Hello\")` → `NaN`, çünki unary `+` sətri rəqəmə çevirməyə çalışır və alınmır. `+true` → 1, `+null` → 0, `+undefined` → NaN."
+    },
+    "js-does-javascript-uses-mixins": {
+      "question": "JavaScript mixin işlədirmi?",
+      "gist": "Dildə açar söz yoxdur, amma Object.assign(Class.prototype, mixin) ilə davranış birləşdirmək adi praktikadır - çoxlu irsiyyətin əvəzidir."
+    },
+    "js-mixin-example-using-object-composition": {
+      "question": "Object composition ilə mixin nümunəsi?",
+      "gist": "Davranış obyektlərini bir hədəfə Object.assign ilə yığmaq. İrsiyyət yerinə tərkib - prototype zənciri dərinləşmir, ad toqquşması isə səssiz üzərinə yazır."
+    },
+    "js-benefits": {
+      "question": "Mixin-lərin faydaları nələrdir?",
+      "gist": "Dərin irsiyyətdən qaçır, composition-u təşviq edir, kodu modul və təkrar istifadə edilən edir. Sual başlığı mənbədə sadəcə \"Benefits\"-dir."
+    },
+    "js-what-is-a-thunk-function": {
+      "question": "Thunk funksiyası nədir?",
+      "gist": "Hesablamanı gecikdirən arqumentsiz funksiya: `const t = () => 1 + 2`. Redux Thunk da bu ideyadan gəlir."
+    },
+    "js-what-are-asynchronous-thunks": {
+      "question": "Asinxron thunk nədir?",
+      "gist": "Hesablamanı funksiyanın içinə büküb gecikdirmək: thunk çağırılana qədər iş başlamır, nəticə callback ya promise ilə gəlir. Redux-da `redux-thunk` action yerinə belə funksiya dispatch etməyə imkan verir."
+    },
+    "js-what-is-the-output-of-below-function-calls": {
+      "question": "Aşağıdakı funksiya çağırışlarının nəticəsi nədir?",
+      "gist": "40 və `NaN`. Adi metodda `this` obyektdir, arrow function-da isə xarici scope-un `this`-idir, ona görə `radius` tapılmır."
+    },
+    "js-how-to-remove-all-line-breaks-from-a-string": {
+      "question": "Sətirdəki bütün yeni sətirlər necə silinir?",
+      "gist": "`s.replace(/\\r?\\n|\\r/g, \"\")`. `g` flag-i olmasa yalnız birincisi silinir."
+    },
+    "js-what-is-the-difference-between-reflow-and-repaint": {
+      "question": "Reflow və repaint arasında fərq nədir?",
+      "gist": "Repaint görünüşü dəyişir (rəng), reflow isə layout-u yenidən hesablayır (ölçü, mövqe) və daha bahadır. `transform` və `opacity` hər ikisindən çox vaxt qaçır."
+    },
+    "js-what-happens-with-negating-an-array": {
+      "question": "Massivi inkar edəndə nə baş verir?",
+      "gist": "`![]` `false` verir, çünki bütün obyektlər, boş massiv də, truthy-dir. Boşluğu yoxlamaq üçün `arr.length` işlət."
+    },
+    "js-what-happens-if-we-add-two-arrays": {
+      "question": "İki massivi topladıqda nə baş verir?",
+      "gist": "Hər ikisi sətrə çevrilib birləşir: `[1,2] + [3,4]` nəticəsi `\"1,23,4\"`. Massiv birləşdirmək üçün `concat` və ya spread işlət."
+    },
+    "js-what-is-the-output-of-prepend-additive-operator-on-falsy-val": {
+      "question": "Falsy dəyərlərin qarşısına `+` qoyanda nəticə nə olur?",
+      "gist": "`+null`, `+false`, `+\"\"` 0 verir; `+undefined` və `+NaN` isə `NaN`. Yəni mənbədəki \"hamısı sıfırdır\" iddiası bu iki dəyər üçün doğru deyil."
+    },
+    "js-how-do-you-create-self-string-using-special-characters": {
+      "question": "Xüsusi simvollarla \"self\" sətri necə yaradılır?",
+      "gist": "Yalnız `[]()!+` ilə coercion trick-i (JSFuck üsulu): `![]`, `+[]` kimi ifadələrdən hərflər çıxarılır. Trivia-dır, praktik işdə yoxdur."
+    },
+    "js-how-do-you-remove-falsy-values-from-an-array": {
+      "question": "Massivdən falsy dəyərlər necə silinir?",
+      "gist": "`arr.filter(Boolean)`. Tələ: `0` və `\"\"` də silinir; onlar lazımdırsa şərti açıq yaz, məsələn `x != null`."
+    },
+    "js-how-do-you-get-unique-values-of-an-array": {
+      "question": "Massivin unikal dəyərləri necə alınır?",
+      "gist": "`[...new Set(arr)]`. Primitivlərdə işləyir; obyektlər referansla müqayisə olunur, onlar üçün açarla `Map` qur."
+    },
+    "js-what-is-destructuring-aliases": {
+      "question": "Destructuring alias nədir?",
+      "gist": "Xassəni başqa adla götürmək: `const { name: userName } = user`. Ad toqquşanda faydalıdır, default ilə də olur: `{ a: b = 1 }`."
+    },
+    "js-how-do-you-map-the-array-values-without-using-map-method": {
+      "question": "`map` metodu olmadan massiv dəyərləri necə çevrilir?",
+      "gist": "`Array.from(arr, fn)` ikinci arqumentlə çevirir. `reduce` və ya sadə dövrə də olar. Array-like obyektlərdə də işləyir."
+    },
+    "js-how-do-you-empty-an-array": {
+      "question": "Massiv necə boşaldılır?",
+      "gist": "`arr.length = 0` yerində boşaldır və bütün istinadlara təsir edir. `arr = []` yalnız dəyişəni yeni massivə bağlayır, köhnə istinadlar qalır."
+    },
+    "js-how-do-you-round-numbers-to-certain-decimals": {
+      "question": "Rəqəm müəyyən onluğa qədər necə yuvarlaqlaşdırılır?",
+      "gist": "`n.toFixed(2)` sətir qaytarır. Tələ: `1.005.toFixed(2)` `\"1.00\"` verir, çünki float dəqiq deyil."
+    },
+    "js-what-is-the-easiest-way-to-convert-an-array-to-an-object": {
+      "question": "Massivi obyektə çevirməyin ən asan yolu nədir?",
+      "gist": "`{ ...arr }` indeksləri açar edir. Açar-dəyər cütləri üçün `Object.fromEntries(pairs)` daha faydalıdır."
+    },
+    "js-how-do-you-create-an-array-with-some-data": {
+      "question": "Data ilə massiv necə yaradılır?",
+      "gist": "`new Array(3).fill(0)`, `Array.from({ length: 3 }, (_, i) => i)`. Tələ: `fill({})` eyni obyekti bütün yerlərə qoyur, ayrıca obyekt üçün `Array.from` işlət."
+    },
+    "js-what-are-the-placeholders-from-console-object": {
+      "question": "Console obyektində hansı placeholder-lər var?",
+      "gist": "`%s` sətir, `%d` tam ədəd, `%o` obyekt, `%f` kəsr, `%c` CSS."
+    },
+    "js-is-it-possible-to-add-css-to-console-messages": {
+      "question": "Console mesajlarına CSS əlavə etmək olar?",
+      "gist": "Bəli: `console.log(\"%cSalam\", \"color: red\")`."
+    },
+    "js-what-is-the-purpose-of-dir-method-of-console-object": {
+      "question": "`console.dir` nə üçündür?",
+      "gist": "Obyektin xassələrini interaktiv siyahı kimi göstərir. DOM elementində `log` HTML, `dir` isə obyekti göstərir."
+    },
+    "js-is-it-possible-to-debug-html-elements-in-console": {
+      "question": "Console-da HTML elementlərini debug etmək olar?",
+      "gist": "Bəli: `console.log(el)` elementi, `console.dir(el)` obyekt kimi göstərir. Elements panelində seçilən element `$0` olur."
+    },
+    "js-how-do-you-display-data-in-a-tabular-format-using-console-ob": {
+      "question": "Console-da data cədvəl şəklində necə göstərilir?",
+      "gist": "`console.table(data)`, massiv və obyektlər üçün. İkinci arqument sütunları seçir."
+    },
+    "js-how-do-you-verify-that-an-argument-is-a-number-or-not": {
+      "question": "Arqumentin rəqəm olması necə yoxlanılır?",
+      "gist": "`typeof x === \"number\" && Number.isFinite(x)`. Sadəsi `Number.isFinite(x)`; `NaN` və `Infinity`-ni də ayırır."
+    },
+    "js-how-do-you-create-copy-to-clipboard-button": {
+      "question": "Copy to clipboard düyməsi necə yaradılır?",
+      "gist": "`await navigator.clipboard.writeText(text)`: HTTPS və istifadəçi hərəkəti tələb edir. Köhnə `execCommand(\"copy\")` deprecated-dir."
+    },
+    "js-what-is-the-shortcut-to-get-timestamp": {
+      "question": "Timestamp almağın qısa yolu nədir?",
+      "gist": "`Date.now()`. `+new Date()` və `new Date().getTime()` də eyni millisaniyəni verir."
+    },
+    "js-how-do-you-flattening-multi-dimensional-arrays": {
+      "question": "Çoxölçülü massivlər necə düzləşdirilir?",
+      "gist": "`arr.flat()` bir səviyyə, `arr.flat(Infinity)` bütün səviyyələr. `flatMap` map və flat birləşməsidir. Köhnə üsul rekursiya idi."
+    },
+    "js-what-is-the-easiest-multi-condition-checking": {
+      "question": "Çoxlu şərti yoxlamağın ən asan yolu nədir?",
+      "gist": "Bir neçə `||` əvəzinə `[\"a\", \"b\"].includes(x)`. Mənbədəki `indexOf` də işləyir, amma `includes` daha aydındır."
+    },
+    "js-how-do-you-capture-browser-back-button": {
+      "question": "Brauzerin Geri düyməsi necə tutulur?",
+      "gist": "SPA-da `popstate`. Mənbədəki `beforeunload` yalnız səhifədən çıxışda xəbərdarlıq üçündür, Geri düyməsini ayırd etmir."
+    },
+    "js-how-do-you-disable-right-click-in-the-web-page": {
+      "question": "Veb səhifədə sağ klik necə söndürülür?",
+      "gist": "`contextmenu` hadisəsində `preventDefault()`. Əlçatanlığa zərərdir və kodu qorumur, çünki yan keçmək asandır."
+    },
+    "js-what-are-wrapper-objects": {
+      "question": "Wrapper obyektlər nədir?",
+      "gist": "Primitive-də metod çağırılanda müvəqqəti `String`, `Number`, `Boolean` obyekti yaranır. Ona yazılan xassə itir. `new String()` işlətmə."
+    },
+    "js-what-is-ajax": {
+      "question": "AJAX nədir?",
+      "gist": "Səhifəni yeniləmədən serverlə məlumat mübadiləsi yanaşması. Əvvəl `XMLHttpRequest`, indi `fetch` ilə edilir; addakı «XML»-ə baxmayaraq praktikada JSON işlənir."
+    },
+    "js-what-are-the-different-ways-to-deal-with-asynchronous-code": {
+      "question": "Asinxron kodu idarə etməyin hansı yolları var?",
+      "gist": "Callback-lər, promise zənciri, async/await, generator əsaslı yanaşmalar (redux-saga), observable modelləri (RxJS). Müasir default async/await-dır; paralellik üçün `Promise.all`, ləğv üçün AbortController."
+    },
+    "js-how-to-cancel-a-fetch-request": {
+      "question": "Fetch sorğusunu necə ləğv edirsən?",
+      "gist": "`AbortController` yaradılır, `signal` sorğuya verilir, `controller.abort()` çağırılanda promise `AbortError` ilə reject olunur. React-də bu, effekt cleanup-ında edilir ki, unmount-dan sonra state yenilənməsin."
+    },
+    "js-what-is-web-speech-api": {
+      "question": "Web Speech API nədir?",
+      "gist": "Nitqi tanıma (`SpeechRecognition`) və mətni səsləndirmə (`speechSynthesis`). Tanıma dəstəyi brauzerlərdə tam deyil."
+    },
+    "js-what-is-minimum-timeout-throttling": {
+      "question": "Minimum timeout throttling nə deməkdir?",
+      "gist": "Brauzer iç-içə `setTimeout` çağırışlarında minimum gecikmə tətbiq edir (adətən 4 ms), fon tab-larda isə daha çox — timer-ə dəqiq vaxt kimi güvənmək olmaz."
+    },
+    "js-how-do-you-implement-zero-timeout-in-modern-browsers": {
+      "question": "Müasir brauzerlərdə zero timeout necə qurulur?",
+      "gist": "`setTimeout(fn, 0)` minimal gecikmə verir. `postMessage` və ya `MessageChannel` daha tez işləyir; microtask üçün `queueMicrotask`."
+    },
+    "js-what-are-tasks-in-event-loop": {
+      "question": "Event loop-da task nədir?",
+      "gist": "Növbəyə düşən iş vahidi. Macrotask: script icrası, `setTimeout`, event handler, I/O. Microtask: promise handler-ləri, `queueMicrotask`. Hər macrotask-dan sonra microtask növbəsi tam boşaldılır, sonra render gəlir."
+    },
+    "js-what-is-microtask": {
+      "question": "Microtask nədir?",
+      "gist": "Cari işdən dərhal sonra, növbəti macrotask və render-dən əvvəl işləyən kiçik tapşırıq: promise `then`/`catch`, `await`-dən sonrakı hissə, `queueMicrotask`. Microtask içində yeni microtask yaratmaq növbəni uzadır və render-i gecikdirir."
+    },
+    "js-what-are-different-event-loops": {
+      "question": "Fərqli event loop-lar hansılardır?",
+      "gist": "Brauzerdə hər agent üçün ayrı loop var — əsas thread və hər worker öz loop-u ilə. Node.js-də libuv loop-u mərhələlərə bölünür (timers, pending, poll, check, close), buna görə `setImmediate` yalnız Node-da mövcuddur."
+    },
+    "js-what-is-the-purpose-of-queuemicrotask": {
+      "question": "queueMicrotask nə üçündür?",
+      "gist": "Funksiyanı birbaşa microtask növbəsinə salır — `Promise.resolve().then(fn)` ilə eyni vaxt anı, amma boş promise yaratmadan. «Cari sinxron kod bitəndən sonra, render-dən əvvəl» işləməli kod üçün."
+    },
+    "js-how-do-you-use-javascript-libraries-in-typescript-file": {
+      "question": "JavaScript kitabxanaları TypeScript faylında necə işlədilir?",
+      "gist": "Tip üçün `@types/x` paketi, yoxdursa `.d.ts` faylında `declare module \"x\"`. Sonra adi kimi import olunur."
+    },
+    "js-what-are-the-differences-between-promises-and-observables": {
+      "question": "Promise-lərlə observable-lar arasında fərqlər nələrdir?",
+      "gist": "Promise bir dəyər verir, dərhal işə başlayır (eager), ləğv olunmur. Observable zamanla çoxlu dəyər buraxır, abunə olunana qədər işləmir (lazy), `unsubscribe` ilə dayandırılır və map/filter/retry operatorları ilə birləşdirilir."
+    },
+    "js-what-is-heap": {
+      "question": "Heap nədir?",
+      "gist": "Obyektlər üçün yaddaş sahəsi. Ayırma avtomatikdir, təmizləməni GC görür. Stack isə çağırışları saxlayır."
+    },
+    "js-what-is-an-event-table": {
+      "question": "Event table nədir?",
+      "gist": "Gözləyən asinxron işləri və callback-lərini saxlayan struktur. Hadisə baş verəndə callback queue-ya keçir. Rəsmi spesifikasiya termini deyil."
+    },
+    "js-what-is-a-microtask-queue": {
+      "question": "Microtask növbəsi nədir?",
+      "gist": "Microtask-ların FIFO növbəsi. Cari macrotask bitəndə loop bu növbəni tam boşaldır — icra zamanı əlavə olunanları da — yalnız sonra növbəti macrotask və render gəlir."
+    },
+    "js-what-is-the-difference-between-shim-and-polyfill": {
+      "question": "Shim və polyfill arasında fərq nədir?",
+      "gist": "Shim köhnə mühitə API gətirən ümumi kitabxanadır, öz API-si də ola bilər. Polyfill konkret brauzer standartını eyni adla tətbiq edir."
+    },
+    "js-how-do-you-detect-primitive-or-non-primitive-value-type": {
+      "question": "Dəyərin primitive olub-olmadığı necə aşkar olunur?",
+      "gist": "`Object(x) !== x` primitive üçün `true` verir: `Object()` primitivi sarıyır, obyekti olduğu kimi qaytarır. `typeof` isə `null` və funksiyada əlavə yoxlama istəyir."
+    },
+    "js-what-is-babel": {
+      "question": "Babel nədir?",
+      "gist": "Yeni JS-i köhnə mühitlərə uyğun koda çevirən transpiler: JSX, TypeScript, sintaksis. Polyfill üçün `core-js` qoşulur. Sürət üçün çox layihə SWC və esbuild-ə keçib."
+    },
+    "js-is-node-js-completely-single-threaded": {
+      "question": "Node.js tamamilə tək axınlıdır?",
+      "gist": "Xeyr: JS bir axında işləyir, amma libuv thread pool-u `fs` və crypto kimi işləri görür. Paralel JS üçün `worker_threads` var."
+    },
+    "js-what-are-the-common-use-cases-of-observables": {
+      "question": "Observable-ların geniş yayılmış istifadə halları hansılardır?",
+      "gist": "WebSocket və push bildirişləri, istifadəçi girişi, təkrarlanan intervallar: zamanla bir neçə dəyər verən axınlar."
+    },
+    "js-what-is-rxjs": {
+      "question": "RxJS nədir?",
+      "gist": "Observable əsaslı reaktiv kitabxana: `debounceTime`, `switchMap` kimi operatorlarla asinxron axınları birləşdirir. Güclüdür, öyrənməsi çətindir."
+    },
+    "js-what-is-the-difference-between-function-constructor-and-func": {
+      "question": "Function konstruktoru ilə function declaration arasında fərq nədir?",
+      "gist": "new Function(...) mətni runtime-da kompilyasiya edir və yalnız global scope görür - closure itir. Declaration hoisting olunur və leksik scope-u saxlayır."
+    },
+    "js-what-is-a-short-circuit-condition": {
+      "question": "Short circuit şərti nədir?",
+      "gist": "`a && b` `a` falsy-dirsə, `a || b` `a` truthy-dirsə sağ tərəfi icra etmir. Şərti icra və default dəyər üçün işlənir."
+    },
+    "js-what-is-the-easiest-way-to-resize-an-array": {
+      "question": "Massivin ölçüsünü dəyişməyin ən asan yolu nədir?",
+      "gist": "`length`-ə yazmaq: `arr.length = 2` kəsir və qalanı silir. Böyütmək boş yerlər, yəni sparse massiv yaradır."
+    },
+    "js-what-is-an-observable": {
+      "question": "Observable nədir?",
+      "gist": "Zamanla bir neçə dəyər verən axın; subscribe olunana qədər işləmir və ləğv edilə bilir. Promise isə tək dəyər verir və dərhal başlayır."
+    },
+    "js-what-is-the-difference-between-function-and-class-declaratio": {
+      "question": "Function və class declaration arasında fərq nədir?",
+      "gist": "Function declaration hoisting olunur, elan yerindən əvvəl çağırıla bilər. Class TDZ-dədir, new olmadan çağırılmır, gövdəsi strict mode-dadır."
+    },
+    "js-what-is-an-async-function": {
+      "question": "Async funksiya nədir?",
+      "gist": "Həmişə promise qaytaran funksiya; içində `await` ilə promise-in nəticəsi gözlənilir. `await` funksiyanın icrasını dayandırır, thread-i bloklamır; funksiyada atılan xəta qaytarılan promise-in reject-inə çevrilir."
+    },
+    "js-how-do-you-prevent-promises-swallowing-errors": {
+      "question": "Promise-lərin xətanı udmasının qarşısını necə alırsan?",
+      "gist": "Zəncirin sonuna `catch` qoy, `then` içində promise-i mütləq return et (yoxsa xəta zəncirdən kənarda qalır), async funksiyada `try/catch` işlət, tutulmayanları `unhandledrejection` hadisəsi ilə logla. `catch` içində problemi həll etmirsənsə yenidən throw et."
+    },
+    "js-what-is-deno": {
+      "question": "Deno nədir?",
+      "gist": "V8 və Rust üzərində JS/TS runtime-ı: Node-un müəllifindən, default olaraq təhlükəsiz (icazə tələb edir), TypeScript hazırdır."
+    },
+    "js-how-do-you-make-an-object-iterable-in-javascript": {
+      "question": "Obyekt iterable necə edilir?",
+      "gist": "`[Symbol.iterator]` metodu təyin et, `{ next() }` qaytaran iterator versin; ən sadəsi generator-dur: `*[Symbol.iterator]() { yield 1 }`. Bundan sonra `for...of` işləyir."
+    },
+    "js-what-is-a-proper-tail-call": {
+      "question": "Proper Tail Call nədir?",
+      "gist": "Son əməliyyat olan çağırış yeni stack frame açmır, dərin rekursiya overflow vermir. ES6-da var, amma demək olar ki, yalnız Safari tətbiq edib."
+    },
+    "js-how-do-you-check-an-object-is-a-promise-or-not": {
+      "question": "Obyektin promise olduğunu necə yoxlayırsan?",
+      "gist": "`value instanceof Promise` (yalnız eyni realm-da düzgün işləyir) və ya thenable yoxlaması: `typeof value?.then === \"function\"`. Kitabxanalar ikincisini seçir, çünki fərqli promise implementasiyalarını da qəbul edir."
+    },
+    "js-how-to-detect-if-a-function-is-called-as-constructor": {
+      "question": "Funksiyanın constructor kimi çağırıldığını necə bilmək olar?",
+      "gist": "new.target - new ilə çağırışda funksiyanın özünə, adi çağırışda undefined-a bərabərdir."
+    },
+    "js-what-are-the-differences-between-arguments-object-and-rest-p": {
+      "question": "arguments obyekti ilə rest parametr arasında fərqlər nələrdir?",
+      "gist": "`arguments` array-like-dır, massiv metodları yoxdur, arrow funksiyada mövcud deyil, bütün arqumentləri əhatə edir. Rest parametr əsl massivdir, ad verirsən, yalnız qalan arqumentləri toplayır və arrow funksiyada da işləyir."
+    },
+    "js-what-are-the-differences-between-spread-operator-and-rest-pa": {
+      "question": "Spread operator ilə rest parametr arasında fərqlər nələrdir?",
+      "gist": "Sintaksis eynidir (`...`), yerinə görə mənası dəyişir: parametr siyahısında/destructuring-də **rest** — dəyərləri toplayır; çağırışda, massiv və obyekt literalında **spread** — dəyərləri açır."
+    },
+    "js-what-are-the-different-kinds-of-generators": {
+      "question": "Generator nə üçün lazımdır?",
+      "gist": "`yield`-də dayanıb dəyər qəbul edərək davam edən funksiya — lazy sequence, custom iterator və saga tipli effekt kitabxanalarının mexanizmi."
+    },
+    "js-what-are-the-built-in-iterables": {
+      "question": "Daxili iterable-lar hansılardır?",
+      "gist": "Array, TypedArray, String, Map, Set, `arguments`, NodeList, generator-lar. Adi obyekt iterable deyil, `Object.entries` ilə dövr edilir."
+    },
+    "js-what-are-the-differences-between-for-of-and-for-in-statement": {
+      "question": "`for...of` və `for...in` arasında fərqlər nələrdir?",
+      "gist": "`for...in` enumerable açarları (miras daxil), `for...of` iterable dəyərləri gəzir. Massivdə `for...of` işlət."
+    },
+    "js-how-do-you-define-instance-and-non-instance-properties": {
+      "question": "Instance və non-instance xassələr necə təyin olunur?",
+      "gist": "Instance: constructor-da `this.a` və ya class field. Static: `static a`, class-ın özünə aiddir. Paylaşılan: prototype-da."
+    },
+    "js-what-is-the-difference-between-isnan-and-number-isnan": {
+      "question": "`isNaN` və `Number.isNaN` arasında fərq nədir?",
+      "gist": "`isNaN` əvvəl çevirir: `isNaN(\"x\")` `true`. `Number.isNaN` çevirmir, yalnız həqiqi `NaN`-da `true` verir. Həmişə ikincisini işlət."
+    },
+    "js-how-to-invoke-an-iife-without-any-extra-brackets": {
+      "question": "IIFE-i əlavə mötərizə olmadan necə çağırmaq olar?",
+      "gist": "Funksiya elanını ifadəyə çevirən istənilən operator kifayətdir: `void function () {}()`, `!function () {}()`, `+function () {}()`. Mötərizə də elə bu məqsədə xidmət edir."
+    },
+    "js-is-that-possible-to-use-expressions-in-switch-cases": {
+      "question": "`switch` case-lərində ifadə işlətmək olar?",
+      "gist": "Bəli: `switch (true) { case x > 5: ... }`. İşləyir, amma çox vaxt `if` daha aydındır."
+    },
+    "js-what-is-the-easiest-way-to-ignore-promise-errors": {
+      "question": "Promise xətalarını nəzərə almamağın ən asan yolu nədir?",
+      "gist": "`.catch(() => {})` əlavə etmək, ya `await promise.catch(() => undefined)`. Susdurmaq problemi gizlədir; log yazmaq və ya `Promise.allSettled` istifadə etmək daha düzgün yoldur."
+    },
+    "js-how-do-style-the-console-output-using-css": {
+      "question": "Console çıxışı CSS ilə necə stillənir?",
+      "gist": "`%c` işlət, CSS-i növbəti arqument kimi ver: `console.log(\"%cDiqqət\", \"color: red\")`."
+    },
+    "js-what-is-nullish-coalescing-operator": {
+      "question": "Nullish coalescing operatoru (`??`) nədir?",
+      "gist": "Yalnız `null` və `undefined` olanda sağ tərəfi qaytarır. `||` isə `0`, `\"\"`, `false`-da da işləyir, ona görə `count ?? 10` düzgündür. `||` ilə mötərizəsiz qarışdırıla bilməz."
+    },
+    "js-how-do-you-group-and-nest-console-output": {
+      "question": "Console çıxışı necə qruplaşdırılır və iç-içə qoyulur?",
+      "gist": "`console.group()`, `console.groupCollapsed()`, bağlamaq üçün `console.groupEnd()`. Qruplar iç-içə ola bilər."
+    },
+    "js-what-is-the-difference-between-dense-and-sparse-arrays": {
+      "question": "Dense və sparse massivlər arasında fərq nədir?",
+      "gist": "Dense-də hər indeks doludur, sparse-də boşluq var. Oxumaq `undefined` verir, amma `forEach` və `map` boşluqları atlayır, `for` isə atlamır."
+    },
+    "js-what-are-the-different-ways-to-create-sparse-arrays": {
+      "question": "Sparse massiv yaratmağın yolları hansılardır?",
+      "gist": "Literalda boşluq `[1,,3]`, `new Array(5)`, `delete arr[0]`, `length`-i böyütmək və ya sonundan kənar indeksə yazmaq."
+    },
+    "js-what-is-the-difference-between-settimeout-setimmediate-and-p": {
+      "question": "setTimeout, setImmediate və process.nextTick arasında fərq nədir?",
+      "gist": "Node-da `process.nextTick` cari əməliyyatdan dərhal sonra, microtask-lardan da əvvəl işləyir; `setImmediate` check mərhələsində, I/O-dan sonra; `setTimeout(fn, 0)` timers mərhələsində, ən azı 1 ms sonra. Son ikisi brauzerdə yoxdur."
+    },
+    "js-how-do-you-reverse-an-array-without-modifying-original-array": {
+      "question": "Orijinalı dəyişmədən massiv necə tərsinə çevrilir?",
+      "gist": "`arr.toReversed()` və ya kopya üzərində: `[...arr].reverse()`, `arr.slice().reverse()`."
+    },
+    "js-how-do-you-create-custom-html-element": {
+      "question": "Custom HTML elementi necə yaradılır?",
+      "gist": "`class X extends HTMLElement` yaz, `customElements.define(\"my-x\", X)` ilə qeyd et. Adda tire mütləqdir."
+    },
+    "js-what-is-global-execution-context": {
+      "question": "Global execution context nədir?",
+      "gist": "Kod başlayanda yaradılan ilk context: qlobal obyekt və `this` bağlanır. Hər proqramda birdir və stack-in dibindədir."
+    },
+    "js-what-is-function-execution-context": {
+      "question": "Function execution context nədir?",
+      "gist": "Hər funksiya çağırışında yaradılır: `this`, `arguments`, lokal dəyişənlər, xarici scope-a keçid. Bitəndə stack-dən çıxır."
+    },
+    "js-what-is-debouncing": {
+      "question": "Debounce nədir?",
+      "gist": "Son hadisədən N ms sükut keçəndən sonra bir dəfə işlədir — axtarış input-u üçün. Throttle isə N ms-də ən çox bir dəfə işlədir (scroll, resize)."
+    },
+    "js-what-is-throttling": {
+      "question": "Throttling nədir?",
+      "gist": "Funksiyanın çağırılma tezliyini məhdudlaşdırır: verilən intervalda ən çox bir dəfə işləyir. Scroll, resize, mousemove üçün uyğundur. Debounce-dan fərqi — throttle mütəmadi işləyir, debounce axın dayanana qədər gözləyir."
+    },
+    "js-what-is-optional-chaining": {
+      "question": "Optional chaining nədir?",
+      "gist": "?. solundaki dəyər null ya undefined olarsa ifadə dayanır və undefined qaytarır, TypeError atmır. Çağırış üçün ?.(), indeks üçün ?.[] formaları var."
+    },
+    "js-what-is-an-environment-record": {
+      "question": "Environment record nədir?",
+      "gist": "Spesifikasiyada identifier-ləri dəyərlərlə bağlayan struktur. Xarici mühitə keçidlə birlikdə scope chain və closure-un əsasıdır."
+    },
+    "js-how-to-verify-if-a-variable-is-an-array": {
+      "question": "Dəyişənin massiv olması necə yoxlanılır?",
+      "gist": "`Array.isArray(x)` ən etibarlısıdır. `instanceof Array` iframe-lər arasında yanılır. `typeof []` isə `\"object\"` qaytarır."
+    },
+    "js-what-is-pass-by-value-and-pass-by-reference": {
+      "question": "Pass by value və pass by reference nədir?",
+      "gist": "JavaScript həmişə dəyərlə ötürür; obyektdə dəyər referansın özüdür. Xassəni dəyişmək görünür, parametri yenidən mənimsətmək görünmür."
+    },
+    "js-what-are-the-differences-between-primitives-and-non-primitiv": {
+      "question": "Primitive və non-primitive tiplər arasında fərqlər nələrdir?",
+      "gist": "Primitive dəyişməzdir, dəyərlə kopyalanır və müqayisə olunur. Obyekt dəyişkəndir, referansla ötürülür: iki oxşar obyekt `===` ilə bərabər deyil."
+    },
+    "js-how-do-you-create-your-own-bind-method-using-either-call-or-": {
+      "question": "`call` və ya `apply` ilə öz `bind` metodunuzu necə yazırsınız?",
+      "gist": "`Function.prototype.myBind = function (ctx, ...a) { const fn = this; return (...b) => fn.apply(ctx, [...a, ...b]); }`. Arqumentləri birləşdirir, `this`-i saxlayır."
+    },
+    "js-what-are-the-differences-between-pure-and-impure-functions": {
+      "question": "Pure və impure funksiyalar arasında fərqlər nələrdir?",
+      "gist": "Pure: eyni giriş → eyni çıxış, side effect yoxdur, xarici state-i dəyişmir. Impure: DOM-a yazır, şəbəkəyə çıxır, qlobal dəyişəni ya arqumenti mutate edir, `Date.now`/`Math.random` işlədir. Impure kod lazımdır, sadəcə kənarlara toplanır."
+    },
+    "js-what-is-referential-transparency": {
+      "question": "Referential transparency nədir?",
+      "gist": "İfadəni dəyəri ilə əvəz etmək proqramın davranışını dəyişmir. Pure funksiyaların xüsusiyyətidir, memoization və testi asanlaşdırır."
+    },
+    "js-what-are-the-possible-side-effects-in-javascript": {
+      "question": "JavaScript-də hansı yan təsirlər ola bilər?",
+      "gist": "Xarici dəyişəni və arqumenti dəyişmək, DOM, şəbəkə, storage, `console`, timer. Funksiyanı impure edir."
+    },
+    "js-what-are-compose-and-pipe-functions": {
+      "question": "`compose` və `pipe` funksiyaları nədir?",
+      "gist": "Funksiyaları birləşdirir: `compose` sağdan sola, `pipe` soldan sağa. Dildə hazır deyil, `reduce` ilə yazılır."
+    },
+    "js-what-is-module-pattern": {
+      "question": "Module pattern nədir?",
+      "gist": "IIFE və closure ilə private state yaradıb yalnız public API qaytaran üsul. ESM-dən əvvəlki standart idi; indi modul faylları eyni məqsədə xidmət edir."
+    },
+    "js-what-is-function-composition": {
+      "question": "Function composition nədir?",
+      "gist": "Bir funksiyanın nəticəsini növbətiyə ötürmək: `f(g(x))`. Kiçik, təkrar işlənən funksiyalardan məntiq qurulur."
+    },
+    "js-how-to-use-await-outside-of-async-function-prior-to-es2022": {
+      "question": "ES2022-dən əvvəl await-i async funksiyadan kənarda necə işlədirdilər?",
+      "gist": "Kodu dərhal çağırılan async IIFE-ə bükməklə: `(async () => { await ... })()`. ES2022-dən sonra ES modullarında top-level await mövcuddur, bu üsul lazım deyil."
+    },
+    "js-what-is-the-purpose-of-the-this-keyword-in-javascript": {
+      "question": "`this` açar sözü nə üçündür?",
+      "gist": "Funksiyanın **necə çağırıldığını** göstərir: metod çağırışında obyekt, `new` ilə yeni instance, `call/apply/bind` ilə verilən dəyər, sərbəst çağırışda strict mode-da `undefined` (əks halda global). Arrow funksiyada isə öz `this`-i yoxdur, yazıldığı yerdən götürülür."
+    },
+    "js-what-are-the-uses-of-closures": {
+      "question": "Closure-lar nə üçün istifadə olunur?",
+      "gist": "Private state saxlamaq (module pattern, counter), funksiya fabrikləri və currying, memoization, debounce/throttle-da timer id-sini saxlamaq, callback-in yaranma anındaki dəyəri «yadda saxlaması». React-də stale closure problemi də buradan çıxır."
+    },
+    "js-what-are-the-phases-of-execution-context": {
+      "question": "Execution context-in fazaları hansılardır?",
+      "gist": "Yaradılma: `var` və funksiyalar yerləşdirilir, `this` bağlanır (hoisting buradan gəlir). İcra: kod sətir-sətir işləyir, dəyərlər mənimsədilir."
+    },
+    "js-what-are-the-possible-reasons-for-memory-leaks": {
+      "question": "SPA-da memory leak-in səbəbləri nələrdir?",
+      "gist": "Silinməyən listener və timer-lər, uzunömürlü obyektin tutduğu closure-lar, detached DOM node-lar, hədsiz keş və cleanup-sız subscription-lar."
+    },
+    "js-what-are-the-optimization-techniques-of-v8-engine": {
+      "question": "V8 mühərrikinin optimallaşdırma üsulları hansılardır?",
+      "gist": "Inline expansion, hidden class və inline cache, escape analysis, JIT (Ignition, TurboFan). Praktik nəticə: obyekt quruluşunu sabit saxla, tipləri qarışdırma."
+    },
+    "js-what-are-the-examples-of-built-in-higher-order-functions": {
+      "question": "Built-in higher order funksiyalara hansılar nümunədir?",
+      "gist": "`map`, `filter`, `reduce`, `forEach`, `find`, `some`, `every`, `sort`, `flatMap`, həmçinin `setTimeout`, `addEventListener`, `Promise.then`, `Function.prototype.bind`."
+    },
+    "js-what-are-the-benefits-higher-order-functions": {
+      "question": "Higher order funksiyaların faydaları nələrdir?",
+      "gist": "Təkrar məntiqi bir yerə toplayır (loop yerinə `map`/`filter`), davranışı parametr kimi ötürməyə imkan verir, kompozisiya və currying-i asanlaşdırır, kodu deklarativ edir."
+    },
+    "js-how-do-you-create-polyfills-for-map-filter-and-reduce-method": {
+      "question": "`map`, `filter` və `reduce` üçün polyfill necə yazılır?",
+      "gist": "`Array.prototype.myMap`-də `this` üzərində dövr et, callback-i `(value, index, array)` ilə çağır. `filter` true olanı, `reduce` accumulator-u saxlayır; ilkin dəyər yoxdursa ilk elementi götürür."
+    },
+    "js-what-is-the-difference-between-map-and-foreach-functions": {
+      "question": "`map` və `forEach` arasında fərq nədir?",
+      "gist": "`map` yeni massiv qaytarır və zəncirlənir, `forEach` `undefined` qaytarır, yan təsir üçündür. Nəticə lazım deyilsə `map` işlətmə. İkisində də `break` yoxdur."
+    },
+    "js-give-an-example-of-statements-affected-by-automatic-semicolo": {
+      "question": "Automatic semicolon insertion-dan təsirlənən ifadələrə nümunə göstərin.",
+      "gist": "`return`, `break`, `continue`, `throw` və postfix `++`. `return` ilə dəyər arasında yeni sətir olsa funksiya `undefined` qaytarır."
+    },
+    "js-what-are-the-event-phases-of-a-browser": {
+      "question": "Brauzerdə event fazaları hansılardır?",
+      "gist": "Capturing (yuxarıdan hədəfə), target, bubbling (hədəfdən yuxarı). `event.eventPhase` cari fazanı göstərir."
+    },
+    "js-what-are-the-real-world-use-cases-of-proxy": {
+      "question": "Proxy-nin real istifadə halları hansılardır?",
+      "gist": "Validasiya, oxunma/yazılma izlənməsi (Vue 3 reaktivliyi), default dəyər, test üçün mock, mövcud API-nin sarğısı - hamısı obyekt əməliyyatını tutmaqla."
+    },
+    "js-what-are-hidden-classes": {
+      "question": "Hidden class nədir?",
+      "gist": "V8-in daxili optimizasiyası: eyni formada yaradılan obyektlər eyni hidden class-ı paylaşır. Sahələri fərqli sırada əlavə etmək ya silmək yeni class yaradır və müraciəti yavaşladır."
+    },
+    "js-what-is-inline-caching": {
+      "question": "Inline caching nədir?",
+      "gist": "V8 eyni formalı obyektdə xassə yerini yadda saxlayır, axtarışı sürətləndirir. Tipləri və quruluşu sabit saxlamaq bunu qoruyur."
+    },
+    "js-what-are-the-different-ways-to-execute-external-scripts": {
+      "question": "Xarici skriptləri icra etməyin hansı yolları var?",
+      "gist": "Adi: parse-ı dayandırır. `async`: paralel yüklənir, hazır olanda işləyir, sıra yoxdur. `defer`: parse-dan sonra, sıra ilə. Modullar default olaraq `defer`-dir."
+    },
+    "js-what-is-lexical-scope": {
+      "question": "Lexical scope nədir?",
+      "gist": "Dəyişənin hansı scope-a aid olduğu kodun **yazıldığı yerə** görə, kompilyasiya vaxtı müəyyən olunur, çağırış yerinə görə deyil (dynamic scope). Closure-lar məhz bu qaydanın nəticəsidir."
+    },
+    "js-how-to-detect-system-dark-mode-in-javascript": {
+      "question": "Sistemin dark mode-u JavaScript-də necə aşkar olunur?",
+      "gist": "`matchMedia(\"(prefers-color-scheme: dark)\").matches`. Dəyişikliyi `change` hadisəsi ilə izlə."
+    },
+    "js-what-is-the-purpose-of-requestanimationframe-method": {
+      "question": "requestAnimationFrame metodu nə üçündür?",
+      "gist": "Callback-i növbəti repaint-dən əvvəl, ekranın yenilənmə tezliyi ilə çağırır — animasiya hamar olur, tab arxa plana keçəndə dayanır. `setTimeout` ilə animasiya kadr vaxtına düşmür və enerji israf edir."
+    },
+    "js-what-is-the-difference-between-substring-and-substr-methods": {
+      "question": "`substring` və `substr` arasında fərq nədir?",
+      "gist": "`substring(start, end)` son indeks alır, `substr(start, length)` uzunluq alır və köhnəlib. Yeni kodda `slice` tövsiyə olunur."
+    },
+    "js-how-to-find-the-number-of-parameters-expected-by-a-function": {
+      "question": "Funksiyanın gözlədiyi parametr sayı necə tapılır?",
+      "gist": "`fn.length`: rest və ilk default-dan sonrakılar sayılmır. Çağırışdakı say üçün `arguments.length`."
+    },
+    "js-what-is-globalthis-and-what-is-the-importance-of-it": {
+      "question": "`globalThis` nədir və niyə vacibdir?",
+      "gist": "Hər mühitdə global obyektə vahid çıxış: brauzerdə `window`, Node-da `global`, worker-də `self` əvəzinə. Mühitdən asılı olmayan kod üçündür."
+    },
+    "js-what-are-the-array-mutation-methods": {
+      "question": "Massivi dəyişən metodlar hansılardır?",
+      "gist": "Dəyişənlər: `push`, `pop`, `shift`, `unshift`, `splice`, `sort`, `reverse`, `fill`, `copyWithin`. Dəyişməyənlər: `map`, `filter`, `slice`, `concat`, `toSorted`, `toSpliced`, `with`."
+    },
+    "js-what-is-module-scope-in-javascript": {
+      "question": "JavaScript-də module scope nədir?",
+      "gist": "ES modulunda top-level elanlar qlobal olmur, yalnız o modulda görünür; paylaşmaq üçün `export` lazımdır. Modul kodu default olaraq strict mode-dadır və bir dəfə icra olunub keşlənir."
+    },
+    "js-what-are-shadowing-and-illegal-shadowing": {
+      "question": "Shadowing və illegal shadowing nədir?",
+      "gist": "İç scope-dakı eyni ad xaricini gizlədir. Illegal: blokda `let a` varkən içində `var a` yazmaq `SyntaxError` verir, çünki `var` blokdan çıxır."
+    },
+    "js-why-is-it-important-to-remove-event-listeners-after-use": {
+      "question": "Event listener-ləri işdən sonra silmək niyə vacibdir?",
+      "gist": "Listener closure vasitəsilə obyektləri saxlayır və yaddaş sızır, handler-lər də təkrarlanır. `removeEventListener` eyni funksiya referansı istəyir; `AbortController` və `{ once: true }` rahatdır."
+    },
+    "js-what-is-structuredclone-and-how-is-it-used-for-deep-copying-": {
+      "question": "structuredClone nədir və deep copy üçün necə işlənir?",
+      "gist": "Built-in deep copy: Date, Map, Set, ArrayBuffer və dövri istinadları saxlayır. Funksiya, DOM node və prototype köçürülmür - onlar üçün xəta atır."
+    },
+    "js-what-is-the-difference-between-const-and-object-freeze": {
+      "question": "`const` ilə `Object.freeze` arasında fərq nədir?",
+      "gist": "`const` dəyişənin yenidən təyin olunmasını (rebinding) qadağan edir, məzmuna toxunmur. `Object.freeze` obyektin özünü dondurur: property əlavə/silmək və dəyişmək olmur, amma yalnız birinci səviyyədə — iç obyektlər dəyişməyə açıq qalır."
+    },
+    "js-what-is-promise-any-and-when-should-it-be-used": {
+      "question": "Promise.any nədir və nə vaxt istifadə olunmalıdır?",
+      "gist": "İlk fulfilled promise-in nəticəsini qaytarır, reject-ləri isə gözləyir; hamısı reject olsa `AggregateError` verir. `race`-dən fərqi: race ilk settle-ı, xəta da olsa, qaytarır. İstifadə: bir neçə mənbədən ilk cavab verəni götürmək."
+    },
+    "js-what-is-bigint-and-how-is-it-different-from-number": {
+      "question": "BigInt nədir və Number-dən necə fərqlənir?",
+      "gist": "`2^53 - 1`-dən böyük tam ədədlər üçün: `10n`. `number` ilə birbaşa qarışdırılmır, kəsr yoxdur, `Math` ilə işləmir, JSON-a birbaşa çevrilmir. Id və maliyyə üçün faydalıdır."
+    },
+    "js-what-are-private-class-fields-in-javascript": {
+      "question": "Private class field nədir?",
+      "gist": "#name formasında sahələr yalnız class gövdəsindən görünür, xaricdən müraciət SyntaxError verir. Konvensiyalı _name-dən fərqli olaraq dil səviyyəsində qorumadır."
+    },
+    "js-what-is-the-array-prototype-at-method-and-why-is-it-useful": {
+      "question": "Array.prototype.at() nədir və nə üçün faydalıdır?",
+      "gist": "İndeksə görə element qaytarır, mənfi indeksi sondan sayır: arr.at(-1) arr[arr.length - 1]-i əvəz edir. String və TypedArray-də də var."
+    },
+    "js-what-is-top-level-await-in-javascript-modules": {
+      "question": "Modullarda top-level await nədir?",
+      "gist": "ES modulunun ən üst səviyyəsində `await` yazmaq imkanı: modul özü asinxron olur, onu import edən modullar hazır olana qədər gözləyir. Yalnız ESM-də var, CommonJS-də yoxdur, və modul qrafikini gecikdirə bilər."
+    },
+    "js-what-are-weakref-and-finalizationregistry-used-for": {
+      "question": "`WeakRef` və `FinalizationRegistry` nə üçündür?",
+      "gist": "`WeakRef` obyektə GC-yə mane olmayan istinaddır, `FinalizationRegistry` təmizlənmədən sonra callback verir. Cache üçündür; GC vaxtı təminatsızdır, məntiqi ona bağlama."
+    },
+    "js-what-are-logical-assignment-operators": {
+      "question": "Logical assignment operatorları nədir?",
+      "gist": "`a ||= b`, `a &&= b`, `a ??= b`: yalnız şərt ödənəndə mənimsədir. `a ??= 1` yalnız `null` və `undefined`-də yazır."
+    },
+    "js-what-is-the-temporal-api-and-why-is-it-proposed-as-a-replace": {
+      "question": "Temporal API nədir və niyə Date-in əvəzi kimi təklif olunur?",
+      "gist": "Date dəyişkəndir, ay 0-dan başlayır, timezone dəstəyi zəifdir. Temporal immutable-dır, ayrı tipləri var: `PlainDate`, `ZonedDateTime`. Dəstəyi hələ hər yerdə yoxdur."
+    },
+    "js-what-is-the-difference-between-for-loop-and-foreach": {
+      "question": "`for` dövrəsi və `forEach` arasında fərq nədir?",
+      "gist": "`for`-da `break`, `continue` və `await` işləyir. `forEach` qısadır, amma dayandırılmır və `await` gözləmir. Sürət fərqi adətən önəmsizdir."
+    },
+    "js-what-are-symbols-and-what-are-their-use-cases": {
+      "question": "Symbol nədir, nə üçün istifadə olunur?",
+      "gist": "Unikal, toqquşmayan key-lər və protokol qarmaqları: `Symbol.iterator`, `Symbol.asyncIterator`, `Symbol.toPrimitive`."
+    },
+    "js-what-is-the-difference-between-object-create-and-object-assi": {
+      "question": "Object.create ilə Object.assign arasında fərq nədir?",
+      "gist": "create yeni obyekt yaradır və verileni onun prototype-ı edir. assign mövcud hədəfə sahələri kopyalayır - shallow, yalnız own enumerable, getter-ləri isə dəyərə çevirir."
+    },
+    "js-what-are-generator-functions-and-how-do-they-work": {
+      "question": "Generator funksiyaları nədir və necə işləyir?",
+      "gist": "`function*` ilə yazılır: `yield` icranı dayandırıb dəyər qaytarır, `next()` davam etdirir. Qaytardığı obyekt həm iterator, həm iterable-dır; `next(value)` ilə generatora dəyər ötürmək olur — redux-saga effektləri belə idarə edir."
+    },
+    "js-what-is-the-reflect-api-and-when-should-you-use-it": {
+      "question": "Reflect API nədir və nə vaxt işlədilir?",
+      "gist": "Obyekt əməliyyatlarının funksiya formaları (Reflect.get, has, ownKeys). Proxy trap-ının içində default davranışı çağırmaq üçün standart yoldur; xəta yerinə boolean qaytarır."
+    },
+    "js-how-does-javascript-handle-floating-point-precision-issues": {
+      "question": "JavaScript floating point dəqiqlik problemlərini necə idarə edir?",
+      "gist": "IEEE 754 səbəbindən `0.1 + 0.2 !== 0.3`. Müqayisədə `Number.EPSILON`, pul üçün tam qəpik və ya `BigInt`, göstərmək üçün `toFixed`."
+    },
+    "js-what-are-tagged-template-literals-and-their-practical-uses": {
+      "question": "Tagged template literal nədir və praktik istifadəsi nədir?",
+      "gist": "Funksiya sətir hissələrini və dəyərləri ayrıca alır: `tag`a${x}``. HTML escape, SQL parametrləri, i18n, `styled-components`, `graphql` belə işləyir."
+    },
+    "js-what-is-the-difference-between-object-keys-object-values-and": {
+      "question": "Object.keys, Object.values və Object.entries arasında fərq nədir?",
+      "gist": "Üçü də own enumerable sahələr üzərində gəzir: keys açarları, values dəyərləri, entries [key, value] cütlərini verir. Prototype-dan gələnlər və Symbol açarlar daxil olmur."
+    },
+    "js-what-is-the-intl-numberformat-api-and-how-is-it-used": {
+      "question": "Intl.NumberFormat nədir və necə işlədilir?",
+      "gist": "Rəqəmi locale-a görə formatlayır: valyuta, faiz, vahid, kompakt. `new Intl.NumberFormat(\"az\", { style: \"currency\", currency: \"AZN\" }).format(5)`."
+    },
+    "js-how-do-you-implement-method-chaining-in-javascript": {
+      "question": "JavaScript-də method chaining necə qurulur?",
+      "gist": "Hər metod `return this` edir: `q.where().limit()`. Builder API-lərində oxunaqlıdır, amma debug bir az çətinləşir."
+    },
+    "js-what-are-the-differences-between-map-and-object-for-storing-": {
+      "question": "Açar-dəyər saxlamaq üçün Map və Object arasında fərqlər nələrdir?",
+      "gist": "Map: istənilən tip açar, `size`, birbaşa iterasiya, tez əlavə/silmə. Object: sətir və Symbol açar, JSON dəstəyi, sadə sintaksis. Dinamik açarlar üçün Map seç."
+    },
+    "js-what-is-the-purpose-of-symbol-iterator-and-how-do-you-use-it": {
+      "question": "Symbol.iterator nə üçündür və necə istifadə olunur?",
+      "gist": "Obyektin necə iterasiya olunduğunu təyin edən well-known symbol: `[Symbol.iterator]()` iterator qaytarır. Onu təyin edən obyekt `for...of`, spread, `Array.from` ilə işləyir; ən qısa yol metodu generator kimi yazmaqdır."
+    },
+    "js-how-does-the-intersection-observer-api-work": {
+      "question": "Intersection Observer API necə işləyir?",
+      "gist": "Elementin viewport və ya valideynlə kəsişməsini asinxron xəbər verir, `threshold` və `rootMargin` alır. Lazy loading və sonsuz scroll üçün scroll listener-dən səmərəlidir."
+    },
+    "js-what-are-async-iterators-and-how-are-they-different-from-reg": {
+      "question": "Async iterator nədir və adi iterator-dan nə ilə fərqlənir?",
+      "gist": "`Symbol.asyncIterator` təyin edir, `next()` `{ value, done }` promise-i qaytarır və `for await...of` ilə oxunur. Adi iterator sinxron dəyər verir; async variant stream, səhifələnən API, fayl oxunuşu üçündür."
+    },
+    "js-what-is-the-purpose-of-object-getownpropertydescriptors": {
+      "question": "Object.getOwnPropertyDescriptors nə üçündür?",
+      "gist": "Bütün own sahələrin descriptor-larını verir. Object.create ilə birlikdə getter/setter və non-enumerable sahələri itirmədən düzgün kopya yaratmaq üçün - assign bunu bacarmır."
+    },
+    "js-how-does-promise-allsettled-differ-from-promise-all": {
+      "question": "Promise.allSettled() Promise.all()-dan nə ilə fərqlənir?",
+      "gist": "`all` biri reject olan kimi dərhal reject edir; `allSettled` hamısını gözləyir və hər biri üçün `{ status, value | reason }` qaytarır. Bir sorğunun uğursuzluğu qalanlarını ləğv etməməli olanda `allSettled` seçilir."
+    },
+    "js-what-are-the-performance-implications-of-using-try-catch-in-": {
+      "question": "`try/catch`-in performansa təsiri nədir?",
+      "gist": "Müasir mühərriklərdə blokun özü demək olar ki, pulsuzdur; baha olan xətanı atmaq və stack yığmaqdır. Adi axını exception ilə idarə etmə, gözlənilən halları əvvəlcədən yoxla."
+    },
+    "js-what-is-the-abortcontroller-api-and-how-is-it-used": {
+      "question": "AbortController API nədir və necə işlədilir?",
+      "gist": "Ləğvetmə siqnalı yaradır: `const c = new AbortController()`, `fetch(url, { signal: c.signal })`, `c.abort()` sorğunu dayandırır və promise `AbortError` verir. Event listener-lərə də `{ signal }` verib hamısını bir dəfəyə silmək olur."
+    },
+    "js-how-do-you-implement-a-custom-error-class-in-javascript": {
+      "question": "Custom error class necə yazılır?",
+      "gist": "class MyError extends Error, constructor-da super(message) və this.name. instanceof işləsin deyə Error-dan extend olunur; köhnə transpile mühitlərində Object.setPrototypeOf lazım gəlir."
+    },
+    "js-what-is-the-difference-between-synchronous-and-asynchronous-": {
+      "question": "Sinxron və asinxron generator arasında fərq nədir?",
+      "gist": "`function*` dərhal `{ value, done }` qaytarır və `for...of` ilə oxunur. `async function*` hər addımda promise qaytarır, içində `await` işlənir və `for await...of` ilə oxunur — asinxron mənbədən axın oxumaq üçündür."
+    },
+    "js-what-are-proxy-traps-and-what-operations-can-they-intercept": {
+      "question": "Proxy trap nədir və hansı əməliyyatları tutur?",
+      "gist": "Handler-in metodları: get, set, has, deleteProperty, ownKeys, apply, construct və s. Hər biri uyğun dil əməliyyatını tutur, default davranış Reflect ilə çağırılır."
+    },
+    "js-how-does-the-mutation-observer-api-work": {
+      "question": "Mutation Observer API necə işləyir?",
+      "gist": "DOM dəyişikliklərini izləyir: `observe(node, { childList, attributes, subtree })`. Callback microtask-da toplu çağırılır. İş bitəndə `disconnect` et."
+    },
+    "js-what-is-tail-call-optimization-and-does-javascript-support-i": {
+      "question": "Tail call optimization nədir və JavaScript dəstəkləyirmi?",
+      "gist": "Son əməliyyat olan çağırış cari stack frame-i yenidən işlədir. Standartda var, amma praktikada demək olar ki, yalnız Safari dəstəkləyir. Ona görə dərin rekursiyanı dövrə ilə yaz."
+    },
+    "js-what-are-the-different-ways-to-handle-circular-references-in": {
+      "question": "JSON-da dövri istinadlar necə idarə olunur?",
+      "gist": "`stringify` xəta atır. Həllər: `WeakSet` ilə replacer, `flatted` kitabxanası, referansı id ilə əvəz etmək. Sadəcə kopya lazımdırsa `structuredClone` dövri istinadı dəstəkləyir."
+    },
+    "js-how-do-you-implement-a-singleton-pattern-in-javascript": {
+      "question": "JavaScript-də singleton pattern necə yazılır?",
+      "gist": "Ən sadəsi modul export-udur, çünki modul bir dəfə icra olunur. Closure və ya static instance ilə də olur. Bədəli gizli global state və çətin testdir."
+    },
+    "js-what-is-the-performance-api-and-how-is-it-used-for-measuring": {
+      "question": "Performance API nədir və ölçmə üçün necə işlədilir?",
+      "gist": "`performance.now()` dəqiq vaxt, `mark`/`measure` öz ölçümlərin, `PerformanceObserver` naviqasiya və resurs datası verir. `Date.now`-dan fərqli olaraq saat dəyişikliyindən asılı deyil."
+    },
+    "js-what-are-the-differences-between-sharedarraybuffer-and-array": {
+      "question": "SharedArrayBuffer və ArrayBuffer arasında fərqlər nələrdir?",
+      "gist": "ArrayBuffer worker-ə kopyalanır və ya transfer olunur. SharedArrayBuffer eyni yaddaşı paylaşır, `Atomics` ilə sinxronlaşır. Brauzerdə cross-origin isolation başlıqları tələb edir."
+    },
+    "js-how-do-you-prevent-prototype-pollution-attacks-in-javascript": {
+      "question": "Prototype pollution hücumunun qarşısı necə alınır?",
+      "gist": "Gələn datadan __proto__, constructor, prototype açarlarını süzmək; Object.create(null) ya Map işlətmək; dərin merge-də açarı yoxlamaq; Object.freeze(Object.prototype)."
+    },
+    "js-what-is-the-atomics-api-and-when-should-it-be-used": {
+      "question": "Atomics API nədir və nə vaxt işlədilməlidir?",
+      "gist": "`SharedArrayBuffer` üzərində thread-safe əməliyyatlar: `add`, `load`, `store`, `wait`, `notify`. Worker-lər eyni yaddaşı paylaşanda race condition-un qarşısını alır."
+    },
+    "js-how-do-you-implement-a-lazy-loading-pattern-for-modules": {
+      "question": "Modullar üçün lazy loading necə qurulur?",
+      "gist": "`import()` ilə lazım olanda yüklə: route, klik və ya `IntersectionObserver` zamanı. Promise-i cache-lə, yükləmə xətasını da idarə et."
+    },
+    "js-what-are-the-best-practices-for-optimizing-javascript-bundle": {
+      "question": "JavaScript bundle ölçüsünü optimallaşdırmağın ən yaxşı üsulları hansılardır?",
+      "gist": "Code splitting, tree shaking, yüngül asılılıqlar, Brotli, minification, bundle analyzer ilə ölçmə. Budget qoy ki, CI artımı tutsun."
+    }
+  }
+}

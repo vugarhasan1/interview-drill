@@ -45,7 +45,7 @@ export const loadDeck = async (deck: Deck): Promise<LoadedDeck | undefined> => {
   const cached = await readDeck(deck).catch(() => undefined);
   if (cached) return { set: cached.set, origin: 'cache', fetchedAt: cached.fetchedAt };
 
-  return undefined;
+  return fetchDeckFromSource(deck).catch(() => undefined);
 };
 
 export const fetchDeckFromSource = async (deck: Deck): Promise<LoadedDeck> => {
