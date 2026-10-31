@@ -54,6 +54,10 @@
       "question": "React-də synthetic event nədir?",
       "gist": "Native event üzərində brauzerlər arası eyni API verən wrapper. `nativeEvent` ilə orijinala çıxılır. React 17-dən handler-lər `document`-ə deyil, root container-ə qoşulur."
     },
+    "react-what-are-inline-conditional-expressions": {
+      "question": "Inline şərt ifadələri nədir?",
+      "gist": "JSX içində `{cond && <A />}` və ya `{cond ? <A /> : <B />}`. `if` statement olduğu üçün JSX-in içində yazılmır, yalnız ondan əvvəl."
+    },
     "react-what-is-key-prop-and-what-is-the-benefit-of-using-it-in-arra": {
       "question": "`key` prop nə üçündür, siyahılarda hansı faydası var?",
       "gist": "Key elementi render-lər arasında instance ilə eyniləşdirir. Index key işlədəndə siyahı sıralanan kimi React yanlış instance-ı təkrar istifadə edir — input dəyərləri və local state sətirlər arasında sıçrayır."
@@ -149,6 +153,10 @@
     "react-what-are-the-limitations-of-react": {
       "question": "React-in məhdudiyyətləri nələrdir?",
       "gist": "Tam framework deyil: routing, data, form üçün seçim etmək lazımdır. Ekosistem tez dəyişir, JSX və render modelini öyrənmək vaxt alır, lazımsız render-lərə də diqqət tələb edir."
+    },
+    "react-what-are-the-recommended-ways-for-static-type-checking": {
+      "question": "Statik tip yoxlaması üçün hansı yollar tövsiyə olunur?",
+      "gist": "Standart TypeScript-dir, səhvi build-də tutur. PropTypes yalnız runtime xəbərdarlığı verir, Flow isə nadir hallarda işlədilir."
     },
     "react-what-is-the-use-of-react-dom-package": {
       "question": "`react-dom` paketi nə üçündür?",
@@ -290,6 +298,10 @@
       "question": "React üçün geniş yayılmış qovluq strukturları hansılardır?",
       "gist": "Feature/route üzrə və ya fayl tipi üzrə (components, hooks). Böyük layihədə feature üzrə miqyaslanır, çünki bir-biri ilə dəyişən kod yan-yana qalır."
     },
+    "react-what-are-the-popular-packages-for-animation": {
+      "question": "Animasiya üçün məşhur paketlər hansılardır?",
+      "gist": "Mənbə React Transition Group və React Motion deyir. Hazırda Motion (əvvəlki Framer Motion) və React Spring daha geniş yayılıb. Sadə hal üçün CSS kifayətdir."
+    },
     "react-what-is-the-benefit-of-styles-modules": {
       "question": "Style modullarının faydası nədir?",
       "gist": "Təkrarlanan stil dəyərləri bir yerdə olur, dəyişmək asandır, sehrli dəyərlər azalır. Eyni ideya bugünkü design token-lərdir."
@@ -329,6 +341,10 @@
     "react-how-to-pass-params-to-history-push-method-in-react-router-v4": {
       "question": "React Router v4-də `history.push`-a parametr necə ötürülür?",
       "gist": "Obyektlə: `{ pathname, search: \"?a=1\", state: {...} }`. `state` URL-də görünmür. v6-da `navigate(path, { state })`."
+    },
+    "react-how-to-implement-default-or-notfound-page": {
+      "question": "Default və ya NotFound səhifəsi necə qurulur?",
+      "gist": "v4-də `Switch` içində path-siz son `Route`. v6-da `<Route path=\"*\" element={<NotFound />} />`."
     },
     "react-how-to-get-history-on-react-router-v4": {
       "question": "React Router v4-də `history` necə əldə olunur?",
@@ -413,6 +429,10 @@
     "react-how-to-access-redux-store-outside-a-component": {
       "question": "Redux store-a component-dən kənarda necə müraciət olunur?",
       "gist": "Store yaradılan moduldan export et və `store.getState()`/`store.dispatch()` çağır. Global `window`-a qoyma. Tələ: SSR-də modul səviyyəli store istifadəçilər arasında paylaşılır."
+    },
+    "react-what-are-the-drawbacks-of-mvw-pattern": {
+      "question": "MVW pattern-in çatışmazlıqları nələrdir?",
+      "gist": "Tez-tez DOM əməliyyatı yavaşlıq yaradır, modellər və view-lar arasında dövri asılılıq data axınını mürəkkəbləşdirir. Bir istiqamətli axın bu problemə cavabdır."
     },
     "react-are-there-any-similarities-between-redux-and-rxjs": {
       "question": "Redux və RxJS arasında oxşarlıq var?",
@@ -634,6 +654,10 @@
       "question": "`React.lazy` nədir?",
       "gist": "Dynamic import-u component edir: kod ilk render-də yüklənir. `Suspense` içində olmalıdır, default export gözləyir. Yükləmə xətası üçün error boundary lazımdır."
     },
+    "react-how-to-prevent-unnecessary-updates-using-setstate": {
+      "question": "`setState` ilə lazımsız yeniləmələrin qarşısı necə alınır?",
+      "gist": "Updater-də dəyər dəyişməyibsə `null` qaytar (class). `useState` eyni dəyərdə render-i özü adətən atlayır. Referans dəyişmirsə `memo` da kömək edir."
+    },
     "react-how-do-you-render-array-strings-and-numbers-in-react-16-vers": {
       "question": "React 16-da massiv, sətir və rəqəm necə render olunur?",
       "gist": "Component birbaşa qaytara bilir: massiv (key ilə), sətir, rəqəm. Artıq əlavə wrapper `div` lazım deyil."
@@ -661,6 +685,10 @@
     "react-can-you-describe-about-componentdidcatch-lifecycle-method-si": {
       "question": "`componentDidCatch` metodunun imzası necədir?",
       "gist": "`componentDidCatch(error, info)`: `info.componentStack` xətanın component yolunu verir. Commit fazasında işləyir, logging üçündür; fallback UI isə `getDerivedStateFromError` ilə göstərilir."
+    },
+    "react-in-which-scenarios-do-error-boundaries-not-catch-errors": {
+      "question": "Error boundary hansı hallarda xətanı tutmur?",
+      "gist": "Event handler, `setTimeout` kimi asinxron kod, SSR və boundary-nin öz xətası. Bunlar üçün `try/catch` lazımdır."
     },
     "react-what-is-the-behavior-of-uncaught-errors-in-react-16": {
       "question": "React 16-da tutulmamış xətalarda nə baş verir?",
@@ -710,13 +738,29 @@
       "question": "Component-ə event handler necə ötürülür?",
       "gist": "Adi prop kimi: `onClick={handleClick}`. Funksiyanın özü ötürülür, çağırışı yox. `React.memo` ilə uşaq üçün sabit referans lazımdırsa `useCallback` işlədilir."
     },
+    "react-how-to-prevent-a-function-from-being-called-multiple-times": {
+      "question": "Funksiyanın dəfələrlə çağırılmasının qarşısı necə alınır?",
+      "gist": "Throttle müəyyən aralıqda bir dəfə, debounce isə hərəkət bitəndən sonra çağırır. `requestAnimationFrame` kadr başına bir dəfəyə endirir. Funksiyanı render-lər arasında sabit saxla."
+    },
     "react-how-jsx-prevents-injection-attacks": {
       "question": "JSX injection hücumlarının qarşısını necə alır?",
       "gist": "JSX-ə qoyulan dəyərlər render-dən əvvəl escape olunur, mətn HTML kimi işləmir. Qoruma yoxdur: `dangerouslySetInnerHTML` və `href` kimi URL atributlarında."
     },
+    "react-how-do-you-update-rendered-elements": {
+      "question": "Render olunmuş elementlər necə yenilənir?",
+      "gist": "Element dəyişməzdir. Yeni element render olunur, React yalnız fərqi DOM-a yazır. Mənbədəki `ReactDOM.render` köhnədir, indi state dəyişikliyi və ya `root.render` işlənir."
+    },
     "react-how-do-you-say-that-props-are-readonly": {
       "question": "Props-un readonly olduğunu necə izah edərsiniz?",
       "gist": "Component props baxımından pure funksiya olmalıdır: girişi dəyişmir, eyni props-a eyni nəticəni qaytarır. Development-də React props obyektini `freeze` edir, ona görə yazmaq işləmir."
+    },
+    "react-what-are-the-conditions-to-safely-use-the-index-as-a-key": {
+      "question": "Index-i key kimi təhlükəsiz işlətmək üçün hansı şərtlər lazımdır?",
+      "gist": "Siyahı statikdir, elementlərin id-si yoxdur, sıralanmır və süzülmür. Üçü də ödənməlidir."
+    },
+    "react-should-keys-be-globally-unique": {
+      "question": "Key-lər qlobal unikal olmalıdır?",
+      "gist": "Xeyr, yalnız qonşu elementlər arasında. Fərqli massivlərdə eyni key işlətmək olar."
     },
     "react-what-is-the-popular-choice-for-form-handling": {
       "question": "Form idarəsi üçün populyar seçim hansıdır?",
@@ -761,6 +805,10 @@
     "react-what-are-the-rules-covered-by-diffing-algorithm": {
       "question": "Diffing algoritmi hansı qaydalara əsaslanır?",
       "gist": "Element tipi dəyişibsə köhnə ağac atılır və yenidən qurulur (state itir). Tip eynidirsə yalnız dəyişən atributlar yenilənir, state saxlanılır. Siyahıda uşaqlar `key` üzrə uyğunlaşdırılır; key yoxdursa indeks işlədilir və sıra dəyişəndə lazımsız yenidənqurma olur."
+    },
+    "react-when-do-you-need-to-use-refs": {
+      "question": "Ref nə vaxt lazımdır?",
+      "gist": "Fokus, mətn seçimi, media idarəsi, imperative animasiya, üçüncü tərəf DOM kitabxanaları. Props ilə həll olunan işdə lazım deyil."
     },
     "react-must-prop-be-named-as-render-for-render-props": {
       "question": "Render props üçün prop-un adı mütləq `render` olmalıdır?",
@@ -942,6 +990,10 @@
       "question": "Massiv dəyişənlərinin mutasiyasının qarşısı necə alınır?",
       "gist": "Render-də xarici dəyişənləri, props və state-i dəyişmə; lokal kopya üzərində işlə. `sort` kimi metodlardan əvvəl kopyala. Strict Mode bu səhvi üzə çıxarır."
     },
+    "react-what-are-capture-phase-events": {
+      "question": "Capture phase event-ləri nədir?",
+      "gist": "`onClickCapture` kimi handler-lər hadisəni aşağı enərkən, hədəfdən əvvəl tutur. Uşaq `stopPropagation` çağırsa da valideynin capture handler-i artıq işləmiş olur."
+    },
     "react-how-does-react-updates-screen-in-an-application": {
       "question": "React ekranı necə yeniləyir?",
       "gist": "Üç addım: trigger (ilk render və ya state dəyişməsi), render (component çağırılır, fərq hesablanır), commit (yalnız dəyişən DOM yazılır). Sonra brauzer rəngləyir."
@@ -981,6 +1033,10 @@
     "react-what-will-happen-by-defining-nested-function-components": {
       "question": "Component-in içində başqa component təyin etsək nə olur?",
       "gist": "Hər render-də yeni funksiya, yəni React üçün yeni tip olur. Uşaq unmount/mount olunur, state və input fokusu itir, performans düşür. Component-i xaricə çıxar."
+    },
+    "react-can-i-use-keys-for-non-list-items": {
+      "question": "Key-i siyahıdan kənar elementlərdə işlətmək olar?",
+      "gist": "Bəli. Key dəyişəndə React component-i sıfırdan yaradır: `<Form key={userId} />` state-i təmizləmək üçün sadə üsuldur."
     },
     "react-what-are-the-guidelines-to-be-followed-for-writing-reducers": {
       "question": "Reducer yazarkən hansı qaydalara əməl olunmalıdır?",
@@ -1250,6 +1306,10 @@
       "question": "JSX callback-lərində metodlar necə bind olunur?",
       "gist": "Constructor-da `bind`, class field arrow function və ya JSX-də inline arrow. Field üstünlükdür; inline hər render-də yeni funksiya yaradır. Funksional component-də bu problem yoxdur."
     },
+    "react-how-to-pass-a-parameter-to-an-event-handler-or-callback": {
+      "question": "Event handler-ə parametr necə ötürülür?",
+      "gist": "`onClick={() => handle(id)}` və ya `handle.bind(this, id)`. `data-*` atributundan oxumaq da olar. Inline funksiya adətən problem deyil."
+    },
     "react-what-is-the-use-of-refs": {
       "question": "Ref-lər nə üçündür?",
       "gist": "DOM node-a və ya render yaratmayan dəyişən dəyərə çıxış: fokus, ölçü, timer id, xarici kitabxana. Deklarativ həll varsa ref işlətmə."
@@ -1257,6 +1317,14 @@
     "react-how-to-create-refs": {
       "question": "Ref necə yaradılır?",
       "gist": "Funksiyada `useRef(null)`, class-da `createRef()`, `ref` atributuna verilir, dəyər `.current`-dədir. Callback ref node-un qoşulma anını tutur."
+    },
+    "react-what-are-forward-refs": {
+      "question": "Forward ref nədir?",
+      "gist": "Component-ə verilən ref-i uşağa ötürür, məsələn daxili `input`-a. `forwardRef` ilə olur; React 19-da `ref` adi prop kimi gəlir."
+    },
+    "react-which-is-preferred-option-with-in-callback-refs-and-finddomn": {
+      "question": "Callback ref və `findDOMNode`-dan hansı üstündür?",
+      "gist": "Ref. `findDOMNode` abstraksiyanı pozur və React 19-da silinib."
     },
     "react-why-are-string-refs-legacy": {
       "question": "String ref-lər niyə köhnəlib?",
@@ -1301,6 +1369,10 @@
     "react-what-is-the-purpose-of-render-method-of-react-dom": {
       "question": "`react-dom`-un `render` metodu nə üçündür?",
       "gist": "React element ağacını verilmiş DOM konteynerinə yerləşdirir və UI-nı idarə etməyə başlayır. React 18-də `ReactDOM.render` deprecate olundu — `createRoot(container).render(...)` istifadə edilir, concurrent xüsusiyyətləri yalnız o açır."
+    },
+    "react-what-will-happen-if-you-use-setstate-in-constructor": {
+      "question": "Constructor-da `setState` işlətsək nə olur?",
+      "gist": "Component hələ mount olunmayıb, React xəbərdarlıq verir və yeniləmə baş vermir. Constructor-da birbaşa `this.state = {...}` yazılır."
     },
     "react-is-it-good-to-use-setstate-in-componentwillmount-method": {
       "question": "`componentWillMount`-da `setState` işlətmək yaxşıdır?",
@@ -1509,6 +1581,10 @@
     "react-how-do-you-say-that-state-updates-are-merged": {
       "question": "State yeniləmələrinin birləşdirildiyini necə izah edərsiniz?",
       "gist": "Class `setState` verilən obyekti cari state-in üst səviyyəsi ilə birləşdirir, qalan açarlara toxunmur. Merge shallow-dur. `useState` isə birləşdirmir, dəyəri bütöv əvəz edir."
+    },
+    "react-how-do-you-pass-arguments-to-an-event-handler": {
+      "question": "Event handler-ə arqumentlər necə ötürülür?",
+      "gist": "Dövrədə arrow function: `onClick={() => remove(item.id)}`. Funksiyanı `onClick={remove(item.id)}` kimi yazmaq render-də çağırır."
     },
     "react-how-to-prevent-component-from-rendering": {
       "question": "Component-in render olunmasının qarşısı necə alınır?",
