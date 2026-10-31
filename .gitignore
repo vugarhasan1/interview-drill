@@ -8,3 +8,6 @@ public/data/az-javascript.json
 
 # Upstream READMEs used by the parser
 .cache/
+
+# Working notes: holds the secret gist link
+CLAUDE.md

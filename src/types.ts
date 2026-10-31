@@ -35,6 +35,8 @@ export interface Progress {
   grade: Grade;
   /** Number of times the question has been graded. */
   seen: number;
+  /** Consecutive "known" grades; absent on progress saved before it was tracked. */
+  streak?: number;
   lastSeen: number;
   /** Epoch ms when the question should come back. */
   due: number;

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { marked } from 'marked';
 import { ClusterHeatmap } from './ClusterHeatmap';
+import { renderAnswer } from './renderAnswer';
 import { useDrill } from './useDrill';
 import { clearProgress, exportProgress } from './storage';
 import {
@@ -60,6 +60,7 @@ export default function App() {
     setOverlay(undefined);
     setOrigin(undefined);
     setLoadError(undefined);
+    setCluster('all');
     setAzUrl(getOverlayUrl(deck));
 
     // The Azerbaijani overlay is optional: a missing or partial one just means fewer gists.
@@ -105,8 +106,8 @@ export default function App() {
   const { current, revealed, elapsed } = drill;
 
   const answerHtml = useMemo(
-    () => (current ? (marked.parse(current.answer, { async: false }) as string) : ''),
-    [current],
+    () => (current && merged ? renderAnswer(current.answer, merged.source) : ''),
+    [current, merged],
   );
 
   const onFile = useCallback((file: File) => {
@@ -127,9 +128,14 @@ export default function App() {
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
-      if (event.target instanceof HTMLInputElement || event.target instanceof HTMLTextAreaElement) {
+      if (
+        event.target instanceof HTMLInputElement ||
+        event.target instanceof HTMLTextAreaElement ||
+        event.target instanceof HTMLSelectElement
+      ) {
         return;
       }
+      if (event.metaKey || event.ctrlKey || event.altKey) return;
       if (event.code === 'Space') {
         event.preventDefault();
         if (!revealed) drill.reveal();
@@ -318,6 +324,7 @@ export default function App() {
                 if (confirm(`Reset all progress for ${deck}?`)) {
                   clearProgress(deck);
                   drill.setProgress({});
+                  drill.restart();
                 }
               }}
             >

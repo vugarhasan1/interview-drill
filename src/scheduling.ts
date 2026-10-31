@@ -16,11 +16,13 @@ export const gradeQuestion = (
   seconds: number,
   now = Date.now(),
 ): Progress => {
-  const repetitions = grade === 'known' ? (current?.grade === 'known' ? current.seen + 1 : 1) : 0;
+  const repetitions =
+    grade === 'known' ? (current?.grade === 'known' ? (current.streak ?? 1) + 1 : 1) : 0;
 
   return {
     grade,
     seen: (current?.seen ?? 0) + 1,
+    streak: repetitions,
     lastSeen: now,
     due: now + INTERVAL[grade](repetitions),
     seconds,

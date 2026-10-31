@@ -15,8 +15,12 @@
       "gist": "Element — nə göstərilməli olduğunu təsvir edən dəyişməz (immutable) sadə obyekt. Component — element qaytaran funksiya və ya class. Element yaratmaq ucuzdur; component render olunanda element ağacı qurur."
     },
     "react-how-to-create-components-in-react": {
-      "question": "React-də components necə yaradılır?",
-      "auto": true
+      "question": "React-də component necə yaradılır?",
+      "gist": "İki yolla: props alıb JSX qaytaran funksiya və ya `render()` metodu olan class. Yeni kodda funksiya standartdır, çünki hooks state və effect ehtiyacını da ödəyir."
+    },
+    "react-when-to-use-a-class-component-over-a-function-component": {
+      "question": "Class component nə vaxt function component-dən üstündür?",
+      "gist": "Demək olar ki, yalnız error boundary lazım olanda: `componentDidCatch` və `getDerivedStateFromError`-un hook qarşılığı yoxdur. Bir də köhnə class kodu saxlanılanda."
     },
     "react-what-are-pure-components": {
       "question": "Pure component nədir?",
@@ -24,7 +28,7 @@
     },
     "react-what-is-state-in-react": {
       "question": "React-də state nədir?",
-      "auto": true
+      "gist": "Component-in zamanla dəyişən, özünə aid datası. Dəyişəndə component yenidən render olunur. Minimal saxla: props və ya başqa state-dən hesablana bilən dəyəri state-də tutma."
     },
     "react-what-are-props-in-react": {
       "question": "Props nədir?",
@@ -82,6 +86,10 @@
       "question": "Higher-Order Component (HOC) nədir?",
       "gist": "Komponenti alıb yeni komponent qaytaran funksiya. Hooks gələndən sonra əksər hallarda custom hook daha oxunaqlıdır; HOC hələ də cross-cutting wrapper-lər üçün işlənir."
     },
+    "react-what-is-children-prop": {
+      "question": "`children` prop nədir?",
+      "gist": "Component-in açılış və bağlanış teqləri arasına yazılan məzmun. Layout və wrapper component-lərin əsasıdır; mətn, JSX, massiv, hətta funksiya da ola bilər."
+    },
     "react-what-is-reconciliation": {
       "question": "Reconciliation nədir?",
       "gist": "React-in köhnə və yeni element ağacını tutuşdurub nəyi yeniləyəcəyini müəyyən etməsi. Eyni mövqe və eyni tipdə instance və state saxlanılır; tip dəyişəndə subtree unmount olur."
@@ -102,9 +110,29 @@
       "question": "Portal nədir?",
       "gist": "React ağacında qalıb, DOM-da başqa node-a render olunur — modal, tooltip, drawer. Valideynin overflow və z-index-i onları kəsmir."
     },
+    "react-what-are-stateless-components": {
+      "question": "Stateless component nədir?",
+      "gist": "Öz state-i olmayan, nəticəsi yalnız props-dan asılı olan component. Oxumaq və test etmək asandır, ona görə mümkün qədər çox component belə qalmalıdır."
+    },
+    "react-what-are-stateful-components": {
+      "question": "Stateful component nədir?",
+      "gist": "Davranışı öz state-indən asılı olan component: `useState`/`useReducer` işlədən funksiya və ya state-li class. State-i ona ehtiyacı olan ən aşağı səviyyədə saxla."
+    },
+    "react-how-to-apply-validation-on-props-in-react": {
+      "question": "React-də props necə yoxlanılır?",
+      "gist": "`prop-types` paketi yalnız development-də runtime xəbərdarlığı verir, production-da söndürülür. İndi adətən TypeScript işlədilir, çünki səhvi compile vaxtı tutur; xarici data üçün isə runtime validation ayrıca lazımdır."
+    },
     "react-how-events-are-different-in-react": {
       "question": "React-də event-lər nə ilə fərqlənir?",
       "gist": "Handler camelCase adlanır və funksiya kimi verilir, React isə SyntheticEvent obyekti ötürür. Listener-lər hər node-a ayrı bağlanmır — React 17-dən root container səviyyəsində delegation edilir (əvvəl `document`-də idi)."
+    },
+    "react-how-do-you-conditionally-render-components": {
+      "question": "Component şərtlə necə render olunur?",
+      "gist": "`cond && <A />`, `cond ? <A /> : <B />` və ya erkən `return`. Tələ: `count && <A />` yazanda `count` 0 olsa ekranda `0` görünür, çünki `false`/`null` render olunmur, 0 isə olunur."
+    },
+    "react-why-we-need-to-be-careful-when-spreading-props-on-dom-elemen": {
+      "question": "Props-u DOM elementinə spread edəndə niyə diqqətli olmaq lazımdır?",
+      "gist": "Naməlum atributlar DOM-a düşür: HTML etibarsız olur, React xəbərdarlıq verir, istifadəçi datası səhvən ötürülə bilər. Lazım olanı destructure edib yalnız `...rest`-i ötür."
     },
     "react-how-do-you-memoize-a-component": {
       "question": "Komponenti necə memoize edirsən?",
@@ -114,6 +142,18 @@
       "question": "Hooks render props və HOC-ları əvəz edirmi?",
       "gist": "Məntiqin paylaşılması üçün — bəli, çox vaxt. Amma render-i idarə edən nümunələr (render prop) və wrapper davranışı (HOC) hələ də yerində qalır."
     },
+    "react-what-is-a-switching-component": {
+      "question": "Switching component nədir?",
+      "gist": "Prop-a görə bir neçə component-dən birini render edən component. Adətən `switch` əvəzinə obyekt xəritəsi işlədilir: `const Page = PAGES[page]`."
+    },
+    "react-why-should-component-names-start-with-capital-letter": {
+      "question": "Component adı niyə böyük hərflə başlamalıdır?",
+      "gist": "JSX kiçik hərfli teqi HTML elementi (`\"div\"` sətri), böyük hərflini isə dəyişənə istinad kimi compile edir. `<button />` component-in deyil, HTML düyməsidir."
+    },
+    "react-how-do-you-access-props-in-attribute-quotes": {
+      "question": "Dırnaq içindəki atributda props-a necə müraciət olunur?",
+      "gist": "JSX dırnaq içində interpolation etmir: `src=\"images/{x}\"` hərfi sətirdir. Bütün dəyəri expression et: `src={`images/${x}`}`."
+    },
     "react-what-is-the-difference-between-react-and-reactdom": {
       "question": "React və ReactDOM arasında fərq nədir?",
       "gist": "`react` platformadan asılı olmayan hissədir: component, element, hook-lar. `react-dom` brauzer renderer-idir: `createRoot`, `hydrateRoot`, `createPortal`, `flushSync`. React Native-də ikincisinin yerini öz renderer-i tutur."
@@ -122,6 +162,18 @@
       "question": "Brauzer ölçüsü dəyişəndə görünüşü necə yenidən render edirsən?",
       "gist": "`useEffect`-də `resize` listener əlavə edib ölçünü state-də saxla, cleanup-da listener-i sil. Hadisə tez-tez baş verdiyi üçün debounce/throttle lazımdır; sadəcə stil dəyişirsə CSS media query daha yaxşıdır."
     },
+    "react-why-can-t-you-update-props-in-react": {
+      "question": "Props-u niyə dəyişmək olmur?",
+      "gist": "Data yuxarıdan aşağı axır və props-un sahibi valideyndir. Uşaq dəyişsəydi, datanın mənbəyi qeyri-müəyyən olardı və render-lər proqnozlaşdırılmazdı. Dəyişiklik callback ilə valideynə bildirilir."
+    },
+    "react-how-to-import-and-export-components-using-react-and-es6": {
+      "question": "ES6 ilə component necə import və export olunur?",
+      "gist": "`export default` faylda bir dəfə olur və istənilən adla import edilir; named export `{ Name }` ilə dəqiq adla gəlir. Named export refactor və axtarış üçün daha etibarlıdır."
+    },
+    "react-what-are-the-exceptions-on-react-component-naming": {
+      "question": "Component adlandırmasında hansı istisnalar var?",
+      "gist": "Nöqtəli ad kiçik hərflə başlasa da component sayılır: `<obj.component />` property access kimi compile olunur. Sadə kiçik hərfli ad isə HTML teqidir."
+    },
     "react-what-is-react-router": {
       "question": "React Router nədir?",
       "auto": true
@@ -129,6 +181,10 @@
     "react-how-react-router-is-different-from-history-library": {
       "question": "React Router `history` kitabxanasından nə ilə fərqlənir?",
       "gist": "`history` brauzer tarixçəsi üzərində aşağı səviyyəli API-dir (push, replace, listen). React Router onun üzərində qurulur və deklarativ marşrutlaşdırma verir: `Route`, `Switch`, `Link`, parametrlər, iç-içə route-lar."
+    },
+    "react-what-are-the-router-components-of-react-router-v6": {
+      "question": "React Router v6-da hansı `<Router>` component-ləri var?",
+      "gist": "`BrowserRouter` — History API, normal veb üçün. `HashRouter` — server rewrite yoxdursa. `MemoryRouter` — testlər üçün. `StaticRouter` — SSR üçün."
     },
     "react-what-is-react-intl": {
       "question": "React Intl nədir?",
@@ -150,9 +206,25 @@
       "question": "`mapStateToProps()` və `mapDispatchToProps()` arasında fərq nədir?",
       "gist": "Birincisi store-dan state oxuyub prop-a çevirir və store dəyişəndə yenidən çağırılır (oxumaq). İkincisi `dispatch`-i prop kimi verilən action funksiyalarına çevirir (yazmaq)."
     },
+    "react-how-to-access-redux-store-outside-a-component": {
+      "question": "Redux store-a component-dən kənarda necə müraciət olunur?",
+      "gist": "Store yaradılan moduldan export et və `store.getState()`/`store.dispatch()` çağır. Global `window`-a qoyma. Tələ: SSR-də modul səviyyəli store istifadəçilər arasında paylaşılır."
+    },
+    "react-how-to-reset-state-in-redux": {
+      "question": "Redux-da state necə sıfırlanır?",
+      "gist": "Root reducer `USER_LOGOUT` action-ını tutub reducer-lərə `undefined` state ötürür, onlar da initial state qaytarır. `redux-persist` varsa saxlanılan datanı da ayrıca təmizlə."
+    },
     "react-what-is-the-difference-between-react-context-and-react-redux": {
       "question": "Context ilə Redux arasında fərq nədir?",
       "gist": "Context dependency injection-dır: dəyər dəyişəndə bütün consumer-lər render olunur. Redux/RTK isə store, selector-lar və dev alətləri ilə server/app state idarəsi üçündür."
+    },
+    "react-why-are-redux-state-functions-called-reducers": {
+      "question": "Redux funksiyalarına niyə reducer deyilir?",
+      "gist": "`Array.reduce`-a ötürülən funksiya kimi işləyir: `(state, action) => newState`. Action-lar ardıcıllığı son state-ə yığılır. Ona görə pure olmalıdır, bu da time-travel debugging-i mümkün edir."
+    },
+    "react-should-i-keep-all-component-s-state-in-redux-store": {
+      "question": "Bütün component state-i Redux-da saxlanmalıdır?",
+      "gist": "Xeyr. Paylaşılan və uzunömürlü data store-da, modalın açıq olması kimi lokal UI state component-də qalır. Hamısını store-a yığmaq lazımsız boilerplate və render yaradır."
     },
     "react-what-is-the-difference-between-component-and-container-in-re": {
       "question": "React Redux-da component və container arasında fərq nədir?",
@@ -161,6 +233,10 @@
     "react-what-are-the-different-ways-to-write-mapdispatchtoprops": {
       "question": "`mapDispatchToProps()` neçə şəkildə yazıla bilər?",
       "gist": "Üç yolla: funksiya kimi (`dispatch => ({ add: () => dispatch(add()) })`), obyekt qısa formasında (`{ add }` — connect özü `dispatch`-ə bükür) və ya heç verməmək (komponent `dispatch`-i prop kimi alır)."
+    },
+    "react-what-is-the-use-of-the-ownprops-parameter-in-mapstatetoprops": {
+      "question": "`mapStateToProps` və `mapDispatchToProps`-da `ownProps` nə üçündür?",
+      "gist": "Connected component-ə verilən props-u bu funksiyalara ötürür. Məsələn `ownProps.id` ilə store-dan konkret elementi seçmək olur. Bu, `connect` API-sidir; hooks-da sadəcə prop-u selector-da işlədirsən."
     },
     "react-what-is-redux-saga": {
       "question": "redux-saga nədir?",
@@ -186,6 +262,10 @@
       "question": "Redux Form nədir?",
       "auto": true
     },
+    "react-how-to-set-initial-state-in-redux": {
+      "question": "Redux-da initial state necə verilir?",
+      "gist": "`createStore`-un ikinci arqumenti ilə (Redux Toolkit-də `preloadedState`). Adətən SSR və ya saxlanılmış datanı bərpa üçün lazımdır; olmasa reducer-lərin default dəyəri işləyir."
+    },
     "react-how-relay-is-different-from-redux": {
       "question": "Relay Redux-dan nə ilə fərqlənir?",
       "gist": "Redux ümumi məqsədli state konteyneridir, data mənbəyinə baxmır. Relay GraphQL-ə bağlıdır: sorğuları komponent yanındaki fragment-lərdən yığır, normalizasiya, keş və yeniləməni özü idarə edir."
@@ -210,9 +290,37 @@
       "question": "React və Angular arasında fərq nədir?",
       "gist": "React kitabxanadır — yalnız view; routing, form, HTTP üçün paketlər özün seçirsən, JSX və birtərəfli data axını var. Angular tam framework-dür: DI, RxJS, template sintaksisi, iki tərəfli binding, CLI hazır gəlir."
     },
+    "react-what-are-styled-components": {
+      "question": "Styled Components nədir?",
+      "gist": "CSS-i JS içində yazan kitabxana: stil birbaşa component-ə bağlanır, siniflər avtomatik unikal olur, props-a görə dəyişə bilir. Bədəli runtime xərcidir və Server Components ilə uyğunluq problemidir."
+    },
+    "react-give-an-example-of-styled-components": {
+      "question": "Styled Components-ə nümunə göstərin.",
+      "gist": "`const Title = styled.h1`font-size: 1.5em;`` tagged template ilə stilli component yaradır, sonra adi component kimi işlənir: `<Title>Salam</Title>`."
+    },
+    "react-how-redux-form-initialvalues-get-updated-from-state": {
+      "question": "Redux Form-da `initialValues` state-dən necə yenilənir?",
+      "gist": "`enableReinitialize: true` lazımdır, yoxsa form yalnız ilk dəyərləri götürür. Bu parametrlə `initialValues` dəyişəndə form yenidən başlanır."
+    },
     "react-how-react-proptypes-allow-different-types-for-one-prop": {
       "question": "PropTypes bir prop üçün bir neçə tipə necə icazə verir?",
       "gist": "`PropTypes.oneOfType([PropTypes.string, PropTypes.number])` ilə. Sabit dəyər dəsti üçün `oneOf`, dəqiq obyekt forması üçün `shape`, massiv elementinin tipi üçün `arrayOf` var."
+    },
+    "react-can-i-import-an-svg-file-as-react-component": {
+      "question": "SVG faylını component kimi import etmək olar?",
+      "gist": "Bəli, amma bundler dəstəyi ilə: CRA-da `import { ReactComponent as Logo } from \"./logo.svg\"`, Vite-də `vite-plugin-svgr`. Bu React xüsusiyyəti deyil, build alətinin işidir."
+    },
+    "react-how-to-pass-numbers-to-react-component": {
+      "question": "Component-ə rəqəm necə ötürülür?",
+      "gist": "Fiqurlu mötərizə ilə: `age={30}`. `age=\"30\"` isə string ötürür və müqayisədə və ya toplamada gözlənilməz nəticə verir."
+    },
+    "react-do-i-need-to-keep-all-my-state-into-redux-should-i-ever-use-": {
+      "question": "Bütün state Redux-da olmalıdır, yoxsa React-in daxili state-i də işlədilməlidir?",
+      "gist": "Daxili state işlədilməlidir. Meyar: başqa hissələrə lazımdırmı, navigasiyadan sağ qalmalıdırmı, debug-da izlənməlidirmi? Yoxdursa lokal saxla. Server datası üçün isə çox vaxt React Query daha uyğundur."
+    },
+    "react-what-is-react-memo-function": {
+      "question": "`React.memo` nədir?",
+      "gist": "Function component-i sarıyır, props shallow müqayisədə dəyişməyibsə render-i atlayır. Tələ: hər render-də yeni obyekt və ya funksiya ötürülsə faydası yoxdur; öz state-i və context dəyişəndə yenə render olunur."
     },
     "react-what-are-hooks": {
       "question": "Hook-lar nədir?",
@@ -230,17 +338,49 @@
       "question": "Flux və Redux arasında fərqlər nələrdir?",
       "gist": "Flux-da bir neçə store və dispatcher var, məntiq store-ların içindədir. Redux-da tək store, dispatcher yox, dəyişiklik saf reducer-lərlə və immutable şəkildə edilir — time-travel debugging və test bundan yaranır."
     },
+    "react-can-you-describe-about-componentdidcatch-lifecycle-method-si": {
+      "question": "`componentDidCatch` metodunun imzası necədir?",
+      "gist": "`componentDidCatch(error, info)`: `info.componentStack` xətanın component yolunu verir. Commit fazasında işləyir, logging üçündür; fallback UI isə `getDerivedStateFromError` ilə göstərilir."
+    },
     "react-what-is-the-benefit-of-component-stack-trace-from-error-boun": {
       "question": "Error boundary-nin component stack trace faydası nədir?",
       "gist": "Xətanın hansı komponent ağacında baş verdiyini göstərir. Error boundary yalnız render fazasındaki xətaları tutur — event handler və async callback-lər onun əhatəsində deyil."
+    },
+    "react-what-are-default-props": {
+      "question": "Default props nədir?",
+      "gist": "Prop verilməyəndə (`undefined`) işlənən dəyər; `null` və `0` default-u işə salmır. Function component-də `defaultProps` köhnəlib, parametr default-u yazılır: `({ color = \"red\" })`."
     },
     "react-what-are-keyed-fragments": {
       "question": "Keyed Fragment nədir?",
       "gist": "Siyahı render edərkən fragment-ə `key` vermək lazım gəlirsə qısa `<>` sintaksisi yaramır — açıq `<React.Fragment key={item.id}>` yazılır. `key` fragment-in qəbul etdiyi yeganə prop-dur."
     },
+    "react-when-component-props-defaults-to-true": {
+      "question": "Component prop-u nə vaxt `true` olur?",
+      "gist": "Dəyərsiz yazılanda: `<Input disabled />` = `disabled={true}`. HTML-ə uyğun davranışdır. Boolean üçün normaldır, amma `{name}` shorthand ilə qarışdırılmamalıdır."
+    },
+    "react-how-do-you-pass-an-event-handler-to-a-component": {
+      "question": "Component-ə event handler necə ötürülür?",
+      "gist": "Adi prop kimi: `onClick={handleClick}`. Funksiyanın özü ötürülür, çağırışı yox. `React.memo` ilə uşaq üçün sabit referans lazımdırsa `useCallback` işlədilir."
+    },
+    "react-how-do-you-say-that-props-are-readonly": {
+      "question": "Props-un readonly olduğunu necə izah edərsiniz?",
+      "gist": "Component props baxımından pure funksiya olmalıdır: girişi dəyişmir, eyni props-a eyni nəticəni qaytarır. Development-də React props obyektini `freeze` edir, ona görə yazmaq işləmir."
+    },
+    "react-can-i-use-web-components-in-react-application": {
+      "question": "React tətbiqində web component işlətmək olar?",
+      "gist": "Bəli, xüsusilə üçüncü tərəf UI üçün. React 19-a qədər props atribut kimi gedir və custom event-lər ref ilə dinlənilir; React 19 bunları tam dəstəkləyir."
+    },
+    "react-what-are-loadable-components": {
+      "question": "Loadable Components nədir?",
+      "gist": "Dynamic import-u component kimi render edən code-splitting kitabxanası. React 18-ə qədər `lazy` və `Suspense` SSR-də işləmədiyi üçün lazım idi; indi çox vaxt onlar kifayətdir."
+    },
     "react-what-is-suspense-component": {
       "question": "Suspense komponenti nədir?",
       "gist": "Uşaq ağacı hazır olana qədər fallback göstərir — lazy komponentlər və data fetching üçün. Layout sıçrayışının olmaması üçün fallback yer ayırmalıdır."
+    },
+    "react-what-is-the-purpose-of-default-value-in-context": {
+      "question": "Context-də default dəyər nə üçündür?",
+      "gist": "Yalnız yuxarıda uyğun Provider olmayanda işlənir, ona görə component-i Provider-siz test etməyə imkan verir. Tələ: Provider `value={undefined}` versə default işləmir."
     },
     "react-what-is-diffing-algorithm": {
       "question": "Diffing algoritmi nədir?",
@@ -250,9 +390,21 @@
       "question": "Diffing algoritmi hansı qaydalara əsaslanır?",
       "gist": "Element tipi dəyişibsə köhnə ağac atılır və yenidən qurulur (state itir). Tip eynidirsə yalnız dəyişən atributlar yenilənir, state saxlanılır. Siyahıda uşaqlar `key` üzrə uyğunlaşdırılır; key yoxdursa indeks işlədilir və sıra dəyişəndə lazımsız yenidənqurma olur."
     },
+    "react-must-prop-be-named-as-render-for-render-props": {
+      "question": "Render props üçün prop-un adı mütləq `render` olmalıdır?",
+      "gist": "Xeyr. Nə render ediləcəyini bildirən istənilən funksiya prop-u render prop-dur. Çox vaxt `children` işlədilir: `<Mouse>{pos => ...}</Mouse>`."
+    },
+    "react-what-are-the-problems-of-using-render-props-with-pure-compon": {
+      "question": "Render props-un pure component ilə problemi nədir?",
+      "gist": "Inline funksiya hər render-də yeni referansdır, shallow müqayisə həmişə fərq görür və `PureComponent`/`memo`-nun faydası itir. Həlli funksiyanı sabit saxlamaqdır: instance metodu və ya `useCallback`."
+    },
     "react-what-is-the-typical-use-case-of-portals": {
       "question": "Portal-ların tipik istifadə halı nədir?",
       "gist": "Modal, dialog, tooltip, dropdown — valideynin `overflow: hidden` və ya `z-index` konteksti kəsdiyi halda content `document.body`-ə render olunur. Event-lər isə React ağacında valideynə qədər qalxmağa davam edir."
+    },
+    "react-how-do-you-set-default-value-for-uncontrolled-component": {
+      "question": "Uncontrolled component-ə default dəyər necə verilir?",
+      "gist": "`defaultValue` ilə; checkbox və radio üçün `defaultChecked`. `value` yazılsa input controlled olar. Default yalnız mount zamanı oxunur, sonrakı dəyişiklikləri DOM özü saxlayır."
     },
     "react-what-is-the-difference-between-real-dom-and-virtual-dom": {
       "question": "Real DOM və Virtual DOM arasında fərq nədir?",
@@ -282,6 +434,10 @@
       "question": "Hook ideyası hansı mənbələrdən götürülüb?",
       "gist": "Funksional proqramlaşdırma, ReasonReact-in reducer component-ləri və mövcud render props / HOC praktikası. Əsas motivasiya: wrapper hell və class-larda dağınıq lifecycle məntiqi."
     },
+    "react-how-do-you-access-imperative-api-of-web-components": {
+      "question": "Web component-in imperative API-sinə necə müraciət olunur?",
+      "gist": "`ref` ilə DOM node-u götürüb metodları birbaşa çağırırsan. Üçüncü tərəf komponentlərdə bunu React wrapper-in içində gizlətmək daha yaxşıdır ki, xaricə deklarativ props çıxsın."
+    },
     "react-what-is-formik": {
       "question": "formik nədir?",
       "auto": true
@@ -310,13 +466,25 @@
       "question": "React-də imperativ və deklarativ yanaşma arasında fərq nədir?",
       "gist": "İmperativ kodda DOM-a addım-addım nə etməli olduğunu deyirsən (`el.classList.add`). Deklarativ yanaşmada UI-nın state-dən asılı son görünüşünü təsvir edirsən, keçidləri React edir. İmperativə yalnız focus, scroll, media kimi hallarda `ref` ilə düşülür."
     },
+    "react-how-do-you-make-sure-that-user-remains-authenticated-on-page": {
+      "question": "Context API-də səhifə yenilənəndə istifadəçinin login qalmasını necə təmin edirsiniz?",
+      "gist": "Context state yenilənəndə sıfırlanır, ona görə tətbiq açılanda `useEffect`-də sessiya serverdən bərpa olunur. Provider `App`-dən yuxarıda olmalıdır. Yoxlama bitənə qədər loading göstər ki, login səhifəsi yanıb-sönməsin."
+    },
     "react-how-is-the-new-jsx-transform-different-from-old-transform": {
       "question": "Yeni JSX transform köhnəsindən nə ilə fərqlənir?",
       "gist": "Köhnə transform JSX-i `React.createElement`-ə çevirirdi, ona görə hər faylda `import React` lazım idi. React 17-dən compiler `react/jsx-runtime`-dan `jsx()` funksiyasını özü import edir — `React` idxalı lazım deyil, bundle bir az kiçilir."
     },
+    "react-what-are-react-server-components": {
+      "question": "React Server Components nədir?",
+      "gist": "Yalnız serverdə render olunan component-lər: kodu client bundle-a düşmür, data mənbəyinə birbaşa çıxa bilir, amma state və effect işlədə bilmir. React 19-da stabildir, framework dəstəyi tələb edir (məs. Next.js)."
+    },
     "react-what-is-the-difference-between-usestate-and-useref-hook": {
       "question": "useState ilə useRef arasında fərq nədir?",
       "gist": "State dəyişikliyi render tetikleyir; ref dəyişikliyi tetiklemez. Ref render-lər arası sabit qutu ya DOM node handle-ı üçündür."
+    },
+    "react-what-is-a-wrapper-component": {
+      "question": "Wrapper component nədir?",
+      "gist": "`children`-i sarıyıb üzərinə stil, layout və ya funksionallıq əlavə edən component. Təkrarı azaldır. Tələ: çox iç-içə wrapper ağacı oxumağı və debug-u çətinləşdirir."
     },
     "react-what-are-the-differences-between-useeffect-and-uselayouteffe": {
       "question": "useEffect və useLayoutEffect arasında fərq nədir?",
@@ -338,6 +506,30 @@
       "question": "React hydration nədir?",
       "gist": "Serverdə hazırlanmış HTML-in üzərinə client-də event handler və state-in «bərkidilməsi». Markup sıfırdan qurulmur, ona görə kontent tez görünür; server və client nəticəsi uyğun gəlməsə hydration xətası olur. API — `hydrateRoot`."
     },
+    "react-how-do-you-update-objects-inside-state": {
+      "question": "State-dəki obyekt necə yenilənir?",
+      "gist": "Birbaşa dəyişmə, yeni obyekt yarat: `setUser({ ...user, name })`. React dəyişikliyi referansla görür, eyni obyekti mutasiya etsən render baş verməyə bilər."
+    },
+    "react-how-do-you-update-nested-objects-inside-state": {
+      "question": "State-dəki iç-içə obyekt necə yenilənir?",
+      "gist": "Spread shallow-dur, ona görə dəyişən yola qədər hər səviyyə kopyalanır: `{ ...user, address: { ...user.address, city } }`. Dərinlik çoxdursa Immer işlət və ya state-i düzləşdir."
+    },
+    "react-how-do-you-update-arrays-inside-state": {
+      "question": "State-dəki massiv necə yenilənir?",
+      "gist": "Yeni massiv yarat: əlavə üçün spread, silmək üçün `filter`, dəyişmək üçün `map`. `push` və `splice` orijinalı dəyişir, referans eyni qaldığı üçün UI yenilənməyə bilər."
+    },
+    "react-how-do-you-use-immer-library-for-state-updates": {
+      "question": "State yeniləməsi üçün Immer necə işlədilir?",
+      "gist": "`produce(state, draft => { draft.a.b = 1 })`: draft Proxy-dir, dəyişiklikləri izləyir və yeni immutable state yaradır, dəyişməyən hissələr paylaşılır. Redux Toolkit-in reducer-ləri də bunu işlədir."
+    },
+    "react-what-are-the-preferred-and-non-preferred-array-operations-fo": {
+      "question": "State yeniləyərkən hansı massiv əməliyyatları tövsiyə olunur, hansılar yox?",
+      "gist": "Tövsiyə: `concat`/spread, `filter`/`slice`, `map`. Tövsiyə olunmur: `push`, `pop`, `shift`, `unshift`, `splice`, indekslə yazmaq. `sort` və `reverse` üçün əvvəl kopyala və ya `toSorted` işlət."
+    },
+    "react-what-will-happen-by-defining-nested-function-components": {
+      "question": "Component-in içində başqa component təyin etsək nə olur?",
+      "gist": "Hər render-də yeni funksiya, yəni React üçün yeni tip olur. Uşaq unmount/mount olunur, state və input fokusu itir, performans düşür. Component-i xaricə çıxar."
+    },
     "react-how-is-usereducer-different-from-usestate": {
       "question": "useReducer useState-dən nə ilə fərqlənir?",
       "gist": "Bir neçə sahə birlikdə, adlandırılmış keçidlərlə dəyişəndə reducer daha oxunaqlıdır və məntiq React-dən kənarda test olunur."
@@ -349,6 +541,10 @@
     "react-what-are-the-use-cases-of-usecontext-hook": {
       "question": "useContext hook-un istifadə halları nələrdir?",
       "gist": "Nadir dəyişən qlobal dəyərlər: theme, locale, auth istifadəçisi, feature flag, i18n. Tez dəyişən state üçün uyğun deyil — dəyər dəyişəndə bütün consumer-lər re-render olur."
+    },
+    "react-when-to-use-client-and-server-components": {
+      "question": "Client və server component-lər nə vaxt işlədilir?",
+      "gist": "Server: data çəkmək, secret-lər, ağır dependency-lər, interaktivlik olmayan hissələr. Client: state, effect, event handler, browser API. `\"use client\"` sərhədini ağacda mümkün qədər aşağı saxla."
     },
     "react-what-are-the-differences-between-page-router-and-app-router-": {
       "question": "Next.js-də page router və app router arasında fərqlər nələrdir?",
@@ -406,9 +602,17 @@
       "question": "useContext necə işləyir? Nümunə ilə izah et.",
       "gist": "useContext ağacda ən yaxın Provider-in value-sunu oxuyur; Provider yoxdursa createContext-ə verilən default dəyəri götürür. Provider-in value-su dəyişəndə bütün consumer-lər re-render olur (memo bunun qarşısını almır)."
     },
+    "react-can-you-use-multiple-contexts-in-one-component": {
+      "question": "Bir component-də bir neçə context işlətmək olar?",
+      "gist": "Bəli, hər biri üçün ayrıca `useContext` çağırılır və Provider-lər iç-içə qoyulur. Tez dəyişən dəyərləri ayrı context-də saxlamaq lazımsız render-ləri azaldır."
+    },
     "react-what-s-a-common-pitfall-when-using-usecontext-with-objects": {
       "question": "useContext-i object ilə istifadə edərkən tipik səhv nədir?",
       "gist": "Provider-ə inline object vermək: value={{ user, setUser }} hər render-də yeni referans yaradır və bütün consumer-ləri re-render edir. Həlli — value-nu useMemo ilə sabitləmək və ya context-i bölmək."
+    },
+    "react-what-would-the-context-value-be-for-no-matching-provider": {
+      "question": "Uyğun Provider olmayanda context dəyəri nə olur?",
+      "gist": "`createContext(defaultValue)`-dakı default qayıdır, verilməyibsə `undefined`. Çox vaxt default-u `null` qoyub custom hook-da xəta atırlar ki, unudulmuş Provider dərhal görünsün."
     },
     "react-how-do-reactive-dependencies-in-the-useeffect-dependency-arr": {
       "question": "useEffect-in dependency array-i nə üçündür?",
@@ -550,6 +754,10 @@
       "question": "useOptimistic hook nədir?",
       "gist": "Async action gedərkən gözlənilən nəticəni dərhal göstərir: UI optimistik state ilə render olunur, action bitəndə real state-ə keçir, uğursuzluqda dəyişiklik avtomatik geri alınır."
     },
+    "react-why-should-we-not-update-the-state-directly": {
+      "question": "State niyə birbaşa dəyişdirilməməlidir?",
+      "gist": "Birbaşa yazmaq render planlaşdırmır və UI köhnə qalır. Üstəlik `memo` və dependency müqayisələri referansa baxdığı üçün dəyişikliyi görmür, batching ilə növbəti yeniləmə də onu silə bilər."
+    },
     "react-what-is-the-use-of-refs": {
       "question": "refs nə üçündür?",
       "auto": true
@@ -567,12 +775,44 @@
       "gist": "Wrapper props-u dəyişmək, əlavə etmək ya filtrləmək üçün araya girir. Riski: gizli prop qarışması və debug çətinliyi."
     },
     "react-what-is-context": {
-      "question": "context nədir?",
-      "auto": true
+      "question": "Context nədir?",
+      "gist": "Datanı hər səviyyədən props kimi keçirmədən ağaca ötürür: theme, dil, istifadəçi. Tələ: `value` dəyişəndə bütün consumer-lər render olunur, ona görə tez dəyişən state üçün uyğun deyil."
+    },
+    "react-what-is-the-purpose-of-using-super-constructor-with-props-ar": {
+      "question": "Constructor-da `super(props)` nə üçündür?",
+      "gist": "`super()` çağırılmadan `this` işlətmək olmur. `props` ötürülməsə constructor içində `this.props` `undefined` olur. Constructor-dan kənarda fərq yoxdur, çünki React onu özü təyin edir."
+    },
+    "react-how-to-set-state-with-a-dynamic-key-name": {
+      "question": "Dinamik açar adı ilə state necə yenilənir?",
+      "gist": "Computed property ilə: `setForm({ ...form, [e.target.name]: e.target.value })`. Bir handler bütün input-lara xidmət edir. Tək yanlış `name` state-də artıq açar yaradır."
+    },
+    "react-what-would-be-the-common-mistake-of-function-being-called-ev": {
+      "question": "Funksiyanın hər render-də çağırılmasına səbəb olan tipik səhv nədir?",
+      "gist": "`onClick={handle()}` yazmaq: funksiya render zamanı işləyir, nəticəsi ötürülür. Düzgünü `onClick={handle}` və ya arqument varsa `onClick={() => handle(id)}`. İçində setState varsa sonsuz dövrə yaranır."
     },
     "react-what-is-the-purpose-of-render-method-of-react-dom": {
       "question": "`react-dom`-un `render` metodu nə üçündür?",
       "gist": "React element ağacını verilmiş DOM konteynerinə yerləşdirir və UI-nı idarə etməyə başlayır. React 18-də `ReactDOM.render` deprecate olundu — `createRoot(container).render(...)` istifadə edilir, concurrent xüsusiyyətləri yalnız o açır."
+    },
+    "react-is-it-good-to-use-setstate-in-componentwillmount-method": {
+      "question": "`componentWillMount`-da `setState` işlətmək yaxşıdır?",
+      "gist": "Xeyr, metod köhnəlib: `UNSAFE_` prefiksi ilə qalır və concurrent rendering-də bir neçə dəfə işləyə bilər. Başlanğıc state constructor-da, side effect isə `componentDidMount`-da və ya `useEffect`-də olmalıdır."
+    },
+    "react-what-will-happen-if-you-use-props-in-initial-state": {
+      "question": "Props-u initial state kimi işlətsək nə olur?",
+      "gist": "State yalnız ilk mount-da hesablanır, prop sonra dəyişsə state köhnə qalır. Birbaşa prop-u işlət, ya hesabla. Sıfırlama lazımdırsa `key` dəyiş; adı `initialX` olsa niyyət də aydın olar."
+    },
+    "react-what-is-the-purpose-of-getderivedstatefromprops-lifecycle-me": {
+      "question": "`getDerivedStateFromProps` nə üçündür?",
+      "gist": "Hər render-dən əvvəl işləyən static metod: props-a görə yeni state obyekti və ya `null` qaytarır. Nadir hallar üçündür; çox vaxt hesablanmış dəyər, memoization və ya `key` daha yaxşı həlldir."
+    },
+    "react-what-is-the-recommended-way-for-naming-components": {
+      "question": "Component-ləri adlandırmağın tövsiyə olunan yolu nədir?",
+      "gist": "`displayName` əvəzinə adı olan funksiya və ya class yaz: DevTools adı özü götürür. `displayName` əsasən HOC və `forwardRef` kimi adsız sarğılar üçün lazımdır."
+    },
+    "react-what-is-the-recommended-ordering-of-methods-in-component-cla": {
+      "question": "Class component-də metodların tövsiyə olunan sırası necədir?",
+      "gist": "Static metodlar, constructor, lifecycle metodları, event handler-lər, render üçün getter-lər və helper-lər, sonda `render`. Bu, React qaydası deyil, oxunaqlılıq konvensiyasıdır."
     },
     "react-what-is-the-difference-between-constructor-and-getinitialsta": {
       "question": "`constructor` və `getInitialState` arasında fərq nədir?",
@@ -590,29 +830,117 @@
       "question": "`setState()` və `replaceState()` arasında fərq nədir?",
       "gist": "`setState` verilən obyekti mövcud state ilə birləşdirir (shallow merge). `replaceState` state-i tamamilə əvəz edirdi — köhnə `createClass` API-sinin hissəsidir, ES6 class-larda mövcud deyil."
     },
+    "react-how-to-listen-to-state-changes": {
+      "question": "State dəyişikliyi necə izlənir?",
+      "gist": "Class-da `componentDidUpdate(prevProps, prevState)` ilə köhnə dəyəri müqayisə edirsən; funksiyada `useEffect(..., [value])`. Yalnız xarici sistemlə sinxronizasiya üçün işlət, hesablanan dəyəri render-də çıxar."
+    },
+    "react-what-is-the-recommended-approach-of-removing-an-array-elemen": {
+      "question": "State-dəki massivdən element silməyin tövsiyə olunan yolu nədir?",
+      "gist": "`filter`: `setItems(prev => prev.filter(x => x.id !== id))`. Yeni massiv yaradır. `splice` orijinalı dəyişir; updater forması köhnə state riskini də aradan qaldırır."
+    },
+    "react-what-are-the-possible-ways-of-updating-objects-in-state": {
+      "question": "State-dəki obyekti yeniləməyin hansı yolları var?",
+      "gist": "`Object.assign({}, obj, changes)`, spread `{ ...obj, ...changes }` və əvvəlki state-dən asılıdırsa updater funksiyası. Class `setState` üst səviyyəni birləşdirir, `useState` isə bütöv əvəz edir."
+    },
+    "react-how-to-update-a-component-every-second": {
+      "question": "Component hər saniyə necə yenilənir?",
+      "gist": "`useEffect`-də `setInterval` qur, cleanup-da `clearInterval` et, yoxsa timer sızır. Stale closure olmasın deyə updater işlət: `setCount(c => c + 1)`."
+    },
+    "react-why-is-a-component-constructor-called-only-once": {
+      "question": "Component constructor-u niyə yalnız bir dəfə çağırılır?",
+      "gist": "Reconciliation eyni yerdə eyni tipi eyni component sayır və instance-ı yenidən işlədir, ona görə növbəti render-lər yalnız `render` çağırır. `key` və ya tip dəyişsə yeni instance yaranır."
+    },
+    "react-how-to-make-ajax-call-and-in-which-component-lifecycle-metho": {
+      "question": "AJAX sorğusu necə edilir və hansı lifecycle metodunda?",
+      "gist": "Class-da `componentDidMount`-da, funksiyada `useEffect`-də `fetch` və ya Axios ilə. Race condition üçün cleanup-da sorğunu ləğv et. Real tətbiqdə React Query cache və təkrar sorğunu özü həll edir."
+    },
     "react-what-are-render-props": {
-      "question": "render props nədir?",
-      "auto": true
+      "question": "Render props nədir?",
+      "gist": "Component nəyi render edəcəyini funksiya prop-undan öyrənir və ona öz datasını ötürür. Məntiq paylaşılır, görünüş çağırana qalır. İndi çox halda custom hook əvəz edir; dərin iç-içəlik əsas çatışmazlıqdır."
+    },
+    "react-what-are-hoc-factory-implementations": {
+      "question": "HOC factory-nin hansı implementasiyaları var?",
+      "gist": "Props Proxy: HOC sarıdığı component-i render edir, props-u əlavə edir və ya dəyişir. Inheritance Inversion: HOC həmin component-dən extends edir və render-ə müdaxilə edir; yalnız class-da işləyir, nadir istifadə olunur."
     },
     "react-what-is-the-difference-between-try-catch-block-and-error-bou": {
       "question": "try/catch bloku ilə error boundary arasında fərq nədir?",
       "gist": "`try/catch` imperativ kodda, funksiya çağırışlarını əhatə edir. Error boundary render, lifecycle və konstruktorda yaranan xətaları tutub fallback UI göstərir. Event handler, async kod və server render xətalarını tutmur — orada `try/catch` lazımdır."
     },
+    "react-what-is-the-required-method-to-be-defined-for-a-class-compon": {
+      "question": "Class component-də hansı metod mütləq olmalıdır?",
+      "gist": "Yalnız `render()`. Qalan lifecycle metodları və constructor istəyə bağlıdır. `render` pure olmalıdır: state dəyişmir, side effect etmir."
+    },
     "react-what-are-the-possible-return-types-of-render-method": {
       "question": "`render` metodu hansı tipləri qaytara bilər?",
       "gist": "React element, fragment, portal, string və ya rəqəm, boolean və `null` (heç nə göstərmir), elementlərdən ibarət massiv. React 18-dən `undefined` də icazəlidir."
+    },
+    "react-is-it-mandatory-to-define-constructor-for-react-component": {
+      "question": "Component üçün constructor yazmaq məcburidir?",
+      "gist": "Xeyr. Yalnız state başlatmaq və metod bind etmək üçün lazımdır; class field syntax ilə o da çox vaxt lazım olmur. Yazılırsa `super(props)` ilə başlamalıdır."
+    },
+    "react-why-should-not-call-setstate-in-componentwillunmount": {
+      "question": "`componentWillUnmount`-da niyə `setState` çağırılmamalıdır?",
+      "gist": "Component silinir və bir də render olunmayacaq, ona görə yeniləmənin mənası yoxdur. Bu metod yalnız təmizlik üçündür: timer, subscription və sorğuların ləğvi."
     },
     "react-what-is-the-methods-order-when-component-re-rendered": {
       "question": "Komponent yenidən render olunanda metodlar hansı sıra ilə işləyir?",
       "gist": "`static getDerivedStateFromProps` → `shouldComponentUpdate` → `render` → `getSnapshotBeforeUpdate` → DOM commit → `componentDidUpdate`. `shouldComponentUpdate` `false` qaytarsa, sonrakılar işləmir."
     },
+    "react-what-is-the-purpose-of-unmountcomponentatnode-method": {
+      "question": "`unmountComponentAtNode` nə üçündür?",
+      "gist": "Container-dəki React ağacını silir, handler və state-i təmizləyir; silibsə `true` qaytarır. React 18-də köhnəlib, 19-da silinib: indi `root.unmount()` işlədilir."
+    },
+    "react-how-to-debug-forwardrefs-in-devtools": {
+      "question": "DevTools-da `forwardRef` necə debug olunur?",
+      "gist": "Render funksiyası adsızdırsa sadəcə `ForwardRef` görünür. Funksiyaya ad ver və ya `displayName` təyin et ki, DevTools mənalı ad göstərsin."
+    },
     "react-is-it-good-to-use-arrow-functions-in-render-methods": {
       "question": "`render` metodunda arrow funksiya işlətmək yaxşıdırmı?",
       "gist": "Hər render-də yeni funksiya referansı yaranır, ona görə `React.memo`/`PureComponent` ilə bükülmüş child hər dəfə yenidən render olur. Kiçik komponentlərdə problem deyil; ağır siyahılarda handler class metodu ya `useCallback` ilə sabitlənir."
     },
+    "react-how-do-you-say-that-state-updates-are-merged": {
+      "question": "State yeniləmələrinin birləşdirildiyini necə izah edərsiniz?",
+      "gist": "Class `setState` verilən obyekti cari state-in üst səviyyəsi ilə birləşdirir, qalan açarlara toxunmur. Merge shallow-dur. `useState` isə birləşdirmir, dəyəri bütöv əvəz edir."
+    },
+    "react-how-to-prevent-component-from-rendering": {
+      "question": "Component-in render olunmasının qarşısı necə alınır?",
+      "gist": "Şərtlə `null` qaytar: DOM-a heç nə düşmür. Component funksiyası yenə işləyir, hooks da işləyir, ona görə hook-lar erkən `return`-dən əvvəl olmalıdır."
+    },
+    "react-give-an-example-on-how-to-use-context": {
+      "question": "Context-in istifadəsinə nümunə göstərin.",
+      "gist": "`const ThemeContext = createContext(\"light\")`, ağacı `<ThemeContext.Provider value=\"dark\">` ilə sar, aşağıda `useContext(ThemeContext)` oxu. Aradakı component-lərə prop ötürmək lazım olmur."
+    },
+    "react-how-do-you-use-contexttype": {
+      "question": "`contextType` necə işlədilir?",
+      "gist": "Class-da `static contextType = MyContext` yazılır və dəyər `this.context` ilə oxunur. Yalnız bir context bağlamaq olur; çoxu üçün `Consumer` lazımdır. Funksiyada `useContext` işlədilir."
+    },
     "react-what-is-a-consumer": {
       "question": "consumer nədir?",
       "auto": true
+    },
+    "react-how-do-you-solve-performance-corner-cases-while-using-contex": {
+      "question": "Context-in performans problemləri necə həll olunur?",
+      "gist": "`value={{ a, b }}` hər render-də yeni obyektdir və bütün consumer-ləri render edir. Dəyəri state-də saxla və ya `useMemo` işlət, tez dəyişən datanı ayrı context-ə çıxar."
+    },
+    "react-is-ref-argument-available-for-all-functions-or-class-compone": {
+      "question": "`ref` arqumenti bütün function və class component-lərdə var?",
+      "gist": "Xeyr, `ref` adi props kimi gəlmir; ikinci arqument yalnız `forwardRef` ilə olur. React 19-da function component `ref`-i birbaşa prop kimi ala bilir."
+    },
+    "react-why-do-you-need-additional-care-for-component-libraries-whil": {
+      "question": "Component kitabxanalarında `forwardRef` işlədəndə niyə əlavə diqqət lazımdır?",
+      "gist": "Ref-in hara bağlandığı və export olunan tip dəyişir, buna bağlı kod sına bilər. Ona görə kitabxanada `forwardRef` əlavə etmək breaking change sayılır və major versiya ilə buraxılır."
+    },
+    "react-how-to-create-react-class-components-without-es6": {
+      "question": "ES6 olmadan class component necə yaradılır?",
+      "gist": "`create-react-class` paketi ilə: `getDefaultProps` və `getInitialState` funksiya kimi verilir, metodlar avtomatik bind olunur. Bu yalnız köhnə kodda rast gəlinən üsuldur."
+    },
+    "react-how-do-you-create-hoc-using-render-props": {
+      "question": "Render props ilə HOC necə yaradılır?",
+      "gist": "HOC içində render prop-lu component-i işlət və ona gələn datanı prop kimi ötür: `withMouse` daxilində `<Mouse render={m => <C {...props} mouse={m} />} />`. Beləcə hər iki pattern-i təqdim etmək olur."
+    },
+    "react-what-is-state-mutation-and-how-to-prevent-it": {
+      "question": "State mutation nədir və qarşısı necə alınır?",
+      "gist": "State obyektini yerində dəyişmək: referans eyni qalır, React və `memo` dəyişikliyi görmür, köhnə snapshot-lar da pozulur. Qarşısı: spread və ya `Object.assign` ilə yeni dəyər, Immer, development-də isə `Object.freeze`."
     },
     "react-what-are-react-mixins": {
       "question": "React Mixins nədir?",
